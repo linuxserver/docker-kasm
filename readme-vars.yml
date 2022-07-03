@@ -1,0 +1,88 @@
+# project information
+project_name: kasm
+project_url: "https://www.kasmweb.com/"
+project_logo: "https://kasm-ci.s3.amazonaws.com/kasm_logo.png"
+project_blurb: |
+  [{{ project_name|capitalize }}]({{ project_url }}) Workspaces streams containerized apps and desktops to end-users. The Workspaces platform provides enterprise-class orchestration, data loss prevention, and web streaming technology to enable the delivery of containerized workloads to your browser.
+
+project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+
+project_blurb_optional_extras_enabled: false
+project_blurb_optional_extras: []
+
+# supported architectures
+available_architectures:
+  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
+
+# development version
+development_versions: true
+development_versions_items:
+  - { tag: "latest", desc: "Stable Kasm releases" }
+  - { tag: "develop", desc: "Tip of develop" }
+
+# container parameters
+common_param_env_vars_enabled: false
+param_container_name: "{{ project_name }}"
+
+param_usage_include_net: false
+
+param_usage_include_env: true
+param_env_vars:
+  - { env_var: "KASM_PORT", env_value: "443", desc: "Specify the port you bind to the outside for Kasm Workspaces." }
+  - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London." }
+
+
+param_usage_include_vols: true
+param_volumes:
+  - { vol_path: "/opt", vol_host_path: "/path/to/data", desc: "Docker and installation storage." }
+
+param_device_map: false
+param_devices: []
+
+param_usage_include_ports: true
+param_ports:
+  - { external_port: "3000", internal_port: "3000", port_desc: "Kasm Installation wizard. (https)" }
+  - { external_port: "443", internal_port: "443", port_desc: "Kasm Workspaces interface. (https)" }
+
+# optional container parameters
+opt_param_usage_include_env: true
+opt_param_env_vars:
+  - { env_var: "DOCKER_HUB_USERNAME", env_value: "USER", desc: "Optionally specify a DockerHub Username to pull private images." }
+  - { env_var: "DOCKER_HUB_PASSWORD", env_value: "PASS", desc: "Optionally specify a DockerHub password to pull private images." }
+
+opt_param_usage_include_vols: true
+opt_param_volumes:
+  - { vol_path: "/profiles", vol_host_path: "/path/to/profiles", desc: "Optionally specify a path for persistent profile storage." }
+
+opt_param_usage_include_ports: false
+opt_param_ports: []
+
+opt_param_device_map: false
+opt_param_devices: []
+
+cap_add_param: false
+cap_add_param_vars: []
+
+opt_cap_add_param: false
+opt_cap_add_param_vars: []
+optional_block_1: false
+optional_block_1_items: ""
+
+privileged: true
+
+# application setup block
+app_setup_block_enabled: true
+app_setup_block: |
+  This container uses [Docker in Docker](https://www.docker.com/blog/docker-can-now-run-within-docker/) and requires being run in `privileged` mode. This container also requires an initial setup that runs on port 3000.
+
+  Access the installation wizard at https://`your ip`:3000 and follow the instructions there. Once setup is complete access https://`your ip`:443 and login with the credentials you entered during setup. The default users are:
+
+  * admin@kasm.local
+  * user@kasm.local
+
+  Currently Synology systems are not supported due to them blocking CPU scheduling in their Kernel. 
+
+# changelog
+changelogs:
+  - { date: "02.07.22:", desc: "Initial Release." }
