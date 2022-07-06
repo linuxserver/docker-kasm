@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv bash
+
+for i in {1..10}; do
+  echo "Armhf/Arm32v7 is not supported"
+done

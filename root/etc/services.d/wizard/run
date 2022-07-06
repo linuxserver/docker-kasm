@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bash
+
+# Wait for docker to be up
+while true; do
+  if [ -S "/var/run/docker.sock" ]; then
+    break
+  fi
+  sleep 1
+done
+
+cd /wizard
+/usr/bin/node index.js
