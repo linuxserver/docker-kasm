@@ -54,8 +54,7 @@ RUN \
   mkdir -p /wizard && \
   if [ -z ${KASM_VERSION+x} ]; then \
     KASM_VERSION=$(curl -sX GET 'https://api.github.com/repos/kasmtech/kasm-install-wizard/releases' \
-    | jq -r '.[] | select (.prerelease==true)' \
-    | jq -rs 'max_by(.name | split(".") | map(tonumber)) | .name'); \
+    | jq -r 'map(select(.prerelease)) | sort_by(.published_at) | last | .tag_name'); \
   fi && \
   curl -o \
     /tmp/wizard.tar.gz -L \
