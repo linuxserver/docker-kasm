@@ -8,5 +8,10 @@ while true; do
   sleep 1
 done
 
+# Don't do anything if wizard is disabled
+if [ -f "/opt/NO_WIZARD" ]; then
+  sleep infinity
+fi
+
 cd /wizard
 /usr/bin/node index.js
