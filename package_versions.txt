@@ -7,8 +7,8 @@ brotli-libs-1.0.9-r6
 btrfs-progs-5.17-r0
 busybox-1.35.0-r16
 c-ares-1.18.1-r0
-ca-certificates-20211220-r0
-ca-certificates-bundle-20211220-r0
+ca-certificates-20220614-r0
+ca-certificates-bundle-20220614-r0
 containerd-1.6.6-r1
 coreutils-9.1-r0
 curl-7.83.1-r2
