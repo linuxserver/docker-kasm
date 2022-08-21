@@ -50,7 +50,7 @@ libffi-3.4.2-r1
 libgcc-11.2.1_git20220219-r2
 libintl-0.21-r2
 libmnl-1.0.5-r0
-libnftnl-1.2.1-r0
+libnftnl-1.2.3-r0
 libproc-3.3.17-r1
 libseccomp-2.5.2-r1
 libssl1.1-1.1.1q-r0
@@ -92,5 +92,5 @@ xz-5.2.5-r1
 xz-libs-5.2.5-r1
 zfs-2.1.5-r0
 zfs-libs-2.1.5-r0
-zlib-1.2.12-r2
+zlib-1.2.12-r3
 zstd-libs-1.5.2-r1
