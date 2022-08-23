@@ -84,7 +84,7 @@ sqlite-libs-3.38.5-r0
 ssl_client-1.35.0-r17
 sudo-1.9.10-r0
 tini-static-0.19.0-r0
-tzdata-2022a-r0
+tzdata-2022c-r0
 userspace-rcu-0.13.1-r0
 utmps-libs-0.1.2.0-r0
 xfsprogs-5.16.0-r1
