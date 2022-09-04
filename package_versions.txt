@@ -11,7 +11,7 @@ ca-certificates-20220614-r0
 ca-certificates-bundle-20220614-r0
 containerd-1.6.6-r2
 coreutils-9.1-r0
-curl-7.83.1-r2
+curl-7.83.1-r3
 device-mapper-libs-2.02.187-r2
 docker-20.10.16-r2
 docker-cli-20.10.16-r2
@@ -45,7 +45,7 @@ libbz2-1.0.8-r1
 libc-utils-0.7.2-r3
 libcom_err-1.46.5-r0
 libcrypto1.1-1.1.1q-r0
-libcurl-7.83.1-r2
+libcurl-7.83.1-r3
 libffi-3.4.2-r1
 libgcc-11.2.1_git20220219-r2
 libintl-0.21-r2
