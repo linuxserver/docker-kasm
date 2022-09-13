@@ -1,5 +1,5 @@
-alpine-baselayout-3.2.0-r22
-alpine-baselayout-data-3.2.0-r22
+alpine-baselayout-3.2.0-r23
+alpine-baselayout-data-3.2.0-r23
 alpine-keys-2.4-r1
 apk-tools-2.12.9-r3
 bash-5.1.16-r2
