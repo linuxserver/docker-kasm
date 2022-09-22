@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:arm32v7-3.16
+FROM ghcr.io/linuxserver/baseimage-alpine:arm32v7-3.16-fb0ed076-ls25
 
 # set version label
 ARG BUILD_DATE
