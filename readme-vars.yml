@@ -91,4 +91,5 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "23.09.22:", desc: "Migrate to s6v3." }
   - { date: "02.07.22:", desc: "Initial Release." }

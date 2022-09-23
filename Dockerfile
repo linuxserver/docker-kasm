@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:3.16-fb0ed076-ls25
+FROM ghcr.io/linuxserver/baseimage-alpine:3.16
 
 # set version label
 ARG BUILD_DATE
@@ -9,6 +9,7 @@ LABEL maintainer="thelamer"
 
 # Env
 ENV DOCKER_TLS_CERTDIR=""
+ENV TINI_SUBREAPER=true
 
 # Container setup
 RUN \
