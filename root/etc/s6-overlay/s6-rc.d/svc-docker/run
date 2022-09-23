@@ -1,0 +1,14 @@
+#!/usr/bin/with-contenv bash
+
+_term() {
+    if [ -f "/opt/kasm/bin/stop" ]; then
+        echo "Caught SIGTERM signal!"
+        echo "Stopping Kasm Containers"
+        /opt/kasm/bin/stop
+        pid=$(pidof stop)
+        # terminate when the stop process dies
+        tail --pid=${pid} -f /dev/null
+    fi
+}
+
+exec /usr/local/bin/dockerd-entrypoint.sh -l error --data-root /opt/docker
