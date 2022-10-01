@@ -237,4 +237,5 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **23.09.22:** - Migrate to s6v3.
 * **02.07.22:** - Initial Release.
