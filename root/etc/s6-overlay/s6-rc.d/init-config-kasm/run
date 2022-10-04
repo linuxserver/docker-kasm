@@ -1,0 +1,20 @@
+#!/usr/bin/with-contenv bash
+
+# Create directories
+if [ ! -d "/opt/docker" ]; then
+    mkdir -p /opt/docker
+fi
+
+# Login to Dockerhub
+if [ -n "${DOCKER_HUB_USERNAME}" ]; then
+    docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_PASSWORD
+fi
+
+# Generate self cert for wizard
+if [ ! -f "/opt/kasm/certs/kasm_wizard.crt" ]; then
+    mkdir -p /opt/kasm/certs
+    openssl req -x509 -nodes -days 1825 -newkey rsa:2048 \
+        -keyout /opt/kasm/certs/kasm_wizard.key \
+        -out /opt/kasm/certs/kasm_wizard.crt \
+        -subj "/C=US/ST=VA/L=None/O=None/OU=DoFu/CN=$(hostname)/emailAddress=none@none.none"
+fi
