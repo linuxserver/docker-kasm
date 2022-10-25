@@ -21,7 +21,7 @@ e2fsprogs-1.46.5-r0
 e2fsprogs-extra-1.46.5-r0
 e2fsprogs-libs-1.46.5-r0
 eudev-libs-3.2.11-r0
-expat-2.4.9-r0
+expat-2.5.0-r0
 findutils-4.9.0-r0
 fuse-common-3.11.0-r0
 fuse-overlayfs-1.8.2-r0
