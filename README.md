@@ -80,6 +80,18 @@ Access the installation wizard at https://`your ip`:3000 and follow the instruct
 
 Currently Synology systems are not supported due to them blocking CPU scheduling in their Kernel.
 
+### GPU Support
+
+During installation an option will be presented to force all Workspace containers to mount in and use a specific GPU. This option is meant for non NVIDIA GPUs only, if using an NVIDIA card please use the native support built into Kasm Workspaces and ensure you are running this container with the NVIDIA container runtime.
+
+### Gamepad support
+
+In order to properly create virtual Gamepads you will need to mount from your host `/dev/input` and `/run/udev/data`. Please see [HERE](https://www.kasmweb.com/docs/develop/guide/gamepad_passthrough.html) for instructions on enabling gamepad support.
+
+### Persistant profiles
+
+In order to use persistant profiles in Workspaces you will need to mount in a folder to use from your host to `/profiles`. From there when configuring a workspace you can set the `Persistant Profile Path` to IE `/profiles/ubuntu-focal/{username}/`, more infomation can be found [HERE](https://www.kasmweb.com/docs/latest/how_to/persistent_profiles.html).
+
 ## Usage
 
 Here are some example snippets to help you get started creating a container.
@@ -102,6 +114,8 @@ services:
     volumes:
       - /path/to/data:/opt
       - /path/to/profiles:/profiles #optional
+      - /dev/input:/dev/input #optional
+      - /run/udev/data:/run/udev/data #optional
     ports:
       - 3000:3000
       - 443:443
@@ -122,6 +136,8 @@ docker run -d \
   -p 443:443 \
   -v /path/to/data:/opt \
   -v /path/to/profiles:/profiles `#optional` \
+  -v /dev/input:/dev/input `#optional` \
+  -v /run/udev/data:/run/udev/data `#optional` \
   --restart unless-stopped \
   lscr.io/linuxserver/kasm:develop
 ```
@@ -140,6 +156,8 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e DOCKER_HUB_PASSWORD=PASS` | Optionally specify a DockerHub password to pull private images. |
 | `-v /opt` | Docker and installation storage. |
 | `-v /profiles` | Optionally specify a path for persistent profile storage. |
+| `-v /dev/input` | Optional for gamepad support. |
+| `-v /run/udev/data` | Optional for gamepad support. |
 
 ## Environment variables from files (Docker secrets)
 
@@ -237,5 +255,6 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **05.11.22:** - Rebase to Jammy, add support for GPUs, add support for Gamepads.
 * **23.09.22:** - Migrate to s6v3.
 * **02.07.22:** - Initial Release.

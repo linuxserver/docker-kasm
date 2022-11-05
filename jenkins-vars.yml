@@ -3,7 +3,7 @@
 # jenkins variables
 project_name: docker-kasm
 external_type: na
-custom_version_command: "curl -sX GET 'https://api.github.com/repos/kasmtech/kasm-install-wizard/releases'| jq -r 'map(select(.prerelease)) | sort_by(.published_at) | last | .tag_name'"
+custom_version_command: "curl -sX GET https://kasm-ci.s3.amazonaws.com/dev-version.txt"
 release_type: prerelease
 release_tag: develop
 ls_branch: develop
@@ -15,7 +15,7 @@ repo_vars:
   - DOCKERHUB_IMAGE = 'linuxserver/kasm'
   - DEV_DOCKERHUB_IMAGE = 'lsiodev/kasm'
   - PR_DOCKERHUB_IMAGE = 'lspipepr/kasm'
-  - DIST_IMAGE = 'alpine'
+  - DIST_IMAGE = 'ubuntu'
   - MULTIARCH='true'
   - CI='true'
   - CI_WEB='true'
