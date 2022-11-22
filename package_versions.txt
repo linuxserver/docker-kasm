@@ -37,7 +37,7 @@ iptables-1.8.8-r1
 jq-1.6-r1
 keyutils-libs-1.6.3-r1
 krb5-conf-1.0-r2
-krb5-libs-1.19.3-r0
+krb5-libs-1.19.4-r0
 libacl-2.3.1-r0
 libattr-2.5.1-r1
 libblkid-2.38-r1
