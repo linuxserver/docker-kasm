@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:arm64v8-3.16
+FROM ghcr.io/linuxserver/baseimage-ubuntu:arm64v8-jammy
 
 # set version label
 ARG BUILD_DATE
@@ -11,40 +11,46 @@ LABEL maintainer="thelamer"
 ENV DOCKER_TLS_CERTDIR=""
 ENV TINI_SUBREAPER=true
 
+#Add needed nvidia environment variables for https://github.com/NVIDIA/nvidia-docker
+ENV NVIDIA_DRIVER_CAPABILITIES="compute,graphics,video,utility"
+
 # Container setup
 RUN \
-  echo "**** install build packages ****" && \
-  apk add --no-cache --virtual=build-dependencies \
-    alpine-sdk \
-    npm && \
   echo "**** install packages ****" && \
-  apk add --no-cache \
-    bash \
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
+  echo "deb [arch=arm64] https://download.docker.com/linux/ubuntu jammy stable" > \
+    /etc/apt/sources.list.d/docker.list && \
+  curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | \
+    gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg && \
+  curl -s -L https://nvidia.github.io/libnvidia-container/ubuntu22.04/libnvidia-container.list | \
+    sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+    tee /etc/apt/sources.list.d/nvidia-container-toolkit.list && \
+  curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
+  apt-get install -y --no-install-recommends \
     btrfs-progs \
-    ca-certificates \
-    coreutils \
-    curl \
-    docker \
-    docker-cli-compose \
+    containerd.io \
+    docker-ce \
+    docker-ce-cli \
+    docker-compose-plugin \
+    drm-info \
     e2fsprogs \
-    e2fsprogs-extra \
-    findutils \
     fuse-overlayfs \
-    ip6tables \
+    g++ \
+    gcc \
     iptables \
     jq \
+    make \
     nodejs \
+    nvidia-docker2 \
     openssl \
     pigz \
     python3 \
-    shadow-uidmap \
     sudo \
-    xfsprogs \
-    xz \
-    zfs && \
+    uidmap \
+    xfsprogs && \
   echo "**** dind setup ****" && \
-  addgroup -S dockremap && \
-  adduser -S -G dockremap dockremap && \
+  useradd -U dockremap && \
+  usermod -G dockremap dockremap && \
   echo 'dockremap:165536:65536' >> /etc/subuid && \
   echo 'dockremap:165536:65536' >> /etc/subgid && \
   curl -o \
@@ -55,8 +61,7 @@ RUN \
   echo "**** setup wizard ****" && \
   mkdir -p /wizard && \
   if [ -z ${KASM_VERSION+x} ]; then \
-    KASM_VERSION=$(curl -sX GET 'https://api.github.com/repos/kasmtech/kasm-install-wizard/releases' \
-    | jq -r 'map(select(.prerelease)) | sort_by(.published_at) | last | .tag_name'); \
+      KASM_VERSION=$(curl -sX GET https://kasm-ci.s3.amazonaws.com/dev-version.txt); \
   fi && \
   curl -o \
     /tmp/wizard.tar.gz -L \
@@ -75,18 +80,19 @@ RUN \
     / && \
   echo "**** copy assets ****" && \
   cp \
-    /kasm_release/www/img/thumbnails/*.png \
+    /kasm_release/www/img/thumbnails/*.png /kasm_release/www/img/thumbnails/*.svg \
     /wizard/public/img/thumbnails/ && \
   cp \
     /kasm_release/conf/database/seed_data/default_images_a* \
     /wizard/ && \
   echo "**** cleanup ****" && \
-  apk del --purge \
-    build-dependencies && \
+  apt-get remove -y g++ gcc make && \
+  apt-get -y autoremove && \
+  apt-get clean && \
   rm -rf \
-    /root/.npm \
-    /root/.cache \
-    /tmp/*
+    /tmp/* \
+    /var/lib/apt/lists/* \
+    /var/tmp/*
 
 # add init files
 COPY root/ /

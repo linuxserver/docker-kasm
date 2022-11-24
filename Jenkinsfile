@@ -24,7 +24,7 @@ pipeline {
     DOCKERHUB_IMAGE = 'linuxserver/kasm'
     DEV_DOCKERHUB_IMAGE = 'lsiodev/kasm'
     PR_DOCKERHUB_IMAGE = 'lspipepr/kasm'
-    DIST_IMAGE = 'alpine'
+    DIST_IMAGE = 'ubuntu'
     MULTIARCH='true'
     CI='true'
     CI_WEB='true'
@@ -104,7 +104,7 @@ pipeline {
       steps{
         script{
           env.EXT_RELEASE = sh(
-            script: ''' curl -sX GET 'https://api.github.com/repos/kasmtech/kasm-install-wizard/releases'| jq -r 'map(select(.prerelease)) | sort_by(.published_at) | last | .tag_name' ''',
+            script: ''' curl -sX GET https://kasm-ci.s3.amazonaws.com/dev-version.txt ''',
             returnStdout: true).trim()
             env.RELEASE_LINK = 'custom_command'
         }
