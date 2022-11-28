@@ -12,7 +12,8 @@ ENV DOCKER_TLS_CERTDIR=""
 ENV TINI_SUBREAPER=true
 
 #Add needed nvidia environment variables for https://github.com/NVIDIA/nvidia-docker
-ENV NVIDIA_DRIVER_CAPABILITIES="compute,graphics,video,utility"
+ENV NVIDIA_DRIVER_CAPABILITIES="compute,graphics,video,utility" \
+    VERSION="develop"
 
 # Container setup
 RUN \
@@ -63,9 +64,10 @@ RUN \
   if [ -z ${KASM_VERSION+x} ]; then \
       KASM_VERSION=$(curl -sX GET https://kasm-ci.s3.amazonaws.com/dev-version.txt); \
   fi && \
+  echo "${KASM_VERSION}" > /version.txt && \
   curl -o \
     /tmp/wizard.tar.gz -L \
-    "https://github.com/kasmtech/kasm-install-wizard/archive/refs/tags/${KASM_VERSION}.tar.gz" && \
+    "https://github.com/kasmtech/kasm-install-wizard/tarball/feature/KASM-2903-upgrade-support" && \
   tar xf \
     /tmp/wizard.tar.gz -C \
     /wizard --strip-components=1 && \
@@ -78,6 +80,7 @@ RUN \
   tar xf \
     /tmp/kasm.tar.gz -C \
     / && \
+  sed -i 's/-N -e -H/-N -B -e -H/g' /kasm_release/upgrade.sh && \ 
   echo "**** copy assets ****" && \
   cp \
     /kasm_release/www/img/thumbnails/*.png /kasm_release/www/img/thumbnails/*.svg \
