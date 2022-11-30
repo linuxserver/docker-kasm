@@ -67,7 +67,7 @@ RUN \
   echo "${KASM_VERSION}" > /version.txt && \
   curl -o \
     /tmp/wizard.tar.gz -L \
-    "https://github.com/kasmtech/kasm-install-wizard/tarball/feature/KASM-2903-upgrade-support" && \
+    "https://github.com/kasmtech/kasm-install-wizard/archive/refs/tags/${KASM_VERSION}.tar.gz" && \
   tar xf \
     /tmp/wizard.tar.gz -C \
     /wizard --strip-components=1 && \
