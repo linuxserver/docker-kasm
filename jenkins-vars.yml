@@ -17,7 +17,7 @@ repo_vars:
   - DOCKERHUB_IMAGE = 'linuxserver/kasm'
   - DEV_DOCKERHUB_IMAGE = 'lsiodev/kasm'
   - PR_DOCKERHUB_IMAGE = 'lspipepr/kasm'
-  - DIST_IMAGE = 'alpine'
+  - DIST_IMAGE = 'ubuntu'
   - MULTIARCH='true'
   - CI='true'
   - CI_WEB='true'

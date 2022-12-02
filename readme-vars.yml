@@ -56,6 +56,8 @@ opt_param_env_vars:
 opt_param_usage_include_vols: true
 opt_param_volumes:
   - { vol_path: "/profiles", vol_host_path: "/path/to/profiles", desc: "Optionally specify a path for persistent profile storage." }
+  - { vol_path: "/dev/input", vol_host_path: "/dev/input", desc: "Optional for gamepad support." }
+  - { vol_path: "/run/udev/data", vol_host_path: "/run/udev/data", desc: "Optional for gamepad support." }
 
 opt_param_usage_include_ports: false
 opt_param_ports: []
@@ -87,9 +89,22 @@ app_setup_block: |
   * admin@kasm.local
   * user@kasm.local
 
-  Currently Synology systems are not supported due to them blocking CPU scheduling in their Kernel. 
+  Currently Synology systems are not supported due to them blocking CPU scheduling in their Kernel.
+
+  ### GPU Support
+
+  During installation an option will be presented to force all Workspace containers to mount in and use a specific GPU. If using an NVIDIA GPU you will need to pass `-e NVIDIA_VISIBLE_DEVICES=all` or `--gpus all` and have the [NVIDIA Container Runtime](https://github.com/NVIDIA/nvidia-container-runtime) installed on the host. Also if using NVIDIA, Kasm Workspaces has [native NVIDIA support](https://www.kasmweb.com/docs/latest/how_to/gpu.html) so you can optionally opt to simply use that instead of he manual override during installation. 
+
+  ### Gamepad support
+
+  In order to properly create virtual Gamepads you will need to mount from your host `/dev/input` and `/run/udev/data`. Please see [HERE](https://www.kasmweb.com/docs/develop/guide/gamepad_passthrough.html) for instructions on enabling gamepad support.
+
+  ### Persistant profiles
+
+  In order to use persistant profiles in Workspaces you will need to mount in a folder to use from your host to `/profiles`. From there when configuring a workspace you can set the `Persistant Profile Path` to IE `/profiles/ubuntu-focal/{username}/`, more infomation can be found [HERE](https://www.kasmweb.com/docs/latest/how_to/persistent_profiles.html).
 
 # changelog
 changelogs:
+  - { date: "05.11.22:", desc: "Rebase to Jammy, add support for GPUs, add support for Gamepads." }
   - { date: "23.09.22:", desc: "Migrate to s6v3." }
   - { date: "02.07.22:", desc: "Initial Release." }
