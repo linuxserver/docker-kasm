@@ -73,16 +73,24 @@ This image provides various versions that are available via tags. Please read th
 
 This container uses [Docker in Docker](https://www.docker.com/blog/docker-can-now-run-within-docker/) and requires being run in `privileged` mode. This container also requires an initial setup that runs on port 3000.
 
-**Unlike other containers the web interface port (default 443) needs to be set for the env variable `KASM_PORT` and both the inside and outside port IE for 4443 `KASM_PORT=4443` `-p 4443:4443`**
-
-**Unraid users due to the DinD storage layer `/opt/` should be mounted directly to a disk IE `/mnt/disk1/appdata/path` or optimally with a cache disk at `/mnt/cache/appdata/path`**
-
 Access the installation wizard at https://`your ip`:3000 and follow the instructions there. Once setup is complete access https://`your ip`:443 and login with the credentials you entered during setup. The default users are:
 
 * admin@kasm.local
 * user@kasm.local
 
 Currently Synology systems are not supported due to them blocking CPU scheduling in their Kernel.
+
+### GPU Support
+
+During installation an option will be presented to force all Workspace containers to mount in and use a specific GPU. If using an NVIDIA GPU you will need to pass `-e NVIDIA_VISIBLE_DEVICES=all` or `--gpus all` and have the [NVIDIA Container Runtime](https://github.com/NVIDIA/nvidia-container-runtime) installed on the host. Also if using NVIDIA, Kasm Workspaces has [native NVIDIA support](https://www.kasmweb.com/docs/latest/how_to/gpu.html) so you can optionally opt to simply use that instead of he manual override during installation. 
+
+### Gamepad support
+
+In order to properly create virtual Gamepads you will need to mount from your host `/dev/input` and `/run/udev/data`. Please see [HERE](https://www.kasmweb.com/docs/develop/guide/gamepad_passthrough.html) for instructions on enabling gamepad support.
+
+### Persistant profiles
+
+In order to use persistant profiles in Workspaces you will need to mount in a folder to use from your host to `/profiles`. From there when configuring a workspace you can set the `Persistant Profile Path` to IE `/profiles/ubuntu-focal/{username}/`, more infomation can be found [HERE](https://www.kasmweb.com/docs/latest/how_to/persistent_profiles.html).
 
 ## Usage
 
@@ -106,6 +114,8 @@ services:
     volumes:
       - /path/to/data:/opt
       - /path/to/profiles:/profiles #optional
+      - /dev/input:/dev/input #optional
+      - /run/udev/data:/run/udev/data #optional
     ports:
       - 3000:3000
       - 443:443
@@ -126,6 +136,8 @@ docker run -d \
   -p 443:443 \
   -v /path/to/data:/opt \
   -v /path/to/profiles:/profiles `#optional` \
+  -v /dev/input:/dev/input `#optional` \
+  -v /run/udev/data:/run/udev/data `#optional` \
   --restart unless-stopped \
   lscr.io/linuxserver/kasm:latest
 ```
@@ -144,6 +156,8 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e DOCKER_HUB_PASSWORD=PASS` | Optionally specify a DockerHub password to pull private images. |
 | `-v /opt` | Docker and installation storage. |
 | `-v /profiles` | Optionally specify a path for persistent profile storage. |
+| `-v /dev/input` | Optional for gamepad support. |
+| `-v /run/udev/data` | Optional for gamepad support. |
 
 ## Environment variables from files (Docker secrets)
 
@@ -241,5 +255,6 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **05.11.22:** - Rebase to Jammy, add support for GPUs, add support for Gamepads.
 * **23.09.22:** - Migrate to s6v3.
 * **02.07.22:** - Initial Release.
