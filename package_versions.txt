@@ -161,7 +161,7 @@ ncurses-bin6.3-2
 netbase6.3
 netcat1.218-4ubuntu1
 netcat-openbsd1.218-4ubuntu1
-nodejs16.18.1-deb-1nodesource1
+nodejs16.19.0-deb-1nodesource1
 nvidia-container-toolkit1.11.0-1
 nvidia-container-toolkit-base1.11.0-1
 nvidia-docker22.11.0-1
