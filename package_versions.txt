@@ -7,7 +7,7 @@ bash5.1-6ubuntu1
 bsdutils1:2.37.2-4ubuntu3
 btrfs-progs5.16.2-1
 ca-certificates20211016ubuntu0.22.04.1
-containerd.io1.6.14-1
+containerd.io1.6.15-1
 coreutils8.32-4.1ubuntu1
 curl7.81.0-1ubuntu1.6
 dash0.5.11+git20210903+057cd650a4ed-3build1
