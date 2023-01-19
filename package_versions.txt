@@ -179,7 +179,7 @@ python3-minimal3.10.6-1~22.04
 readline-common8.1.2-1
 sed4.8-1ubuntu2
 sensible-utils0.0.17
-sudo1.9.9-1ubuntu2.1
+sudo1.9.9-1ubuntu2.2
 sysvinit-utils3.01-1ubuntu1
 tar1.34+dfsg-1build3
 tzdata2022g-0ubuntu0.22.04.1
