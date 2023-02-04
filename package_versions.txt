@@ -106,8 +106,8 @@ libnftnl111.2.1-1build1
 libnghttp2-141.43.0-1build3
 libnpth01.6-3build2
 libnsl21.3.0-2build2
-libnvidia-container11.11.0-1
-libnvidia-container-tools1.11.0-1
+libnvidia-container11.12.0-1
+libnvidia-container-tools1.12.0-1
 libonig56.9.7.1-2build1
 libp11-kit00.24.0-6build1
 libpam0g1.4.0-11ubuntu2
@@ -162,9 +162,9 @@ netbase6.3
 netcat1.218-4ubuntu1
 netcat-openbsd1.218-4ubuntu1
 nodejs16.19.0-deb-1nodesource1
-nvidia-container-toolkit1.11.0-1
-nvidia-container-toolkit-base1.11.0-1
-nvidia-docker22.11.0-1
+nvidia-container-toolkit1.12.0-1
+nvidia-container-toolkit-base1.12.0-1
+nvidia-docker22.12.0-1
 openssl3.0.2-0ubuntu1.7
 passwd1:4.8.1-2ubuntu2.1
 perl-base5.34.0-3ubuntu1.1
