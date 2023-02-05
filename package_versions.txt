@@ -7,7 +7,7 @@ bash5.1-6ubuntu1
 bsdutils1:2.37.2-4ubuntu3
 btrfs-progs5.16.2-1
 ca-certificates20211016ubuntu0.22.04.1
-containerd.io1.6.15-1
+containerd.io1.6.16-1
 coreutils8.32-4.1ubuntu1
 curl7.81.0-1ubuntu1.7
 dash0.5.11+git20210903+057cd650a4ed-3build1
@@ -16,8 +16,8 @@ debianutils5.5-1ubuntu2
 diffutils1:3.8-0ubuntu2
 dirmngr2.2.27-3ubuntu2.1
 distro-info-data0.52ubuntu0.2
-docker-ce5:20.10.23~3-0~ubuntu-jammy
-docker-ce-cli5:20.10.23~3-0~ubuntu-jammy
+docker-ce5:23.0.0-1~ubuntu.22.04~jammy
+docker-ce-cli5:23.0.0-1~ubuntu.22.04~jammy
 docker-compose-plugin2.15.1-1~ubuntu.22.04~jammy
 dpkg1.21.1ubuntu2.1
 drm-info2.2.0-2
@@ -62,8 +62,8 @@ libcurl47.81.0-1ubuntu1.7
 libdb5.35.3.28+dfsg1-0.8ubuntu3
 libdebconfclient00.261ubuntu1
 libdevmapper1.02.12:1.02.175-2.1ubuntu4
-libdrm22.4.110-1ubuntu1
-libdrm-common2.4.110-1ubuntu1
+libdrm22.4.113-2~ubuntu0.22.04.1
+libdrm-common2.4.113-2~ubuntu0.22.04.1
 libedit23.1-20210910-1build1
 libexpat12.4.7-1ubuntu0.2
 libext2fs21.46.5-2ubuntu1.1
@@ -106,8 +106,8 @@ libnftnl111.2.1-1build1
 libnghttp2-141.43.0-1build3
 libnpth01.6-3build2
 libnsl21.3.0-2build2
-libnvidia-container11.11.0-1
-libnvidia-container-tools1.11.0-1
+libnvidia-container11.12.0-1
+libnvidia-container-tools1.12.0-1
 libonig56.9.7.1-2build1
 libp11-kit00.24.0-6build1
 libpam0g1.4.0-11ubuntu2
@@ -162,9 +162,9 @@ netbase6.3
 netcat1.218-4ubuntu1
 netcat-openbsd1.218-4ubuntu1
 nodejs16.19.0-deb-1nodesource1
-nvidia-container-toolkit1.11.0-1
-nvidia-container-toolkit-base1.11.0-1
-nvidia-docker22.11.0-1
+nvidia-container-toolkit1.12.0-1
+nvidia-container-toolkit-base1.12.0-1
+nvidia-docker22.12.0-1
 openssl3.0.2-0ubuntu1.7
 passwd1:4.8.1-2ubuntu2.1
 perl-base5.34.0-3ubuntu1.1
