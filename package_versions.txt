@@ -165,7 +165,7 @@ nodejs16.19.0-deb-1nodesource1
 nvidia-container-toolkit1.12.0-1
 nvidia-container-toolkit-base1.12.0-1
 nvidia-docker22.12.0-1
-openssl3.0.2-0ubuntu1.7
+openssl3.0.2-0ubuntu1.8
 passwd1:4.8.1-2ubuntu2.1
 perl-base5.34.0-3ubuntu1.1
 pigz2.6-1
