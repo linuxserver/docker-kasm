@@ -7,6 +7,7 @@ custom_version_command: "curl -sX GET https://kasm-ci.s3.amazonaws.com/dev-versi
 release_type: prerelease
 release_tag: develop
 ls_branch: develop
+build_armhf: false
 repo_vars:
   - BUILD_VERSION_ARG = 'KASM_VERSION'
   - LS_USER = 'linuxserver'
