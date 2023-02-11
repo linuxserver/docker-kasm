@@ -58,7 +58,7 @@ The architectures supported by this image are:
 | :----: | :----: | ---- |
 | x86-64 | ✅ | amd64-\<version tag\> |
 | arm64 | ✅ | arm64v8-\<version tag\> |
-| armhf| ❌ | |
+| armhf | ❌ | |
 
 ## Version Tags
 
@@ -68,7 +68,6 @@ This image provides various versions that are available via tags. Please read th
 | :----: | :----: |--- |
 | latest | ✅ | Stable Kasm releases |
 | develop | ✅ | Tip of develop |
-
 ## Application Setup
 
 This container uses [Docker in Docker](https://www.docker.com/blog/docker-can-now-run-within-docker/) and requires being run in `privileged` mode. This container also requires an initial setup that runs on port 3000.
@@ -92,6 +91,11 @@ In order to properly create virtual Gamepads you will need to mount from your ho
 
 In order to use persistant profiles in Workspaces you will need to mount in a folder to use from your host to `/profiles`. From there when configuring a workspace you can set the `Persistant Profile Path` to IE `/profiles/ubuntu-focal/{username}/`, more infomation can be found [HERE](https://www.kasmweb.com/docs/latest/how_to/persistent_profiles.html).
 
+### Strict reverse proxies
+
+This image uses a self-signed certificate by default. This naturally means the scheme is `https`.
+If you are using a reverse proxy which validates certificates, you need to [disable this check for the container](https://docs.linuxserver.io/faq#strict-proxy).
+
 ## Usage
 
 Here are some example snippets to help you get started creating a container.
@@ -108,7 +112,6 @@ services:
     privileged: true
     environment:
       - KASM_PORT=443
-      - TZ=Europe/London
       - DOCKER_HUB_USERNAME=USER #optional
       - DOCKER_HUB_PASSWORD=PASS #optional
     volumes:
@@ -129,7 +132,6 @@ docker run -d \
   --name=kasm \
   --privileged \
   -e KASM_PORT=443 \
-  -e TZ=Europe/London \
   -e DOCKER_HUB_USERNAME=USER `#optional` \
   -e DOCKER_HUB_PASSWORD=PASS `#optional` \
   -p 3000:3000 \
@@ -140,6 +142,7 @@ docker run -d \
   -v /run/udev/data:/run/udev/data `#optional` \
   --restart unless-stopped \
   lscr.io/linuxserver/kasm:develop
+
 ```
 
 ## Parameters
@@ -151,7 +154,6 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-p 3000` | Kasm Installation wizard. (https) |
 | `-p 443` | Kasm Workspaces interface. (https) |
 | `-e KASM_PORT=443` | Specify the port you bind to the outside for Kasm Workspaces. |
-| `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London. |
 | `-e DOCKER_HUB_USERNAME=USER` | Optionally specify a DockerHub Username to pull private images. |
 | `-e DOCKER_HUB_PASSWORD=PASS` | Optionally specify a DockerHub password to pull private images. |
 | `-v /opt` | Docker and installation storage. |
