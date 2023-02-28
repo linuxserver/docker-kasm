@@ -9,7 +9,7 @@ btrfs-progs5.16.2-1
 ca-certificates20211016ubuntu0.22.04.1
 containerd.io1.6.18-1
 coreutils8.32-4.1ubuntu1
-curl7.81.0-1ubuntu1.7
+curl7.81.0-1ubuntu1.8
 dash0.5.11+git20210903+057cd650a4ed-3build1
 debconf1.5.79ubuntu1
 debianutils5.5-1ubuntu2
@@ -58,7 +58,7 @@ libcap-ng00.7.9-2.2build3
 libc-bin2.35-0ubuntu3.1
 libcom-err21.46.5-2ubuntu1.1
 libcrypt11:4.4.27-1
-libcurl47.81.0-1ubuntu1.7
+libcurl47.81.0-1ubuntu1.8
 libdb5.35.3.28+dfsg1-0.8ubuntu3
 libdebconfclient00.261ubuntu1
 libdevmapper1.02.12:1.02.175-2.1ubuntu4
