@@ -1,191 +1,760 @@
-adduser3.118ubuntu5
-apt2.4.8
-apt-utils2.4.8
-base-files12ubuntu4.3
-base-passwd3.5.52build1
-bash5.1-6ubuntu1
-bsdutils1:2.37.2-4ubuntu3
-btrfs-progs5.16.2-1
-ca-certificates20211016ubuntu0.22.04.1
-containerd.io1.6.18-1
-coreutils8.32-4.1ubuntu1
-curl7.81.0-1ubuntu1.7
-dash0.5.11+git20210903+057cd650a4ed-3build1
-debconf1.5.79ubuntu1
-debianutils5.5-1ubuntu2
-diffutils1:3.8-0ubuntu2
-dirmngr2.2.27-3ubuntu2.1
-distro-info-data0.52ubuntu0.2
-docker-ce5:23.0.1-1~ubuntu.22.04~jammy
-docker-ce-cli5:23.0.1-1~ubuntu.22.04~jammy
-docker-compose-plugin2.16.0-1~ubuntu.22.04~jammy
-dpkg1.21.1ubuntu2.1
-drm-info2.2.0-2
-e2fsprogs1.46.5-2ubuntu1.1
-findutils4.8.0-1ubuntu3
-fuse33.10.5-1build1
-fuse-overlayfs1.7.1-1
-gcc-12-base12.1.0-2ubuntu1~22.04
-gnupg2.2.27-3ubuntu2.1
-gnupg-l10n2.2.27-3ubuntu2.1
-gnupg-utils2.2.27-3ubuntu2.1
-gpg2.2.27-3ubuntu2.1
-gpg-agent2.2.27-3ubuntu2.1
-gpgconf2.2.27-3ubuntu2.1
-gpgsm2.2.27-3ubuntu2.1
-gpgv2.2.27-3ubuntu2.1
-gpg-wks-client2.2.27-3ubuntu2.1
-gpg-wks-server2.2.27-3ubuntu2.1
-grep3.7-1build1
-gzip1.10-4ubuntu4.1
-hostname3.23ubuntu2
-init-system-helpers1.62
-iptables1.8.7-1ubuntu5
-jq1.6-2.1ubuntu3
-libacl12.3.1-1
-libapt-pkg6.02.4.8
-libassuan02.5.5-1build1
-libattr11:2.5.1-1build1
-libaudit11:3.0.7-1build1
-libaudit-common1:3.0.7-1build1
-libblkid12.37.2-4ubuntu3
-libbrotli11.0.9-2build6
-libbsd00.11.5-1
-libbz2-1.01.0.8-5build1
-libc62.35-0ubuntu3.1
-libcap21:2.44-1build3
-libcap-ng00.7.9-2.2build3
-libc-bin2.35-0ubuntu3.1
-libcom-err21.46.5-2ubuntu1.1
-libcrypt11:4.4.27-1
-libcurl47.81.0-1ubuntu1.7
-libdb5.35.3.28+dfsg1-0.8ubuntu3
-libdebconfclient00.261ubuntu1
-libdevmapper1.02.12:1.02.175-2.1ubuntu4
-libdrm22.4.113-2~ubuntu0.22.04.1
-libdrm-common2.4.113-2~ubuntu0.22.04.1
-libedit23.1-20210910-1build1
-libexpat12.4.7-1ubuntu0.2
-libext2fs21.46.5-2ubuntu1.1
-libffi83.4.2-4
-libfuse3-33.10.5-1build1
-libgcc-s112.1.0-2ubuntu1~22.04
-libgcrypt201.9.4-3ubuntu3
-libgmp102:6.2.1+dfsg-3ubuntu1
-libgnutls303.7.3-4ubuntu1.1
-libgpg-error01.43-3
-libgssapi-krb5-21.19.2-2ubuntu0.1
-libhogweed63.7.3-1build2
-libicu7070.1-2
-libidn2-02.3.2-2build1
-libinih153-1ubuntu3
-libip4tc21.8.7-1ubuntu5
-libip6tc21.8.7-1ubuntu5
-libjq11.6-2.1ubuntu3
-libjson-c50.15-3~ubuntu1.22.04.1
-libk5crypto31.19.2-2ubuntu0.1
-libkeyutils11.6.1-2ubuntu3
-libkrb5-31.19.2-2ubuntu0.1
-libkrb5support01.19.2-2ubuntu0.1
-libksba81.6.0-2ubuntu0.2
-libldap-2.5-02.5.13+dfsg-0ubuntu0.22.04.1
-libldap-common2.5.13+dfsg-0ubuntu0.22.04.1
-liblz4-11.9.3-2build2
-liblzma55.2.5-2ubuntu1
-liblzo2-22.10-2build3
-libmd01.0.4-1build1
-libmnl01.0.4-3build2
-libmount12.37.2-4ubuntu3
-libmpdec32.5.1-2build2
-libncurses66.3-2
-libncursesw66.3-2
-libnetfilter-conntrack31.0.9-1
-libnettle83.7.3-1build2
-libnfnetlink01.0.1-3build3
-libnftnl111.2.1-1build1
-libnghttp2-141.43.0-1build3
-libnpth01.6-3build2
-libnsl21.3.0-2build2
-libnvidia-container11.12.0-1
-libnvidia-container-tools1.12.0-1
-libonig56.9.7.1-2build1
-libp11-kit00.24.0-6build1
-libpam0g1.4.0-11ubuntu2.3
-libpam-modules1.4.0-11ubuntu2.3
-libpam-modules-bin1.4.0-11ubuntu2.3
-libpam-runtime1.4.0-11ubuntu2.3
-libpcre2-8-010.39-3ubuntu0.1
-libpcre32:8.39-13ubuntu0.22.04.1
-libprocps82:3.3.17-6ubuntu2
-libpsl50.21.0-1.2build2
-libpython3.10-minimal3.10.6-1~22.04.2
-libpython3.10-stdlib3.10.6-1~22.04.2
-libpython3-stdlib3.10.6-1~22.04
-libreadline88.1.2-1
-librtmp12.4+20151223.gitfa8646d.1-2build4
-libsasl2-22.1.27+dfsg2-3ubuntu1.1
-libsasl2-modules2.1.27+dfsg2-3ubuntu1.1
-libsasl2-modules-db2.1.27+dfsg2-3ubuntu1.1
-libseccomp22.5.3-2ubuntu2
-libselinux13.3-1build2
-libsemanage23.3-1build2
-libsemanage-common3.3-1build2
-libsepol23.3-1build1
-libsmartcols12.37.2-4ubuntu3
-libsqlite3-03.37.2-2ubuntu0.1
-libss21.46.5-2ubuntu1.1
-libssh-40.9.6-2build1
-libssl33.0.2-0ubuntu1.8
-libstdc++612.1.0-2ubuntu1~22.04
-libsystemd0249.11-0ubuntu3.6
-libtasn1-64.18.0-4build1
-libtinfo66.3-2
-libtirpc31.3.2-2ubuntu0.1
-libtirpc-common1.3.2-2ubuntu0.1
-libudev1249.11-0ubuntu3.6
-libunistring21.0-1
-libuuid12.37.2-4ubuntu3
-libxtables121.8.7-1ubuntu5
-libxxhash00.8.1-1
-libzstd11.4.8+dfsg-3build1
-locales2.35-0ubuntu3.1
-login1:4.8.1-2ubuntu2.1
-logsave1.46.5-2ubuntu1.1
-lsb-base11.1.0ubuntu4
-lsb-release11.1.0ubuntu4
-mawk1.3.4.20200120-3
-media-types7.0.0
-mount2.37.2-4ubuntu3
-ncurses-base6.3-2
-ncurses-bin6.3-2
-netbase6.3
-netcat1.218-4ubuntu1
-netcat-openbsd1.218-4ubuntu1
-nodejs16.19.1-deb-1nodesource1
-nvidia-container-toolkit1.12.0-1
-nvidia-container-toolkit-base1.12.0-1
-nvidia-docker22.12.0-1
-openssl3.0.2-0ubuntu1.8
-passwd1:4.8.1-2ubuntu2.1
-perl-base5.34.0-3ubuntu1.1
-pigz2.6-1
-pinentry-curses1.1.1-1build2
-procps2:3.3.17-6ubuntu2
-publicsuffix20211207.1025-1
-python3.103.10.6-1~22.04.2
-python3.10-minimal3.10.6-1~22.04.2
-python33.10.6-1~22.04
-python3-minimal3.10.6-1~22.04
-readline-common8.1.2-1
-sed4.8-1ubuntu2
-sensible-utils0.0.17
-sudo1.9.9-1ubuntu2.2
-sysvinit-utils3.01-1ubuntu1
-tar1.34+dfsg-1build3
-tzdata2022g-0ubuntu0.22.04.1
-ubuntu-keyring2021.03.26
-uidmap1:4.8.1-2ubuntu2.1
-usrmerge25ubuntu2
-util-linux2.37.2-4ubuntu3
-xfsprogs5.13.0-1ubuntu2
-zlib1g1:1.2.11.dfsg-2ubuntu9.2
+NAME                                                                          VERSION                                            TYPE      
+1to2                                                                          1.0.0                                              npm        
+@balena/dockerignore                                                          1.0.2                                              npm        
+@colors/colors                                                                1.5.0                                              npm        
+@gar/promisify                                                                1.1.3                                              npm        
+@isaacs/string-locale-compare                                                 1.1.0                                              npm        
+@npmcli/arborist                                                              5.6.3                                              npm        
+@npmcli/ci-detect                                                             2.0.0                                              npm        
+@npmcli/config                                                                4.2.2                                              npm        
+@npmcli/disparity-colors                                                      2.0.0                                              npm        
+@npmcli/fs                                                                    2.1.2                                              npm        
+@npmcli/git                                                                   3.0.2                                              npm        
+@npmcli/installed-package-contents                                            1.0.7                                              npm        
+@npmcli/map-workspaces                                                        2.0.4                                              npm        
+@npmcli/metavuln-calculator                                                   3.1.1                                              npm        
+@npmcli/move-file                                                             2.0.1                                              npm        
+@npmcli/name-from-folder                                                      1.0.1                                              npm        
+@npmcli/node-gyp                                                              2.0.0                                              npm        
+@npmcli/package-json                                                          2.0.0                                              npm        
+@npmcli/promise-spawn                                                         3.0.0                                              npm        
+@npmcli/query                                                                 1.2.0                                              npm        
+@npmcli/run-script                                                            4.2.1                                              npm        
+@socket.io/component-emitter                                                  3.1.0                                              npm        
+@tootallnate/once                                                             2.0.0                                              npm        
+@types/cookie                                                                 0.4.1                                              npm        
+@types/cors                                                                   2.8.13                                             npm        
+@types/node                                                                   18.14.6                                            npm        
+abbrev                                                                        1.1.1                                              npm        
+accepts                                                                       1.3.8                                              npm        
+adduser                                                                       3.118ubuntu5                                       deb        
+agent-base                                                                    6.0.2                                              npm        
+agentkeepalive                                                                4.2.1                                              npm        
+aggregate-error                                                               3.1.0                                              npm        
+ansi-regex                                                                    5.0.1                                              npm        
+ansi-styles                                                                   4.3.0                                              npm        
+aproba                                                                        2.0.0                                              npm        
+apt                                                                           2.4.8                                              deb        
+apt-utils                                                                     2.4.8                                              deb        
+archy                                                                         1.0.0                                              npm        
+are-we-there-yet                                                              3.0.1                                              npm        
+argparse                                                                      2.0.1                                              npm        
+array-flatten                                                                 1.1.1                                              npm        
+asap                                                                          2.0.6                                              npm        
+asn1                                                                          0.2.6                                              npm        
+balanced-match                                                                1.0.2                                              npm        
+base-files                                                                    12ubuntu4.3                                        deb        
+base-passwd                                                                   3.5.52build1                                       deb        
+base64-js                                                                     1.5.1                                              npm        
+base64id                                                                      2.0.0                                              npm        
+bash                                                                          5.1-6ubuntu1                                       deb        
+bcrypt-pbkdf                                                                  1.0.2                                              npm        
+bin-links                                                                     3.0.3                                              npm        
+binary-extensions                                                             2.2.0                                              npm        
+bl                                                                            4.1.0                                              npm        
+body-parser                                                                   1.20.1                                             npm        
+brace-expansion                                                               1.1.11                                             npm        
+brace-expansion                                                               2.0.1                                              npm        
+bsdutils                                                                      1:2.37.2-4ubuntu3                                  deb        
+btrfs-progs                                                                   5.16.2-1                                           deb        
+buffer                                                                        5.7.1                                              npm        
+buildcheck                                                                    0.0.3                                              npm        
+builtins                                                                      5.0.1                                              npm        
+bytes                                                                         3.1.2                                              npm        
+ca-certificates                                                               20211016ubuntu0.22.04.1                            deb        
+cacache                                                                       16.1.3                                             npm        
+call-bind                                                                     1.0.2                                              npm        
+chalk                                                                         4.1.2                                              npm        
+chownr                                                                        1.1.4                                              npm        
+chownr                                                                        2.0.0                                              npm        
+cidr-regex                                                                    3.1.1                                              npm        
+clean-stack                                                                   2.2.0                                              npm        
+cli-columns                                                                   4.0.0                                              npm        
+cli-table3                                                                    0.6.2                                              npm        
+clone                                                                         1.0.4                                              npm        
+cmd-shim                                                                      5.0.0                                              npm        
+color-convert                                                                 2.0.1                                              npm        
+color-name                                                                    1.1.4                                              npm        
+color-support                                                                 1.1.3                                              npm        
+columnify                                                                     1.6.0                                              npm        
+common-ancestor-path                                                          1.0.1                                              npm        
+concat-map                                                                    0.0.1                                              npm        
+console-control-strings                                                       1.1.0                                              npm        
+containerd.io                                                                 1.6.18-1                                           deb        
+content-disposition                                                           0.5.4                                              npm        
+content-type                                                                  1.0.5                                              npm        
+cookie                                                                        0.4.2                                              npm        
+cookie                                                                        0.5.0                                              npm        
+cookie-signature                                                              1.0.6                                              npm        
+corepack                                                                      0.15.1                                             npm        
+coreutils                                                                     8.32-4.1ubuntu1                                    deb        
+cors                                                                          2.8.5                                              npm        
+cpu-features                                                                  0.0.4                                              npm        
+cssesc                                                                        3.0.0                                              npm        
+curl                                                                          7.81.0-1ubuntu1.8                                  deb        
+dash                                                                          0.5.11+git20210903+057cd650a4ed-3build1            deb        
+debconf                                                                       1.5.79ubuntu1                                      deb        
+debianutils                                                                   5.5-1ubuntu2                                       deb        
+debug                                                                         2.6.9                                              npm        
+debug                                                                         4.3.4                                              npm        
+debuglog                                                                      1.0.1                                              npm        
+defaults                                                                      1.0.3                                              npm        
+delegates                                                                     1.0.0                                              npm        
+depd                                                                          1.1.2                                              npm        
+depd                                                                          2.0.0                                              npm        
+destroy                                                                       1.2.0                                              npm        
+dezalgo                                                                       1.0.4                                              npm        
+diff                                                                          5.1.0                                              npm        
+diffutils                                                                     1:3.8-0ubuntu2                                     deb        
+dirmngr                                                                       2.2.27-3ubuntu2.1                                  deb        
+distro-info-data                                                              0.52ubuntu0.2                                      deb        
+docker-ce                                                                     5:23.0.1-1~ubuntu.22.04~jammy                      deb        
+docker-ce-cli                                                                 5:23.0.1-1~ubuntu.22.04~jammy                      deb        
+docker-compose-plugin                                                         2.16.0-1~ubuntu.22.04~jammy                        deb        
+docker-modem                                                                  3.0.6                                              npm        
+dockerode                                                                     3.3.4                                              npm        
+dpkg                                                                          1.21.1ubuntu2.1                                    deb        
+drm-info                                                                      2.2.0-2                                            deb        
+e2fsprogs                                                                     1.46.5-2ubuntu1.1                                  deb        
+ee-first                                                                      1.1.1                                              npm        
+emoji-regex                                                                   8.0.0                                              npm        
+encodeurl                                                                     1.0.2                                              npm        
+encoding                                                                      0.1.13                                             npm        
+end-of-stream                                                                 1.4.4                                              npm        
+engine.io                                                                     6.4.1                                              npm        
+engine.io-parser                                                              5.0.6                                              npm        
+env-paths                                                                     2.2.1                                              npm        
+err-code                                                                      2.0.3                                              npm        
+escape-html                                                                   1.0.3                                              npm        
+etag                                                                          1.8.1                                              npm        
+express                                                                       4.18.2                                             npm        
+fastest-levenshtein                                                           1.0.12                                             npm        
+finalhandler                                                                  1.2.0                                              npm        
+findutils                                                                     4.8.0-1ubuntu3                                     deb        
+forwarded                                                                     0.2.0                                              npm        
+fresh                                                                         0.5.2                                              npm        
+fs-constants                                                                  1.0.0                                              npm        
+fs-minipass                                                                   2.1.0                                              npm        
+fs.realpath                                                                   1.0.0                                              npm        
+function-bind                                                                 1.1.1                                              npm        
+fuse-overlayfs                                                                1.7.1-1                                            deb        
+fuse3                                                                         3.10.5-1build1                                     deb        
+gauge                                                                         4.0.4                                              npm        
+gcc-12-base                                                                   12.1.0-2ubuntu1~22.04                              deb        
+get-intrinsic                                                                 1.2.0                                              npm        
+github.com/AlecAivazis/survey/v2                                              v2.3.6                                             go-module  
+github.com/BurntSushi/toml                                                    v1.0.0                                             go-module  
+github.com/Microsoft/hcsshim                                                  v0.9.6                                             go-module  
+github.com/NVIDIA/go-nvml                                                     v0.11.6-0.0.20220823120812-7e2082095e82            go-module  
+github.com/NVIDIA/nvidia-container-toolkit                                    (devel)                                            go-module  
+github.com/a8m/envsubst                                                       v1.3.0                                             go-module  
+github.com/aws/aws-sdk-go-v2                                                  v1.16.3                                            go-module  
+github.com/aws/aws-sdk-go-v2/config                                           v1.15.5                                            go-module  
+github.com/aws/aws-sdk-go-v2/credentials                                      v1.12.0                                            go-module  
+github.com/aws/aws-sdk-go-v2/feature/ec2/imds                                 v1.12.4                                            go-module  
+github.com/aws/aws-sdk-go-v2/internal/configsources                           v1.1.10                                            go-module  
+github.com/aws/aws-sdk-go-v2/internal/endpoints/v2                            v2.4.4                                             go-module  
+github.com/aws/aws-sdk-go-v2/internal/ini                                     v1.3.11                                            go-module  
+github.com/aws/aws-sdk-go-v2/service/internal/presigned-url                   v1.9.4                                             go-module  
+github.com/aws/aws-sdk-go-v2/service/sso                                      v1.11.4                                            go-module  
+github.com/aws/aws-sdk-go-v2/service/sts                                      v1.16.4                                            go-module  
+github.com/aws/smithy-go                                                      v1.11.2                                            go-module  
+github.com/beorn7/perks                                                       v1.0.1                                             go-module  
+github.com/blang/semver                                                       v3.5.1+incompatible                                go-module  
+github.com/buger/goterm                                                       v1.0.4                                             go-module  
+github.com/cenkalti/backoff/v4                                                v4.1.2                                             go-module  
+github.com/cespare/xxhash/v2                                                  v2.1.2                                             go-module  
+github.com/checkpoint-restore/go-criu/v5                                      v5.3.0                                             go-module  
+github.com/cilium/ebpf                                                        v0.7.0                                             go-module  
+github.com/compose-spec/compose-go                                            v1.9.0                                             go-module  
+github.com/container-orchestrated-devices/container-device-interface          v0.5.4-0.20230111111500-5b3b5d81179a               go-module  
+github.com/containerd/aufs                                                    v1.0.0                                             go-module  
+github.com/containerd/btrfs                                                   v1.0.0                                             go-module  
+github.com/containerd/cgroups                                                 v1.0.4                                             go-module  
+github.com/containerd/console                                                 v1.0.3                                             go-module  
+github.com/containerd/containerd                                              v0.0.0-20230215225028-2456e983eb9e                 go-module  
+github.com/containerd/containerd                                              v1.6.16                                            go-module  
+github.com/containerd/continuity                                              v0.3.0                                             go-module  
+github.com/containerd/fifo                                                    v1.0.0                                             go-module  
+github.com/containerd/go-cni                                                  v1.1.6                                             go-module  
+github.com/containerd/go-runc                                                 v1.0.0                                             go-module  
+github.com/containerd/imgcrypt                                                v1.1.4                                             go-module  
+github.com/containerd/nri                                                     v0.1.0                                             go-module  
+github.com/containerd/ttrpc                                                   v1.1.0                                             go-module  
+github.com/containerd/typeurl                                                 v1.0.2                                             go-module  
+github.com/containerd/zfs                                                     v1.0.0                                             go-module  
+github.com/containernetworking/cni                                            v1.1.1                                             go-module  
+github.com/containernetworking/plugins                                        v1.1.1                                             go-module  
+github.com/containers/ocicrypt                                                v1.1.3                                             go-module  
+github.com/coreos/go-systemd/v22                                              v22.3.2                                            go-module  
+github.com/cpuguy83/go-md2man/v2                                              v2.0.0                                             go-module  
+github.com/cpuguy83/go-md2man/v2                                              v2.0.0-20190314233015-f79a8a8ca69d                 go-module  
+github.com/cpuguy83/go-md2man/v2                                              v2.0.1                                             go-module  
+github.com/cyphar/filepath-securejoin                                         v0.2.3                                             go-module  
+github.com/davecgh/go-spew                                                    v1.1.1                                             go-module  
+github.com/distribution/distribution/v3                                       v3.0.0-20221201083218-92d136e113cf                 go-module  
+github.com/docker/buildx                                                      v0.10.2                                            go-module  
+github.com/docker/cli                                                         v23.0.0+incompatible                               go-module  
+github.com/docker/cli/cmd/docker                                              (devel)                                            go-module  
+github.com/docker/compose/v2                                                  (devel)                                            go-module  
+github.com/docker/distribution                                                v2.8.1+incompatible                                go-module  
+github.com/docker/docker                                                      v23.0.0+incompatible                               go-module  
+github.com/docker/docker-credential-helpers                                   v0.7.0                                             go-module  
+github.com/docker/docker/cmd/docker-proxy                                     (devel)                                            go-module  
+github.com/docker/docker/cmd/dockerd                                          (devel)                                            go-module  
+github.com/docker/go                                                          v1.5.1-1.0.20160303222718-d30aec9fd63c             go-module  
+github.com/docker/go-connections                                              v0.4.0                                             go-module  
+github.com/docker/go-events                                                   v0.0.0-20190806004212-e31b211e4f1c                 go-module  
+github.com/docker/go-metrics                                                  v0.0.1                                             go-module  
+github.com/docker/go-units                                                    v0.4.0                                             go-module  
+github.com/docker/go-units                                                    v0.5.0                                             go-module  
+github.com/elliotchance/orderedmap                                            v1.4.0                                             go-module  
+github.com/emicklei/go-restful                                                v2.9.5+incompatible                                go-module  
+github.com/fatih/color                                                        v1.13.0                                            go-module  
+github.com/felixge/httpsnoop                                                  v1.0.2                                             go-module  
+github.com/fsnotify/fsnotify                                                  v1.4.9                                             go-module  
+github.com/fsnotify/fsnotify                                                  v1.5.4                                             go-module  
+github.com/fvbommel/sortorder                                                 v1.0.2                                             go-module  
+github.com/go-logr/logr                                                       v1.2.2                                             go-module  
+github.com/go-logr/logr                                                       v1.2.3                                             go-module  
+github.com/go-logr/stdr                                                       v1.2.2                                             go-module  
+github.com/goccy/go-yaml                                                      v1.9.5                                             go-module  
+github.com/godbus/dbus/v5                                                     v5.0.6                                             go-module  
+github.com/gofrs/flock                                                        v0.8.1                                             go-module  
+github.com/gogo/googleapis                                                    v1.3.2                                             go-module  
+github.com/gogo/googleapis                                                    v1.4.1                                             go-module  
+github.com/gogo/protobuf                                                      v1.3.2                                             go-module  
+github.com/golang/mock                                                        v1.6.0                                             go-module  
+github.com/golang/protobuf                                                    v1.5.2                                             go-module  
+github.com/google/go-cmp                                                      v0.5.6                                             go-module  
+github.com/google/go-cmp                                                      v0.5.9                                             go-module  
+github.com/google/gofuzz                                                      v1.2.0                                             go-module  
+github.com/google/shlex                                                       v0.0.0-20191202100458-e7afc7fbc510                 go-module  
+github.com/google/uuid                                                        v1.2.0                                             go-module  
+github.com/googleapis/gnostic                                                 v0.5.5                                             go-module  
+github.com/gorilla/mux                                                        v1.8.0                                             go-module  
+github.com/grpc-ecosystem/go-grpc-middleware                                  v1.3.0                                             go-module  
+github.com/grpc-ecosystem/go-grpc-prometheus                                  v1.2.0                                             go-module  
+github.com/grpc-ecosystem/grpc-gateway                                        v1.16.0                                            go-module  
+github.com/hashicorp/errwrap                                                  v1.1.0                                             go-module  
+github.com/hashicorp/go-multierror                                            v1.1.1                                             go-module  
+github.com/hashicorp/go-version                                               v1.6.0                                             go-module  
+github.com/imdario/mergo                                                      v0.3.12                                            go-module  
+github.com/imdario/mergo                                                      v0.3.13                                            go-module  
+github.com/intel/goresctrl                                                    v0.2.0                                             go-module  
+github.com/jinzhu/copier                                                      v0.3.5                                             go-module  
+github.com/jonboulle/clockwork                                                v0.3.1-0.20230117163003-a89700cec744               go-module  
+github.com/json-iterator/go                                                   v1.1.12                                            go-module  
+github.com/kballard/go-shellquote                                             v0.0.0-20180428030007-95032a82bc51                 go-module  
+github.com/klauspost/compress                                                 v1.11.13                                           go-module  
+github.com/klauspost/compress                                                 v1.15.12                                           go-module  
+github.com/magiconair/properties                                              v1.8.6                                             go-module  
+github.com/mattn/go-colorable                                                 v0.1.12                                            go-module  
+github.com/mattn/go-isatty                                                    v0.0.14                                            go-module  
+github.com/mattn/go-isatty                                                    v0.0.16                                            go-module  
+github.com/mattn/go-runewidth                                                 v0.0.14                                            go-module  
+github.com/mattn/go-shellwords                                                v1.0.12                                            go-module  
+github.com/matttproud/golang_protobuf_extensions                              v1.0.4                                             go-module  
+github.com/mgutz/ansi                                                         v0.0.0-20170206155736-9520e82c474b                 go-module  
+github.com/miekg/pkcs11                                                       v1.1.1                                             go-module  
+github.com/mikefarah/yq/v4                                                    v0.0.0-20220429015737-1425d0720ec1                 go-module  
+github.com/mistifyio/go-zfs                                                   v2.1.2-0.20190413222219-f784269be439+incompatible  go-module  
+github.com/mitchellh/mapstructure                                             v1.5.0                                             go-module  
+github.com/moby/buildkit                                                      v0.11.2                                            go-module  
+github.com/moby/locker                                                        v1.0.1                                             go-module  
+github.com/moby/patternmatcher                                                v0.5.0                                             go-module  
+github.com/moby/spdystream                                                    v0.2.0                                             go-module  
+github.com/moby/sys/mountinfo                                                 v0.5.0                                             go-module  
+github.com/moby/sys/mountinfo                                                 v0.6.2                                             go-module  
+github.com/moby/sys/sequential                                                v0.5.0                                             go-module  
+github.com/moby/sys/signal                                                    v0.6.0                                             go-module  
+github.com/moby/sys/signal                                                    v0.7.0                                             go-module  
+github.com/moby/sys/symlink                                                   v0.2.0                                             go-module  
+github.com/moby/term                                                          v0.0.0-20221128092401-c43b287e0e0f                 go-module  
+github.com/modern-go/concurrent                                               v0.0.0-20180306012644-bacd9c7ef1dd                 go-module  
+github.com/modern-go/reflect2                                                 v1.0.2                                             go-module  
+github.com/morikuni/aec                                                       v1.0.0                                             go-module  
+github.com/mrunalp/fileutils                                                  v0.5.0                                             go-module  
+github.com/opencontainers/go-digest                                           v1.0.0                                             go-module  
+github.com/opencontainers/image-spec                                          v1.0.3-0.20211202183452-c5a74bcca799               go-module  
+github.com/opencontainers/image-spec                                          v1.1.0-rc2                                         go-module  
+github.com/opencontainers/runc                                                v0.0.0-20220824004513-5fd4c4d14413                 go-module  
+github.com/opencontainers/runc                                                v1.1.2                                             go-module  
+github.com/opencontainers/runc                                                v1.1.3                                             go-module  
+github.com/opencontainers/runc                                                v1.1.4                                             go-module  
+github.com/opencontainers/runtime-spec                                        v1.0.3-0.20210326190908-1c3f411f0417               go-module  
+github.com/opencontainers/runtime-spec                                        v1.0.3-0.20220825212826-86290f6a00fb               go-module  
+github.com/opencontainers/runtime-tools                                       v0.9.1-0.20221107090550-2e043c6bd626               go-module  
+github.com/opencontainers/selinux                                             v1.10.0                                            go-module  
+github.com/opencontainers/selinux                                             v1.10.1                                            go-module  
+github.com/pelletier/go-toml                                                  v1.9.4                                             go-module  
+github.com/pelletier/go-toml                                                  v1.9.5                                             go-module  
+github.com/pkg/errors                                                         v0.9.1                                             go-module  
+github.com/pmezard/go-difflib                                                 v1.0.0                                             go-module  
+github.com/prometheus/client_golang                                           v1.11.1                                            go-module  
+github.com/prometheus/client_golang                                           v1.14.0                                            go-module  
+github.com/prometheus/client_model                                            v0.2.0                                             go-module  
+github.com/prometheus/client_model                                            v0.3.0                                             go-module  
+github.com/prometheus/common                                                  v0.30.0                                            go-module  
+github.com/prometheus/common                                                  v0.37.0                                            go-module  
+github.com/prometheus/procfs                                                  v0.7.3                                             go-module  
+github.com/prometheus/procfs                                                  v0.8.0                                             go-module  
+github.com/rivo/uniseg                                                        v0.2.0                                             go-module  
+github.com/russross/blackfriday/v2                                            v2.0.1                                             go-module  
+github.com/russross/blackfriday/v2                                            v2.1.0                                             go-module  
+github.com/seccomp/libseccomp-golang                                          v0.9.2-0.20220502022130-f33da4d89646               go-module  
+github.com/serialx/hashring                                                   v0.0.0-20190422032157-8b2912629002                 go-module  
+github.com/shurcooL/sanitized_anchor_name                                     v1.0.0                                             go-module  
+github.com/sirupsen/logrus                                                    v1.8.1                                             go-module  
+github.com/sirupsen/logrus                                                    v1.9.0                                             go-module  
+github.com/spf13/cobra                                                        v1.4.0                                             go-module  
+github.com/spf13/cobra                                                        v1.6.1                                             go-module  
+github.com/spf13/pflag                                                        v1.0.5                                             go-module  
+github.com/stefanberger/go-pkcs11uri                                          v0.0.0-20201008174630-78d3cae3a980                 go-module  
+github.com/stretchr/testify                                                   v1.8.1                                             go-module  
+github.com/syndtr/gocapability                                                v0.0.0-20200815063812-42c35b437635                 go-module  
+github.com/tchap/go-patricia                                                  v2.2.6+incompatible                                go-module  
+github.com/theupdateframework/notary                                          v0.7.0                                             go-module  
+github.com/tilt-dev/fsnotify                                                  v1.4.8-0.20220602155310-fff9c274a375               go-module  
+github.com/timtadh/data-structures                                            v0.5.3                                             go-module  
+github.com/timtadh/lexmachine                                                 v0.2.2                                             go-module  
+github.com/tonistiigi/fsutil                                                  v0.0.0-20230105215944-fb433841cbfa                 go-module  
+github.com/tonistiigi/units                                                   v0.0.0-20180711220420-6950e57a87ea                 go-module  
+github.com/tonistiigi/vt100                                                   v0.0.0-20210615222946-8066bb97264f                 go-module  
+github.com/urfave/cli                                                         v1.22.1                                            go-module  
+github.com/urfave/cli/v2                                                      v2.3.0                                             go-module  
+github.com/vishvananda/netlink                                                v1.1.0                                             go-module  
+github.com/vishvananda/netlink                                                v1.1.1-0.20210330154013-f5de75959ad5               go-module  
+github.com/vishvananda/netns                                                  v0.0.0-20191106174202-0a2b9b5464df                 go-module  
+github.com/vishvananda/netns                                                  v0.0.0-20210104183010-2eb08e3e575f                 go-module  
+github.com/xeipuuv/gojsonpointer                                              v0.0.0-20190905194746-02993c407bfb                 go-module  
+github.com/xeipuuv/gojsonreference                                            v0.0.0-20180127040603-bd5ef7bd5415                 go-module  
+github.com/xeipuuv/gojsonschema                                               v1.2.0                                             go-module  
+gitlab.com/nvidia/cloud-native/go-nvlib                                       v0.0.0-20230119114711-6fe07bb33342                 go-module  
+glob                                                                          7.2.3                                              npm        
+glob                                                                          8.0.3                                              npm        
+gnupg                                                                         2.2.27-3ubuntu2.1                                  deb        
+gnupg-l10n                                                                    2.2.27-3ubuntu2.1                                  deb        
+gnupg-utils                                                                   2.2.27-3ubuntu2.1                                  deb        
+go.etcd.io/bbolt                                                              v1.3.6                                             go-module  
+go.mozilla.org/pkcs7                                                          v0.0.0-20200128120323-432b2356ecb1                 go-module  
+go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc   v0.28.0                                            go-module  
+go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc   v0.29.0                                            go-module  
+go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace  v0.29.0                                            go-module  
+go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp                 v0.29.0                                            go-module  
+go.opentelemetry.io/otel                                                      v1.13.0                                            go-module  
+go.opentelemetry.io/otel                                                      v1.3.0                                             go-module  
+go.opentelemetry.io/otel/exporters/otlp/internal/retry                        v1.3.0                                             go-module  
+go.opentelemetry.io/otel/exporters/otlp/internal/retry                        v1.4.1                                             go-module  
+go.opentelemetry.io/otel/exporters/otlp/otlptrace                             v1.3.0                                             go-module  
+go.opentelemetry.io/otel/exporters/otlp/otlptrace                             v1.4.1                                             go-module  
+go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc               v1.3.0                                             go-module  
+go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc               v1.4.1                                             go-module  
+go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp               v1.3.0                                             go-module  
+go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp               v1.4.1                                             go-module  
+go.opentelemetry.io/otel/internal/metric                                      v0.27.0                                            go-module  
+go.opentelemetry.io/otel/metric                                               v0.27.0                                            go-module  
+go.opentelemetry.io/otel/sdk                                                  v1.3.0                                             go-module  
+go.opentelemetry.io/otel/sdk                                                  v1.4.1                                             go-module  
+go.opentelemetry.io/otel/trace                                                v1.13.0                                            go-module  
+go.opentelemetry.io/otel/trace                                                v1.3.0                                             go-module  
+go.opentelemetry.io/proto/otlp                                                v0.11.0                                            go-module  
+go.opentelemetry.io/proto/otlp                                                v0.12.0                                            go-module  
+golang.org/x/crypto                                                           v0.0.0-20220315160706-3147a52a75dd                 go-module  
+golang.org/x/crypto                                                           v0.2.0                                             go-module  
+golang.org/x/mod                                                              v0.5.0                                             go-module  
+golang.org/x/net                                                              v0.0.0-20201224014010-6772e930b67b                 go-module  
+golang.org/x/net                                                              v0.0.0-20210813160813-60bc85c4be6d                 go-module  
+golang.org/x/net                                                              v0.0.0-20220722155237-a158d28d115b                 go-module  
+golang.org/x/net                                                              v0.4.0                                             go-module  
+golang.org/x/oauth2                                                           v0.0.0-20210819190943-2bc19b11175f                 go-module  
+golang.org/x/oauth2                                                           v0.0.0-20221014153046-6fdb5e3db783                 go-module  
+golang.org/x/sync                                                             v0.0.0-20210220032951-036812b2e83c                 go-module  
+golang.org/x/sync                                                             v0.1.0                                             go-module  
+golang.org/x/sys                                                              v0.0.0-20211116061358-0a5406a5449c                 go-module  
+golang.org/x/sys                                                              v0.0.0-20211205182925-97ca703d548d                 go-module  
+golang.org/x/sys                                                              v0.0.0-20220722155257-8c9f86f7a55f                 go-module  
+golang.org/x/sys                                                              v0.0.0-20220927170352-d9d178bc13c6                 go-module  
+golang.org/x/sys                                                              v0.4.0                                             go-module  
+golang.org/x/term                                                             v0.0.0-20210927222741-03fcf44c2211                 go-module  
+golang.org/x/term                                                             v0.3.0                                             go-module  
+golang.org/x/text                                                             v0.3.7                                             go-module  
+golang.org/x/text                                                             v0.6.0                                             go-module  
+golang.org/x/time                                                             v0.0.0-20210723032227-1f47c861a9ac                 go-module  
+golang.org/x/time                                                             v0.1.0                                             go-module  
+golang.org/x/xerrors                                                          v0.0.0-20200804184101-5ec99f83aff1                 go-module  
+google.golang.org/genproto                                                    v0.0.0-20200224152610-e50cd9704f63                 go-module  
+google.golang.org/genproto                                                    v0.0.0-20221024183307-1bc688fe9f3e                 go-module  
+google.golang.org/grpc                                                        v1.47.0                                            go-module  
+google.golang.org/grpc                                                        v1.50.1                                            go-module  
+google.golang.org/protobuf                                                    v1.27.1                                            go-module  
+google.golang.org/protobuf                                                    v1.28.0                                            go-module  
+google.golang.org/protobuf                                                    v1.28.1                                            go-module  
+gopkg.in/inf.v0                                                               v0.9.1                                             go-module  
+gopkg.in/op/go-logging.v1                                                     v1.0.0-20160211212156-b2cb9fa56473                 go-module  
+gopkg.in/square/go-jose.v2                                                    v2.5.1                                             go-module  
+gopkg.in/yaml.v2                                                              v2.4.0                                             go-module  
+gopkg.in/yaml.v3                                                              v3.0.0-20210107192922-496545a6307b                 go-module  
+gopkg.in/yaml.v3                                                              v3.0.1                                             go-module  
+gpg                                                                           2.2.27-3ubuntu2.1                                  deb        
+gpg-agent                                                                     2.2.27-3ubuntu2.1                                  deb        
+gpg-wks-client                                                                2.2.27-3ubuntu2.1                                  deb        
+gpg-wks-server                                                                2.2.27-3ubuntu2.1                                  deb        
+gpgconf                                                                       2.2.27-3ubuntu2.1                                  deb        
+gpgsm                                                                         2.2.27-3ubuntu2.1                                  deb        
+gpgv                                                                          2.2.27-3ubuntu2.1                                  deb        
+graceful-fs                                                                   4.2.10                                             npm        
+grep                                                                          3.7-1build1                                        deb        
+gzip                                                                          1.10-4ubuntu4.1                                    deb        
+has                                                                           1.0.3                                              npm        
+has-flag                                                                      4.0.0                                              npm        
+has-symbols                                                                   1.0.3                                              npm        
+has-unicode                                                                   2.0.1                                              npm        
+hosted-git-info                                                               5.2.1                                              npm        
+hostname                                                                      3.23ubuntu2                                        deb        
+http-cache-semantics                                                          4.1.0                                              npm        
+http-errors                                                                   2.0.0                                              npm        
+http-proxy-agent                                                              5.0.0                                              npm        
+https-proxy-agent                                                             5.0.1                                              npm        
+humanize-ms                                                                   1.2.1                                              npm        
+iconv-lite                                                                    0.4.24                                             npm        
+iconv-lite                                                                    0.6.3                                              npm        
+ieee754                                                                       1.2.1                                              npm        
+ignore-walk                                                                   5.0.1                                              npm        
+imurmurhash                                                                   0.1.4                                              npm        
+indent-string                                                                 4.0.0                                              npm        
+infer-owner                                                                   1.0.4                                              npm        
+inflight                                                                      1.0.6                                              npm        
+inherits                                                                      2.0.4                                              npm        
+ini                                                                           3.0.1                                              npm        
+init-package-json                                                             3.0.2                                              npm        
+init-system-helpers                                                           1.62                                               deb        
+ip                                                                            2.0.0                                              npm        
+ip-regex                                                                      4.3.0                                              npm        
+ipaddr.js                                                                     1.9.1                                              npm        
+iptables                                                                      1.8.7-1ubuntu5                                     deb        
+is-cidr                                                                       4.0.2                                              npm        
+is-core-module                                                                2.10.0                                             npm        
+is-fullwidth-code-point                                                       3.0.0                                              npm        
+is-lambda                                                                     1.0.1                                              npm        
+isexe                                                                         2.0.0                                              npm        
+jq                                                                            1.6-2.1ubuntu3                                     deb        
+js-yaml                                                                       4.1.0                                              npm        
+json-parse-even-better-errors                                                 2.3.1                                              npm        
+json-stringify-nice                                                           1.1.4                                              npm        
+jsonparse                                                                     1.3.1                                              npm        
+just-diff                                                                     5.1.1                                              npm        
+just-diff-apply                                                               5.4.1                                              npm        
+k8s.io/api                                                                    v0.22.4                                            go-module  
+k8s.io/api                                                                    v0.22.5                                            go-module  
+k8s.io/apimachinery                                                           v0.22.4                                            go-module  
+k8s.io/apimachinery                                                           v0.22.5                                            go-module  
+k8s.io/apiserver                                                              v0.22.5                                            go-module  
+k8s.io/client-go                                                              v0.22.4                                            go-module  
+k8s.io/client-go                                                              v0.22.5                                            go-module  
+k8s.io/component-base                                                         v0.22.5                                            go-module  
+k8s.io/cri-api                                                                v0.25.0                                            go-module  
+k8s.io/klog/v2                                                                v2.30.0                                            go-module  
+k8s.io/klog/v2                                                                v2.60.1                                            go-module  
+k8s.io/utils                                                                  v0.0.0-20210930125809-cb0fa318a74b                 go-module  
+k8s.io/utils                                                                  v0.0.0-20220210201930-3a6ce19ff2f9                 go-module  
+kasm-wizard                                                                   0.0.1                                              npm        
+libacl1                                                                       2.3.1-1                                            deb        
+libapt-pkg6.0                                                                 2.4.8                                              deb        
+libassuan0                                                                    2.5.5-1build1                                      deb        
+libattr1                                                                      1:2.5.1-1build1                                    deb        
+libaudit-common                                                               1:3.0.7-1build1                                    deb        
+libaudit1                                                                     1:3.0.7-1build1                                    deb        
+libblkid1                                                                     2.37.2-4ubuntu3                                    deb        
+libbrotli1                                                                    1.0.9-2build6                                      deb        
+libbsd0                                                                       0.11.5-1                                           deb        
+libbz2-1.0                                                                    1.0.8-5build1                                      deb        
+libc-bin                                                                      2.35-0ubuntu3.1                                    deb        
+libc6                                                                         2.35-0ubuntu3.1                                    deb        
+libcap-ng0                                                                    0.7.9-2.2build3                                    deb        
+libcap2                                                                       1:2.44-1build3                                     deb        
+libcom-err2                                                                   1.46.5-2ubuntu1.1                                  deb        
+libcrypt1                                                                     1:4.4.27-1                                         deb        
+libcurl4                                                                      7.81.0-1ubuntu1.8                                  deb        
+libdb5.3                                                                      5.3.28+dfsg1-0.8ubuntu3                            deb        
+libdebconfclient0                                                             0.261ubuntu1                                       deb        
+libdevmapper1.02.1                                                            2:1.02.175-2.1ubuntu4                              deb        
+libdrm-common                                                                 2.4.113-2~ubuntu0.22.04.1                          deb        
+libdrm2                                                                       2.4.113-2~ubuntu0.22.04.1                          deb        
+libedit2                                                                      3.1-20210910-1build1                               deb        
+libexpat1                                                                     2.4.7-1ubuntu0.2                                   deb        
+libext2fs2                                                                    1.46.5-2ubuntu1.1                                  deb        
+libffi8                                                                       3.4.2-4                                            deb        
+libfuse3-3                                                                    3.10.5-1build1                                     deb        
+libgcc-s1                                                                     12.1.0-2ubuntu1~22.04                              deb        
+libgcrypt20                                                                   1.9.4-3ubuntu3                                     deb        
+libgmp10                                                                      2:6.2.1+dfsg-3ubuntu1                              deb        
+libgnutls30                                                                   3.7.3-4ubuntu1.1                                   deb        
+libgpg-error0                                                                 1.43-3                                             deb        
+libgssapi-krb5-2                                                              1.19.2-2ubuntu0.1                                  deb        
+libhogweed6                                                                   3.7.3-1build2                                      deb        
+libicu70                                                                      70.1-2                                             deb        
+libidn2-0                                                                     2.3.2-2build1                                      deb        
+libinih1                                                                      53-1ubuntu3                                        deb        
+libip4tc2                                                                     1.8.7-1ubuntu5                                     deb        
+libip6tc2                                                                     1.8.7-1ubuntu5                                     deb        
+libjq1                                                                        1.6-2.1ubuntu3                                     deb        
+libjson-c5                                                                    0.15-3~ubuntu1.22.04.1                             deb        
+libk5crypto3                                                                  1.19.2-2ubuntu0.1                                  deb        
+libkeyutils1                                                                  1.6.1-2ubuntu3                                     deb        
+libkrb5-3                                                                     1.19.2-2ubuntu0.1                                  deb        
+libkrb5support0                                                               1.19.2-2ubuntu0.1                                  deb        
+libksba8                                                                      1.6.0-2ubuntu0.2                                   deb        
+libldap-2.5-0                                                                 2.5.13+dfsg-0ubuntu0.22.04.1                       deb        
+libldap-common                                                                2.5.13+dfsg-0ubuntu0.22.04.1                       deb        
+liblz4-1                                                                      1.9.3-2build2                                      deb        
+liblzma5                                                                      5.2.5-2ubuntu1                                     deb        
+liblzo2-2                                                                     2.10-2build3                                       deb        
+libmd0                                                                        1.0.4-1build1                                      deb        
+libmnl0                                                                       1.0.4-3build2                                      deb        
+libmount1                                                                     2.37.2-4ubuntu3                                    deb        
+libmpdec3                                                                     2.5.1-2build2                                      deb        
+libncurses6                                                                   6.3-2                                              deb        
+libncursesw6                                                                  6.3-2                                              deb        
+libnetfilter-conntrack3                                                       1.0.9-1                                            deb        
+libnettle8                                                                    3.7.3-1build2                                      deb        
+libnfnetlink0                                                                 1.0.1-3build3                                      deb        
+libnftnl11                                                                    1.2.1-1build1                                      deb        
+libnghttp2-14                                                                 1.43.0-1build3                                     deb        
+libnpmaccess                                                                  6.0.4                                              npm        
+libnpmdiff                                                                    4.0.5                                              npm        
+libnpmexec                                                                    4.0.14                                             npm        
+libnpmfund                                                                    3.0.5                                              npm        
+libnpmhook                                                                    8.0.4                                              npm        
+libnpmorg                                                                     4.0.4                                              npm        
+libnpmpack                                                                    4.1.3                                              npm        
+libnpmpublish                                                                 6.0.5                                              npm        
+libnpmsearch                                                                  5.0.4                                              npm        
+libnpmteam                                                                    4.0.4                                              npm        
+libnpmversion                                                                 3.0.7                                              npm        
+libnpth0                                                                      1.6-3build2                                        deb        
+libnsl2                                                                       1.3.0-2build2                                      deb        
+libnvidia-container-tools                                                     1.12.0-1                                           deb        
+libnvidia-container1                                                          1.12.0-1                                           deb        
+libonig5                                                                      6.9.7.1-2build1                                    deb        
+libp11-kit0                                                                   0.24.0-6build1                                     deb        
+libpam-modules                                                                1.4.0-11ubuntu2.3                                  deb        
+libpam-modules-bin                                                            1.4.0-11ubuntu2.3                                  deb        
+libpam-runtime                                                                1.4.0-11ubuntu2.3                                  deb        
+libpam0g                                                                      1.4.0-11ubuntu2.3                                  deb        
+libpcre2-8-0                                                                  10.39-3ubuntu0.1                                   deb        
+libpcre3                                                                      2:8.39-13ubuntu0.22.04.1                           deb        
+libprocps8                                                                    2:3.3.17-6ubuntu2                                  deb        
+libpsl5                                                                       0.21.0-1.2build2                                   deb        
+libpython3-stdlib                                                             3.10.6-1~22.04                                     deb        
+libpython3.10-minimal                                                         3.10.6-1~22.04.2                                   deb        
+libpython3.10-stdlib                                                          3.10.6-1~22.04.2                                   deb        
+libreadline8                                                                  8.1.2-1                                            deb        
+librtmp1                                                                      2.4+20151223.gitfa8646d.1-2build4                  deb        
+libsasl2-2                                                                    2.1.27+dfsg2-3ubuntu1.2                            deb        
+libsasl2-modules                                                              2.1.27+dfsg2-3ubuntu1.2                            deb        
+libsasl2-modules-db                                                           2.1.27+dfsg2-3ubuntu1.2                            deb        
+libseccomp2                                                                   2.5.3-2ubuntu2                                     deb        
+libselinux1                                                                   3.3-1build2                                        deb        
+libsemanage-common                                                            3.3-1build2                                        deb        
+libsemanage2                                                                  3.3-1build2                                        deb        
+libsepol2                                                                     3.3-1build1                                        deb        
+libsmartcols1                                                                 2.37.2-4ubuntu3                                    deb        
+libsqlite3-0                                                                  3.37.2-2ubuntu0.1                                  deb        
+libss2                                                                        1.46.5-2ubuntu1.1                                  deb        
+libssh-4                                                                      0.9.6-2build1                                      deb        
+libssl3                                                                       3.0.2-0ubuntu1.8                                   deb        
+libstdc++6                                                                    12.1.0-2ubuntu1~22.04                              deb        
+libsystemd0                                                                   249.11-0ubuntu3.6                                  deb        
+libtasn1-6                                                                    4.18.0-4build1                                     deb        
+libtinfo6                                                                     6.3-2                                              deb        
+libtirpc-common                                                               1.3.2-2ubuntu0.1                                   deb        
+libtirpc3                                                                     1.3.2-2ubuntu0.1                                   deb        
+libudev1                                                                      249.11-0ubuntu3.6                                  deb        
+libunistring2                                                                 1.0-1                                              deb        
+libuuid1                                                                      2.37.2-4ubuntu3                                    deb        
+libxtables12                                                                  1.8.7-1ubuntu5                                     deb        
+libxxhash0                                                                    0.8.1-1                                            deb        
+libzstd1                                                                      1.4.8+dfsg-3build1                                 deb        
+locales                                                                       2.35-0ubuntu3.1                                    deb        
+lodash                                                                        4.17.21                                            npm        
+login                                                                         1:4.8.1-2ubuntu2.1                                 deb        
+logsave                                                                       1.46.5-2ubuntu1.1                                  deb        
+lru-cache                                                                     6.0.0                                              npm        
+lru-cache                                                                     7.13.2                                             npm        
+lsb-base                                                                      11.1.0ubuntu4                                      deb        
+lsb-release                                                                   11.1.0ubuntu4                                      deb        
+make-fetch-happen                                                             10.2.1                                             npm        
+mawk                                                                          1.3.4.20200120-3                                   deb        
+media-typer                                                                   0.3.0                                              npm        
+media-types                                                                   7.0.0                                              deb        
+merge-descriptors                                                             1.0.1                                              npm        
+methods                                                                       1.1.2                                              npm        
+mime                                                                          1.6.0                                              npm        
+mime-db                                                                       1.52.0                                             npm        
+mime-types                                                                    2.1.35                                             npm        
+minimatch                                                                     3.1.2                                              npm        
+minimatch                                                                     5.1.0                                              npm        
+minipass                                                                      3.3.4                                              npm        
+minipass-collect                                                              1.0.2                                              npm        
+minipass-fetch                                                                2.1.1                                              npm        
+minipass-flush                                                                1.0.5                                              npm        
+minipass-json-stream                                                          1.0.1                                              npm        
+minipass-pipeline                                                             1.2.4                                              npm        
+minipass-sized                                                                1.0.3                                              npm        
+minizlib                                                                      2.1.2                                              npm        
+mkdirp                                                                        1.0.4                                              npm        
+mkdirp-classic                                                                0.5.3                                              npm        
+mkdirp-infer-owner                                                            2.0.0                                              npm        
+mount                                                                         2.37.2-4ubuntu3                                    deb        
+ms                                                                            2.0.0                                              npm        
+ms                                                                            2.1.2                                              npm        
+ms                                                                            2.1.3                                              npm        
+mute-stream                                                                   0.0.8                                              npm        
+nan                                                                           2.17.0                                             npm        
+ncurses-base                                                                  6.3-2                                              deb        
+ncurses-bin                                                                   6.3-2                                              deb        
+negotiator                                                                    0.6.3                                              npm        
+netbase                                                                       6.3                                                deb        
+netcat                                                                        1.218-4ubuntu1                                     deb        
+netcat-openbsd                                                                1.218-4ubuntu1                                     deb        
+node                                                                          16.19.1                                            binary     
+node-gyp                                                                      9.1.0                                              npm        
+node-pty                                                                      0.10.1                                             npm        
+nodejs                                                                        16.19.1-deb-1nodesource1                           deb        
+nopt                                                                          5.0.0                                              npm        
+nopt                                                                          6.0.0                                              npm        
+normalize-package-data                                                        4.0.1                                              npm        
+npm                                                                           8.19.3                                             npm        
+npm-audit-report                                                              3.0.0                                              npm        
+npm-bundled                                                                   1.1.2                                              npm        
+npm-bundled                                                                   2.0.1                                              npm        
+npm-init                                                                      0.0.0                                              npm        
+npm-install-checks                                                            5.0.0                                              npm        
+npm-normalize-package-bin                                                     1.0.1                                              npm        
+npm-normalize-package-bin                                                     2.0.0                                              npm        
+npm-package-arg                                                               9.1.0                                              npm        
+npm-packlist                                                                  5.1.3                                              npm        
+npm-pick-manifest                                                             7.0.2                                              npm        
+npm-profile                                                                   6.2.1                                              npm        
+npm-registry-fetch                                                            13.3.1                                             npm        
+npm-user-validate                                                             1.0.1                                              npm        
+npmlog                                                                        6.0.2                                              npm        
+nvidia-container-toolkit                                                      1.12.0-1                                           deb        
+nvidia-container-toolkit-base                                                 1.12.0-1                                           deb        
+nvidia-docker2                                                                2.12.0-1                                           deb        
+object-assign                                                                 4.1.1                                              npm        
+object-inspect                                                                1.12.3                                             npm        
+on-finished                                                                   2.4.1                                              npm        
+once                                                                          1.4.0                                              npm        
+opener                                                                        1.5.2                                              npm        
+openssl                                                                       3.0.2-0ubuntu1.8                                   deb        
+p-map                                                                         4.0.0                                              npm        
+pacote                                                                        13.6.2                                             npm        
+parse-conflict-json                                                           2.0.2                                              npm        
+parseurl                                                                      1.3.3                                              npm        
+passwd                                                                        1:4.8.1-2ubuntu2.1                                 deb        
+path-is-absolute                                                              1.0.1                                              npm        
+path-to-regexp                                                                0.1.7                                              npm        
+perl-base                                                                     5.34.0-3ubuntu1.1                                  deb        
+pigz                                                                          2.6-1                                              deb        
+pinentry-curses                                                               1.1.1-1build2                                      deb        
+postcss-selector-parser                                                       6.0.10                                             npm        
+proc-log                                                                      2.0.1                                              npm        
+procps                                                                        2:3.3.17-6ubuntu2                                  deb        
+promise-all-reject-late                                                       1.0.1                                              npm        
+promise-call-limit                                                            1.0.1                                              npm        
+promise-inflight                                                              1.0.1                                              npm        
+promise-retry                                                                 2.0.1                                              npm        
+promzard                                                                      0.3.0                                              npm        
+proxy-addr                                                                    2.0.7                                              npm        
+publicsuffix                                                                  20211207.1025-1                                    deb        
+pump                                                                          3.0.0                                              npm        
+python                                                                        3.10.6                                             binary     
+python3                                                                       3.10.6-1~22.04                                     deb        
+python3-minimal                                                               3.10.6-1~22.04                                     deb        
+python3.10                                                                    3.10.6-1~22.04.2                                   deb        
+python3.10-minimal                                                            3.10.6-1~22.04.2                                   deb        
+qrcode-terminal                                                               0.12.0                                             npm        
+qs                                                                            6.11.0                                             npm        
+range-parser                                                                  1.2.1                                              npm        
+raw-body                                                                      2.5.1                                              npm        
+read                                                                          1.0.7                                              npm        
+read-cmd-shim                                                                 3.0.0                                              npm        
+read-package-json                                                             5.0.2                                              npm        
+read-package-json-fast                                                        2.0.3                                              npm        
+readable-stream                                                               3.6.0                                              npm        
+readable-stream                                                               3.6.1                                              npm        
+readdir-scoped-modules                                                        1.1.0                                              npm        
+readline-common                                                               8.1.2-1                                            deb        
+retry                                                                         0.12.0                                             npm        
+rimraf                                                                        3.0.2                                              npm        
+safe-buffer                                                                   5.2.1                                              npm        
+safer-buffer                                                                  2.1.2                                              npm        
+sed                                                                           4.8-1ubuntu2                                       deb        
+semver                                                                        7.3.7                                              npm        
+send                                                                          0.18.0                                             npm        
+sensible-utils                                                                0.0.17                                             deb        
+serve-static                                                                  1.15.0                                             npm        
+set-blocking                                                                  2.0.0                                              npm        
+setprototypeof                                                                1.2.0                                              npm        
+side-channel                                                                  1.0.4                                              npm        
+signal-exit                                                                   3.0.7                                              npm        
+sigs.k8s.io/structured-merge-diff/v4                                          v4.1.2                                             go-module  
+sigs.k8s.io/structured-merge-diff/v4                                          v4.2.1                                             go-module  
+sigs.k8s.io/yaml                                                              v1.2.0                                             go-module  
+sigs.k8s.io/yaml                                                              v1.3.0                                             go-module  
+smart-buffer                                                                  4.2.0                                              npm        
+socket.io                                                                     4.6.1                                              npm        
+socket.io-adapter                                                             2.5.2                                              npm        
+socket.io-parser                                                              4.2.2                                              npm        
+socks                                                                         2.7.0                                              npm        
+socks-proxy-agent                                                             7.0.0                                              npm        
+spdx-correct                                                                  3.1.1                                              npm        
+spdx-exceptions                                                               2.3.0                                              npm        
+spdx-expression-parse                                                         3.0.1                                              npm        
+spdx-license-ids                                                              3.0.11                                             npm        
+split-ca                                                                      1.0.1                                              npm        
+ssh2                                                                          1.11.0                                             npm        
+ssri                                                                          9.0.1                                              npm        
+statuses                                                                      2.0.1                                              npm        
+string-width                                                                  4.2.3                                              npm        
+string_decoder                                                                1.3.0                                              npm        
+strip-ansi                                                                    6.0.1                                              npm        
+sudo                                                                          1.9.9-1ubuntu2.3                                   deb        
+supports-color                                                                7.2.0                                              npm        
+systeminformation                                                             5.17.12                                            npm        
+sysvinit-utils                                                                3.01-1ubuntu1                                      deb        
+tar                                                                           1.34+dfsg-1build3                                  deb        
+tar                                                                           6.1.11                                             npm        
+tar-fs                                                                        2.0.1                                              npm        
+tar-stream                                                                    2.2.0                                              npm        
+text-table                                                                    0.2.0                                              npm        
+tiny-relative-date                                                            1.3.0                                              npm        
+toidentifier                                                                  1.0.1                                              npm        
+treeverse                                                                     2.0.0                                              npm        
+tweetnacl                                                                     0.14.5                                             npm        
+type-is                                                                       1.6.18                                             npm        
+tzdata                                                                        2022g-0ubuntu0.22.04.1                             deb        
+ubuntu-keyring                                                                2021.03.26                                         deb        
+uidmap                                                                        1:4.8.1-2ubuntu2.1                                 deb        
+unique-filename                                                               2.0.1                                              npm        
+unique-slug                                                                   3.0.0                                              npm        
+unpipe                                                                        1.0.0                                              npm        
+usrmerge                                                                      25ubuntu2                                          deb        
+util-deprecate                                                                1.0.2                                              npm        
+util-linux                                                                    2.37.2-4ubuntu3                                    deb        
+utils-merge                                                                   1.0.1                                              npm        
+validate-npm-package-license                                                  3.0.4                                              npm        
+validate-npm-package-name                                                     4.0.0                                              npm        
+vary                                                                          1.1.2                                              npm        
+walk-up-path                                                                  1.0.0                                              npm        
+wcwidth                                                                       1.0.1                                              npm        
+which                                                                         2.0.2                                              npm        
+wide-align                                                                    1.1.5                                              npm        
+wrappy                                                                        1.0.2                                              npm        
+write-file-atomic                                                             4.0.2                                              npm        
+ws                                                                            8.11.0                                             npm        
+xfsprogs                                                                      5.13.0-1ubuntu2                                    deb        
+yallist                                                                       4.0.0                                              npm        
+zlib1g                                                                        1:1.2.11.dfsg-2ubuntu9.2                           deb        
