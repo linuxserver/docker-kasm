@@ -34,7 +34,6 @@ RUN \
     containerd.io \
     docker-ce \
     docker-ce-cli \
-    docker-compose-plugin \
     drm-info \
     e2fsprogs \
     fuse-overlayfs \
@@ -51,6 +50,12 @@ RUN \
     sudo \
     uidmap \
     xfsprogs && \
+  echo "**** compose install ****" && \
+  mkdir -p /usr/local/lib/docker/cli-plugins && \
+  curl -L \
+    https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-$(uname -s)-$(uname -m) -o \
+    /usr/local/lib/docker/cli-plugins/docker-compose && \
+  chmod +x /usr/local/lib/docker/cli-plugins/docker-compose && \
   echo "**** dind setup ****" && \
   useradd -U dockremap && \
   usermod -G dockremap dockremap && \
