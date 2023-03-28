@@ -105,6 +105,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "28.03.23:", desc: "Pin compose to 2.5.0 to be in sync with upstream requirements." }
   - { date: "05.11.22:", desc: "Rebase to Jammy, add support for GPUs, add support for Gamepads." }
   - { date: "23.09.22:", desc: "Migrate to s6v3." }
   - { date: "02.07.22:", desc: "Initial Release." }

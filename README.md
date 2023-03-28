@@ -261,6 +261,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **28.03.23:** - Pin compose to 2.5.0 to be in sync with upstream requirements.
 * **05.11.22:** - Rebase to Jammy, add support for GPUs, add support for Gamepads.
 * **23.09.22:** - Migrate to s6v3.
 * **02.07.22:** - Initial Release.
