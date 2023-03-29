@@ -585,6 +585,7 @@ lru-cache                                                                     6.
 lru-cache                                                                     7.13.2                                             npm        
 lsb-base                                                                      11.1.0ubuntu4                                      deb        
 lsb-release                                                                   11.1.0ubuntu4                                      deb        
+lsof                                                                          4.93.2+dfsg-1.1build2                              deb        
 make-fetch-happen                                                             10.2.1                                             npm        
 mawk                                                                          1.3.4.20200120-3                                   deb        
 media-typer                                                                   0.3.0                                              npm        
