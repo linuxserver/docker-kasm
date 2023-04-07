@@ -88,6 +88,12 @@ RUN \
   tar xf \
     /tmp/kasm.tar.gz -C \
     / && \
+  curl -o \
+    /tmp/images.tar.gz -L \
+    "https://kasm-ci.s3.amazonaws.com/1.13.0-images-combined.tar.gz" && \
+  tar xf \
+    /tmp/images.tar.gz -C \
+    / && \
   sed -i 's/-N -e -H/-N -B -e -H/g' /kasm_release/upgrade.sh && \
   echo "**** copy assets ****" && \
   cp \
