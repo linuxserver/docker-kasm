@@ -41,6 +41,7 @@ RUN \
     gcc \
     iptables \
     jq \
+    lsof \
     make \
     nodejs \
     nvidia-docker2 \
