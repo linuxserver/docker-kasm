@@ -24,7 +24,7 @@ NAME                                                                          VE
 @tootallnate/once                                                             2.0.0                                              npm        
 @types/cookie                                                                 0.4.1                                              npm        
 @types/cors                                                                   2.8.13                                             npm        
-@types/node                                                                   18.16.1                                            npm        
+@types/node                                                                   18.16.3                                            npm        
 abbrev                                                                        1.1.1                                              npm        
 accepts                                                                       1.3.8                                              npm        
 adduser                                                                       3.118ubuntu5                                       deb        
@@ -34,8 +34,8 @@ aggregate-error                                                               3.
 ansi-regex                                                                    5.0.1                                              npm        
 ansi-styles                                                                   4.3.0                                              npm        
 aproba                                                                        2.0.0                                              npm        
-apt                                                                           2.4.8                                              deb        
-apt-utils                                                                     2.4.8                                              deb        
+apt                                                                           2.4.9                                              deb        
+apt-utils                                                                     2.4.9                                              deb        
 archy                                                                         1.0.0                                              npm        
 are-we-there-yet                                                              3.0.1                                              npm        
 argparse                                                                      2.0.1                                              npm        
@@ -108,9 +108,9 @@ diff                                                                          5.
 diffutils                                                                     1:3.8-0ubuntu2                                     deb        
 dirmngr                                                                       2.2.27-3ubuntu2.1                                  deb        
 distro-info-data                                                              0.52ubuntu0.3                                      deb        
-docker-ce                                                                     5:23.0.4-1~ubuntu.22.04~jammy                      deb        
-docker-ce-cli                                                                 5:23.0.4-1~ubuntu.22.04~jammy                      deb        
-docker-compose-plugin                                                         2.17.2-1~ubuntu.22.04~jammy                        deb        
+docker-ce                                                                     5:23.0.5-1~ubuntu.22.04~jammy                      deb        
+docker-ce-cli                                                                 5:23.0.5-1~ubuntu.22.04~jammy                      deb        
+docker-compose-plugin                                                         2.17.3-1~ubuntu.22.04~jammy                        deb        
 docker-modem                                                                  3.0.8                                              npm        
 dockerode                                                                     3.3.5                                              npm        
 dpkg                                                                          1.21.1ubuntu2.1                                    deb        
@@ -121,7 +121,7 @@ emoji-regex                                                                   8.
 encodeurl                                                                     1.0.2                                              npm        
 encoding                                                                      0.1.13                                             npm        
 end-of-stream                                                                 1.4.4                                              npm        
-engine.io                                                                     6.4.1                                              npm        
+engine.io                                                                     6.4.2                                              npm        
 engine.io-parser                                                              5.0.6                                              npm        
 env-paths                                                                     2.2.1                                              npm        
 err-code                                                                      2.0.3                                              npm        
@@ -166,7 +166,7 @@ github.com/cenkalti/backoff/v4                                                v4
 github.com/cespare/xxhash/v2                                                  v2.1.2                                             go-module  
 github.com/checkpoint-restore/go-criu/v5                                      v5.3.0                                             go-module  
 github.com/cilium/ebpf                                                        v0.7.0                                             go-module  
-github.com/compose-spec/compose-go                                            v1.13.2                                            go-module  
+github.com/compose-spec/compose-go                                            v1.13.4                                            go-module  
 github.com/container-orchestrated-devices/container-device-interface          v0.5.4-0.20230111111500-5b3b5d81179a               go-module  
 github.com/containerd/aufs                                                    v1.0.0                                             go-module  
 github.com/containerd/btrfs                                                   v1.0.0                                             go-module  
@@ -193,13 +193,13 @@ github.com/cpuguy83/go-md2man/v2                                              v2
 github.com/cpuguy83/go-md2man/v2                                              v2.0.1                                             go-module  
 github.com/cyphar/filepath-securejoin                                         v0.2.3                                             go-module  
 github.com/davecgh/go-spew                                                    v1.1.1                                             go-module  
-github.com/distribution/distribution/v3                                       v3.0.0-20230223072852-e5d5810851d1                 go-module  
+github.com/distribution/distribution/v3                                       v3.0.0-20230327091844-0c958010ace2                 go-module  
 github.com/docker/buildx                                                      v0.10.4                                            go-module  
-github.com/docker/cli                                                         v23.0.1+incompatible                               go-module  
+github.com/docker/cli                                                         v23.0.4+incompatible                               go-module  
 github.com/docker/cli/cmd/docker                                              (devel)                                            go-module  
 github.com/docker/compose/v2                                                  (devel)                                            go-module  
 github.com/docker/distribution                                                v2.8.1+incompatible                                go-module  
-github.com/docker/docker                                                      v23.0.1+incompatible                               go-module  
+github.com/docker/docker                                                      v23.0.4+incompatible                               go-module  
 github.com/docker/docker-credential-helpers                                   v0.7.0                                             go-module  
 github.com/docker/docker/cmd/docker-proxy                                     (devel)                                            go-module  
 github.com/docker/docker/cmd/dockerd                                          (devel)                                            go-module  
@@ -242,10 +242,10 @@ github.com/hashicorp/errwrap                                                  v1
 github.com/hashicorp/go-multierror                                            v1.1.1                                             go-module  
 github.com/hashicorp/go-version                                               v1.6.0                                             go-module  
 github.com/imdario/mergo                                                      v0.3.12                                            go-module  
-github.com/imdario/mergo                                                      v0.3.14                                            go-module  
+github.com/imdario/mergo                                                      v0.3.15                                            go-module  
 github.com/intel/goresctrl                                                    v0.2.0                                             go-module  
 github.com/jinzhu/copier                                                      v0.3.5                                             go-module  
-github.com/jonboulle/clockwork                                                v0.3.1-0.20230117163003-a89700cec744               go-module  
+github.com/jonboulle/clockwork                                                v0.4.0                                             go-module  
 github.com/json-iterator/go                                                   v1.1.12                                            go-module  
 github.com/kballard/go-shellquote                                             v0.0.0-20180428030007-95032a82bc51                 go-module  
 github.com/klauspost/compress                                                 v1.11.13                                           go-module  
@@ -282,7 +282,6 @@ github.com/opencontainers/go-digest                                           v1
 github.com/opencontainers/image-spec                                          v1.1.0-rc2                                         go-module  
 github.com/opencontainers/image-spec                                          v1.1.0-rc2.0.20221005185240-3a7f492d3f1b           go-module  
 github.com/opencontainers/runc                                                v0.0.0-20230329064553-f19387a6bec4                 go-module  
-github.com/opencontainers/runc                                                v1.1.3                                             go-module  
 github.com/opencontainers/runc                                                v1.1.4                                             go-module  
 github.com/opencontainers/runc                                                v1.1.5                                             go-module  
 github.com/opencontainers/runtime-spec                                        v1.0.3-0.20210326190908-1c3f411f0417               go-module  
@@ -311,7 +310,7 @@ github.com/shurcooL/sanitized_anchor_name                                     v1
 github.com/sirupsen/logrus                                                    v1.8.1                                             go-module  
 github.com/sirupsen/logrus                                                    v1.9.0                                             go-module  
 github.com/spf13/cobra                                                        v1.4.0                                             go-module  
-github.com/spf13/cobra                                                        v1.6.1                                             go-module  
+github.com/spf13/cobra                                                        v1.7.0                                             go-module  
 github.com/spf13/pflag                                                        v1.0.5                                             go-module  
 github.com/stefanberger/go-pkcs11uri                                          v0.0.0-20201008174630-78d3cae3a980                 go-module  
 github.com/stretchr/testify                                                   v1.8.2                                             go-module  
@@ -463,7 +462,7 @@ k8s.io/utils                                                                  v0
 k8s.io/utils                                                                  v0.0.0-20220210201930-3a6ce19ff2f9                 go-module  
 kasm-wizard                                                                   0.0.1                                              npm        
 libacl1                                                                       2.3.1-1                                            deb        
-libapt-pkg6.0                                                                 2.4.8                                              deb        
+libapt-pkg6.0                                                                 2.4.9                                              deb        
 libassuan0                                                                    2.5.5-1build1                                      deb        
 libattr1                                                                      1:2.5.1-1build1                                    deb        
 libaudit-common                                                               1:3.0.7-1build1                                    deb        
@@ -719,7 +718,7 @@ spdx-exceptions                                                               2.
 spdx-expression-parse                                                         3.0.1                                              npm        
 spdx-license-ids                                                              3.0.11                                             npm        
 split-ca                                                                      1.0.1                                              npm        
-ssh2                                                                          1.11.0                                             npm        
+ssh2                                                                          1.12.0                                             npm        
 ssri                                                                          9.0.1                                              npm        
 statuses                                                                      2.0.1                                              npm        
 string-width                                                                  4.2.3                                              npm        
