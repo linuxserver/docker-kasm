@@ -52,6 +52,7 @@ opt_param_usage_include_env: true
 opt_param_env_vars:
   - { env_var: "DOCKER_HUB_USERNAME", env_value: "USER", desc: "Optionally specify a DockerHub Username to pull private images." }
   - { env_var: "DOCKER_HUB_PASSWORD", env_value: "PASS", desc: "Optionally specify a DockerHub password to pull private images." }
+  - { env_var: "DOCKER_MTU", env_value: "1500", desc: "Optionally specify the mtu options passed to dockerd" }
 
 opt_param_usage_include_vols: true
 opt_param_volumes:
