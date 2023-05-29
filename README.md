@@ -164,6 +164,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e KASM_PORT=443` | Specify the port you bind to the outside for Kasm Workspaces. |
 | `-e DOCKER_HUB_USERNAME=USER` | Optionally specify a DockerHub Username to pull private images. |
 | `-e DOCKER_HUB_PASSWORD=PASS` | Optionally specify a DockerHub password to pull private images. |
+| `-e DOCKER_MTU=1500` | Optionally specify the mtu options passed to dockerd. |
 | `-v /opt` | Docker and installation storage. |
 | `-v /profiles` | Optionally specify a path for persistent profile storage. |
 | `-v /dev/input` | Optional for gamepad support. |
