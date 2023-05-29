@@ -122,6 +122,7 @@ services:
       - KASM_PORT=443
       - DOCKER_HUB_USERNAME=USER #optional
       - DOCKER_HUB_PASSWORD=PASS #optional
+      - DOCKER_MTU=1500 #optional
     volumes:
       - /path/to/data:/opt
       - /path/to/profiles:/profiles #optional
@@ -142,6 +143,7 @@ docker run -d \
   -e KASM_PORT=443 \
   -e DOCKER_HUB_USERNAME=USER `#optional` \
   -e DOCKER_HUB_PASSWORD=PASS `#optional` \
+  -e DOCKER_MTU=1500 `#optional` \
   -p 3000:3000 \
   -p 443:443 \
   -v /path/to/data:/opt \
