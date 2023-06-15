@@ -116,6 +116,7 @@ if [ "$#" -eq 0 ] || [ "${1#-}" != "$1" ]; then
 	; then
 		# generate certs and use TLS if requested/possible (default in 19.03+)
 		set -- dockerd \
+            --mtu="${DOCKER_MTU:-1500}" \
 			--host="$dockerSocket" \
 			--host=tcp://0.0.0.0:2376 \
 			--tlsverify \
@@ -127,6 +128,7 @@ if [ "$#" -eq 0 ] || [ "${1#-}" != "$1" ]; then
 	else
 		# TLS disabled (-e DOCKER_TLS_CERTDIR='') or missing certs
 		set -- dockerd \
+            --mtu="${DOCKER_MTU:-1500}" \
 			--host="$dockerSocket" \
 			"$@"
 		DOCKERD_ROOTLESS_ROOTLESSKIT_FLAGS="${DOCKERD_ROOTLESS_ROOTLESSKIT_FLAGS:-} -p 0.0.0.0:2375:2375/tcp"

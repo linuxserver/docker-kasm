@@ -122,6 +122,7 @@ services:
       - KASM_PORT=443
       - DOCKER_HUB_USERNAME=USER #optional
       - DOCKER_HUB_PASSWORD=PASS #optional
+      - DOCKER_MTU=1500 #optional
     volumes:
       - /path/to/data:/opt
       - /path/to/profiles:/profiles #optional
@@ -142,6 +143,7 @@ docker run -d \
   -e KASM_PORT=443 \
   -e DOCKER_HUB_USERNAME=USER `#optional` \
   -e DOCKER_HUB_PASSWORD=PASS `#optional` \
+  -e DOCKER_MTU=1500 `#optional` \
   -p 3000:3000 \
   -p 443:443 \
   -v /path/to/data:/opt \
@@ -164,6 +166,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e KASM_PORT=443` | Specify the port you bind to the outside for Kasm Workspaces. |
 | `-e DOCKER_HUB_USERNAME=USER` | Optionally specify a DockerHub Username to pull private images. |
 | `-e DOCKER_HUB_PASSWORD=PASS` | Optionally specify a DockerHub password to pull private images. |
+| `-e DOCKER_MTU=1500` | Optionally specify the mtu options passed to dockerd. |
 | `-v /opt` | Docker and installation storage. |
 | `-v /profiles` | Optionally specify a path for persistent profile storage. |
 | `-v /dev/input` | Optional for gamepad support. |
