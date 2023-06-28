@@ -473,7 +473,7 @@ libbz2-1.0                                                                    1.
 libc-bin                                                                      2.35-0ubuntu3.1                                    deb        
 libc6                                                                         2.35-0ubuntu3.1                                    deb        
 libcap-ng0                                                                    0.7.9-2.2build3                                    deb        
-libcap2                                                                       1:2.44-1build3                                     deb        
+libcap2                                                                       1:2.44-1ubuntu0.22.04.1                            deb        
 libcom-err2                                                                   1.46.5-2ubuntu1.1                                  deb        
 libcrypt1                                                                     1:4.4.27-1                                         deb        
 libcurl4                                                                      7.81.0-1ubuntu1.10                                 deb        
@@ -707,7 +707,7 @@ sigs.k8s.io/structured-merge-diff/v4                                          v4
 sigs.k8s.io/yaml                                                              v1.2.0                                             go-module  
 sigs.k8s.io/yaml                                                              v1.3.0                                             go-module  
 smart-buffer                                                                  4.2.0                                              npm        
-socket.io                                                                     4.7.0                                              npm        
+socket.io                                                                     4.7.1                                              npm        
 socket.io-adapter                                                             2.5.2                                              npm        
 socket.io-parser                                                              4.2.4                                              npm        
 socks                                                                         2.7.0                                              npm        
@@ -725,7 +725,7 @@ string_decoder                                                                1.
 strip-ansi                                                                    6.0.1                                              npm        
 sudo                                                                          1.9.9-1ubuntu2.4                                   deb        
 supports-color                                                                7.2.0                                              npm        
-systeminformation                                                             5.18.5                                             npm        
+systeminformation                                                             5.18.6                                             npm        
 sysvinit-utils                                                                3.01-1ubuntu1                                      deb        
 tar                                                                           1.34+dfsg-1ubuntu0.1.22.04.1                       deb        
 tar                                                                           6.1.11                                             npm        
