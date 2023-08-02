@@ -121,8 +121,8 @@ emoji-regex                                                                   8.
 encodeurl                                                                     1.0.2                                               npm        
 encoding                                                                      0.1.13                                              npm        
 end-of-stream                                                                 1.4.4                                               npm        
-engine.io                                                                     6.5.1                                               npm        
-engine.io-parser                                                              5.1.0                                               npm        
+engine.io                                                                     6.5.2                                               npm        
+engine.io-parser                                                              5.2.1                                               npm        
 env-paths                                                                     2.2.1                                               npm        
 err-code                                                                      2.0.3                                               npm        
 escape-html                                                                   1.0.3                                               npm        
@@ -524,8 +524,8 @@ libkeyutils1                                                                  1.
 libkrb5-3                                                                     1.19.2-2ubuntu0.2                                   deb        
 libkrb5support0                                                               1.19.2-2ubuntu0.2                                   deb        
 libksba8                                                                      1.6.0-2ubuntu0.2                                    deb        
-libldap-2.5-0                                                                 2.5.14+dfsg-0ubuntu0.22.04.2                        deb        
-libldap-common                                                                2.5.14+dfsg-0ubuntu0.22.04.2                        deb        
+libldap-2.5-0                                                                 2.5.15+dfsg-0ubuntu0.22.04.1                        deb        
+libldap-common                                                                2.5.15+dfsg-0ubuntu0.22.04.1                        deb        
 liblz4-1                                                                      1.9.3-2build2                                       deb        
 liblzma5                                                                      5.2.5-2ubuntu1                                      deb        
 liblzo2-2                                                                     2.10-2build3                                        deb        
