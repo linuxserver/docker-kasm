@@ -638,10 +638,10 @@ negotiator                                                                    0.
 netbase                                                                       6.3                                                 deb        
 netcat                                                                        1.218-4ubuntu1                                      deb        
 netcat-openbsd                                                                1.218-4ubuntu1                                      deb        
-node                                                                          16.20.1                                             binary     
+node                                                                          16.20.2                                             binary     
 node-gyp                                                                      9.1.0                                               npm        
 node-pty                                                                      0.10.1                                              npm        
-nodejs                                                                        16.20.1-deb-1nodesource1                            deb        
+nodejs                                                                        16.20.2-deb-1nodesource1                            deb        
 nopt                                                                          5.0.0                                               npm        
 nopt                                                                          6.0.0                                               npm        
 normalize-package-data                                                        4.0.1                                               npm        
@@ -744,7 +744,7 @@ string_decoder                                                                1.
 strip-ansi                                                                    6.0.1                                               npm        
 sudo                                                                          1.9.9-1ubuntu2.4                                    deb        
 supports-color                                                                7.2.0                                               npm        
-systeminformation                                                             5.18.13                                             npm        
+systeminformation                                                             5.18.14                                             npm        
 sysvinit-utils                                                                3.01-1ubuntu1                                       deb        
 tar                                                                           1.34+dfsg-1ubuntu0.1.22.04.1                        deb        
 tar                                                                           6.1.11                                              npm        
