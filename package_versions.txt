@@ -638,7 +638,6 @@ negotiator                                                                    0.
 netbase                                                                       6.3                                                 deb        
 netcat                                                                        1.218-4ubuntu1                                      deb        
 netcat-openbsd                                                                1.218-4ubuntu1                                      deb        
-node                                                                          16.20.2                                             binary     
 node-gyp                                                                      9.1.0                                               npm        
 node-pty                                                                      0.10.1                                              npm        
 nodejs                                                                        16.20.2-deb-1nodesource1                            deb        
@@ -690,7 +689,6 @@ promzard                                                                      0.
 proxy-addr                                                                    2.0.7                                               npm        
 publicsuffix                                                                  20211207.1025-1                                     deb        
 pump                                                                          3.0.0                                               npm        
-python                                                                        3.10.12                                             binary     
 python3                                                                       3.10.6-1~22.04                                      deb        
 python3-minimal                                                               3.10.6-1~22.04                                      deb        
 python3.10                                                                    3.10.12-1~22.04.2                                   deb        
