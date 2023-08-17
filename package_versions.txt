@@ -89,7 +89,7 @@ cookie-signature                                                              1.
 corepack                                                                      0.17.0                                              npm        
 coreutils                                                                     8.32-4.1ubuntu1                                     deb        
 cors                                                                          2.8.5                                               npm        
-cpu-features                                                                  0.0.8                                               npm        
+cpu-features                                                                  0.0.9                                               npm        
 cssesc                                                                        3.0.0                                               npm        
 curl                                                                          7.81.0-1ubuntu1.13                                  deb        
 dash                                                                          0.5.11+git20210903+057cd650a4ed-3build1             deb        
