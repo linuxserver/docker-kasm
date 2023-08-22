@@ -91,11 +91,12 @@ RUN \
     / && \
   curl -o \
     /tmp/images.tar.gz -L \
-    "https://kasm-ci.s3.amazonaws.com/1.13.0-images-combined.tar.gz" && \
+    "https://kasm-ci.s3.amazonaws.com/1.14.0-images-combined.tar.gz" && \
   tar xf \
     /tmp/images.tar.gz -C \
     / && \
   sed -i 's/-N -e -H/-N -B -e -H/g' /kasm_release/upgrade.sh && \
+  echo "exit 0" > /kasm_release/install_dependencies.sh && \
   echo "**** copy assets ****" && \
   cp \
     /kasm_release/www/img/thumbnails/*.png /kasm_release/www/img/thumbnails/*.svg \

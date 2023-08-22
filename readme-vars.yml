@@ -110,6 +110,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "22.08.23:", desc: "Update base image for 1.14.0 release." }
   - { date: "07.04.23:", desc: "Add mod layer for ingesting LSIO images for 1.13.0 release." }
   - { date: "28.03.23:", desc: "Pin compose to 2.5.0 to be in sync with upstream requirements." }
   - { date: "05.11.22:", desc: "Rebase to Jammy, add support for GPUs, add support for Gamepads." }
