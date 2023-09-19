@@ -24,7 +24,7 @@ NAME                                                                          VE
 @tootallnate/once                                                             2.0.0                                     npm        
 @types/cookie                                                                 0.4.1                                     npm        
 @types/cors                                                                   2.8.14                                    npm        
-@types/node                                                                   20.6.1                                    npm        
+@types/node                                                                   20.6.2                                    npm        
 abbrev                                                                        1.1.1                                     npm        
 accepts                                                                       1.3.8                                     npm        
 adduser                                                                       3.118ubuntu5                              deb        
@@ -85,7 +85,7 @@ columnify                                                                     1.
 common-ancestor-path                                                          1.0.1                                     npm        
 concat-map                                                                    0.0.1                                     npm        
 console-control-strings                                                       1.1.0                                     npm        
-containerd.io                                                                 1.6.22-1                                  deb        
+containerd.io                                                                 1.6.24-1                                  deb        
 content-disposition                                                           0.5.4                                     npm        
 content-type                                                                  1.0.5                                     npm        
 cookie                                                                        0.4.2                                     npm        
@@ -150,6 +150,7 @@ get-intrinsic                                                                 1.
 github.com/AlecAivazis/survey/v2                                              v2.3.7                                    go-module  
 github.com/Graylog2/go-gelf                                                   v0.0.0-20191017102106-1550ee647df0        go-module  
 github.com/Masterminds/semver/v3                                              v3.2.1                                    go-module  
+github.com/Microsoft/hcsshim                                                  v0.9.10                                   go-module  
 github.com/Microsoft/hcsshim                                                  v0.9.8                                    go-module  
 github.com/NVIDIA/go-nvml                                                     v0.12.0-1                                 go-module  
 github.com/NVIDIA/nvidia-container-toolkit                                    v1.14.1                                   go-module  
@@ -205,6 +206,7 @@ github.com/containerd/cgroups                                                 v1
 github.com/containerd/cgroups/v3                                              v3.0.2                                    go-module  
 github.com/containerd/console                                                 v1.0.3                                    go-module  
 github.com/containerd/containerd                                              v1.6.22                                   go-module  
+github.com/containerd/containerd                                              v1.6.24                                   go-module  
 github.com/containerd/containerd                                              v1.7.3                                    go-module  
 github.com/containerd/continuity                                              v0.3.0                                    go-module  
 github.com/containerd/continuity                                              v0.4.1                                    go-module  
@@ -362,7 +364,7 @@ github.com/opencontainers/go-digest                                           v1
 github.com/opencontainers/image-spec                                          v1.1.0-rc2.0.20221005185240-3a7f492d3f1b  go-module  
 github.com/opencontainers/image-spec                                          v1.1.0-rc3                                go-module  
 github.com/opencontainers/image-spec                                          v1.1.0-rc4                                go-module  
-github.com/opencontainers/runc                                                v0.0.0-20230719051532-82f18fe0e44a        go-module  
+github.com/opencontainers/runc                                                v0.0.0-20230810173218-ccaecfcbc907        go-module  
 github.com/opencontainers/runc                                                v1.1.5                                    go-module  
 github.com/opencontainers/runc                                                v1.1.6                                    go-module  
 github.com/opencontainers/runc                                                v1.1.7                                    go-module  
@@ -495,7 +497,6 @@ golang.org/x/net                                                              v0
 golang.org/x/oauth2                                                           v0.0.0-20210819190943-2bc19b11175f        go-module  
 golang.org/x/oauth2                                                           v0.1.0                                    go-module  
 golang.org/x/oauth2                                                           v0.7.0                                    go-module  
-golang.org/x/sync                                                             v0.0.0-20210220032951-036812b2e83c        go-module  
 golang.org/x/sync                                                             v0.1.0                                    go-module  
 golang.org/x/sync                                                             v0.3.0                                    go-module  
 golang.org/x/sys                                                              v0.0.0-20211205182925-97ca703d548d        go-module  
@@ -858,7 +859,7 @@ string_decoder                                                                1.
 strip-ansi                                                                    6.0.1                                     npm        
 sudo                                                                          1.9.9-1ubuntu2.4                          deb        
 supports-color                                                                7.2.0                                     npm        
-systeminformation                                                             5.21.5                                    npm        
+systeminformation                                                             5.21.7                                    npm        
 sysvinit-utils                                                                3.01-1ubuntu1                             deb        
 tar                                                                           1.34+dfsg-1ubuntu0.1.22.04.1              deb        
 tar                                                                           6.1.11                                    npm        
