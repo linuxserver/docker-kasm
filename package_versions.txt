@@ -24,7 +24,7 @@ NAME                                                                          VE
 @tootallnate/once                                                             2.0.0                                     npm        
 @types/cookie                                                                 0.4.1                                     npm        
 @types/cors                                                                   2.8.14                                    npm        
-@types/node                                                                   20.8.2                                    npm        
+@types/node                                                                   20.8.4                                    npm        
 abbrev                                                                        1.1.1                                     npm        
 accepts                                                                       1.3.8                                     npm        
 adduser                                                                       3.118ubuntu5                              deb        
@@ -855,6 +855,10 @@ split-ca                                                                      1.
 ssh2                                                                          1.14.0                                    npm        
 ssri                                                                          9.0.1                                     npm        
 statuses                                                                      2.0.1                                     npm        
+stdlib                                                                        go1.18.1                                  go-module  
+stdlib                                                                        go1.20.5                                  go-module  
+stdlib                                                                        go1.20.7                                  go-module  
+stdlib                                                                        go1.20.8                                  go-module  
 string-width                                                                  4.2.3                                     npm        
 string_decoder                                                                1.3.0                                     npm        
 strip-ansi                                                                    6.0.1                                     npm        
@@ -875,6 +879,7 @@ type-is                                                                       1.
 tzdata                                                                        2023c-0ubuntu0.22.04.2                    deb        
 ubuntu-keyring                                                                2021.03.26                                deb        
 uidmap                                                                        1:4.8.1-2ubuntu2.1                        deb        
+undici-types                                                                  5.25.3                                    npm        
 unique-filename                                                               2.0.1                                     npm        
 unique-slug                                                                   3.0.0                                     npm        
 unpipe                                                                        1.0.0                                     npm        
