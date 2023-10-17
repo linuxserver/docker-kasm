@@ -781,7 +781,7 @@ nvidia-container-toolkit                                                      1.
 nvidia-container-toolkit-base                                                 1.14.2-1                                  deb        
 nvidia-docker2                                                                2.14.0-1                                  deb        
 object-assign                                                                 4.1.1                                     npm        
-object-inspect                                                                1.12.3                                    npm        
+object-inspect                                                                1.13.0                                    npm        
 on-finished                                                                   2.4.1                                     npm        
 once                                                                          1.4.0                                     npm        
 opener                                                                        1.5.2                                     npm        
@@ -865,7 +865,7 @@ string_decoder                                                                1.
 strip-ansi                                                                    6.0.1                                     npm        
 sudo                                                                          1.9.9-1ubuntu2.4                          deb        
 supports-color                                                                7.2.0                                     npm        
-systeminformation                                                             5.21.11                                   npm        
+systeminformation                                                             5.21.12                                   npm        
 sysvinit-utils                                                                3.01-1ubuntu1                             deb        
 tar                                                                           1.34+dfsg-1ubuntu0.1.22.04.1              deb        
 tar                                                                           6.1.11                                    npm        
