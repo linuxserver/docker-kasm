@@ -23,8 +23,8 @@ NAME                                                                          VE
 @socket.io/component-emitter                                                  3.1.0                                     npm        
 @tootallnate/once                                                             2.0.0                                     npm        
 @types/cookie                                                                 0.4.1                                     npm        
-@types/cors                                                                   2.8.15                                    npm        
-@types/node                                                                   20.8.10                                   npm        
+@types/cors                                                                   2.8.16                                    npm        
+@types/node                                                                   20.9.0                                    npm        
 abbrev                                                                        1.1.1                                     npm        
 accepts                                                                       1.3.8                                     npm        
 adduser                                                                       3.118ubuntu5                              deb        
@@ -95,6 +95,7 @@ corepack                                                                      0.
 coreutils                                                                     8.32-4.1ubuntu1                           deb        
 cors                                                                          2.8.5                                     npm        
 cpu-features                                                                  0.0.9                                     npm        
+cron                                                                          3.0pl1-137ubuntu3                         deb        
 cssesc                                                                        3.0.0                                     npm        
 curl                                                                          7.81.0-1ubuntu1.14                        deb        
 dash                                                                          0.5.11+git20210903+057cd650a4ed-3build1   deb        
