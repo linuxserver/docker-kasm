@@ -24,7 +24,7 @@ NAME                                                                          VE
 @tootallnate/once                                                             2.0.0                                                npm        
 @types/cookie                                                                 0.4.1                                                npm        
 @types/cors                                                                   2.8.17                                               npm        
-@types/node                                                                   20.10.0                                              npm        
+@types/node                                                                   20.10.3                                              npm        
 abbrev                                                                        1.1.1                                                npm        
 accepts                                                                       1.3.8                                                npm        
 adduser                                                                       3.118ubuntu5                                         deb        
@@ -614,7 +614,7 @@ libnetfilter-conntrack3                                                       1.
 libnettle8                                                                    3.7.3-1build2                                        deb        
 libnfnetlink0                                                                 1.0.1-3build3                                        deb        
 libnftnl11                                                                    1.2.1-1build1                                        deb        
-libnghttp2-14                                                                 1.43.0-1build3                                       deb        
+libnghttp2-14                                                                 1.43.0-1ubuntu0.1                                    deb        
 libnpmaccess                                                                  6.0.4                                                npm        
 libnpmdiff                                                                    4.0.5                                                npm        
 libnpmexec                                                                    4.0.14                                               npm        
@@ -822,7 +822,7 @@ string_decoder                                                                1.
 strip-ansi                                                                    6.0.1                                                npm        
 sudo                                                                          1.9.9-1ubuntu2.4                                     deb        
 supports-color                                                                7.2.0                                                npm        
-systeminformation                                                             5.21.18                                              npm        
+systeminformation                                                             5.21.20                                              npm        
 sysvinit-utils                                                                3.01-1ubuntu1                                        deb        
 tar                                                                           1.34+dfsg-1ubuntu0.1.22.04.1                         deb        
 tar                                                                           6.1.11                                               npm        
