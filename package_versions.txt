@@ -97,7 +97,7 @@ cors                                                                          2.
 cpu-features                                                                  0.0.9                                     npm        
 cron                                                                          3.0pl1-137ubuntu3                         deb        
 cssesc                                                                        3.0.0                                     npm        
-curl                                                                          7.81.0-1ubuntu1.14                        deb        
+curl                                                                          7.81.0-1ubuntu1.15                        deb        
 dash                                                                          0.5.11+git20210903+057cd650a4ed-3build1   deb        
 debconf                                                                       1.5.79ubuntu1                             deb        
 debianutils                                                                   5.5-1ubuntu2                              deb        
@@ -617,7 +617,7 @@ libcap-ng0                                                                    0.
 libcap2                                                                       1:2.44-1ubuntu0.22.04.1                   deb        
 libcom-err2                                                                   1.46.5-2ubuntu1.1                         deb        
 libcrypt1                                                                     1:4.4.27-1                                deb        
-libcurl4                                                                      7.81.0-1ubuntu1.14                        deb        
+libcurl4                                                                      7.81.0-1ubuntu1.15                        deb        
 libdb5.3                                                                      5.3.28+dfsg1-0.8ubuntu3                   deb        
 libdebconfclient0                                                             0.261ubuntu1                              deb        
 libdevmapper1.02.1                                                            2:1.02.175-2.1ubuntu4                     deb        
@@ -718,7 +718,7 @@ libuuid1                                                                      2.
 libxtables12                                                                  1.8.7-1ubuntu5.1                          deb        
 libxxhash0                                                                    0.8.1-1                                   deb        
 libzstd1                                                                      1.4.8+dfsg-3build1                        deb        
-locales                                                                       2.35-0ubuntu3.4                           deb        
+locales                                                                       2.35-0ubuntu3.5                           deb        
 lodash                                                                        4.17.21                                   npm        
 login                                                                         1:4.8.1-2ubuntu2.1                        deb        
 logsave                                                                       1.46.5-2ubuntu1.1                         deb        
