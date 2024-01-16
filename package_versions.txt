@@ -24,7 +24,7 @@ NAME                                                                          VE
 @tootallnate/once                                                             2.0.0                                     npm        
 @types/cookie                                                                 0.4.1                                     npm        
 @types/cors                                                                   2.8.17                                    npm        
-@types/node                                                                   20.10.8                                   npm        
+@types/node                                                                   20.11.4                                   npm        
 abbrev                                                                        1.1.1                                     npm        
 accepts                                                                       1.3.8                                     npm        
 adduser                                                                       3.118ubuntu5                              deb        
@@ -85,7 +85,7 @@ columnify                                                                     1.
 common-ancestor-path                                                          1.0.1                                     npm        
 concat-map                                                                    0.0.1                                     npm        
 console-control-strings                                                       1.1.0                                     npm        
-containerd.io                                                                 1.6.26-1                                  deb        
+containerd.io                                                                 1.6.27-1                                  deb        
 content-disposition                                                           0.5.4                                     npm        
 content-type                                                                  1.0.5                                     npm        
 cookie                                                                        0.4.2                                     npm        
@@ -98,6 +98,7 @@ cpu-features                                                                  0.
 cron                                                                          3.0pl1-137ubuntu3                         deb        
 cssesc                                                                        3.0.0                                     npm        
 curl                                                                          7.81.0-1ubuntu1.15                        deb        
+dario.cat/mergo                                                               v1.0.0                                    go-module  
 dash                                                                          0.5.11+git20210903+057cd650a4ed-3build1   deb        
 debconf                                                                       1.5.79ubuntu1                             deb        
 debianutils                                                                   5.5-1ubuntu2                              deb        
@@ -209,7 +210,7 @@ github.com/containerd/cgroups                                                 v1
 github.com/containerd/cgroups/v3                                              v3.0.2                                    go-module  
 github.com/containerd/console                                                 v1.0.3                                    go-module  
 github.com/containerd/containerd                                              v1.6.22                                   go-module  
-github.com/containerd/containerd                                              v1.6.26                                   go-module  
+github.com/containerd/containerd                                              v1.6.27                                   go-module  
 github.com/containerd/containerd                                              v1.7.3                                    go-module  
 github.com/containerd/continuity                                              v0.3.0                                    go-module  
 github.com/containerd/continuity                                              v0.4.1                                    go-module  
@@ -236,6 +237,7 @@ github.com/cpuguy83/go-md2man/v2                                              v2
 github.com/cpuguy83/go-md2man/v2                                              v2.0.0-20190314233015-f79a8a8ca69d        go-module  
 github.com/cpuguy83/go-md2man/v2                                              v2.0.2                                    go-module  
 github.com/cyphar/filepath-securejoin                                         v0.2.3                                    go-module  
+github.com/cyphar/filepath-securejoin                                         v0.2.4                                    go-module  
 github.com/davecgh/go-spew                                                    v1.1.1                                    go-module  
 github.com/deckarep/golang-set/v2                                             v2.3.0                                    go-module  
 github.com/dimchansky/utfbom                                                  v1.1.1                                    go-module  
@@ -312,7 +314,6 @@ github.com/hashicorp/go-version                                               v1
 github.com/hashicorp/golang-lru                                               v0.5.4                                    go-module  
 github.com/hashicorp/memberlist                                               v0.4.0                                    go-module  
 github.com/hashicorp/serf                                                     v0.8.5                                    go-module  
-github.com/imdario/mergo                                                      v0.3.12                                   go-module  
 github.com/imdario/mergo                                                      v0.3.13                                   go-module  
 github.com/imdario/mergo                                                      v0.3.16                                   go-module  
 github.com/in-toto/in-toto-golang                                             v0.5.0                                    go-module  
@@ -357,6 +358,7 @@ github.com/moby/sys/sequential                                                v0
 github.com/moby/sys/signal                                                    v0.6.0                                    go-module  
 github.com/moby/sys/signal                                                    v0.7.0                                    go-module  
 github.com/moby/sys/symlink                                                   v0.2.0                                    go-module  
+github.com/moby/sys/user                                                      v0.1.0                                    go-module  
 github.com/moby/term                                                          v0.5.0                                    go-module  
 github.com/modern-go/concurrent                                               v0.0.0-20180306012644-bacd9c7ef1dd        go-module  
 github.com/modern-go/reflect2                                                 v1.0.2                                    go-module  
@@ -367,8 +369,7 @@ github.com/opencontainers/go-digest                                           v1
 github.com/opencontainers/image-spec                                          v1.1.0-rc2.0.20221005185240-3a7f492d3f1b  go-module  
 github.com/opencontainers/image-spec                                          v1.1.0-rc3                                go-module  
 github.com/opencontainers/image-spec                                          v1.1.0-rc4                                go-module  
-github.com/opencontainers/runc                                                v0.0.0-20231101070151-18a0cb0f32bc        go-module  
-github.com/opencontainers/runc                                                v1.1.5                                    go-module  
+github.com/opencontainers/runc                                                v0.0.0-20240102023416-4bccb38cc9cf        go-module  
 github.com/opencontainers/runc                                                v1.1.6                                    go-module  
 github.com/opencontainers/runc                                                v1.1.7                                    go-module  
 github.com/opencontainers/runtime-spec                                        v1.0.3-0.20210326190908-1c3f411f0417      go-module  
@@ -612,7 +613,7 @@ libbrotli1                                                                    1.
 libbsd0                                                                       0.11.5-1                                  deb        
 libbz2-1.0                                                                    1.0.8-5build1                             deb        
 libc-bin                                                                      2.35-0ubuntu3.1                           deb        
-libc6                                                                         2.35-0ubuntu3.5                           deb        
+libc6                                                                         2.35-0ubuntu3.6                           deb        
 libcap-ng0                                                                    0.7.9-2.2build3                           deb        
 libcap2                                                                       1:2.44-1ubuntu0.22.04.1                   deb        
 libcom-err2                                                                   1.46.5-2ubuntu1.1                         deb        
@@ -702,7 +703,7 @@ libsemanage-common                                                            3.
 libsemanage2                                                                  3.3-1build2                               deb        
 libsepol2                                                                     3.3-1build1                               deb        
 libsmartcols1                                                                 2.37.2-4ubuntu3                           deb        
-libsqlite3-0                                                                  3.37.2-2ubuntu0.1                         deb        
+libsqlite3-0                                                                  3.37.2-2ubuntu0.3                         deb        
 libss2                                                                        1.46.5-2ubuntu1.1                         deb        
 libssh-4                                                                      0.9.6-2ubuntu0.22.04.2                    deb        
 libssl3                                                                       3.0.2-0ubuntu1.10                         deb        
@@ -839,7 +840,7 @@ send                                                                          0.
 sensible-utils                                                                0.0.17                                    deb        
 serve-static                                                                  1.15.0                                    npm        
 set-blocking                                                                  2.0.0                                     npm        
-set-function-length                                                           1.1.1                                     npm        
+set-function-length                                                           1.2.0                                     npm        
 setprototypeof                                                                1.2.0                                     npm        
 side-channel                                                                  1.0.4                                     npm        
 signal-exit                                                                   3.0.7                                     npm        
@@ -849,7 +850,7 @@ sigs.k8s.io/structured-merge-diff/v4                                          v4
 sigs.k8s.io/yaml                                                              v1.2.0                                    go-module  
 sigs.k8s.io/yaml                                                              v1.3.0                                    go-module  
 smart-buffer                                                                  4.2.0                                     npm        
-socket.io                                                                     4.7.3                                     npm        
+socket.io                                                                     4.7.4                                     npm        
 socket.io-adapter                                                             2.5.2                                     npm        
 socket.io-parser                                                              4.2.4                                     npm        
 socks                                                                         2.7.0                                     npm        
@@ -864,7 +865,7 @@ ssri                                                                          9.
 statuses                                                                      2.0.1                                     npm        
 stdlib                                                                        go1.18.1                                  go-module  
 stdlib                                                                        go1.20.10                                 go-module  
-stdlib                                                                        go1.20.12                                 go-module  
+stdlib                                                                        go1.20.13                                 go-module  
 stdlib                                                                        go1.20.5                                  go-module  
 stdlib                                                                        go1.20.7                                  go-module  
 string-width                                                                  4.2.3                                     npm        
