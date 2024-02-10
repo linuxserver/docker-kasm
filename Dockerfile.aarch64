@@ -91,7 +91,7 @@ RUN \
   ALVERSION=$(cat /kasm_release/conf/database/seed_data/default_properties.yaml |awk '/alembic_version/ {print $2}') && \
   curl -o \
     /tmp/images.tar.gz -L \
-    "https://kasm-ci.s3.amazonaws.com/1.14.0-images-combined.tar.gz" && \
+    "https://kasm-ci.s3.amazonaws.com/1.15.0-images-combined.tar.gz" && \
   tar xf \
     /tmp/images.tar.gz -C \
     / && \
