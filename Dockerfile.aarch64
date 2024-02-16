@@ -28,7 +28,7 @@ RUN \
   curl -s -L https://nvidia.github.io/libnvidia-container/ubuntu22.04/libnvidia-container.list | \
     sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
     tee /etc/apt/sources.list.d/nvidia-container-toolkit.list && \
-  curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
+  curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
   apt-get install -y --no-install-recommends \
     btrfs-progs \
     containerd.io \
@@ -89,12 +89,16 @@ RUN \
   tar xf \
     /tmp/kasm.tar.gz -C \
     / && \
+  ALVERSION=$(cat /kasm_release/conf/database/seed_data/default_properties.yaml |awk '/alembic_version/ {print $2}') && \
   curl -o \
     /tmp/images.tar.gz -L \
-    "https://kasm-ci.s3.amazonaws.com/1.14.0-images-combined.tar.gz" && \
+    "https://kasm-ci.s3.amazonaws.com/1.15.0-images-combined.tar.gz" && \
   tar xf \
     /tmp/images.tar.gz -C \
     / && \
+  sed -i \
+    '/alembic_version/s/.*/alembic_version: '${ALVERSION}'/' \
+    /kasm_release/conf/database/seed_data/default_images_a* && \
   sed -i 's/-N -e -H/-N -B -e -H/g' /kasm_release/upgrade.sh && \
   echo "exit 0" > /kasm_release/install_dependencies.sh && \
   echo "**** copy assets ****" && \
