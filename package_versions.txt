@@ -547,7 +547,7 @@ graceful-fs                                                                   4.
 grep                                                                          3.7-1build1                                          deb        
 gzip                                                                          1.10-4ubuntu4.1                                      deb        
 has-property-descriptors                                                      1.0.2                                                npm        
-has-proto                                                                     1.0.1                                                npm        
+has-proto                                                                     1.0.3                                                npm        
 has-symbols                                                                   1.0.3                                                npm        
 has-unicode                                                                   2.0.1                                                npm        
 hasown                                                                        2.0.0                                                npm        
@@ -868,7 +868,7 @@ strip-ansi                                                                    6.
 strip-ansi                                                                    7.1.0                                                npm        
 sudo                                                                          1.9.9-1ubuntu2.4                                     deb        
 supports-color                                                                9.4.0                                                npm        
-systeminformation                                                             5.21.24                                              npm        
+systeminformation                                                             5.22.0                                               npm        
 sysvinit-utils                                                                3.01-1ubuntu1                                        deb        
 tags.cncf.io/container-device-interface                                       v0.6.2                                               go-module  
 tags.cncf.io/container-device-interface/specs-go                              v0.6.0                                               go-module  
