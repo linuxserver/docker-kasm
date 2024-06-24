@@ -12,19 +12,19 @@ jobs:
       - name: External Trigger
         if: github.ref == 'refs/heads/develop'
         run: |
-          if [ -n "${{ secrets.PAUSE_EXTERNAL_TRIGGER_KASM_DEVELOP }}" ]; then
-            echo "**** Github secret PAUSE_EXTERNAL_TRIGGER_KASM_DEVELOP is set; skipping trigger. ****"
-            echo "Github secret \`PAUSE_EXTERNAL_TRIGGER_KASM_DEVELOP\` is set; skipping trigger." >> $GITHUB_STEP_SUMMARY
+          if [ -n "${{ secrets.PAUSE_EXTERNAL_TRIGGER_WEBTOP_DEVELOP }}" ]; then
+            echo "**** Github secret PAUSE_EXTERNAL_TRIGGER_WEBTOP_DEVELOP is set; skipping trigger. ****"
+            echo "Github secret \`PAUSE_EXTERNAL_TRIGGER_WEBTOP_DEVELOP\` is set; skipping trigger." >> $GITHUB_STEP_SUMMARY
             exit 0
           fi
-          echo "**** External trigger running off of develop branch. To disable this trigger, set a Github secret named \"PAUSE_EXTERNAL_TRIGGER_KASM_DEVELOP\". ****"
-          echo "External trigger running off of develop branch. To disable this trigger, set a Github secret named \`PAUSE_EXTERNAL_TRIGGER_KASM_DEVELOP\`" >> $GITHUB_STEP_SUMMARY
+          echo "**** External trigger running off of develop branch. To disable this trigger, set a Github secret named \"PAUSE_EXTERNAL_TRIGGER_WEBTOP_DEVELOP\". ****"
+          echo "External trigger running off of develop branch. To disable this trigger, set a Github secret named \`PAUSE_EXTERNAL_TRIGGER_WEBTOP_DEVELOP\`" >> $GITHUB_STEP_SUMMARY
           echo "**** Retrieving external version ****"
           EXT_RELEASE=$(curl -sX GET https://kasm-ci.s3.amazonaws.com/dev-version.txt)
           if [ -z "${EXT_RELEASE}" ] || [ "${EXT_RELEASE}" == "null" ]; then
             echo "**** Can't retrieve external version, exiting ****"
-            FAILURE_REASON="Can't retrieve external version for kasm branch develop"
-            GHA_TRIGGER_URL="https://github.com/linuxserver/docker-kasm/actions/runs/${{ github.run_id }}"
+            FAILURE_REASON="Can't retrieve external version for webtop branch develop"
+            GHA_TRIGGER_URL="https://github.com/linuxserver/docker-webtop/actions/runs/${{ github.run_id }}"
             curl -X POST -H "Content-Type: application/json" --data '{"avatar_url": "https://cdn.discordapp.com/avatars/354986384542662657/df91181b3f1cf0ef1592fbe18e0962d7.png","embeds": [{"color": 16711680,
               "description": "**Trigger Failed** \n**Reason:** '"${FAILURE_REASON}"' \n**Trigger URL:** '"${GHA_TRIGGER_URL}"' \n"}],
               "username": "Github Actions"}' ${{ secrets.DISCORD_WEBHOOK }}
@@ -34,10 +34,10 @@ jobs:
           echo "**** External version: ${EXT_RELEASE} ****"
           echo "External version: ${EXT_RELEASE}" >> $GITHUB_STEP_SUMMARY
           echo "**** Retrieving last pushed version ****"
-          image="linuxserver/kasm"
+          image="linuxserver/webtop"
           tag="develop"
           token=$(curl -sX GET \
-            "https://ghcr.io/token?scope=repository%3Alinuxserver%2Fkasm%3Apull" \
+            "https://ghcr.io/token?scope=repository%3Alinuxserver%2Fwebtop%3Apull" \
             | jq -r '.token')
             multidigest=$(curl -s \
               --header "Accept: application/vnd.docker.distribution.manifest.v2+json" \
@@ -61,7 +61,7 @@ jobs:
           IMAGE_VERSION=$(echo ${IMAGE_RELEASE} | awk -F'-ls' '{print $1}')
           if [ -z "${IMAGE_VERSION}" ]; then
             echo "**** Can't retrieve last pushed version, exiting ****"
-            FAILURE_REASON="Can't retrieve last pushed version for kasm tag develop"
+            FAILURE_REASON="Can't retrieve last pushed version for webtop tag develop"
             curl -X POST -H "Content-Type: application/json" --data '{"avatar_url": "https://cdn.discordapp.com/avatars/354986384542662657/df91181b3f1cf0ef1592fbe18e0962d7.png","embeds": [{"color": 16711680,
               "description": "**Trigger Failed** \n**Reason:** '"${FAILURE_REASON}"' \n"}],
               "username": "Github Actions"}' ${{ secrets.DISCORD_WEBHOOK }}
@@ -73,7 +73,7 @@ jobs:
             echo "**** Version ${EXT_RELEASE} already pushed, exiting ****"
             echo "Version ${EXT_RELEASE} already pushed, exiting" >> $GITHUB_STEP_SUMMARY
             exit 0
-          elif [ $(curl -s https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-kasm/job/develop/lastBuild/api/json | jq -r '.building') == "true" ]; then
+          elif [ $(curl -s https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-webtop/job/develop/lastBuild/api/json | jq -r '.building') == "true" ]; then
             echo "**** New version ${EXT_RELEASE} found; but there already seems to be an active build on Jenkins; exiting ****"
             echo "New version ${EXT_RELEASE} found; but there already seems to be an active build on Jenkins; exiting" >> $GITHUB_STEP_SUMMARY
             exit 0
@@ -81,7 +81,7 @@ jobs:
             echo "**** New version ${EXT_RELEASE} found; old version was ${IMAGE_VERSION}. Triggering new build ****"
             echo "New version ${EXT_RELEASE} found; old version was ${IMAGE_VERSION}. Triggering new build" >> $GITHUB_STEP_SUMMARY
             response=$(curl -iX POST \
-              https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-kasm/job/develop/buildWithParameters?PACKAGE_CHECK=false \
+              https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-webtop/job/develop/buildWithParameters?PACKAGE_CHECK=false \
               --user ${{ secrets.JENKINS_USER }}:${{ secrets.JENKINS_TOKEN }} | grep -i location | sed "s|^[L|l]ocation: \(.*\)|\1|")
             echo "**** Jenkins job queue url: ${response%$'\r'} ****"
             echo "**** Sleeping 10 seconds until job starts ****"
@@ -97,7 +97,7 @@ jobs:
               --data-urlencode "description=GHA external trigger https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
               --data-urlencode "Submit=Submit"
             echo "**** Notifying Discord ****"
-            TRIGGER_REASON="A version change was detected for kasm tag develop. Old version:${IMAGE_VERSION} New version:${EXT_RELEASE}"
+            TRIGGER_REASON="A version change was detected for webtop tag develop. Old version:${IMAGE_VERSION} New version:${EXT_RELEASE}"
             curl -X POST -H "Content-Type: application/json" --data '{"avatar_url": "https://cdn.discordapp.com/avatars/354986384542662657/df91181b3f1cf0ef1592fbe18e0962d7.png","embeds": [{"color": 9802903,
               "description": "**Build Triggered** \n**Reason:** '"${TRIGGER_REASON}"' \n**Build URL:** '"${buildurl}display/redirect"' \n"}],
               "username": "Github Actions"}' ${{ secrets.DISCORD_WEBHOOK }}

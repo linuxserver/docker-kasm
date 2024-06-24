@@ -47,14 +47,6 @@ body:
       render: markdown
     validations:
       required: false
-  - type: dropdown
-    attributes:
-      label: CPU architecture
-      options:
-        - x86-64
-        - arm64
-    validations:
-      required: true
   - type: textarea
     attributes:
       label: Docker creation
@@ -67,10 +59,10 @@ body:
   - type: textarea
     attributes:
       description: |
-        Provide a full docker log, output of "docker logs kasm"
+        Provide a full docker log, output of "docker logs webtop"
       label: Container logs
       placeholder: |
-        Output of `docker logs kasm`
+        Output of `docker logs webtop`
       render: bash
     validations:
       required: true

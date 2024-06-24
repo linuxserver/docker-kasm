@@ -1,4 +1,4 @@
-# Contributing to kasm
+# Contributing to webtop
 
 ## Gotchas
 
@@ -24,10 +24,10 @@
 ## Readme
 
 If you would like to change our readme, please __**do not**__ directly edit the readme, as it is auto-generated on each commit.
-Instead edit the [readme-vars.yml](https://github.com/linuxserver/docker-kasm/edit/develop/readme-vars.yml).
+Instead edit the [readme-vars.yml](https://github.com/linuxserver/docker-webtop/edit/develop/readme-vars.yml).
 
 These variables are used in a template for our [Jenkins Builder](https://github.com/linuxserver/docker-jenkins-builder) as part of an ansible play.
-Most of these variables are also carried over to [docs.linuxserver.io](https://docs.linuxserver.io/images/docker-kasm)
+Most of these variables are also carried over to [docs.linuxserver.io](https://docs.linuxserver.io)
 
 ### Fixing typos or clarify the text in the readme
 
@@ -97,12 +97,12 @@ If you are proposing additional packages to be added, ensure that you added the 
 ### Testing your changes
 
 ```bash
-git clone https://github.com/linuxserver/docker-kasm.git
-cd docker-kasm
+git clone https://github.com/linuxserver/docker-webtop.git
+cd docker-webtop
 docker build \
   --no-cache \
   --pull \
-  -t linuxserver/kasm:latest .
+  -t linuxserver/webtop:latest .
 ```
 
 The ARM variants can be built on x86_64 hardware using `multiarch/qemu-user-static`
@@ -115,7 +115,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Update the changelog
 
-If you are modifying the Dockerfiles or any of the startup scripts in [root](https://github.com/linuxserver/docker-kasm/tree/develop/root), add an entry to the changelog
+If you are modifying the Dockerfiles or any of the startup scripts in [root](https://github.com/linuxserver/docker-webtop/tree/develop/root), add an entry to the changelog
 
 ```yml
 changelogs:
