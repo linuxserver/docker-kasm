@@ -59,10 +59,10 @@ body:
   - type: textarea
     attributes:
       description: |
-        Provide a full docker log, output of "docker logs webtop"
+        Provide a full docker log, output of "docker logs kasm"
       label: Container logs
       placeholder: |
-        Output of `docker logs webtop`
+        Output of `docker logs kasm`
       render: bash
     validations:
       required: true

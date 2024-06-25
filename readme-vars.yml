@@ -1,7 +1,7 @@
 ---
 
 # project information
-project_name: webtop
+project_name: kasm
 full_custom_readme: |
   {% raw -%}
   Up to date documentation is available [here](https://github.com/linuxserver/docker-kasm/blob/master/README.md).
