@@ -74,6 +74,8 @@ opt_cap_add_param_vars: []
 optional_block_1: false
 optional_block_1_items: ""
 
+unraid_template: false
+
 privileged: true
 
 # application setup block
