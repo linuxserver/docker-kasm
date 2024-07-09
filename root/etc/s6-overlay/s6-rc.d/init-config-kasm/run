@@ -18,3 +18,11 @@ if [ ! -f "/opt/kasm/certs/kasm_wizard.crt" ]; then
         -out /opt/kasm/certs/kasm_wizard.crt \
         -subj "/C=US/ST=VA/L=None/O=None/OU=DoFu/CN=$(hostname)/emailAddress=none@none.none"
 fi
+
+# Create plugin directory
+if [ ! -d "/opt/docker-plugins" ]; then
+  mkdir -p /opt/docker-plugins
+  ln -s /opt/docker-plugins /var/lib/docker-plugins
+  mkdir -p /var/lib/docker-plugins/rclone/config
+  mkdir -p /var/lib/docker-plugins/rclone/cache
+fi

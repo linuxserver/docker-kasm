@@ -34,16 +34,17 @@ RUN \
     containerd.io \
     docker-ce \
     docker-ce-cli \
-    drm-info \
     e2fsprogs \
     fuse-overlayfs \
     g++ \
     gcc \
+    iproute2 \
     iptables \
     jq \
     lsof \
     make \
     nodejs \
+    nvidia-container-toolkit \
     nvidia-docker2 \
     openssl \
     pigz \
