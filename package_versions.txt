@@ -30,7 +30,7 @@ NAME                                                                          VE
 @tufjs/models                                                                 2.0.0                                                npm                         
 @types/cookie                                                                 0.4.1                                                npm                         
 @types/cors                                                                   2.8.17                                               npm                         
-@types/node                                                                   20.14.9                                              npm                         
+@types/node                                                                   20.14.10                                             npm                         
 abbrev                                                                        2.0.0                                                npm                         
 accepts                                                                       1.3.8                                                npm                         
 adduser                                                                       3.118ubuntu5                                         deb                         
@@ -686,8 +686,8 @@ libpcre3                                                                      2:
 libprocps8                                                                    2:3.3.17-6ubuntu2.1                                  deb                         
 libpsl5                                                                       0.21.0-1.2build2                                     deb                         
 libpython3-stdlib                                                             3.10.6-1~22.04                                       deb                         
-libpython3.10-minimal                                                         3.10.12-1~22.04.3                                    deb                         
-libpython3.10-stdlib                                                          3.10.12-1~22.04.3                                    deb                         
+libpython3.10-minimal                                                         3.10.12-1~22.04.4                                    deb                         
+libpython3.10-stdlib                                                          3.10.12-1~22.04.4                                    deb                         
 libreadline8                                                                  8.1.2-1                                              deb                         
 librtmp1                                                                      2.4+20151223.gitfa8646d.1-2build4                    deb                         
 libsasl2-2                                                                    2.1.27+dfsg2-3ubuntu1.2                              deb                         
@@ -702,7 +702,7 @@ libsmartcols1                                                                 2.
 libsqlite3-0                                                                  3.37.2-2ubuntu0.3                                    deb                         
 libss2                                                                        1.46.5-2ubuntu1.1                                    deb                         
 libssh-4                                                                      0.9.6-2ubuntu0.22.04.3                               deb                         
-libssl3                                                                       3.0.2-0ubuntu1.15                                    deb                         
+libssl3                                                                       3.0.2-0ubuntu1.16                                    deb                         
 libstdc++6                                                                    12.3.0-1ubuntu1~22.04                                deb                         
 libsystemd0                                                                   249.11-0ubuntu3.12                                   deb                         
 libtasn1-6                                                                    4.18.0-4build1                                       deb                         
@@ -759,7 +759,7 @@ netcat                                                                        1.
 netcat-openbsd                                                                1.218-4ubuntu1                                       deb                         
 node-gyp                                                                      10.1.0                                               npm                         
 node-pty                                                                      0.10.1                                               npm                         
-nodejs                                                                        18.20.3-1nodesource1                                 deb                         
+nodejs                                                                        18.20.4-1nodesource1                                 deb                         
 nopt                                                                          7.2.0                                                npm                         
 normalize-package-data                                                        6.0.0                                                npm                         
 npm                                                                           10.7.0                                               npm                         
@@ -807,8 +807,8 @@ publicsuffix                                                                  20
 pump                                                                          3.0.0                                                npm                         
 python3                                                                       3.10.6-1~22.04                                       deb                         
 python3-minimal                                                               3.10.6-1~22.04                                       deb                         
-python3.10                                                                    3.10.12-1~22.04.3                                    deb                         
-python3.10-minimal                                                            3.10.12-1~22.04.3                                    deb                         
+python3.10                                                                    3.10.12-1~22.04.4                                    deb                         
+python3.10-minimal                                                            3.10.12-1~22.04.4                                    deb                         
 qrcode-terminal                                                               0.12.0                                               npm                         
 qs                                                                            6.11.0                                               npm                         
 range-parser                                                                  1.2.1                                                npm                         
