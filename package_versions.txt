@@ -882,7 +882,7 @@ treeverse                                                                     3.
 tuf-js                                                                        2.2.0                                                npm                         
 tweetnacl                                                                     0.14.5                                               npm                         
 type-is                                                                       1.6.18                                               npm                         
-tzdata                                                                        2024a-0ubuntu0.22.04                                 deb                         
+tzdata                                                                        2024a-0ubuntu0.22.04.1                               deb                         
 ubuntu-keyring                                                                2021.03.26                                           deb                         
 uidmap                                                                        1:4.8.1-2ubuntu2.2                                   deb                         
 undici-types                                                                  5.26.5                                               npm                         
