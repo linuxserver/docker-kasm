@@ -105,7 +105,7 @@ debconf                                                                       1.
 debianutils                                                                   5.5-1ubuntu2                                         deb                          
 debug                                                                         2.6.9                                                npm        (+3 duplicates)   
 debug                                                                         4.3.4                                                npm                          
-debug                                                                         4.3.5                                                npm                          
+debug                                                                         4.3.6                                                npm                          
 define-data-property                                                          1.1.4                                                npm                          
 depd                                                                          2.0.0                                                npm                          
 destroy                                                                       1.2.0                                                npm                          
