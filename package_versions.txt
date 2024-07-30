@@ -155,7 +155,7 @@ github.com/Masterminds/semver                                                 v1
 github.com/Microsoft/hcsshim                                                  v0.11.7                                              go-module  (+2 duplicates)   
 github.com/NVIDIA/go-nvlib                                                    v0.6.0                                               go-module  (+3 duplicates)   
 github.com/NVIDIA/go-nvml                                                     v0.12.4-0                                            go-module  (+3 duplicates)   
-github.com/NVIDIA/nvidia-container-toolkit                                    v1.16.0                                              go-module  (+3 duplicates)   
+github.com/NVIDIA/nvidia-container-toolkit                                    v1.16.1                                              go-module  (+3 duplicates)   
 github.com/RackSec/srslog                                                     v0.0.0-20180709174129-a4725f04ec91                   go-module                    
 github.com/a8m/envsubst                                                       v1.3.0                                               go-module  (+1 duplicate)    
 github.com/agext/levenshtein                                                  v1.2.3                                               go-module                    
@@ -242,7 +242,7 @@ github.com/distribution/distribution/v3                                       v3
 github.com/distribution/reference                                             v0.6.0                                               go-module  (+2 duplicates)   
 github.com/docker/buildx                                                      v0.8.1                                               go-module                    
 github.com/docker/cli                                                         v20.10.3-0.20220309205733-2b52f62e9627+incompatible  go-module                    
-github.com/docker/cli/cmd/docker                                              v27.1.1                                              go-module                    
+github.com/docker/cli/cmd/docker                                              27.1.1                                               go-module                    
 github.com/docker/compose/v2                                                  v2.5.0                                               go-module                    
 github.com/docker/distribution                                                v2.8.0+incompatible                                  go-module                    
 github.com/docker/distribution                                                v2.8.3+incompatible                                  go-module                    
@@ -684,8 +684,8 @@ libnpmteam                                                                    6.
 libnpmversion                                                                 6.0.1                                                npm                          
 libnpth0                                                                      1.6-3build2                                          deb                          
 libnsl2                                                                       1.3.0-2build2                                        deb                          
-libnvidia-container-tools                                                     1.16.0-1                                             deb                          
-libnvidia-container1                                                          1.16.0-1                                             deb                          
+libnvidia-container-tools                                                     1.16.1-1                                             deb                          
+libnvidia-container1                                                          1.16.1-1                                             deb                          
 libonig5                                                                      6.9.7.1-2build1                                      deb                          
 libp11-kit0                                                                   0.24.0-6build1                                       deb                          
 libpam-modules                                                                1.4.0-11ubuntu2.4                                    deb                          
@@ -697,8 +697,8 @@ libpcre3                                                                      2:
 libprocps8                                                                    2:3.3.17-6ubuntu2.1                                  deb                          
 libpsl5                                                                       0.21.0-1.2build2                                     deb                          
 libpython3-stdlib                                                             3.10.6-1~22.04                                       deb                          
-libpython3.10-minimal                                                         3.10.12-1~22.04.4                                    deb                          
-libpython3.10-stdlib                                                          3.10.12-1~22.04.4                                    deb                          
+libpython3.10-minimal                                                         3.10.12-1~22.04.5                                    deb                          
+libpython3.10-stdlib                                                          3.10.12-1~22.04.5                                    deb                          
 libreadline8                                                                  8.1.2-1                                              deb                          
 librtmp1                                                                      2.4+20151223.gitfa8646d.1-2build4                    deb                          
 libsasl2-2                                                                    2.1.27+dfsg2-3ubuntu1.2                              deb                          
@@ -784,8 +784,8 @@ npm-pick-manifest                                                             9.
 npm-profile                                                                   9.0.2                                                npm                          
 npm-registry-fetch                                                            17.0.0                                               npm                          
 npm-user-validate                                                             2.0.0                                                npm                          
-nvidia-container-toolkit                                                      1.16.0-1                                             deb                          
-nvidia-container-toolkit-base                                                 1.16.0-1                                             deb                          
+nvidia-container-toolkit                                                      1.16.1-1                                             deb                          
+nvidia-container-toolkit-base                                                 1.16.1-1                                             deb                          
 nvidia-docker2                                                                2.14.0-1                                             deb                          
 object-assign                                                                 4.1.1                                                npm                          
 object-inspect                                                                1.13.2                                               npm                          
@@ -818,8 +818,8 @@ publicsuffix                                                                  20
 pump                                                                          3.0.0                                                npm                          
 python3                                                                       3.10.6-1~22.04                                       deb                          
 python3-minimal                                                               3.10.6-1~22.04                                       deb                          
-python3.10                                                                    3.10.12-1~22.04.4                                    deb                          
-python3.10-minimal                                                            3.10.12-1~22.04.4                                    deb                          
+python3.10                                                                    3.10.12-1~22.04.5                                    deb                          
+python3.10-minimal                                                            3.10.12-1~22.04.5                                    deb                          
 qrcode-terminal                                                               0.12.0                                               npm                          
 qs                                                                            6.11.0                                               npm                          
 range-parser                                                                  1.2.1                                                npm                          
