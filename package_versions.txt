@@ -713,7 +713,7 @@ libsmartcols1                                                                 2.
 libsqlite3-0                                                                  3.37.2-2ubuntu0.3                                    deb                          
 libss2                                                                        1.46.5-2ubuntu1.1                                    deb                          
 libssh-4                                                                      0.9.6-2ubuntu0.22.04.3                               deb                          
-libssl3                                                                       3.0.2-0ubuntu1.16                                    deb                          
+libssl3                                                                       3.0.2-0ubuntu1.17                                    deb                          
 libstdc++6                                                                    12.3.0-1ubuntu1~22.04                                deb                          
 libsystemd0                                                                   249.11-0ubuntu3.12                                   deb                          
 libtasn1-6                                                                    4.18.0-4build1                                       deb                          
