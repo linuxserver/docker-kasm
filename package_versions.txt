@@ -30,7 +30,7 @@ NAME                                                                          VE
 @tufjs/models                                                                 2.0.0                                                npm                          
 @types/cookie                                                                 0.4.1                                                npm                          
 @types/cors                                                                   2.8.17                                               npm                          
-@types/node                                                                   22.1.0                                               npm                          
+@types/node                                                                   22.2.0                                               npm                          
 abbrev                                                                        2.0.0                                                npm                          
 accepts                                                                       1.3.8                                                npm                          
 adduser                                                                       3.118ubuntu5                                         deb                          
@@ -242,7 +242,7 @@ github.com/distribution/distribution/v3                                       v3
 github.com/distribution/reference                                             v0.6.0                                               go-module  (+2 duplicates)   
 github.com/docker/buildx                                                      v0.8.1                                               go-module                    
 github.com/docker/cli                                                         v20.10.3-0.20220309205733-2b52f62e9627+incompatible  go-module                    
-github.com/docker/cli/cmd/docker                                              27.1.1                                               go-module                    
+github.com/docker/cli/cmd/docker                                              v27.1.1                                              go-module                    
 github.com/docker/compose/v2                                                  v2.5.0                                               go-module                    
 github.com/docker/distribution                                                v2.8.0+incompatible                                  go-module                    
 github.com/docker/distribution                                                v2.8.3+incompatible                                  go-module                    
