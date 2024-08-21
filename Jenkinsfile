@@ -34,7 +34,7 @@ pipeline {
     CI_SSL='true'
     CI_DELAY='120'
     CI_DOCKERENV='TEST=true'
-    CI_AUTH='user:password'
+    CI_AUTH=''
     CI_WEBPATH=''
   }
   stages {

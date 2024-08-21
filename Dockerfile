@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-ubuntu:jammy
+FROM ghcr.io/linuxserver/baseimage-ubuntu:noble
 
 # set version label
 ARG BUILD_DATE
@@ -20,12 +20,11 @@ ENV NVIDIA_DRIVER_CAPABILITIES="compute,graphics,video,utility" \
 # Container setup
 RUN \
   echo "**** install packages ****" && \
-  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
-  echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable" > \
-    /etc/apt/sources.list.d/docker.list && \
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | tee /usr/share/keyrings/docker.asc >/dev/null && \
+  echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker.asc] https://download.docker.com/linux/ubuntu noble stable" > /etc/apt/sources.list.d/docker.list && \
   curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | \
     gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg && \
-  curl -s -L https://nvidia.github.io/libnvidia-container/ubuntu22.04/libnvidia-container.list | \
+    curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
     sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
     tee /etc/apt/sources.list.d/nvidia-container-toolkit.list && \
   curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
@@ -45,7 +44,6 @@ RUN \
     make \
     nodejs \
     nvidia-container-toolkit \
-    nvidia-docker2 \
     openssl \
     pigz \
     python3 \
@@ -108,6 +106,7 @@ RUN \
   cp \
     /kasm_release/conf/database/seed_data/default_images_a* \
     /wizard/ && \
+  printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** cleanup ****" && \
   apt-get remove -y g++ gcc make && \
   apt-get -y autoremove && \
