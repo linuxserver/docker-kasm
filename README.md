@@ -313,6 +313,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **21.08.24:** - Rebase to Noble.
 * **16.02.24:** - Update base image for 1.15.0 release.
 * **22.08.23:** - Update base image for 1.14.0 release.
 * **07.04.23:** - Add mod layer for ingesting LSIO images for 1.13.0 release.
