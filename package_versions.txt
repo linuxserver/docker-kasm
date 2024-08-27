@@ -30,7 +30,7 @@ NAME                                                                          VE
 @tufjs/models                                                                 2.0.0                                                npm                          
 @types/cookie                                                                 0.4.1                                                npm                          
 @types/cors                                                                   2.8.17                                               npm                          
-@types/node                                                                   22.4.1                                               npm                          
+@types/node                                                                   22.5.0                                               npm                          
 abbrev                                                                        2.0.0                                                npm                          
 accepts                                                                       1.3.8                                                npm                          
 adduser                                                                       3.118ubuntu5                                         deb                          
@@ -118,7 +118,7 @@ docker-modem                                                                  3.
 dockerode                                                                     3.3.5                                                npm                          
 dpkg                                                                          1.21.1ubuntu2.3                                      deb                          
 drm-info                                                                      2.2.0-2                                              deb                          
-e2fsprogs                                                                     1.46.5-2ubuntu1.1                                    deb                          
+e2fsprogs                                                                     1.46.5-2ubuntu1.2                                    deb                          
 eastasianwidth                                                                0.2.0                                                npm                          
 ee-first                                                                      1.1.1                                                npm                          
 emoji-regex                                                                   8.0.0                                                npm                          
@@ -624,7 +624,7 @@ libdrm-common                                                                 2.
 libdrm2                                                                       2.4.113-2~ubuntu0.22.04.1                            deb                          
 libedit2                                                                      3.1-20210910-1build1                                 deb                          
 libexpat1                                                                     2.4.7-1ubuntu0.3                                     deb                          
-libext2fs2                                                                    1.46.5-2ubuntu1.1                                    deb                          
+libext2fs2                                                                    1.46.5-2ubuntu1.2                                    deb                          
 libffi8                                                                       3.4.2-4                                              deb                          
 libfuse3-3                                                                    3.10.5-1build1                                       deb                          
 libgcc-s1                                                                     12.3.0-1ubuntu1~22.04                                deb                          
@@ -687,7 +687,7 @@ libpcre2-8-0                                                                  10
 libpcre3                                                                      2:8.39-13ubuntu0.22.04.1                             deb                          
 libprocps8                                                                    2:3.3.17-6ubuntu2.1                                  deb                          
 libpsl5                                                                       0.21.0-1.2build2                                     deb                          
-libpython3-stdlib                                                             3.10.6-1~22.04                                       deb                          
+libpython3-stdlib                                                             3.10.6-1~22.04.1                                     deb                          
 libpython3.10-minimal                                                         3.10.12-1~22.04.5                                    deb                          
 libpython3.10-stdlib                                                          3.10.12-1~22.04.5                                    deb                          
 libreadline8                                                                  8.1.2-1                                              deb                          
@@ -807,8 +807,8 @@ promzard                                                                      1.
 proxy-addr                                                                    2.0.7                                                npm                          
 publicsuffix                                                                  20211207.1025-1                                      deb                          
 pump                                                                          3.0.0                                                npm                          
-python3                                                                       3.10.6-1~22.04                                       deb                          
-python3-minimal                                                               3.10.6-1~22.04                                       deb                          
+python3                                                                       3.10.6-1~22.04.1                                     deb                          
+python3-minimal                                                               3.10.6-1~22.04.1                                     deb                          
 python3.10                                                                    3.10.12-1~22.04.5                                    deb                          
 python3.10-minimal                                                            3.10.12-1~22.04.5                                    deb                          
 qrcode-terminal                                                               0.12.0                                               npm                          
@@ -868,7 +868,7 @@ strip-ansi                                                                    6.
 strip-ansi                                                                    7.1.0                                                npm        (+1 duplicate)    
 sudo                                                                          1.9.9-1ubuntu2.4                                     deb                          
 supports-color                                                                9.4.0                                                npm                          
-systeminformation                                                             5.23.4                                               npm                          
+systeminformation                                                             5.23.5                                               npm                          
 sysvinit-utils                                                                3.01-1ubuntu1                                        deb                          
 tags.cncf.io/container-device-interface                                       v0.7.2                                               go-module  (+1 duplicate)    
 tags.cncf.io/container-device-interface                                       v0.8.0                                               go-module  (+3 duplicates)   
