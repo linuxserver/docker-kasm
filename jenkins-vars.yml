@@ -19,7 +19,7 @@ repo_vars:
   - DIST_IMAGE = 'ubuntu'
   - MULTIARCH='true'
   - CI='true'
-  - CI_WEB='true'
+  - CI_WEB='false'
   - CI_PORT='3000'
   - CI_SSL='true'
   - CI_DELAY='120'
