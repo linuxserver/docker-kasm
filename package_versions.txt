@@ -30,7 +30,7 @@ NAME                                                                          VE
 @tufjs/models                                                                 2.0.0                                                npm                          
 @types/cookie                                                                 0.4.1                                                npm                          
 @types/cors                                                                   2.8.17                                               npm                          
-@types/node                                                                   22.5.0                                               npm                          
+@types/node                                                                   22.5.2                                               npm                          
 abbrev                                                                        2.0.0                                                npm                          
 accepts                                                                       1.3.8                                                npm                          
 adduser                                                                       3.118ubuntu5                                         deb                          
@@ -614,7 +614,7 @@ libc6                                                                         2.
 libcap-ng0                                                                    0.7.9-2.2build3                                      deb                          
 libcap2                                                                       1:2.44-1ubuntu0.22.04.1                              deb                          
 libcap2-bin                                                                   1:2.44-1ubuntu0.22.04.1                              deb                          
-libcom-err2                                                                   1.46.5-2ubuntu1.1                                    deb                          
+libcom-err2                                                                   1.46.5-2ubuntu1.2                                    deb                          
 libcrypt1                                                                     1:4.4.27-1                                           deb                          
 libcurl4                                                                      7.81.0-1ubuntu1.17                                   deb                          
 libdb5.3                                                                      5.3.28+dfsg1-0.8ubuntu3                              deb                          
@@ -700,7 +700,7 @@ libsemanage2                                                                  3.
 libsepol2                                                                     3.3-1build1                                          deb                          
 libsmartcols1                                                                 2.37.2-4ubuntu3.4                                    deb                          
 libsqlite3-0                                                                  3.37.2-2ubuntu0.3                                    deb                          
-libss2                                                                        1.46.5-2ubuntu1.1                                    deb                          
+libss2                                                                        1.46.5-2ubuntu1.2                                    deb                          
 libssh-4                                                                      0.9.6-2ubuntu0.22.04.3                               deb                          
 libssl3                                                                       3.0.2-0ubuntu1.17                                    deb                          
 libstdc++6                                                                    12.3.0-1ubuntu1~22.04                                deb                          
@@ -718,7 +718,7 @@ libzstd1                                                                      1.
 locales                                                                       2.35-0ubuntu3.8                                      deb                          
 lodash                                                                        4.17.21                                              npm                          
 login                                                                         1:4.8.1-2ubuntu2.2                                   deb                          
-logsave                                                                       1.46.5-2ubuntu1.1                                    deb                          
+logsave                                                                       1.46.5-2ubuntu1.2                                    deb                          
 lru-cache                                                                     10.2.2                                               npm                          
 lru-cache                                                                     6.0.0                                                npm                          
 lsb-base                                                                      11.1.0ubuntu4                                        deb                          
@@ -780,7 +780,7 @@ object-assign                                                                 4.
 object-inspect                                                                1.13.2                                               npm                          
 on-finished                                                                   2.4.1                                                npm                          
 once                                                                          1.4.0                                                npm                          
-openssl                                                                       3.0.2-0ubuntu1.17                                    deb                          
+openssl                                                                       3.0.2-0ubuntu1.18                                    deb                          
 p-map                                                                         4.0.0                                                npm                          
 pacote                                                                        18.0.3                                               npm                          
 parse-conflict-json                                                           3.0.1                                                npm                          
