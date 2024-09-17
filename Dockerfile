@@ -101,6 +101,9 @@ RUN \
     /kasm_release/conf/database/seed_data/default_images_a* && \
   sed -i 's/-N -e -H/-N -B -e -H/g' /kasm_release/upgrade.sh && \
   echo "exit 0" > /kasm_release/install_dependencies.sh && \
+  /kasm_release/bin/utils/yq_$(uname -m) -i \
+    '.services.proxy.volumes += "/kasm_release/www/img/thumbnails:/srv/www/img/thumbnails"' \
+    /kasm_release/docker/docker-compose-all.yaml && \
   echo "**** copy assets ****" && \
   cp \
     /kasm_release/www/img/thumbnails/*.png /kasm_release/www/img/thumbnails/*.svg \
