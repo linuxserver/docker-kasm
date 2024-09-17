@@ -112,6 +112,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "17.09.24:", desc: "Update base image for 1.16.0 release and fix Nvidia support." }
   - { date: "16.02.24:", desc: "Update base image for 1.15.0 release." }
   - { date: "22.08.23:", desc: "Update base image for 1.14.0 release." }
   - { date: "07.04.23:", desc: "Add mod layer for ingesting LSIO images for 1.13.0 release." }

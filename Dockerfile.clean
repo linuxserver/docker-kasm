@@ -86,7 +86,7 @@ RUN \
   echo "**** add installer ****" && \
   curl -o \
     /tmp/kasm.tar.gz -L \
-    "https://kasmweb-build-artifacts.s3.amazonaws.com/kasm_backend/b05ebcfbd973739debca5bc2d91b6ac1e01fcdc7/kasm_workspaces_1.16.0_1.16.0.b05ebc.tar.gz" && \
+    "https://github.com/kasmtech/kasm-install-wizard/releases/download/${KASM_VERSION}/kasm_release.tar.gz" && \
   tar xf \
     /tmp/kasm.tar.gz -C \
     / && \
@@ -102,9 +102,6 @@ RUN \
     /kasm_release/conf/database/seed_data/default_images_a* && \
   sed -i 's/-N -e -H/-N -B -e -H/g' /kasm_release/upgrade.sh && \
   echo "exit 0" > /kasm_release/install_dependencies.sh && \
-  /kasm_release/bin/utils/yq_$(uname -m) -i \
-    '.services.proxy.volumes += "/kasm_release/www/img/thumbnails:/srv/www/img/thumbnails"' \
-    /kasm_release/docker/docker-compose-all.yaml && \
   echo "**** copy assets ****" && \
   cp \
     /kasm_release/www/img/thumbnails/*.png /kasm_release/www/img/thumbnails/*.svg \
