@@ -86,7 +86,7 @@ RUN \
   echo "**** add installer ****" && \
   curl -o \
     /tmp/kasm.tar.gz -L \
-    "https://kasmweb-build-artifacts.s3.amazonaws.com/kasm_backend/b05ebcfbd973739debca5bc2d91b6ac1e01fcdc7/kasm_workspaces_1.16.0_1.16.0.b05ebc.tar.gz" && \
+    "https://github.com/kasmtech/kasm-install-wizard/releases/download/${KASM_VERSION}/kasm_release.tar.gz" && \
   tar xf \
     /tmp/kasm.tar.gz -C \
     / && \
