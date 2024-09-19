@@ -117,6 +117,8 @@ services:
     image: lscr.io/linuxserver/kasm:latest
     container_name: kasm
     privileged: true
+    security_opt:
+      - apparmor:rootlesskit #optional
     environment:
       - KASM_PORT=443
       - DOCKER_HUB_USERNAME=USER #optional
@@ -139,6 +141,7 @@ services:
 docker run -d \
   --name=kasm \
   --privileged \
+  --security-opt apparmor=rootlesskit `#optional` \
   -e KASM_PORT=443 \
   -e DOCKER_HUB_USERNAME=USER `#optional` \
   -e DOCKER_HUB_PASSWORD=PASS `#optional` \
@@ -169,6 +172,7 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-v /profiles` | Optionally specify a path for persistent profile storage. |
 | `-v /dev/input` | Optional for gamepad support. |
 | `-v /run/udev/data` | Optional for gamepad support. |
+| `--security-opt apparmor=rootlesskit` | Some hosts require this on top of privileged for namespacing to work properly inside the DinD layer. |
 
 ## Environment variables from files (Docker secrets)
 
