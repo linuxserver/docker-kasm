@@ -34,16 +34,17 @@ RUN \
     containerd.io \
     docker-ce \
     docker-ce-cli \
-    drm-info \
     e2fsprogs \
     fuse-overlayfs \
     g++ \
     gcc \
+    iproute2 \
     iptables \
     jq \
     lsof \
     make \
     nodejs \
+    nvidia-container-toolkit \
     nvidia-docker2 \
     openssl \
     pigz \
@@ -92,7 +93,7 @@ RUN \
   ALVERSION=$(cat /kasm_release/conf/database/seed_data/default_properties.yaml |awk '/alembic_version/ {print $2}') && \
   curl -o \
     /tmp/images.tar.gz -L \
-    "https://kasm-ci.s3.amazonaws.com/1.15.0-images-combined.tar.gz" && \
+    "https://kasm-ci.s3.amazonaws.com/1.16.0-images-combined.tar.gz" && \
   tar xf \
     /tmp/images.tar.gz -C \
     / && \
@@ -101,6 +102,9 @@ RUN \
     /kasm_release/conf/database/seed_data/default_images_a* && \
   sed -i 's/-N -e -H/-N -B -e -H/g' /kasm_release/upgrade.sh && \
   echo "exit 0" > /kasm_release/install_dependencies.sh && \
+  /kasm_release/bin/utils/yq_$(uname -m) -i \
+    '.services.proxy.volumes += "/kasm_release/www/img/thumbnails:/srv/www/img/thumbnails"' \
+    /kasm_release/docker/docker-compose-all.yaml && \
   echo "**** copy assets ****" && \
   cp \
     /kasm_release/www/img/thumbnails/*.png /kasm_release/www/img/thumbnails/*.svg \

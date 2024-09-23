@@ -60,6 +60,10 @@ opt_param_volumes:
   - { vol_path: "/dev/input", vol_host_path: "/dev/input", desc: "Optional for gamepad support." }
   - { vol_path: "/run/udev/data", vol_host_path: "/run/udev/data", desc: "Optional for gamepad support." }
 
+opt_security_opt_param: true
+opt_security_opt_param_vars:
+  - { run_var: "apparmor=rootlesskit", compose_var: "apparmor:rootlesskit", desc: "Some hosts require this on top of privileged for namespacing to work properly inside the DinD layer." }
+
 opt_param_usage_include_ports: false
 opt_param_ports: []
 
@@ -112,6 +116,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "17.09.24:", desc: "Update base image for 1.16.0 release and fix Nvidia support." }
   - { date: "16.02.24:", desc: "Update base image for 1.15.0 release." }
   - { date: "22.08.23:", desc: "Update base image for 1.14.0 release." }
   - { date: "07.04.23:", desc: "Add mod layer for ingesting LSIO images for 1.13.0 release." }
