@@ -116,6 +116,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "24.09.24:", desc: "Add base users in docker build logic to survive container upgrades." }
   - { date: "17.09.24:", desc: "Update base image for 1.16.0 release and fix Nvidia support." }
   - { date: "16.02.24:", desc: "Update base image for 1.15.0 release." }
   - { date: "22.08.23:", desc: "Update base image for 1.14.0 release." }

@@ -112,6 +112,8 @@ RUN \
   cp \
     /kasm_release/conf/database/seed_data/default_images_a* \
     /wizard/ && \
+  useradd -u 70 kasm_db && \
+  useradd kasm && \
   echo "**** cleanup ****" && \
   apt-get remove -y g++ gcc make && \
   apt-get -y autoremove && \
