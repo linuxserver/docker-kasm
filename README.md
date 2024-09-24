@@ -317,6 +317,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **24.09.24:** - Add base users in docker build logic to survive container upgrades.
 * **17.09.24:** - Update base image for 1.16.0 release and fix Nvidia support.
 * **16.02.24:** - Update base image for 1.15.0 release.
 * **22.08.23:** - Update base image for 1.14.0 release.
