@@ -86,7 +86,7 @@ code.cloudfoundry.org/clock                                                   v1
 color-convert                                                                 2.0.1                                                npm                          
 color-name                                                                    1.1.4                                                npm                          
 common-ancestor-path                                                          1.0.1                                                npm                          
-containerd.io                                                                 1.7.22-1                                             deb                          
+containerd.io                                                                 1.7.23-1                                             deb                          
 content-disposition                                                           0.5.4                                                npm                          
 content-type                                                                  1.0.5                                                npm                          
 cookie                                                                        0.7.1                                                npm                          
@@ -206,12 +206,14 @@ github.com/containerd/cgroups/v3                                              v3
 github.com/containerd/console                                                 v1.0.3                                               go-module  (+6 duplicates)   
 github.com/containerd/console                                                 v1.0.4                                               go-module                    
 github.com/containerd/containerd                                              v1.6.2                                               go-module                    
-github.com/containerd/containerd                                              v1.7.22                                              go-module  (+5 duplicates)   
+github.com/containerd/containerd                                              v1.7.22                                              go-module                    
+github.com/containerd/containerd                                              v1.7.23                                              go-module  (+4 duplicates)   
 github.com/containerd/containerd/api                                          v1.7.19                                              go-module  (+5 duplicates)   
 github.com/containerd/continuity                                              v0.2.2                                               go-module                    
 github.com/containerd/continuity                                              v0.4.2                                               go-module  (+4 duplicates)   
 github.com/containerd/continuity                                              v0.4.3                                               go-module                    
-github.com/containerd/errdefs                                                 v0.1.0                                               go-module  (+5 duplicates)   
+github.com/containerd/errdefs                                                 v0.1.0                                               go-module                    
+github.com/containerd/errdefs                                                 v0.3.0                                               go-module  (+4 duplicates)   
 github.com/containerd/fifo                                                    v1.1.0                                               go-module  (+5 duplicates)   
 github.com/containerd/go-cni                                                  v1.1.10                                              go-module                    
 github.com/containerd/go-cni                                                  v1.1.9                                               go-module  (+1 duplicate)    
@@ -867,7 +869,8 @@ ssh2                                                                          1.
 ssri                                                                          10.0.5                                               npm                          
 statuses                                                                      2.0.1                                                npm                          
 stdlib                                                                        go1.17.9                                             go-module                    
-stdlib                                                                        go1.22.7                                             go-module  (+8 duplicates)   
+stdlib                                                                        go1.22.7                                             go-module  (+2 duplicates)   
+stdlib                                                                        go1.22.9                                             go-module  (+5 duplicates)   
 stdlib                                                                        go1.23.1                                             go-module  (+1 duplicate)    
 stdlib                                                                        go1.23.2                                             go-module  (+3 duplicates)   
 string-width                                                                  4.2.3                                                npm        (+1 duplicate)    
