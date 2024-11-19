@@ -31,7 +31,7 @@ NAME                                                                          VE
 @tufjs/models                                                                 2.0.0                                                npm                          
 @types/cookie                                                                 0.4.1                                                npm                          
 @types/cors                                                                   2.8.17                                               npm                          
-@types/node                                                                   22.9.0                                               npm                          
+@types/node                                                                   22.9.1                                               npm                          
 abbrev                                                                        2.0.0                                                npm                          
 accepts                                                                       1.3.8                                                npm                          
 adduser                                                                       3.118ubuntu5                                         deb                          
@@ -86,7 +86,7 @@ code.cloudfoundry.org/clock                                                   v1
 color-convert                                                                 2.0.1                                                npm                          
 color-name                                                                    1.1.4                                                npm                          
 common-ancestor-path                                                          1.0.1                                                npm                          
-containerd.io                                                                 1.7.22-1                                             deb                          
+containerd.io                                                                 1.7.23-1                                             deb                          
 content-disposition                                                           0.5.4                                                npm                          
 content-type                                                                  1.0.5                                                npm                          
 cookie                                                                        0.7.1                                                npm                          
@@ -99,7 +99,7 @@ cpu-features                                                                  0.
 cron                                                                          3.0pl1-137ubuntu3                                    deb                          
 cross-spawn                                                                   7.0.3                                                npm                          
 cssesc                                                                        3.0.0                                                npm                          
-curl                                                                          7.81.0-1ubuntu1.18                                   deb                          
+curl                                                                          7.81.0-1ubuntu1.19                                   deb                          
 dario.cat/mergo                                                               v1.0.0                                               go-module  (+1 duplicate)    
 dash                                                                          0.5.11+git20210903+057cd650a4ed-3build1              deb                          
 debconf                                                                       1.5.79ubuntu1                                        deb                          
@@ -158,7 +158,7 @@ github.com/Masterminds/semver                                                 v1
 github.com/Microsoft/hcsshim                                                  v0.11.7                                              go-module  (+2 duplicates)   
 github.com/NVIDIA/go-nvlib                                                    v0.6.1                                               go-module  (+3 duplicates)   
 github.com/NVIDIA/go-nvml                                                     v0.12.4-0                                            go-module  (+3 duplicates)   
-github.com/NVIDIA/nvidia-container-toolkit                                    v1.17.1                                              go-module  (+3 duplicates)   
+github.com/NVIDIA/nvidia-container-toolkit                                    v1.17.2                                              go-module  (+3 duplicates)   
 github.com/RackSec/srslog                                                     v0.0.0-20180709174129-a4725f04ec91                   go-module                    
 github.com/a8m/envsubst                                                       v1.4.2                                               go-module  (+1 duplicate)    
 github.com/agext/levenshtein                                                  v1.2.3                                               go-module                    
@@ -206,12 +206,14 @@ github.com/containerd/cgroups/v3                                              v3
 github.com/containerd/console                                                 v1.0.3                                               go-module  (+6 duplicates)   
 github.com/containerd/console                                                 v1.0.4                                               go-module                    
 github.com/containerd/containerd                                              v1.6.2                                               go-module                    
-github.com/containerd/containerd                                              v1.7.22                                              go-module  (+5 duplicates)   
+github.com/containerd/containerd                                              v1.7.22                                              go-module                    
+github.com/containerd/containerd                                              v1.7.23                                              go-module  (+4 duplicates)   
 github.com/containerd/containerd/api                                          v1.7.19                                              go-module  (+5 duplicates)   
 github.com/containerd/continuity                                              v0.2.2                                               go-module                    
 github.com/containerd/continuity                                              v0.4.2                                               go-module  (+4 duplicates)   
 github.com/containerd/continuity                                              v0.4.3                                               go-module                    
-github.com/containerd/errdefs                                                 v0.1.0                                               go-module  (+5 duplicates)   
+github.com/containerd/errdefs                                                 v0.1.0                                               go-module                    
+github.com/containerd/errdefs                                                 v0.3.0                                               go-module  (+4 duplicates)   
 github.com/containerd/fifo                                                    v1.1.0                                               go-module  (+5 duplicates)   
 github.com/containerd/go-cni                                                  v1.1.10                                              go-module                    
 github.com/containerd/go-cni                                                  v1.1.9                                               go-module  (+1 duplicate)    
@@ -627,7 +629,7 @@ libcap2                                                                       1:
 libcap2-bin                                                                   1:2.44-1ubuntu0.22.04.1                              deb                          
 libcom-err2                                                                   1.46.5-2ubuntu1.2                                    deb                          
 libcrypt1                                                                     1:4.4.27-1                                           deb                          
-libcurl4                                                                      7.81.0-1ubuntu1.18                                   deb                          
+libcurl4                                                                      7.81.0-1ubuntu1.19                                   deb                          
 libdb5.3                                                                      5.3.28+dfsg1-0.8ubuntu3                              deb                          
 libdebconfclient0                                                             0.261ubuntu1                                         deb                          
 libdevmapper1.02.1                                                            2:1.02.175-2.1ubuntu4                                deb                          
@@ -684,8 +686,8 @@ libnpmteam                                                                    6.
 libnpmversion                                                                 6.0.1                                                npm                          
 libnpth0                                                                      1.6-3build2                                          deb                          
 libnsl2                                                                       1.3.0-2build2                                        deb                          
-libnvidia-container-tools                                                     1.17.1-1                                             deb                          
-libnvidia-container1                                                          1.17.1-1                                             deb                          
+libnvidia-container-tools                                                     1.17.2-1                                             deb                          
+libnvidia-container1                                                          1.17.2-1                                             deb                          
 libonig5                                                                      6.9.7.1-2build1                                      deb                          
 libp11-kit0                                                                   0.24.0-6build1                                       deb                          
 libpam-modules                                                                1.4.0-11ubuntu2.4                                    deb                          
@@ -697,8 +699,8 @@ libpcre3                                                                      2:
 libprocps8                                                                    2:3.3.17-6ubuntu2.1                                  deb                          
 libpsl5                                                                       0.21.0-1.2build2                                     deb                          
 libpython3-stdlib                                                             3.10.6-1~22.04.1                                     deb                          
-libpython3.10-minimal                                                         3.10.12-1~22.04.6                                    deb                          
-libpython3.10-stdlib                                                          3.10.12-1~22.04.6                                    deb                          
+libpython3.10-minimal                                                         3.10.12-1~22.04.7                                    deb                          
+libpython3.10-stdlib                                                          3.10.12-1~22.04.7                                    deb                          
 libreadline8                                                                  8.1.2-1                                              deb                          
 librtmp1                                                                      2.4+20151223.gitfa8646d.1-2build4                    deb                          
 libsasl2-2                                                                    2.1.27+dfsg2-3ubuntu1.2                              deb                          
@@ -784,8 +786,8 @@ npm-pick-manifest                                                             9.
 npm-profile                                                                   9.0.2                                                npm                          
 npm-registry-fetch                                                            17.0.0                                               npm                          
 npm-user-validate                                                             2.0.0                                                npm                          
-nvidia-container-toolkit                                                      1.17.1-1                                             deb                          
-nvidia-container-toolkit-base                                                 1.17.1-1                                             deb                          
+nvidia-container-toolkit                                                      1.17.2-1                                             deb                          
+nvidia-container-toolkit-base                                                 1.17.2-1                                             deb                          
 nvidia-docker2                                                                2.14.0-1                                             deb                          
 object-assign                                                                 4.1.1                                                npm                          
 object-inspect                                                                1.13.3                                               npm                          
@@ -818,8 +820,8 @@ publicsuffix                                                                  20
 pump                                                                          3.0.2                                                npm                          
 python3                                                                       3.10.6-1~22.04.1                                     deb                          
 python3-minimal                                                               3.10.6-1~22.04.1                                     deb                          
-python3.10                                                                    3.10.12-1~22.04.6                                    deb                          
-python3.10-minimal                                                            3.10.12-1~22.04.6                                    deb                          
+python3.10                                                                    3.10.12-1~22.04.7                                    deb                          
+python3.10-minimal                                                            3.10.12-1~22.04.7                                    deb                          
 qrcode-terminal                                                               0.12.0                                               npm                          
 qs                                                                            6.13.0                                               npm                          
 range-parser                                                                  1.2.1                                                npm                          
@@ -867,7 +869,8 @@ ssh2                                                                          1.
 ssri                                                                          10.0.5                                               npm                          
 statuses                                                                      2.0.1                                                npm                          
 stdlib                                                                        go1.17.9                                             go-module                    
-stdlib                                                                        go1.22.7                                             go-module  (+8 duplicates)   
+stdlib                                                                        go1.22.7                                             go-module  (+2 duplicates)   
+stdlib                                                                        go1.22.9                                             go-module  (+5 duplicates)   
 stdlib                                                                        go1.23.1                                             go-module  (+1 duplicate)    
 stdlib                                                                        go1.23.2                                             go-module  (+3 duplicates)   
 string-width                                                                  4.2.3                                                npm        (+1 duplicate)    
