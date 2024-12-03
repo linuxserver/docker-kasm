@@ -85,7 +85,7 @@ Currently Synology systems are not supported due to them blocking CPU scheduling
 
 ### GPU Support
 
-During installation an option will be presented to force all Workspace containers to mount in and use a specific GPU. If using an NVIDIA GPU you will need to pass `-e NVIDIA_VISIBLE_DEVICES=all` or `--gpus all` and have the [NVIDIA Container Runtime](https://github.com/NVIDIA/nvidia-container-runtime) installed on the host. Also if using NVIDIA, Kasm Workspaces has [native NVIDIA support](https://www.kasmweb.com/docs/latest/how_to/gpu.html) so you can optionally opt to simply use that instead of he manual override during installation. 
+During installation an option will be presented to force all Workspace containers to mount in and use a specific GPU. If using an NVIDIA GPU you will need to pass `-e NVIDIA_VISIBLE_DEVICES=all` or `--gpus all` and have the [NVIDIA Container Runtime](https://github.com/NVIDIA/nvidia-container-runtime) installed on the host. Also if using NVIDIA, Kasm Workspaces has [native NVIDIA support](https://www.kasmweb.com/docs/latest/how_to/gpu.html) so you can optionally opt to simply use that instead of he manual override during installation.
 
 ### Gamepad support
 
