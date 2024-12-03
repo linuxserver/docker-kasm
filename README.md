@@ -99,7 +99,6 @@ In order to use persistant profiles in Workspaces you will need to mount in a fo
 
 A sample for [SWAG](https://github.com/linuxserver/docker-swag) can be found [here](https://raw.githubusercontent.com/linuxserver/reverse-proxy-confs/master/kasm.subdomain.conf.sample). Post installation you will need to modify the "Proxy Port" setting under the default zone to 0 as outlined [here](https://www.kasmweb.com/docs/latest/how_to/reverse_proxy.html#update-zones) to launch Workspaces sessions.
 
- 
 ### Strict reverse proxies
 
 This image uses a self-signed certificate by default. This naturally means the scheme is `https`.
@@ -108,6 +107,9 @@ If you are using a reverse proxy which validates certificates, you need to [disa
 ## Usage
 
 To help you get started creating a container from this image you can either use docker-compose or the docker cli.
+
+>[!NOTE]
+>Unless a parameter is flaged as 'optional', it is *mandatory* and a value must be provided.
 
 ### docker-compose (recommended, [click here for more info](https://docs.linuxserver.io/general/docker-compose))
 
@@ -163,8 +165,8 @@ Containers are configured using parameters passed at runtime (such as those abov
 
 | Parameter | Function |
 | :----: | --- |
-| `-p 3000` | Kasm Installation wizard. (https) |
-| `-p 443` | Kasm Workspaces interface. (https) |
+| `-p 3000:3000` | Kasm Installation wizard. (https) |
+| `-p 443:443` | Kasm Workspaces interface. (https) |
 | `-e KASM_PORT=443` | Specify the port you bind to the outside for Kasm Workspaces. |
 | `-e DOCKER_HUB_USERNAME=USER` | Optionally specify a DockerHub Username to pull private images. |
 | `-e DOCKER_HUB_PASSWORD=PASS` | Optionally specify a DockerHub password to pull private images. |
