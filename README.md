@@ -83,6 +83,10 @@ Access the installation wizard at https://`your ip`:3000 and follow the instruct
 
 Currently Synology systems are not supported due to them blocking CPU scheduling in their Kernel.
 
+### Updating KASM
+
+In order to update kasm, first make sure you are using the latest docker image, and then perform the in app update in the admin panel. Docker image update and recreation of container alone won't update kasm.
+
 ### GPU Support
 
 During installation an option will be presented to force all Workspace containers to mount in and use a specific GPU. If using an NVIDIA GPU you will need to pass `-e NVIDIA_VISIBLE_DEVICES=all` or `--gpus all` and have the [NVIDIA Container Runtime](https://github.com/NVIDIA/nvidia-container-runtime) installed on the host. Also if using NVIDIA, Kasm Workspaces has [native NVIDIA support](https://www.kasmweb.com/docs/latest/how_to/gpu.html) so you can optionally opt to simply use that instead of he manual override during installation.
