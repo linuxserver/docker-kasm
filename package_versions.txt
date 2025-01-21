@@ -31,7 +31,7 @@ NAME                                                                          VE
 @tufjs/models                                                                 2.0.1                                                npm                          
 @types/cookie                                                                 0.4.1                                                npm                          
 @types/cors                                                                   2.8.17                                               npm                          
-@types/node                                                                   22.10.6                                              npm                          
+@types/node                                                                   22.10.7                                              npm                          
 abbrev                                                                        2.0.0                                                npm                          
 accepts                                                                       1.3.8                                                npm                          
 adduser                                                                       3.118ubuntu5                                         deb                          
@@ -135,7 +135,7 @@ env-paths                                                                     2.
 err-code                                                                      2.0.3                                                npm                          
 es-define-property                                                            1.0.1                                                npm                          
 es-errors                                                                     1.3.0                                                npm                          
-es-object-atoms                                                               1.1.0                                                npm                          
+es-object-atoms                                                               1.1.1                                                npm                          
 escape-html                                                                   1.0.3                                                npm                          
 etag                                                                          1.8.1                                                npm                          
 exponential-backoff                                                           3.1.1                                                npm                          
@@ -713,8 +713,8 @@ libpcre3                                                                      2:
 libprocps8                                                                    2:3.3.17-6ubuntu2.1                                  deb                          
 libpsl5                                                                       0.21.0-1.2build2                                     deb                          
 libpython3-stdlib                                                             3.10.6-1~22.04.1                                     deb                          
-libpython3.10-minimal                                                         3.10.12-1~22.04.7                                    deb                          
-libpython3.10-stdlib                                                          3.10.12-1~22.04.7                                    deb                          
+libpython3.10-minimal                                                         3.10.12-1~22.04.8                                    deb                          
+libpython3.10-stdlib                                                          3.10.12-1~22.04.8                                    deb                          
 libreadline8                                                                  8.1.2-1                                              deb                          
 librtmp1                                                                      2.4+20151223.gitfa8646d.1-2build4                    deb                          
 libsasl2-2                                                                    2.1.27+dfsg2-3ubuntu1.2                              deb                          
@@ -785,7 +785,7 @@ netcat                                                                        1.
 netcat-openbsd                                                                1.218-4ubuntu1                                       deb                          
 node-gyp                                                                      10.1.0                                               npm                          
 node-pty                                                                      0.10.1                                               npm                          
-nodejs                                                                        18.20.5-1nodesource1                                 deb                          
+nodejs                                                                        18.20.6-1nodesource1                                 deb                          
 nopt                                                                          7.2.1                                                npm                          
 normalize-package-data                                                        6.0.2                                                npm                          
 npm                                                                           10.8.2                                               npm                          
@@ -834,8 +834,8 @@ publicsuffix                                                                  20
 pump                                                                          3.0.2                                                npm                          
 python3                                                                       3.10.6-1~22.04.1                                     deb                          
 python3-minimal                                                               3.10.6-1~22.04.1                                     deb                          
-python3.10                                                                    3.10.12-1~22.04.7                                    deb                          
-python3.10-minimal                                                            3.10.12-1~22.04.7                                    deb                          
+python3.10                                                                    3.10.12-1~22.04.8                                    deb                          
+python3.10-minimal                                                            3.10.12-1~22.04.8                                    deb                          
 qrcode-terminal                                                               0.12.0                                               npm                          
 qs                                                                            6.13.0                                               npm                          
 range-parser                                                                  1.2.1                                                npm                          
