@@ -7,6 +7,7 @@ project_blurb: |
 
   The rendering of the graphical-based containers is powered by the open-source project [KasmVNC](https://www.kasmweb.com/kasmvnc.html?utm_campaign=LinuxServer&utm_source=kasmvnc).
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+project_categories: "Remote Desktop"
 project_blurb_optional_extras_enabled: false
 project_blurb_optional_extras: []
 # supported architectures
