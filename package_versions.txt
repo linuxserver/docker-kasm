@@ -29,9 +29,8 @@ NAME                                                                          VE
 @socket.io/component-emitter                                                  UNKNOWN                                              npm        (+1 duplicate)    
 @tufjs/canonical-json                                                         2.0.0                                                npm                          
 @tufjs/models                                                                 2.0.1                                                npm                          
-@types/cookie                                                                 0.4.1                                                npm                          
 @types/cors                                                                   2.8.17                                               npm                          
-@types/node                                                                   22.10.7                                              npm                          
+@types/node                                                                   22.12.0                                              npm                          
 abbrev                                                                        2.0.0                                                npm                          
 accepts                                                                       1.3.8                                                npm                          
 adduser                                                                       3.118ubuntu5                                         deb                          
@@ -128,7 +127,7 @@ encodeurl                                                                     1.
 encodeurl                                                                     2.0.0                                                npm                          
 encoding                                                                      0.1.13                                               npm                          
 end-of-stream                                                                 1.4.4                                                npm                          
-engine.io                                                                     6.6.2                                                npm                          
+engine.io                                                                     6.6.4                                                npm                          
 engine.io-parser                                                              5.2.3                                                npm                          
 engine.io-parser                                                              UNKNOWN                                              npm        (+1 duplicate)    
 env-paths                                                                     2.2.1                                                npm                          
@@ -161,8 +160,8 @@ github.com/Masterminds/semver                                                 v1
 github.com/Microsoft/hcsshim                                                  v0.11.7                                              go-module  (+1 duplicate)    
 github.com/Microsoft/hcsshim                                                  v0.12.8                                              go-module                    
 github.com/NVIDIA/go-nvlib                                                    v0.6.1                                               go-module  (+3 duplicates)   
-github.com/NVIDIA/go-nvml                                                     v0.12.4-0                                            go-module  (+3 duplicates)   
-github.com/NVIDIA/nvidia-container-toolkit                                    v1.17.3                                              go-module  (+3 duplicates)   
+github.com/NVIDIA/go-nvml                                                     v0.12.4-1                                            go-module  (+3 duplicates)   
+github.com/NVIDIA/nvidia-container-toolkit                                    v1.17.4                                              go-module  (+3 duplicates)   
 github.com/RackSec/srslog                                                     v0.0.0-20180709174129-a4725f04ec91                   go-module                    
 github.com/a8m/envsubst                                                       v1.4.2                                               go-module  (+1 duplicate)    
 github.com/agext/levenshtein                                                  v1.2.3                                               go-module                    
@@ -242,7 +241,7 @@ github.com/containernetworking/plugins                                        v1
 github.com/containernetworking/plugins                                        v1.4.0                                               go-module                    
 github.com/containers/ocicrypt                                                v1.1.10                                              go-module                    
 github.com/coreos/go-systemd/v22                                              v22.5.0                                              go-module  (+5 duplicates)   
-github.com/cpuguy83/go-md2man/v2                                              v2.0.4                                               go-module  (+1 duplicate)    
+github.com/cpuguy83/go-md2man/v2                                              v2.0.5                                               go-module  (+1 duplicate)    
 github.com/cyphar/filepath-securejoin                                         v0.2.4                                               go-module                    
 github.com/cyphar/filepath-securejoin                                         v0.3.5                                               go-module                    
 github.com/davecgh/go-spew                                                    v1.1.1                                               go-module  (+2 duplicates)   
@@ -447,7 +446,7 @@ github.com/tonistiigi/units                                                   v0
 github.com/tonistiigi/vt100                                                   v0.0.0-20210615222946-8066bb97264f                   go-module                    
 github.com/urfave/cli                                                         v1.22.12                                             go-module  (+1 duplicate)    
 github.com/urfave/cli                                                         v1.22.14                                             go-module                    
-github.com/urfave/cli/v2                                                      v2.27.4                                              go-module  (+1 duplicate)    
+github.com/urfave/cli/v2                                                      v2.27.5                                              go-module  (+1 duplicate)    
 github.com/vbatts/tar-split                                                   v0.11.5                                              go-module                    
 github.com/vishvananda/netlink                                                v1.1.0                                               go-module                    
 github.com/vishvananda/netlink                                                v1.2.1-beta.2                                        go-module                    
@@ -700,8 +699,8 @@ libnpmteam                                                                    6.
 libnpmversion                                                                 6.0.3                                                npm                          
 libnpth0                                                                      1.6-3build2                                          deb                          
 libnsl2                                                                       1.3.0-2build2                                        deb                          
-libnvidia-container-tools                                                     1.17.3-1                                             deb                          
-libnvidia-container1                                                          1.17.3-1                                             deb                          
+libnvidia-container-tools                                                     1.17.4-1                                             deb                          
+libnvidia-container1                                                          1.17.4-1                                             deb                          
 libonig5                                                                      6.9.7.1-2build1                                      deb                          
 libp11-kit0                                                                   0.24.0-6build1                                       deb                          
 libpam-modules                                                                1.4.0-11ubuntu2.4                                    deb                          
@@ -799,8 +798,8 @@ npm-pick-manifest                                                             9.
 npm-profile                                                                   10.0.0                                               npm                          
 npm-registry-fetch                                                            17.1.0                                               npm                          
 npm-user-validate                                                             2.0.1                                                npm                          
-nvidia-container-toolkit                                                      1.17.3-1                                             deb                          
-nvidia-container-toolkit-base                                                 1.17.3-1                                             deb                          
+nvidia-container-toolkit                                                      1.17.4-1                                             deb                          
+nvidia-container-toolkit-base                                                 1.17.4-1                                             deb                          
 nvidia-docker2                                                                2.14.0-1                                             deb                          
 object-assign                                                                 4.1.1                                                npm                          
 object-inspect                                                                1.13.3                                               npm                          
@@ -889,7 +888,7 @@ stdlib                                                                        go
 stdlib                                                                        go1.22.10                                            go-module  (+5 duplicates)   
 stdlib                                                                        go1.22.11                                            go-module  (+2 duplicates)   
 stdlib                                                                        go1.23.1                                             go-module  (+1 duplicate)    
-stdlib                                                                        go1.23.2                                             go-module  (+3 duplicates)   
+stdlib                                                                        go1.23.4                                             go-module  (+3 duplicates)   
 string-width                                                                  4.2.3                                                npm        (+1 duplicate)    
 string-width                                                                  5.1.2                                                npm        (+1 duplicate)    
 string_decoder                                                                1.3.0                                                npm                          
