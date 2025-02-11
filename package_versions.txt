@@ -636,7 +636,7 @@ libbrotli1                                                                    1.
 libbsd0                                                                       0.11.5-1                                             deb                          
 libbz2-1.0                                                                    1.0.8-5build1                                        deb                          
 libc-bin                                                                      2.35-0ubuntu3.8                                      deb                          
-libc6                                                                         2.35-0ubuntu3.8                                      deb                          
+libc6                                                                         2.35-0ubuntu3.9                                      deb                          
 libcap-ng0                                                                    0.7.9-2.2build3                                      deb                          
 libcap2                                                                       1:2.44-1ubuntu0.22.04.1                              deb                          
 libcap2-bin                                                                   1:2.44-1ubuntu0.22.04.1                              deb                          
@@ -802,7 +802,7 @@ nvidia-container-toolkit                                                      1.
 nvidia-container-toolkit-base                                                 1.17.4-1                                             deb                          
 nvidia-docker2                                                                2.14.0-1                                             deb                          
 object-assign                                                                 4.1.1                                                npm                          
-object-inspect                                                                1.13.3                                               npm                          
+object-inspect                                                                1.13.4                                               npm                          
 on-finished                                                                   2.4.1                                                npm                          
 once                                                                          1.4.0                                                npm                          
 openssl                                                                       3.0.2-0ubuntu1.18                                    deb                          
@@ -913,7 +913,7 @@ treeverse                                                                     3.
 tuf-js                                                                        2.2.1                                                npm                          
 tweetnacl                                                                     0.14.5                                               npm                          
 type-is                                                                       1.6.18                                               npm                          
-tzdata                                                                        2024a-0ubuntu0.22.04.1                               deb                          
+tzdata                                                                        2024b-0ubuntu0.22.04                                 deb                          
 ubuntu-keyring                                                                2021.03.26                                           deb                          
 uidmap                                                                        1:4.8.1-2ubuntu2.2                                   deb                          
 undici-types                                                                  6.20.0                                               npm                          
