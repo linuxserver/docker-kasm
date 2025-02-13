@@ -30,7 +30,7 @@ NAME                                                                          VE
 @tufjs/canonical-json                                                         2.0.0                                                npm                          
 @tufjs/models                                                                 2.0.1                                                npm                          
 @types/cors                                                                   2.8.17                                               npm                          
-@types/node                                                                   22.13.1                                              npm                          
+@types/node                                                                   22.13.2                                              npm                          
 abbrev                                                                        2.0.0                                                npm                          
 accepts                                                                       1.3.8                                                npm                          
 adduser                                                                       3.118ubuntu5                                         deb                          
@@ -67,7 +67,7 @@ buildcheck                                                                    0.
 bytes                                                                         3.1.2                                                npm                          
 ca-certificates                                                               20240203~22.04.1                                     deb                          
 cacache                                                                       18.0.3                                               npm                          
-call-bind-apply-helpers                                                       1.0.1                                                npm                          
+call-bind-apply-helpers                                                       1.0.2                                                npm                          
 call-bound                                                                    1.0.3                                                npm                          
 catatonit                                                                     0.1.7-1                                              deb                          
 chalk                                                                         5.3.0                                                npm                          
@@ -635,7 +635,7 @@ libbpf0                                                                       1:
 libbrotli1                                                                    1.0.9-2build6                                        deb                          
 libbsd0                                                                       0.11.5-1                                             deb                          
 libbz2-1.0                                                                    1.0.8-5build1                                        deb                          
-libc-bin                                                                      2.35-0ubuntu3.8                                      deb                          
+libc-bin                                                                      2.35-0ubuntu3.9                                      deb                          
 libc6                                                                         2.35-0ubuntu3.9                                      deb                          
 libcap-ng0                                                                    0.7.9-2.2build3                                      deb                          
 libcap2                                                                       1:2.44-1ubuntu0.22.04.1                              deb                          
@@ -657,7 +657,7 @@ libgcrypt20                                                                   1.
 libgmp10                                                                      2:6.2.1+dfsg-3ubuntu1                                deb                          
 libgnutls30                                                                   3.7.3-4ubuntu1.5                                     deb                          
 libgpg-error0                                                                 1.43-3                                               deb                          
-libgssapi-krb5-2                                                              1.19.2-2ubuntu0.4                                    deb                          
+libgssapi-krb5-2                                                              1.19.2-2ubuntu0.5                                    deb                          
 libhogweed6                                                                   3.7.3-1build2                                        deb                          
 libicu70                                                                      70.1-2                                               deb                          
 libidn2-0                                                                     2.3.2-2build1                                        deb                          
@@ -665,10 +665,10 @@ libinih1                                                                      53
 libip4tc2                                                                     1.8.7-1ubuntu5.2                                     deb                          
 libip6tc2                                                                     1.8.7-1ubuntu5.2                                     deb                          
 libjq1                                                                        1.6-2.1ubuntu3                                       deb                          
-libk5crypto3                                                                  1.19.2-2ubuntu0.4                                    deb                          
+libk5crypto3                                                                  1.19.2-2ubuntu0.5                                    deb                          
 libkeyutils1                                                                  1.6.1-2ubuntu3                                       deb                          
-libkrb5-3                                                                     1.19.2-2ubuntu0.4                                    deb                          
-libkrb5support0                                                               1.19.2-2ubuntu0.4                                    deb                          
+libkrb5-3                                                                     1.19.2-2ubuntu0.5                                    deb                          
+libkrb5support0                                                               1.19.2-2ubuntu0.5                                    deb                          
 libksba8                                                                      1.6.0-2ubuntu0.2                                     deb                          
 libldap-2.5-0                                                                 2.5.18+dfsg-0ubuntu0.22.04.2                         deb                          
 libldap-common                                                                2.5.18+dfsg-0ubuntu0.22.04.2                         deb                          
@@ -719,7 +719,7 @@ librtmp1                                                                      2.
 libsasl2-2                                                                    2.1.27+dfsg2-3ubuntu1.2                              deb                          
 libsasl2-modules                                                              2.1.27+dfsg2-3ubuntu1.2                              deb                          
 libsasl2-modules-db                                                           2.1.27+dfsg2-3ubuntu1.2                              deb                          
-libseccomp2                                                                   2.5.3-2ubuntu2                                       deb                          
+libseccomp2                                                                   2.5.3-2ubuntu3~22.04.1                               deb                          
 libselinux1                                                                   3.3-1build2                                          deb                          
 libsemanage-common                                                            3.3-1build2                                          deb                          
 libsemanage2                                                                  3.3-1build2                                          deb                          
@@ -741,7 +741,7 @@ libuuid1                                                                      2.
 libxtables12                                                                  1.8.7-1ubuntu5.2                                     deb                          
 libxxhash0                                                                    0.8.1-1                                              deb                          
 libzstd1                                                                      1.4.8+dfsg-3build1                                   deb                          
-locales                                                                       2.35-0ubuntu3.8                                      deb                          
+locales                                                                       2.35-0ubuntu3.9                                      deb                          
 lodash                                                                        4.17.21                                              npm                          
 login                                                                         1:4.8.1-2ubuntu2.2                                   deb                          
 logsave                                                                       1.46.5-2ubuntu1.2                                    deb                          
