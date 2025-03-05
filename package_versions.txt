@@ -661,7 +661,7 @@ libgcrypt20                                                                   1.
 libgmp10                                                                      2:6.2.1+dfsg-3ubuntu1                                deb                          
 libgnutls30                                                                   3.7.3-4ubuntu1.6                                     deb                          
 libgpg-error0                                                                 1.43-3                                               deb                          
-libgssapi-krb5-2                                                              1.19.2-2ubuntu0.5                                    deb                          
+libgssapi-krb5-2                                                              1.19.2-2ubuntu0.6                                    deb                          
 libhogweed6                                                                   3.7.3-1build2                                        deb                          
 libicu70                                                                      70.1-2                                               deb                          
 libidn2-0                                                                     2.3.2-2build1                                        deb                          
@@ -669,10 +669,10 @@ libinih1                                                                      53
 libip4tc2                                                                     1.8.7-1ubuntu5.2                                     deb                          
 libip6tc2                                                                     1.8.7-1ubuntu5.2                                     deb                          
 libjq1                                                                        1.6-2.1ubuntu3                                       deb                          
-libk5crypto3                                                                  1.19.2-2ubuntu0.5                                    deb                          
+libk5crypto3                                                                  1.19.2-2ubuntu0.6                                    deb                          
 libkeyutils1                                                                  1.6.1-2ubuntu3                                       deb                          
-libkrb5-3                                                                     1.19.2-2ubuntu0.5                                    deb                          
-libkrb5support0                                                               1.19.2-2ubuntu0.5                                    deb                          
+libkrb5-3                                                                     1.19.2-2ubuntu0.6                                    deb                          
+libkrb5support0                                                               1.19.2-2ubuntu0.6                                    deb                          
 libksba8                                                                      1.6.0-2ubuntu0.2                                     deb                          
 libldap-2.5-0                                                                 2.5.18+dfsg-0ubuntu0.22.04.3                         deb                          
 libldap-common                                                                2.5.18+dfsg-0ubuntu0.22.04.3                         deb                          
