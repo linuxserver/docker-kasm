@@ -166,7 +166,7 @@ github.com/Microsoft/hcsshim                                                  v0
 github.com/Microsoft/hcsshim                                                  v0.12.9                                              go-module                    
 github.com/NVIDIA/go-nvlib                                                    v0.6.1                                               go-module  (+3 duplicates)   
 github.com/NVIDIA/go-nvml                                                     v0.12.4-1                                            go-module  (+3 duplicates)   
-github.com/NVIDIA/nvidia-container-toolkit                                    v1.17.4                                              go-module  (+3 duplicates)   
+github.com/NVIDIA/nvidia-container-toolkit                                    v1.17.5                                              go-module  (+3 duplicates)   
 github.com/RackSec/srslog                                                     v0.0.0-20180709174129-a4725f04ec91                   go-module                    
 github.com/a8m/envsubst                                                       v1.4.2                                               go-module  (+1 duplicate)    
 github.com/agext/levenshtein                                                  v1.2.3                                               go-module                    
@@ -251,6 +251,7 @@ github.com/containers/ocicrypt                                                v1
 github.com/coreos/go-systemd/v22                                              v22.5.0                                              go-module  (+5 duplicates)   
 github.com/cpuguy83/go-md2man/v2                                              v2.0.5                                               go-module  (+1 duplicate)    
 github.com/cyphar/filepath-securejoin                                         v0.3.5                                               go-module  (+1 duplicate)    
+github.com/cyphar/filepath-securejoin                                         v0.4.1                                               go-module  (+1 duplicate)    
 github.com/davecgh/go-spew                                                    v1.1.1                                               go-module  (+2 duplicates)   
 github.com/deckarep/golang-set/v2                                             v2.3.0                                               go-module                    
 github.com/dimchansky/utfbom                                                  v1.1.1                                               go-module  (+2 duplicates)   
@@ -398,8 +399,10 @@ github.com/opencontainers/image-spec                                          v1
 github.com/opencontainers/runc                                                v1.1.0                                               go-module                    
 github.com/opencontainers/runc                                                v1.2.3                                               go-module                    
 github.com/opencontainers/runc                                                v1.2.4-0-g6c52b3f                                    go-module                    
+github.com/opencontainers/runc                                                v1.2.5                                               go-module  (+1 duplicate)    
 github.com/opencontainers/runtime-spec                                        v1.1.0                                               go-module  (+4 duplicates)   
-github.com/opencontainers/runtime-spec                                        v1.2.0                                               go-module  (+5 duplicates)   
+github.com/opencontainers/runtime-spec                                        v1.2.0                                               go-module  (+1 duplicate)    
+github.com/opencontainers/runtime-spec                                        v1.2.1                                               go-module  (+3 duplicates)   
 github.com/opencontainers/runtime-tools                                       v0.9.1-0.20221107090550-2e043c6bd626                 go-module  (+5 duplicates)   
 github.com/opencontainers/selinux                                             v1.11.0                                              go-module  (+2 duplicates)   
 github.com/opencontainers/selinux                                             v1.11.1                                              go-module                    
@@ -537,8 +540,7 @@ golang.org/x/oauth2                                                           v0
 golang.org/x/sync                                                             v0.0.0-20210220032951-036812b2e83c                   go-module                    
 golang.org/x/sync                                                             v0.10.0                                              go-module  (+5 duplicates)   
 golang.org/x/sys                                                              v0.0.0-20220114195835-da31bd327af9                   go-module                    
-golang.org/x/sys                                                              v0.26.0                                              go-module  (+3 duplicates)   
-golang.org/x/sys                                                              v0.28.0                                              go-module  (+7 duplicates)   
+golang.org/x/sys                                                              v0.28.0                                              go-module  (+11 duplicates)  
 golang.org/x/sys                                                              v0.29.0                                              go-module  (+1 duplicate)    
 golang.org/x/term                                                             v0.0.0-20210615171337-6886f2dfbf5b                   go-module                    
 golang.org/x/term                                                             v0.27.0                                              go-module                    
@@ -703,8 +705,8 @@ libnpmteam                                                                    6.
 libnpmversion                                                                 6.0.3                                                npm                          
 libnpth0                                                                      1.6-3build2                                          deb                          
 libnsl2                                                                       1.3.0-2build2                                        deb                          
-libnvidia-container-tools                                                     1.17.4-1                                             deb                          
-libnvidia-container1                                                          1.17.4-1                                             deb                          
+libnvidia-container-tools                                                     1.17.5-1                                             deb                          
+libnvidia-container1                                                          1.17.5-1                                             deb                          
 libonig5                                                                      6.9.7.1-2build1                                      deb                          
 libp11-kit0                                                                   0.24.0-6build1                                       deb                          
 libpam-modules                                                                1.4.0-11ubuntu2.5                                    deb                          
@@ -802,8 +804,8 @@ npm-pick-manifest                                                             9.
 npm-profile                                                                   10.0.0                                               npm                          
 npm-registry-fetch                                                            17.1.0                                               npm                          
 npm-user-validate                                                             2.0.1                                                npm                          
-nvidia-container-toolkit                                                      1.17.4-1                                             deb                          
-nvidia-container-toolkit-base                                                 1.17.4-1                                             deb                          
+nvidia-container-toolkit                                                      1.17.5-1                                             deb                          
+nvidia-container-toolkit-base                                                 1.17.5-1                                             deb                          
 nvidia-docker2                                                                2.14.0-1                                             deb                          
 object-assign                                                                 4.1.1                                                npm                          
 object-inspect                                                                1.13.4                                               npm                          
@@ -890,7 +892,8 @@ ssri                                                                          10
 statuses                                                                      2.0.1                                                npm                          
 stdlib                                                                        go1.17.9                                             go-module                    
 stdlib                                                                        go1.22.10                                            go-module  (+5 duplicates)   
-stdlib                                                                        go1.23.4                                             go-module  (+5 duplicates)   
+stdlib                                                                        go1.23.4                                             go-module  (+1 duplicate)    
+stdlib                                                                        go1.23.5                                             go-module  (+3 duplicates)   
 stdlib                                                                        go1.23.6                                             go-module  (+2 duplicates)   
 string-width                                                                  4.2.3                                                npm        (+1 duplicate)    
 string-width                                                                  5.1.2                                                npm        (+1 duplicate)    
@@ -902,8 +905,7 @@ supports-color                                                                9.
 systeminformation                                                             5.25.11                                              npm                          
 sysvinit-utils                                                                3.01-1ubuntu1                                        deb                          
 tags.cncf.io/container-device-interface                                       v0.7.2                                               go-module                    
-tags.cncf.io/container-device-interface                                       v0.8.0                                               go-module  (+3 duplicates)   
-tags.cncf.io/container-device-interface                                       v0.8.1                                               go-module                    
+tags.cncf.io/container-device-interface                                       v0.8.1                                               go-module  (+4 duplicates)   
 tags.cncf.io/container-device-interface/specs-go                              v0.7.0                                               go-module                    
 tags.cncf.io/container-device-interface/specs-go                              v0.8.0                                               go-module  (+4 duplicates)   
 tar                                                                           1.34+dfsg-1ubuntu0.1.22.04.2                         deb                          
