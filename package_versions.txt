@@ -92,7 +92,7 @@ content-type                                                                  1.
 cookie                                                                        0.7.1                                                npm                          
 cookie                                                                        0.7.2                                                npm                          
 cookie-signature                                                              1.0.6                                                npm                          
-corepack                                                                      0.29.4                                               npm                          
+corepack                                                                      0.32.0                                               npm                          
 coreutils                                                                     8.32-4.1ubuntu1.2                                    deb                          
 cors                                                                          2.8.5                                                npm                          
 cpu-features                                                                  0.0.10                                               npm                          
@@ -791,7 +791,7 @@ netcat                                                                        1.
 netcat-openbsd                                                                1.218-4ubuntu1                                       deb                          
 node-gyp                                                                      10.1.0                                               npm                          
 node-pty                                                                      0.10.1                                               npm                          
-nodejs                                                                        18.20.6-1nodesource1                                 deb                          
+nodejs                                                                        18.20.8-1nodesource1                                 deb                          
 nopt                                                                          7.2.1                                                npm                          
 normalize-package-data                                                        6.0.2                                                npm                          
 npm                                                                           10.8.2                                               npm                          
