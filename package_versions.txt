@@ -655,7 +655,7 @@ libdebconfclient0                                                             0.
 libdevmapper1.02.1                                                            2:1.02.175-2.1ubuntu5                                deb                          
 libedit2                                                                      3.1-20210910-1build1                                 deb                          
 libelf1                                                                       0.186-1ubuntu0.1                                     deb                          
-libexpat1                                                                     2.4.7-1ubuntu0.5                                     deb                          
+libexpat1                                                                     2.4.7-1ubuntu0.6                                     deb                          
 libext2fs2                                                                    1.46.5-2ubuntu1.2                                    deb                          
 libffi8                                                                       3.4.2-4                                              deb                          
 libfuse3-3                                                                    3.10.5-1build1                                       deb                          
