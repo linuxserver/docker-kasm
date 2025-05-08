@@ -1,0 +1,19 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+echo '
+╔════════════════════════════════════════════════════╗
+╠════════════════════════════════════════════════════╣
+║                                                    ║
+║             This image is deprecated.              ║
+║      We will not offer support for this image      ║
+║            and it will not be updated.             ║
+║                                                    ║
+╠════════════════════════════════════════════════════╣
+╚════════════════════════════════════════════════════╝
+
+We recommend migrating to the official docker image from Kasm:
+https://github.com/kasmtech/kasm-workspaces-dind
+
+
+══════════════════════════════════════════════════════'
