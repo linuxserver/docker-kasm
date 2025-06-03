@@ -8,8 +8,6 @@ project_blurb: |
   The rendering of the graphical-based containers is powered by the open-source project [KasmVNC](https://www.kasmweb.com/kasmvnc.html?utm_campaign=LinuxServer&utm_source=kasmvnc).
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 project_categories: "Remote Desktop,Business"
-project_blurb_optional_extras_enabled: false
-project_blurb_optional_extras: []
 # supported architectures
 available_architectures:
   - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
@@ -26,12 +24,9 @@ param_usage_include_net: false
 param_usage_include_env: true
 param_env_vars:
   - {env_var: "KASM_PORT", env_value: "443", desc: "Specify the port you bind to the outside for Kasm Workspaces."}
-  - {env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London."}
 param_usage_include_vols: true
 param_volumes:
-  - {vol_path: "/opt", vol_host_path: "/path/to/data", desc: "Docker and installation storage."}
-param_device_map: false
-param_devices: []
+  - {vol_path: "/opt", vol_host_path: "/path/to/{{ project_name }}/data", desc: "Docker and installation storage."}
 param_usage_include_ports: true
 param_ports:
   - {external_port: "3000", internal_port: "3000", port_desc: "Kasm Installation wizard. (https)"}
@@ -44,22 +39,12 @@ opt_param_env_vars:
   - {env_var: "DOCKER_MTU", env_value: "1500", desc: "Optionally specify the mtu options passed to dockerd."}
 opt_param_usage_include_vols: true
 opt_param_volumes:
-  - {vol_path: "/profiles", vol_host_path: "/path/to/profiles", desc: "Optionally specify a path for persistent profile storage."}
+  - {vol_path: "/profiles", vol_host_path: "/path/to/{{ project_name }}/profiles", desc: "Optionally specify a path for persistent profile storage."}
   - {vol_path: "/dev/input", vol_host_path: "/dev/input", desc: "Optional for gamepad support."}
   - {vol_path: "/run/udev/data", vol_host_path: "/run/udev/data", desc: "Optional for gamepad support."}
 opt_security_opt_param: true
 opt_security_opt_param_vars:
   - {run_var: "apparmor=rootlesskit", compose_var: "apparmor:rootlesskit", desc: "Some hosts require this on top of privileged for namespacing to work properly inside the DinD layer."}
-opt_param_usage_include_ports: false
-opt_param_ports: []
-opt_param_device_map: false
-opt_param_devices: []
-cap_add_param: false
-cap_add_param_vars: []
-opt_cap_add_param: false
-opt_cap_add_param_vars: []
-optional_block_1: false
-optional_block_1_items: ""
 unraid_template: false
 privileged: true
 # application setup block
@@ -148,6 +133,7 @@ init_diagram: |
   "kasm:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "03.06.25:", desc: "Rebase to Ubuntu Noble. Update for 1.17.0 release."}
   - {date: "09.11.24:", desc: "Update base image for 1.16.1 release."}
   - {date: "24.09.24:", desc: "Add base users in docker build logic to survive container upgrades."}
   - {date: "17.09.24:", desc: "Update base image for 1.16.0 release and fix Nvidia support."}
