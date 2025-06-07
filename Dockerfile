@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-ubuntu:jammy
+FROM ghcr.io/linuxserver/baseimage-ubuntu:noble
 
 # set version label
 ARG BUILD_DATE
@@ -21,43 +21,33 @@ ENV NVIDIA_DRIVER_CAPABILITIES="compute,graphics,video,utility" \
 RUN \
   echo "**** install packages ****" && \
   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
-  echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable" > \
+  echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu noble stable" > \
     /etc/apt/sources.list.d/docker.list && \
-  curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | \
-    gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg && \
-  curl -s -L https://nvidia.github.io/libnvidia-container/ubuntu22.04/libnvidia-container.list | \
-    sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
-    tee /etc/apt/sources.list.d/nvidia-container-toolkit.list && \
-  curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+  curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
+    && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+      sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+      tee /etc/apt/sources.list.d/nvidia-container-toolkit.list && \
+  curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
   apt-get install -y --no-install-recommends \
     btrfs-progs \
+    build-essential \
     containerd.io \
     docker-ce \
     docker-ce-cli \
+    docker-compose-plugin \
     e2fsprogs \
     fuse-overlayfs \
-    g++ \
-    gcc \
     iproute2 \
     iptables \
-    jq \
     lsof \
-    make \
     nodejs \
     nvidia-container-toolkit \
-    nvidia-docker2 \
     openssl \
     pigz \
     python3 \
     sudo \
     uidmap \
     xfsprogs && \
-  echo "**** compose install ****" && \
-  mkdir -p /usr/local/lib/docker/cli-plugins && \
-  curl -L \
-    https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-$(uname -s)-$(uname -m) -o \
-    /usr/local/lib/docker/cli-plugins/docker-compose && \
-  chmod +x /usr/local/lib/docker/cli-plugins/docker-compose && \
   echo "**** dind setup ****" && \
   useradd -U dockremap && \
   usermod -G dockremap dockremap && \
@@ -93,7 +83,7 @@ RUN \
   ALVERSION=$(cat /kasm_release/conf/database/seed_data/default_properties.yaml |awk '/alembic_version/ {print $2}') && \
   curl -o \
     /tmp/images.tar.gz -L \
-    "https://kasm-ci.s3.amazonaws.com/1.16.1-images-combined.tar.gz" && \
+    "https://kasm-ci.s3.amazonaws.com/1.17.0-images-combined.tar.gz" && \
   tar xf \
     /tmp/images.tar.gz -C \
     / && \

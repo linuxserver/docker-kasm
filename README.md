@@ -132,8 +132,8 @@ services:
       - DOCKER_HUB_PASSWORD=PASS #optional
       - DOCKER_MTU=1500 #optional
     volumes:
-      - /path/to/data:/opt
-      - /path/to/profiles:/profiles #optional
+      - /path/to/kasm/data:/opt
+      - /path/to/kasm/profiles:/profiles #optional
       - /dev/input:/dev/input #optional
       - /run/udev/data:/run/udev/data #optional
     ports:
@@ -155,8 +155,8 @@ docker run -d \
   -e DOCKER_MTU=1500 `#optional` \
   -p 3000:3000 \
   -p 443:443 \
-  -v /path/to/data:/opt \
-  -v /path/to/profiles:/profiles `#optional` \
+  -v /path/to/kasm/data:/opt \
+  -v /path/to/kasm/profiles:/profiles `#optional` \
   -v /dev/input:/dev/input `#optional` \
   -v /run/udev/data:/run/udev/data `#optional` \
   --restart unless-stopped \
@@ -325,6 +325,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **03.06.25:** - Rebase to Ubuntu Noble. Update for 1.17.0 release.
 * **09.11.24:** - Update base image for 1.16.1 release.
 * **24.09.24:** - Add base users in docker build logic to survive container upgrades.
 * **17.09.24:** - Update base image for 1.16.0 release and fix Nvidia support.
