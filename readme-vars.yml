@@ -13,10 +13,7 @@ available_architectures:
   - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
   - {arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
 # development version
-development_versions: true
-development_versions_items:
-  - {tag: "latest", desc: "Stable Kasm releases"}
-  - {tag: "develop", desc: "Tip of develop"}
+development_versions: false
 # container parameters
 common_param_env_vars_enabled: false
 param_container_name: "{{ project_name }}"
@@ -129,6 +126,7 @@ init_diagram: |
   "kasm:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "08.06.25:", desc: "Deprecate develop branch."}
   - {date: "03.06.25:", desc: "Rebase to Ubuntu Noble. Update for 1.17.0 release."}
   - {date: "09.11.24:", desc: "Update base image for 1.16.1 release."}
   - {date: "24.09.24:", desc: "Add base users in docker build logic to survive container upgrades."}
