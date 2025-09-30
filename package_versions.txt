@@ -30,7 +30,7 @@ NAME                                                                          VE
 @tufjs/canonical-json                                                         2.0.0                                   npm                          
 @tufjs/models                                                                 2.0.1                                   npm                          
 @types/cors                                                                   2.8.19                                  npm                          
-@types/node                                                                   24.5.2                                  npm                          
+@types/node                                                                   24.6.0                                  npm                          
 abbrev                                                                        2.0.0                                   npm                          
 accepts                                                                       1.3.8                                   npm                          
 adduser                                                                       3.137ubuntu1                            deb                          
@@ -86,7 +86,7 @@ code.cloudfoundry.org/clock                                                   v1
 color-convert                                                                 2.0.1                                   npm                          
 color-name                                                                    1.1.4                                   npm                          
 common-ancestor-path                                                          1.0.1                                   npm                          
-containerd.io                                                                 1.7.27-1                                deb                          
+containerd.io                                                                 1.7.28-0~ubuntu.24.04~noble             deb                          
 content-disposition                                                           0.5.4                                   npm                          
 content-type                                                                  1.0.5                                   npm                          
 cookie                                                                        0.7.1                                   npm                          
@@ -121,8 +121,8 @@ docker-ce-cli                                                                 5:
 docker-compose-plugin                                                         2.39.4-0~ubuntu.24.04~noble             deb                          
 docker-modem                                                                  3.0.8                                   npm                          
 dockerode                                                                     3.3.5                                   npm                          
-dpkg                                                                          1.22.6ubuntu6.2                         deb                          
-dpkg-dev                                                                      1.22.6ubuntu6.2                         deb                          
+dpkg                                                                          1.22.6ubuntu6.5                         deb                          
+dpkg-dev                                                                      1.22.6ubuntu6.5                         deb                          
 dunder-proto                                                                  1.0.1                                   npm                          
 e2fsprogs                                                                     1.47.0-2.4~exp1ubuntu4.1                deb                          
 eastasianwidth                                                                0.2.0                                   npm                          
@@ -205,8 +205,7 @@ github.com/cenkalti/backoff/v4                                                v4
 github.com/cespare/xxhash/v2                                                  v2.2.0                                  go-module                    
 github.com/cespare/xxhash/v2                                                  v2.3.0                                  go-module  (+1 duplicate)    
 github.com/checkpoint-restore/go-criu/v6                                      v6.3.0                                  go-module                    
-github.com/cilium/ebpf                                                        v0.16.0                                 go-module                    
-github.com/cilium/ebpf                                                        v0.17.3                                 go-module                    
+github.com/cilium/ebpf                                                        v0.17.3                                 go-module  (+1 duplicate)    
 github.com/cilium/ebpf                                                        v0.9.1                                  go-module  (+3 duplicates)   
 github.com/cloudflare/cfssl                                                   v1.6.4                                  go-module                    
 github.com/compose-spec/compose-go/v2                                         v2.9.0                                  go-module                    
@@ -220,7 +219,7 @@ github.com/containerd/cgroups/v3                                              v3
 github.com/containerd/console                                                 v1.0.3                                  go-module  (+4 duplicates)   
 github.com/containerd/console                                                 v1.0.4                                  go-module                    
 github.com/containerd/console                                                 v1.0.5                                  go-module  (+1 duplicate)    
-github.com/containerd/containerd                                              v1.7.27                                 go-module  (+4 duplicates)   
+github.com/containerd/containerd                                              v1.7.28                                 go-module  (+4 duplicates)   
 github.com/containerd/containerd/api                                          v1.8.0                                  go-module  (+4 duplicates)   
 github.com/containerd/containerd/api                                          v1.9.0                                  go-module  (+1 duplicate)    
 github.com/containerd/containerd/v2                                           v2.1.4                                  go-module  (+1 duplicate)    
@@ -290,7 +289,7 @@ github.com/fsnotify/fsnotify                                                  v1
 github.com/fsnotify/fsnotify                                                  v1.9.0                                  go-module                    
 github.com/fvbommel/sortorder                                                 v1.1.0                                  go-module                    
 github.com/fxamacker/cbor/v2                                                  v2.7.0                                  go-module                    
-github.com/go-jose/go-jose/v3                                                 v3.0.3                                  go-module                    
+github.com/go-jose/go-jose/v3                                                 v3.0.4                                  go-module                    
 github.com/go-logr/logr                                                       v1.4.2                                  go-module  (+2 duplicates)   
 github.com/go-logr/logr                                                       v1.4.3                                  go-module                    
 github.com/go-logr/stdr                                                       v1.2.2                                  go-module  (+3 duplicates)   
@@ -381,11 +380,10 @@ github.com/moby/spdystream                                                    v0
 github.com/moby/spdystream                                                    v0.5.0                                  go-module                    
 github.com/moby/swarmkit/v2                                                   v2.0.0                                  go-module                    
 github.com/moby/sys/atomicwriter                                              v0.1.0                                  go-module  (+1 duplicate)    
-github.com/moby/sys/capability                                                v0.4.0                                  go-module                    
+github.com/moby/sys/capability                                                v0.4.0                                  go-module  (+1 duplicate)    
 github.com/moby/sys/mount                                                     v0.3.4                                  go-module                    
 github.com/moby/sys/mountinfo                                                 v0.6.2                                  go-module  (+4 duplicates)   
-github.com/moby/sys/mountinfo                                                 v0.7.1                                  go-module                    
-github.com/moby/sys/mountinfo                                                 v0.7.2                                  go-module  (+1 duplicate)    
+github.com/moby/sys/mountinfo                                                 v0.7.2                                  go-module  (+2 duplicates)   
 github.com/moby/sys/reexec                                                    v0.1.0                                  go-module  (+2 duplicates)   
 github.com/moby/sys/sequential                                                v0.6.0                                  go-module  (+1 duplicate)    
 github.com/moby/sys/signal                                                    v0.7.0                                  go-module  (+1 duplicate)    
@@ -402,17 +400,18 @@ github.com/morikuni/aec                                                       v1
 github.com/mrunalp/fileutils                                                  v0.5.1                                  go-module                    
 github.com/munnerz/goautoneg                                                  v0.0.0-20191010083416-a7dc8b61c822      go-module  (+1 duplicate)    
 github.com/mxk/go-flowrate                                                    v0.0.0-20140419014527-cca7078d478f      go-module                    
+github.com/opencontainers/cgroups                                             v0.0.1                                  go-module                    
 github.com/opencontainers/cgroups                                             v0.0.3                                  go-module                    
 github.com/opencontainers/go-digest                                           v1.0.0                                  go-module  (+6 duplicates)   
 github.com/opencontainers/image-spec                                          v1.1.0                                  go-module  (+4 duplicates)   
 github.com/opencontainers/image-spec                                          v1.1.1                                  go-module  (+1 duplicate)    
-github.com/opencontainers/runc                                                v0.0.0-20250213225849-59923ef18c98      go-module                    
 github.com/opencontainers/runc                                                v1.2.6                                  go-module  (+1 duplicate)    
+github.com/opencontainers/runc                                                v1.3.0                                  go-module                    
 github.com/opencontainers/runtime-spec                                        v1.1.0                                  go-module  (+4 duplicates)   
-github.com/opencontainers/runtime-spec                                        v1.2.0                                  go-module                    
-github.com/opencontainers/runtime-spec                                        v1.2.1                                  go-module  (+4 duplicates)   
+github.com/opencontainers/runtime-spec                                        v1.2.1                                  go-module  (+5 duplicates)   
 github.com/opencontainers/runtime-tools                                       v0.9.1-0.20221107090550-2e043c6bd626    go-module  (+5 duplicates)   
-github.com/opencontainers/selinux                                             v1.11.0                                 go-module  (+2 duplicates)   
+github.com/opencontainers/selinux                                             v1.11.0                                 go-module  (+1 duplicate)    
+github.com/opencontainers/selinux                                             v1.11.1                                 go-module                    
 github.com/opencontainers/selinux                                             v1.12.0                                 go-module                    
 github.com/package-url/packageurl-go                                          v0.1.1                                  go-module                    
 github.com/pelletier/go-toml                                                  v1.9.5                                  go-module  (+7 duplicates)   
@@ -451,7 +450,7 @@ github.com/spf13/pflag                                                        v1
 github.com/stefanberger/go-pkcs11uri                                          v0.0.0-20230803200340-78284954bff6      go-module                    
 github.com/stretchr/testify                                                   v1.10.0                                 go-module                    
 github.com/stretchr/testify                                                   v1.11.1                                 go-module                    
-github.com/syndtr/gocapability                                                v0.0.0-20200815063812-42c35b437635      go-module  (+6 duplicates)   
+github.com/syndtr/gocapability                                                v0.0.0-20200815063812-42c35b437635      go-module  (+5 duplicates)   
 github.com/tchap/go-patricia/v2                                               v2.3.1                                  go-module                    
 github.com/theupdateframework/notary                                          v0.7.0                                  go-module                    
 github.com/tilt-dev/fsnotify                                                  v1.4.8-0.20220602155310-fff9c274a375    go-module                    
@@ -464,14 +463,14 @@ github.com/tonistiigi/go-csvvalue                                             v0
 github.com/tonistiigi/units                                                   v0.0.0-20180711220420-6950e57a87ea      go-module  (+1 duplicate)    
 github.com/tonistiigi/vt100                                                   v0.0.0-20240514184818-90bafcd6abab      go-module                    
 github.com/urfave/cli                                                         v1.22.12                                go-module  (+1 duplicate)    
-github.com/urfave/cli                                                         v1.22.14                                go-module                    
+github.com/urfave/cli                                                         v1.22.16                                go-module                    
 github.com/urfave/cli/v2                                                      v2.27.5                                 go-module  (+1 duplicate)    
 github.com/vbatts/tar-split                                                   v0.12.1                                 go-module                    
-github.com/vishvananda/netlink                                                v1.1.0                                  go-module                    
 github.com/vishvananda/netlink                                                v1.2.1-beta.2                           go-module                    
+github.com/vishvananda/netlink                                                v1.3.0                                  go-module                    
 github.com/vishvananda/netlink                                                v1.3.1                                  go-module                    
-github.com/vishvananda/netns                                                  v0.0.0-20191106174202-0a2b9b5464df      go-module                    
 github.com/vishvananda/netns                                                  v0.0.0-20210104183010-2eb08e3e575f      go-module                    
+github.com/vishvananda/netns                                                  v0.0.4                                  go-module                    
 github.com/vishvananda/netns                                                  v0.0.5                                  go-module                    
 github.com/weppos/publicsuffix-go                                             v0.15.1-0.20210511084619-b1f36a2d6c0b   go-module                    
 github.com/x448/float16                                                       v0.8.4                                  go-module                    
@@ -529,35 +528,35 @@ go.uber.org/mock                                                              v0
 go.uber.org/multierr                                                          v1.8.0                                  go-module                    
 go.uber.org/zap                                                               v1.21.0                                 go-module                    
 go.yaml.in/yaml/v3                                                            v3.0.4                                  go-module                    
-golang.org/x/crypto                                                           v0.31.0                                 go-module                    
 golang.org/x/crypto                                                           v0.37.0                                 go-module                    
 golang.org/x/crypto                                                           v0.38.0                                 go-module                    
-golang.org/x/exp                                                              v0.0.0-20230224173230-c95f2b4c22f2      go-module                    
-golang.org/x/mod                                                              v0.17.0                                 go-module                    
+golang.org/x/crypto                                                           v0.40.0                                 go-module                    
 golang.org/x/mod                                                              v0.20.0                                 go-module  (+3 duplicates)   
 golang.org/x/mod                                                              v0.24.0                                 go-module                    
-golang.org/x/net                                                              v0.33.0                                 go-module  (+3 duplicates)   
+golang.org/x/mod                                                              v0.26.0                                 go-module                    
+golang.org/x/net                                                              v0.35.0                                 go-module                    
 golang.org/x/net                                                              v0.37.0                                 go-module  (+1 duplicate)    
 golang.org/x/net                                                              v0.39.0                                 go-module  (+1 duplicate)    
 golang.org/x/net                                                              v0.40.0                                 go-module                    
-golang.org/x/oauth2                                                           v0.11.0                                 go-module                    
+golang.org/x/net                                                              v0.42.0                                 go-module  (+2 duplicates)   
 golang.org/x/oauth2                                                           v0.29.0                                 go-module                    
-golang.org/x/oauth2                                                           v0.30.0                                 go-module                    
-golang.org/x/sync                                                             v0.10.0                                 go-module  (+4 duplicates)   
-golang.org/x/sync                                                             v0.16.0                                 go-module                    
+golang.org/x/oauth2                                                           v0.30.0                                 go-module  (+1 duplicate)    
+golang.org/x/sync                                                             v0.16.0                                 go-module  (+5 duplicates)   
 golang.org/x/sync                                                             v0.17.0                                 go-module                    
-golang.org/x/sys                                                              v0.28.0                                 go-module  (+9 duplicates)   
+golang.org/x/sys                                                              v0.28.0                                 go-module  (+3 duplicates)   
+golang.org/x/sys                                                              v0.30.0                                 go-module                    
 golang.org/x/sys                                                              v0.31.0                                 go-module  (+1 duplicate)    
 golang.org/x/sys                                                              v0.33.0                                 go-module  (+1 duplicate)    
+golang.org/x/sys                                                              v0.34.0                                 go-module  (+4 duplicates)   
 golang.org/x/sys                                                              v0.36.0                                 go-module                    
-golang.org/x/term                                                             v0.27.0                                 go-module                    
 golang.org/x/term                                                             v0.32.0                                 go-module                    
-golang.org/x/text                                                             v0.21.0                                 go-module  (+2 duplicates)   
+golang.org/x/term                                                             v0.33.0                                 go-module                    
 golang.org/x/text                                                             v0.23.0                                 go-module  (+1 duplicate)    
 golang.org/x/text                                                             v0.24.0                                 go-module                    
 golang.org/x/text                                                             v0.25.0                                 go-module                    
-golang.org/x/time                                                             v0.0.0-20220210224613-90d013bbcef8      go-module                    
+golang.org/x/text                                                             v0.27.0                                 go-module  (+2 duplicates)   
 golang.org/x/time                                                             v0.11.0                                 go-module  (+1 duplicate)    
+golang.org/x/time                                                             v0.12.0                                 go-module                    
 google.golang.org/api                                                         v0.160.0                                go-module                    
 google.golang.org/genproto                                                    v0.0.0-20231211222908-989df2bf70f3      go-module  (+4 duplicates)   
 google.golang.org/genproto                                                    v0.0.0-20240227224415-6ceb2ff114de      go-module                    
@@ -570,8 +569,8 @@ google.golang.org/genproto/googleapis/rpc                                     v0
 google.golang.org/grpc                                                        v1.59.0                                 go-module  (+4 duplicates)   
 google.golang.org/grpc                                                        v1.72.2                                 go-module                    
 google.golang.org/grpc                                                        v1.74.2                                 go-module                    
-google.golang.org/protobuf                                                    v1.33.0                                 go-module                    
 google.golang.org/protobuf                                                    v1.35.2                                 go-module  (+4 duplicates)   
+google.golang.org/protobuf                                                    v1.36.5                                 go-module                    
 google.golang.org/protobuf                                                    v1.36.6                                 go-module  (+1 duplicate)    
 gopd                                                                          1.2.0                                   npm                          
 gopkg.in/evanphx/json-patch.v4                                                v4.12.0                                 go-module                    
@@ -721,10 +720,10 @@ libnvidia-container-tools                                                     1.
 libnvidia-container1                                                          1.17.8-1                                deb                          
 libonig5                                                                      6.9.9-1build1                           deb                          
 libp11-kit0                                                                   0.25.3-4ubuntu2.1                       deb                          
-libpam-modules                                                                1.5.3-5ubuntu5.4                        deb                          
-libpam-modules-bin                                                            1.5.3-5ubuntu5.4                        deb                          
-libpam-runtime                                                                1.5.3-5ubuntu5.4                        deb                          
-libpam0g                                                                      1.5.3-5ubuntu5.4                        deb                          
+libpam-modules                                                                1.5.3-5ubuntu5.5                        deb                          
+libpam-modules-bin                                                            1.5.3-5ubuntu5.5                        deb                          
+libpam-runtime                                                                1.5.3-5ubuntu5.5                        deb                          
+libpam0g                                                                      1.5.3-5ubuntu5.5                        deb                          
 libpcre2-8-0                                                                  10.42-4ubuntu2.1                        deb                          
 libproc2-0                                                                    2:4.0.4-4ubuntu3.2                      deb                          
 libpsl5t64                                                                    0.21.2-1.1build1                        deb                          
@@ -746,7 +745,7 @@ libsmartcols1                                                                 2.
 libsqlite3-0                                                                  3.45.1-1ubuntu2.5                       deb                          
 libss2                                                                        1.47.0-2.4~exp1ubuntu4.1                deb                          
 libssh-4                                                                      0.10.6-2ubuntu0.1                       deb                          
-libssl3t64                                                                    3.0.13-0ubuntu3.5                       deb                          
+libssl3t64                                                                    3.0.13-0ubuntu3.6                       deb                          
 libstdc++6                                                                    14.2.0-4ubuntu2~24.04                   deb                          
 libsubid4                                                                     1:4.13+dfsg1-4ubuntu3.2                 deb                          
 libsystemd0                                                                   255.4-1ubuntu8.10                       deb                          
@@ -822,7 +821,7 @@ object-assign                                                                 4.
 object-inspect                                                                1.13.4                                  npm                          
 on-finished                                                                   2.4.1                                   npm                          
 once                                                                          1.4.0                                   npm                          
-openssl                                                                       3.0.13-0ubuntu3.5                       deb                          
+openssl                                                                       3.0.13-0ubuntu3.6                       deb                          
 p-map                                                                         4.0.0                                   npm                          
 package-json-from-dist                                                        1.0.0                                   npm                          
 pacote                                                                        18.0.6                                  npm                          
@@ -903,10 +902,9 @@ sprintf-js                                                                    1.
 ssh2                                                                          1.17.0                                  npm                          
 ssri                                                                          10.0.6                                  npm                          
 statuses                                                                      2.0.1                                   npm                          
-stdlib                                                                        go1.23.7                                go-module  (+5 duplicates)   
 stdlib                                                                        go1.23.9                                go-module  (+3 duplicates)   
 stdlib                                                                        go1.24.1                                go-module  (+1 duplicate)    
-stdlib                                                                        go1.24.7                                go-module  (+3 duplicates)   
+stdlib                                                                        go1.24.7                                go-module  (+9 duplicates)   
 string-width                                                                  4.2.3                                   npm        (+1 duplicate)    
 string-width                                                                  5.1.2                                   npm        (+1 duplicate)    
 string_decoder                                                                1.3.0                                   npm                          
@@ -935,7 +933,7 @@ type-is                                                                       1.
 tzdata                                                                        2025b-0ubuntu0.24.04.1                  deb                          
 ubuntu-keyring                                                                2023.11.28.1                            deb                          
 uidmap                                                                        1:4.13+dfsg1-4ubuntu3.2                 deb                          
-undici-types                                                                  7.12.0                                  npm                          
+undici-types                                                                  7.13.0                                  npm                          
 unique-filename                                                               3.0.0                                   npm                          
 unique-slug                                                                   4.0.0                                   npm                          
 unminimize                                                                    0.2.1                                   deb                          
