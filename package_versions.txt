@@ -30,7 +30,7 @@ NAME                                                                          VE
 @tufjs/canonical-json                                                         2.0.0                                   npm                          
 @tufjs/models                                                                 2.0.1                                   npm                          
 @types/cors                                                                   2.8.19                                  npm                          
-@types/node                                                                   24.6.0                                  npm                          
+@types/node                                                                   24.7.0                                  npm                          
 abbrev                                                                        2.0.0                                   npm                          
 accepts                                                                       1.3.8                                   npm                          
 adduser                                                                       3.137ubuntu1                            deb                          
@@ -116,9 +116,9 @@ destroy                                                                       1.
 diff                                                                          5.2.0                                   npm                          
 diffutils                                                                     1:3.10-1build1                          deb                          
 dirmngr                                                                       2.4.4-2ubuntu17.3                       deb                          
-docker-ce                                                                     5:28.4.0-1~ubuntu.24.04~noble           deb                          
-docker-ce-cli                                                                 5:28.4.0-1~ubuntu.24.04~noble           deb                          
-docker-compose-plugin                                                         2.39.4-0~ubuntu.24.04~noble             deb                          
+docker-ce                                                                     5:28.5.0-1~ubuntu.24.04~noble           deb                          
+docker-ce-cli                                                                 5:28.5.0-1~ubuntu.24.04~noble           deb                          
+docker-compose-plugin                                                         2.40.0-1~ubuntu.24.04~noble             deb                          
 docker-modem                                                                  3.0.8                                   npm                          
 dockerode                                                                     3.3.5                                   npm                          
 dpkg                                                                          1.22.6ubuntu6.5                         deb                          
@@ -258,13 +258,13 @@ github.com/deckarep/golang-set/v2                                             v2
 github.com/dimchansky/utfbom                                                  v1.1.1                                  go-module  (+2 duplicates)   
 github.com/distribution/reference                                             v0.6.0                                  go-module  (+3 duplicates)   
 github.com/docker/buildx                                                      v0.28.0                                 go-module                    
-github.com/docker/cli                                                         v28.4.0+incompatible                    go-module                    
+github.com/docker/cli                                                         v28.5.0+incompatible                    go-module                    
 github.com/docker/cli-docs-tool                                               v0.10.0                                 go-module                    
 github.com/docker/cli/cmd/docker                                              UNKNOWN                                 go-module                    
-github.com/docker/compose/v2                                                  v0.0.0-20250919083120-a32dc3da722e      go-module                    
+github.com/docker/compose/v2                                                  v0.0.0-20251003093215-d9423f687258      go-module                    
 github.com/docker/distribution                                                v2.8.3+incompatible                     go-module  (+1 duplicate)    
-github.com/docker/docker                                                      v28.4.0                                 go-module  (+1 duplicate)    
-github.com/docker/docker                                                      v28.4.0+incompatible                    go-module                    
+github.com/docker/docker                                                      v28.5.0                                 go-module  (+1 duplicate)    
+github.com/docker/docker                                                      v28.5.0+incompatible                    go-module                    
 github.com/docker/docker-credential-helpers                                   v0.9.3                                  go-module                    
 github.com/docker/go                                                          v1.5.1-1.0.20160303222718-d30aec9fd63c  go-module                    
 github.com/docker/go-connections                                              v0.5.0                                  go-module                    
@@ -365,9 +365,9 @@ github.com/minio/sha256-simd                                                  v1
 github.com/mistifyio/go-zfs/v3                                                v3.0.1                                  go-module  (+1 duplicate)    
 github.com/mitchellh/copystructure                                            v1.2.0                                  go-module                    
 github.com/mitchellh/hashstructure/v2                                         v2.0.2                                  go-module  (+1 duplicate)    
-github.com/mitchellh/mapstructure                                             v1.5.0                                  go-module                    
 github.com/mitchellh/reflectwalk                                              v1.0.2                                  go-module                    
-github.com/moby/buildkit                                                      v0.24.0                                 go-module  (+1 duplicate)    
+github.com/moby/buildkit                                                      v0.24.0                                 go-module                    
+github.com/moby/buildkit                                                      v0.25.0                                 go-module                    
 github.com/moby/docker-image-spec                                             v1.3.1                                  go-module  (+1 duplicate)    
 github.com/moby/go-archive                                                    v0.1.0                                  go-module  (+1 duplicate)    
 github.com/moby/ipvs                                                          v1.1.0                                  go-module                    
@@ -571,7 +571,8 @@ google.golang.org/grpc                                                        v1
 google.golang.org/grpc                                                        v1.74.2                                 go-module                    
 google.golang.org/protobuf                                                    v1.35.2                                 go-module  (+4 duplicates)   
 google.golang.org/protobuf                                                    v1.36.5                                 go-module                    
-google.golang.org/protobuf                                                    v1.36.6                                 go-module  (+1 duplicate)    
+google.golang.org/protobuf                                                    v1.36.6                                 go-module                    
+google.golang.org/protobuf                                                    v1.36.9                                 go-module                    
 gopd                                                                          1.2.0                                   npm                          
 gopkg.in/evanphx/json-patch.v4                                                v4.12.0                                 go-module                    
 gopkg.in/inf.v0                                                               v0.9.1                                  go-module  (+2 duplicates)   
@@ -913,7 +914,7 @@ strip-ansi                                                                    7.
 sudo                                                                          1.9.15p5-3ubuntu5.24.04.1               deb                          
 supports-color                                                                9.4.0                                   npm                          
 systemd-standalone-sysusers                                                   255.4-1ubuntu8.10                       deb                          
-systeminformation                                                             5.27.10                                 npm                          
+systeminformation                                                             5.27.11                                 npm                          
 sysvinit-utils                                                                3.08-6ubuntu3                           deb                          
 tags.cncf.io/container-device-interface                                       v0.8.1                                  go-module  (+4 duplicates)   
 tags.cncf.io/container-device-interface                                       v1.0.1                                  go-module  (+1 duplicate)    
@@ -933,7 +934,7 @@ type-is                                                                       1.
 tzdata                                                                        2025b-0ubuntu0.24.04.1                  deb                          
 ubuntu-keyring                                                                2023.11.28.1                            deb                          
 uidmap                                                                        1:4.13+dfsg1-4ubuntu3.2                 deb                          
-undici-types                                                                  7.13.0                                  npm                          
+undici-types                                                                  7.14.0                                  npm                          
 unique-filename                                                               3.0.0                                   npm                          
 unique-slug                                                                   4.0.0                                   npm                          
 unminimize                                                                    0.2.1                                   deb                          
