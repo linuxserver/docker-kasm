@@ -30,7 +30,7 @@ NAME                                                                          VE
 @tufjs/canonical-json                                                         2.0.0                                   npm                          
 @tufjs/models                                                                 2.0.1                                   npm                          
 @types/cors                                                                   2.8.19                                  npm                          
-@types/node                                                                   24.7.0                                  npm                          
+@types/node                                                                   24.7.2                                  npm                          
 abbrev                                                                        2.0.0                                   npm                          
 accepts                                                                       1.3.8                                   npm                          
 adduser                                                                       3.137ubuntu1                            deb                          
@@ -86,7 +86,7 @@ code.cloudfoundry.org/clock                                                   v1
 color-convert                                                                 2.0.1                                   npm                          
 color-name                                                                    1.1.4                                   npm                          
 common-ancestor-path                                                          1.0.1                                   npm                          
-containerd.io                                                                 1.7.28-0~ubuntu.24.04~noble             deb                          
+containerd.io                                                                 1.7.28-1~ubuntu.24.04~noble             deb                          
 content-disposition                                                           0.5.4                                   npm                          
 content-type                                                                  1.0.5                                   npm                          
 cookie                                                                        0.7.1                                   npm                          
@@ -116,8 +116,8 @@ destroy                                                                       1.
 diff                                                                          5.2.0                                   npm                          
 diffutils                                                                     1:3.10-1build1                          deb                          
 dirmngr                                                                       2.4.4-2ubuntu17.3                       deb                          
-docker-ce                                                                     5:28.5.0-1~ubuntu.24.04~noble           deb                          
-docker-ce-cli                                                                 5:28.5.0-1~ubuntu.24.04~noble           deb                          
+docker-ce                                                                     5:28.5.1-1~ubuntu.24.04~noble           deb                          
+docker-ce-cli                                                                 5:28.5.1-1~ubuntu.24.04~noble           deb                          
 docker-compose-plugin                                                         2.40.0-1~ubuntu.24.04~noble             deb                          
 docker-modem                                                                  3.0.8                                   npm                          
 dockerode                                                                     3.3.5                                   npm                          
@@ -263,8 +263,8 @@ github.com/docker/cli-docs-tool                                               v0
 github.com/docker/cli/cmd/docker                                              UNKNOWN                                 go-module                    
 github.com/docker/compose/v2                                                  v0.0.0-20251003093215-d9423f687258      go-module                    
 github.com/docker/distribution                                                v2.8.3+incompatible                     go-module  (+1 duplicate)    
-github.com/docker/docker                                                      v28.5.0                                 go-module  (+1 duplicate)    
 github.com/docker/docker                                                      v28.5.0+incompatible                    go-module                    
+github.com/docker/docker                                                      v28.5.1                                 go-module  (+1 duplicate)    
 github.com/docker/docker-credential-helpers                                   v0.9.3                                  go-module                    
 github.com/docker/go                                                          v1.5.1-1.0.20160303222718-d30aec9fd63c  go-module                    
 github.com/docker/go-connections                                              v0.5.0                                  go-module                    
@@ -367,7 +367,7 @@ github.com/mitchellh/copystructure                                            v1
 github.com/mitchellh/hashstructure/v2                                         v2.0.2                                  go-module  (+1 duplicate)    
 github.com/mitchellh/reflectwalk                                              v1.0.2                                  go-module                    
 github.com/moby/buildkit                                                      v0.24.0                                 go-module                    
-github.com/moby/buildkit                                                      v0.25.0                                 go-module                    
+github.com/moby/buildkit                                                      v0.25.1                                 go-module                    
 github.com/moby/docker-image-spec                                             v1.3.1                                  go-module  (+1 duplicate)    
 github.com/moby/go-archive                                                    v0.1.0                                  go-module  (+1 duplicate)    
 github.com/moby/ipvs                                                          v1.1.0                                  go-module                    
@@ -905,7 +905,8 @@ ssri                                                                          10
 statuses                                                                      2.0.1                                   npm                          
 stdlib                                                                        go1.23.9                                go-module  (+3 duplicates)   
 stdlib                                                                        go1.24.1                                go-module  (+1 duplicate)    
-stdlib                                                                        go1.24.7                                go-module  (+9 duplicates)   
+stdlib                                                                        go1.24.7                                go-module                    
+stdlib                                                                        go1.24.8                                go-module  (+8 duplicates)   
 string-width                                                                  4.2.3                                   npm        (+1 duplicate)    
 string-width                                                                  5.1.2                                   npm        (+1 duplicate)    
 string_decoder                                                                1.3.0                                   npm                          
