@@ -2,16 +2,16 @@
 
 # Wait for docker to be up
 while true; do
-    if [ -S "/var/run/docker.sock" ]; then
+    if [[ -S "/var/run/docker.sock" ]]; then
         break
     fi
     sleep 1
 done
 
 # Don't do anything if wizard is disabled
-if [ -f "/opt/NO_WIZARD" ]; then
+if [[ -f "/opt/NO_WIZARD" ]]; then
     sleep infinity
 fi
 
-cd /wizard
+cd /wizard || exit 1
 /usr/bin/node index.js
