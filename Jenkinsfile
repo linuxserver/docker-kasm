@@ -31,12 +31,12 @@ pipeline {
     DIST_IMAGE = 'ubuntu'
     MULTIARCH='true'
     CI='true'
-    CI_WEB='true'
+    CI_WEB='false'
     CI_PORT='3000'
     CI_SSL='true'
     CI_DELAY='120'
     CI_DOCKERENV=''
-    CI_AUTH='user:password'
+    CI_AUTH=''
     CI_WEBPATH=''
   }
   stages {
