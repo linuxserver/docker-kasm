@@ -19,7 +19,6 @@ pipeline {
     DOCKERHUB_TOKEN=credentials('docker-hub-ci-pat')
     QUAYIO_API_TOKEN=credentials('quayio-repo-api-token')
     GIT_SIGNING_KEY=credentials('484fbca6-9a4f-455e-b9e3-97ac98785f5f')
-    EXT_GIT_BRANCH = 'develop'
     EXT_USER = 'kasmtech'
     EXT_REPO = 'kasm-install-wizard'
     BUILD_VERSION_ARG = 'KASM_VERSION'
@@ -32,11 +31,11 @@ pipeline {
     DIST_IMAGE = 'ubuntu'
     MULTIARCH='true'
     CI='true'
-    CI_WEB='false'
+    CI_WEB='true'
     CI_PORT='3000'
     CI_SSL='true'
     CI_DELAY='120'
-    CI_DOCKERENV='TEST=true'
+    CI_DOCKERENV=''
     CI_AUTH='user:password'
     CI_WEBPATH=''
   }

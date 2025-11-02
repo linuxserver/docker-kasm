@@ -7,15 +7,14 @@ ARG BUILD_DATE
 ARG KASM_VERSION
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="thelamer"
+LABEL maintainer="thespad"
 
 # Env
 ENV DOCKER_TLS_CERTDIR=""
 ENV TINI_SUBREAPER=true
 
 #Add needed nvidia environment variables for https://github.com/NVIDIA/nvidia-docker
-ENV NVIDIA_DRIVER_CAPABILITIES="compute,graphics,video,utility" \
-    VERSION="develop"
+ENV NVIDIA_DRIVER_CAPABILITIES="compute,graphics,video,utility"
 
 # Container setup
 RUN \
