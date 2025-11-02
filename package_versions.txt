@@ -57,7 +57,7 @@ bash                                                                          5.
 bcrypt-pbkdf                                                                  1.0.2                                   npm                          
 bin-links                                                                     4.0.4                                   npm                          
 binary-extensions                                                             2.3.0                                   npm                          
-binutils-common                                                               2.42-4ubuntu2.5                         deb                          
+binutils-common                                                               2.42-4ubuntu2.6                         deb                          
 bl                                                                            4.1.0                                   npm                          
 body-parser                                                                   1.20.3                                  npm                          
 brace-expansion                                                               2.0.1                                   npm                          
@@ -118,7 +118,7 @@ diffutils                                                                     1:
 dirmngr                                                                       2.4.4-2ubuntu17.3                       deb                          
 docker-ce                                                                     5:28.5.1-1~ubuntu.24.04~noble           deb                          
 docker-ce-cli                                                                 5:28.5.1-1~ubuntu.24.04~noble           deb                          
-docker-compose-plugin                                                         2.40.2-1~ubuntu.24.04~noble             deb                          
+docker-compose-plugin                                                         2.40.3-1~ubuntu.24.04~noble             deb                          
 docker-modem                                                                  3.0.8                                   npm                          
 dockerode                                                                     3.3.5                                   npm                          
 dpkg                                                                          1.22.6ubuntu6.5                         deb                          
@@ -208,7 +208,7 @@ github.com/checkpoint-restore/go-criu/v6                                      v6
 github.com/cilium/ebpf                                                        v0.17.3                                 go-module  (+1 duplicate)    
 github.com/cilium/ebpf                                                        v0.9.1                                  go-module  (+3 duplicates)   
 github.com/cloudflare/cfssl                                                   v1.6.4                                  go-module                    
-github.com/compose-spec/compose-go/v2                                         v2.9.0                                  go-module                    
+github.com/compose-spec/compose-go/v2                                         v2.9.1                                  go-module                    
 github.com/container-storage-interface/spec                                   v1.5.0                                  go-module                    
 github.com/containerd/accelerated-container-image                             v1.3.0                                  go-module                    
 github.com/containerd/aufs                                                    v1.0.0                                  go-module                    
@@ -261,7 +261,7 @@ github.com/docker/buildx                                                      v0
 github.com/docker/cli                                                         v28.5.1+incompatible                    go-module                    
 github.com/docker/cli-docs-tool                                               v0.10.0                                 go-module                    
 github.com/docker/cli/cmd/docker                                              UNKNOWN                                 go-module                    
-github.com/docker/compose/v2                                                  v0.0.0-20251022173216-6007d4c7e7b7      go-module                    
+github.com/docker/compose/v2                                                  v0.0.0-20251030091458-49b1c1e932ae      go-module                    
 github.com/docker/distribution                                                v2.8.3+incompatible                     go-module  (+1 duplicate)    
 github.com/docker/docker                                                      v28.5.1                                 go-module  (+1 duplicate)    
 github.com/docker/docker                                                      v28.5.1+incompatible                    go-module                    
