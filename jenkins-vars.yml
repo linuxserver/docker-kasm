@@ -7,7 +7,6 @@ release_type: stable
 release_tag: latest
 ls_branch: master
 repo_vars:
-  - EXT_GIT_BRANCH = 'develop'
   - EXT_USER = 'kasmtech'
   - EXT_REPO = 'kasm-install-wizard'
   - BUILD_VERSION_ARG = 'KASM_VERSION'
@@ -24,6 +23,6 @@ repo_vars:
   - CI_PORT='3000'
   - CI_SSL='true'
   - CI_DELAY='120'
-  - CI_DOCKERENV='TEST=true'
-  - CI_AUTH='user:password'
+  - CI_DOCKERENV=''
+  - CI_AUTH=''
   - CI_WEBPATH=''
