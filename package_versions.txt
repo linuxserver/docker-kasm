@@ -30,7 +30,7 @@ NAME                                                                          VE
 @tufjs/canonical-json                                                         2.0.0                                   npm                          
 @tufjs/models                                                                 2.0.1                                   npm                          
 @types/cors                                                                   2.8.19                                  npm                          
-@types/node                                                                   24.9.2                                  npm                          
+@types/node                                                                   24.10.0                                 npm                          
 abbrev                                                                        2.0.0                                   npm                          
 accepts                                                                       1.3.8                                   npm                          
 adduser                                                                       3.137ubuntu1                            deb                          
