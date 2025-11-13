@@ -126,6 +126,7 @@ init_diagram: |
   "kasm:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "13.11.25:", desc: "Pin docker to v28 to avoid API deprecation issues."}
   - {date: "22.10.25:", desc: "Update for 1.18.0 release."}
   - {date: "08.06.25:", desc: "Deprecate develop branch."}
   - {date: "03.06.25:", desc: "Rebase to Ubuntu Noble. Update for 1.17.0 release."}
