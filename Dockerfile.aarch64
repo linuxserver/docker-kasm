@@ -27,9 +27,7 @@ RUN \
       sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
       tee /etc/apt/sources.list.d/nvidia-container-toolkit.list && \
   curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
-  echo "Package: docker-ce docker-ce-cli docker-ce-rootless-extras \
-  Pin: version 5:28.* \
-  Pin-Priority: 1001" > /etc/apt/preferences.d/docker && \
+  printf "Package: docker-ce docker-ce-cli docker-ce-rootless-extras\nPin: version 5:28.* \nPin-Priority: 1001" > /etc/apt/preferences.d/docker && \
   apt-get install -y --no-install-recommends \
     btrfs-progs \
     build-essential \
