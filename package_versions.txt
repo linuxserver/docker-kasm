@@ -115,7 +115,7 @@ diffutils                                                                     1:
 dirmngr                                                                       2.4.4-2ubuntu17.3                       deb                          
 docker-ce                                                                     5:28.5.2-1~ubuntu.24.04~noble           deb                          
 docker-ce-cli                                                                 5:28.5.2-1~ubuntu.24.04~noble           deb                          
-docker-compose-plugin                                                         5.0.0-1~ubuntu.24.04~noble              deb                          
+docker-compose-plugin                                                         5.0.1-1~ubuntu.24.04~noble              deb                          
 docker-modem                                                                  3.0.8                                   npm                          
 dockerode                                                                     3.3.5                                   npm                          
 dpkg                                                                          1.22.6ubuntu6.5                         deb                          
@@ -247,9 +247,9 @@ github.com/dimchansky/utfbom                                                  v1
 github.com/distribution/reference                                             v0.6.0                                  go-module  (+3 duplicates)   
 github.com/docker/buildx                                                      v0.30.1                                 go-module                    
 github.com/docker/cli                                                         v28.5.2+incompatible                    go-module                    
-github.com/docker/cli-docs-tool                                               v0.10.0                                 go-module                    
+github.com/docker/cli-docs-tool                                               v0.11.0                                 go-module                    
 github.com/docker/cli/cmd/docker                                              UNKNOWN                                 go-module                    
-github.com/docker/compose/v5                                                  v0.0.0-20251202074149-13d70b1c1134      go-module                    
+github.com/docker/compose/v5                                                  v0.0.0-20251218103533-c89b8a2d6b44      go-module                    
 github.com/docker/distribution                                                v2.8.3+incompatible                     go-module  (+1 duplicate)    
 github.com/docker/docker                                                      v28.5.2                                 go-module  (+1 duplicate)    
 github.com/docker/docker                                                      v28.5.2+incompatible                    go-module                    
@@ -346,7 +346,7 @@ github.com/mitchellh/copystructure                                            v1
 github.com/mitchellh/hashstructure/v2                                         v2.0.2                                  go-module  (+1 duplicate)    
 github.com/mitchellh/reflectwalk                                              v1.0.2                                  go-module                    
 github.com/moby/buildkit                                                      v0.25.2                                 go-module                    
-github.com/moby/buildkit                                                      v0.26.2                                 go-module                    
+github.com/moby/buildkit                                                      v0.26.3                                 go-module                    
 github.com/moby/docker-image-spec                                             v1.3.1                                  go-module  (+1 duplicate)    
 github.com/moby/go-archive                                                    v0.1.0                                  go-module  (+1 duplicate)    
 github.com/moby/ipvs                                                          v1.1.0                                  go-module                    
@@ -371,7 +371,8 @@ github.com/moby/sys/userns                                                    v0
 github.com/moby/term                                                          v0.5.2                                  go-module  (+1 duplicate)    
 github.com/modern-go/concurrent                                               v0.0.0-20180306012644-bacd9c7ef1dd      go-module                    
 github.com/modern-go/reflect2                                                 v1.0.3-0.20250322232337-35a7c28c31ee    go-module                    
-github.com/morikuni/aec                                                       v1.0.0                                  go-module  (+1 duplicate)    
+github.com/morikuni/aec                                                       v1.0.0                                  go-module                    
+github.com/morikuni/aec                                                       v1.1.0                                  go-module                    
 github.com/mrunalp/fileutils                                                  v0.5.1                                  go-module                    
 github.com/munnerz/goautoneg                                                  v0.0.0-20191010083416-a7dc8b61c822      go-module  (+2 duplicates)   
 github.com/mxk/go-flowrate                                                    v0.0.0-20140419014527-cca7078d478f      go-module                    
@@ -415,7 +416,7 @@ github.com/sirupsen/logrus                                                    v1
 github.com/skratchdot/open-golang                                             v0.0.0-20200116055534-eef842397966      go-module                    
 github.com/smallstep/pkcs7                                                    v0.1.1                                  go-module                    
 github.com/spdx/tools-golang                                                  v0.5.5                                  go-module                    
-github.com/spf13/cobra                                                        v1.10.1                                 go-module                    
+github.com/spf13/cobra                                                        v1.10.2                                 go-module                    
 github.com/spf13/cobra                                                        v1.8.1                                  go-module  (+1 duplicate)    
 github.com/spf13/cobra                                                        v1.9.1                                  go-module                    
 github.com/spf13/pflag                                                        v1.0.10                                 go-module                    
@@ -514,12 +515,14 @@ golang.org/x/net                                                              v0
 golang.org/x/oauth2                                                           v0.29.0                                 go-module                    
 golang.org/x/oauth2                                                           v0.30.0                                 go-module                    
 golang.org/x/sync                                                             v0.16.0                                 go-module                    
-golang.org/x/sync                                                             v0.18.0                                 go-module  (+3 duplicates)   
+golang.org/x/sync                                                             v0.18.0                                 go-module  (+2 duplicates)   
+golang.org/x/sync                                                             v0.19.0                                 go-module                    
 golang.org/x/sys                                                              v0.30.0                                 go-module                    
 golang.org/x/sys                                                              v0.32.0                                 go-module  (+1 duplicate)    
 golang.org/x/sys                                                              v0.33.0                                 go-module  (+1 duplicate)    
 golang.org/x/sys                                                              v0.37.0                                 go-module  (+3 duplicates)   
-golang.org/x/sys                                                              v0.38.0                                 go-module  (+3 duplicates)   
+golang.org/x/sys                                                              v0.38.0                                 go-module  (+2 duplicates)   
+golang.org/x/sys                                                              v0.39.0                                 go-module                    
 golang.org/x/term                                                             v0.37.0                                 go-module  (+1 duplicate)    
 golang.org/x/text                                                             v0.24.0                                 go-module  (+2 duplicates)   
 golang.org/x/text                                                             v0.31.0                                 go-module  (+2 duplicates)   
@@ -861,9 +864,8 @@ sprintf-js                                                                    1.
 ssh2                                                                          1.17.0                                  npm                          
 ssri                                                                          10.0.6                                  npm                          
 statuses                                                                      2.0.2                                   npm                          
-stdlib                                                                        go1.24.11                               go-module  (+3 duplicates)   
+stdlib                                                                        go1.24.11                               go-module  (+4 duplicates)   
 stdlib                                                                        go1.24.2                                go-module  (+1 duplicate)    
-stdlib                                                                        go1.24.9                                go-module                    
 stdlib                                                                        go1.25.3                                go-module  (+2 duplicates)   
 stdlib                                                                        go1.25.4                                go-module  (+3 duplicates)   
 string-width                                                                  4.2.3                                   npm        (+1 duplicate)    
@@ -874,11 +876,11 @@ strip-ansi                                                                    7.
 sudo                                                                          1.9.15p5-3ubuntu5.24.04.1               deb                          
 supports-color                                                                9.4.0                                   npm                          
 systemd-standalone-sysusers                                                   255.4-1ubuntu8.12                       deb                          
-systeminformation                                                             5.28.5                                  npm                          
+systeminformation                                                             5.30.0                                  npm                          
 sysvinit-utils                                                                3.08-6ubuntu3                           deb                          
-tags.cncf.io/container-device-interface                                       v1.0.1                                  go-module  (+1 duplicate)    
+tags.cncf.io/container-device-interface                                       v1.0.1                                  go-module                    
 tags.cncf.io/container-device-interface                                       v1.0.2-0.20251114135136-1b24d969689f    go-module  (+3 duplicates)   
-tags.cncf.io/container-device-interface                                       v1.1.0                                  go-module  (+1 duplicate)    
+tags.cncf.io/container-device-interface                                       v1.1.0                                  go-module  (+2 duplicates)   
 tags.cncf.io/container-device-interface/specs-go                              v1.0.0                                  go-module  (+4 duplicates)   
 tags.cncf.io/container-device-interface/specs-go                              v1.1.0                                  go-module  (+1 duplicate)    
 tar                                                                           1.35+dfsg-3build1                       deb                          
