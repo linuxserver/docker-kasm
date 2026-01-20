@@ -30,7 +30,7 @@ NAME                                                                          VE
 @tufjs/canonical-json                                                         2.0.0                                   npm                          
 @tufjs/models                                                                 2.0.1                                   npm                          
 @types/cors                                                                   2.8.19                                  npm                          
-@types/node                                                                   25.0.8                                  npm                          
+@types/node                                                                   25.0.9                                  npm                          
 abbrev                                                                        2.0.0                                   npm                          
 accepts                                                                       1.3.8                                   npm                          
 adduser                                                                       3.137ubuntu1                            deb                          
@@ -711,7 +711,7 @@ libssl3t64                                                                    3.
 libstdc++6                                                                    14.2.0-4ubuntu2~24.04                   deb                          
 libsubid4                                                                     1:4.13+dfsg1-4ubuntu3.2                 deb                          
 libsystemd0                                                                   255.4-1ubuntu8.12                       deb                          
-libtasn1-6                                                                    4.19.0-3ubuntu0.24.04.1                 deb                          
+libtasn1-6                                                                    4.19.0-3ubuntu0.24.04.2                 deb                          
 libtinfo6                                                                     6.4+20240113-1ubuntu2                   deb                          
 libtirpc-common                                                               1.3.4+ds-1.1build1                      deb                          
 libtirpc3t64                                                                  1.3.4+ds-1.1build1                      deb                          
@@ -876,7 +876,7 @@ strip-ansi                                                                    7.
 sudo                                                                          1.9.15p5-3ubuntu5.24.04.1               deb                          
 supports-color                                                                9.4.0                                   npm                          
 systemd-standalone-sysusers                                                   255.4-1ubuntu8.12                       deb                          
-systeminformation                                                             5.30.3                                  npm                          
+systeminformation                                                             5.30.5                                  npm                          
 sysvinit-utils                                                                3.08-6ubuntu3                           deb                          
 tags.cncf.io/container-device-interface                                       v1.0.1                                  go-module                    
 tags.cncf.io/container-device-interface                                       v1.0.2-0.20251114135136-1b24d969689f    go-module  (+3 duplicates)   
