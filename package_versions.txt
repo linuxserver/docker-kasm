@@ -30,7 +30,7 @@ NAME                                                                          VE
 @tufjs/canonical-json                                                         2.0.0                                    npm                         
 @tufjs/models                                                                 2.0.1                                    npm                         
 @types/cors                                                                   2.8.19                                   npm                         
-@types/node                                                                   25.4.0                                   npm                         
+@types/node                                                                   25.5.0                                   npm                         
 @types/ws                                                                     8.18.1                                   npm                         
 abbrev                                                                        2.0.0                                    npm                         
 accepts                                                                       1.3.8                                    npm                         
@@ -87,7 +87,7 @@ code.cloudfoundry.org/clock                                                   v1
 color-convert                                                                 2.0.1                                    npm                         
 color-name                                                                    1.1.4                                    npm                         
 common-ancestor-path                                                          1.0.1                                    npm                         
-containerd.io                                                                 2.2.1-1~ubuntu.24.04~noble               deb                         
+containerd.io                                                                 2.2.2-1~ubuntu.24.04~noble               deb                         
 content-disposition                                                           0.5.4                                    npm                         
 content-type                                                                  1.0.5                                    npm                         
 cookie                                                                        0.7.2                                    npm                         
@@ -101,7 +101,7 @@ cron                                                                          3.
 cron-daemon-common                                                            3.0pl1-184ubuntu2                        deb                         
 cross-spawn                                                                   7.0.3                                    npm                         
 cssesc                                                                        3.0.0                                    npm                         
-curl                                                                          8.5.0-2ubuntu10.7                        deb                         
+curl                                                                          8.5.0-2ubuntu10.8                        deb                         
 dario.cat/mergo                                                               v1.0.2                                   go-module  (+1 duplicate)   
 dash                                                                          0.5.12-6ubuntu5                          deb                         
 debconf                                                                       1.5.86ubuntu1                            deb                         
@@ -214,7 +214,8 @@ github.com/containerd/console                                                 v1
 github.com/containerd/containerd/api                                          v1.10.0                                  go-module  (+3 duplicates)  
 github.com/containerd/containerd/api                                          v1.9.0                                   go-module                   
 github.com/containerd/containerd/v2                                           v2.1.4                                   go-module                   
-github.com/containerd/containerd/v2                                           v2.2.1                                   go-module  (+3 duplicates)  
+github.com/containerd/containerd/v2                                           v2.2.1                                   go-module                   
+github.com/containerd/containerd/v2                                           v2.2.2                                   go-module  (+2 duplicates)  
 github.com/containerd/continuity                                              v0.4.5                                   go-module  (+4 duplicates)  
 github.com/containerd/errdefs                                                 v1.0.0                                   go-module  (+4 duplicates)  
 github.com/containerd/errdefs/pkg                                             v0.3.0                                   go-module  (+4 duplicates)  
@@ -274,7 +275,7 @@ github.com/fsnotify/fsnotify                                                  v1
 github.com/fsnotify/fsnotify                                                  v1.9.0                                   go-module  (+2 duplicates)  
 github.com/fvbommel/sortorder                                                 v1.1.0                                   go-module                   
 github.com/fxamacker/cbor/v2                                                  v2.9.0                                   go-module  (+1 duplicate)   
-github.com/go-jose/go-jose/v4                                                 v4.1.2                                   go-module                   
+github.com/go-jose/go-jose/v4                                                 v4.1.3                                   go-module                   
 github.com/go-logr/logr                                                       v1.4.2                                   go-module                   
 github.com/go-logr/logr                                                       v1.4.3                                   go-module  (+2 duplicates)  
 github.com/go-logr/stdr                                                       v1.2.2                                   go-module  (+3 duplicates)  
@@ -473,8 +474,8 @@ go.etcd.io/etcd/pkg/v3                                                        v3
 go.etcd.io/etcd/raft/v3                                                       v3.5.16                                  go-module                   
 go.etcd.io/etcd/server/v3                                                     v3.5.16                                  go-module                   
 go.opencensus.io                                                              v0.24.0                                  go-module                   
-go.opentelemetry.io/auto/sdk                                                  v1.1.0                                   go-module  (+2 duplicates)  
-go.opentelemetry.io/auto/sdk                                                  v1.2.1                                   go-module                   
+go.opentelemetry.io/auto/sdk                                                  v1.1.0                                   go-module                   
+go.opentelemetry.io/auto/sdk                                                  v1.2.1                                   go-module  (+2 duplicates)  
 go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc   v0.60.0                                  go-module  (+1 duplicate)   
 go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc   v0.63.0                                  go-module                   
 go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace  v0.60.0                                  go-module                   
@@ -483,8 +484,7 @@ go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp                 v0
 go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp                 v0.63.0                                  go-module                   
 go.opentelemetry.io/contrib/processors/baggagecopy                            v0.4.0                                   go-module                   
 go.opentelemetry.io/otel                                                      v1.35.0                                  go-module                   
-go.opentelemetry.io/otel                                                      v1.37.0                                  go-module  (+1 duplicate)   
-go.opentelemetry.io/otel                                                      v1.38.0                                  go-module                   
+go.opentelemetry.io/otel                                                      v1.38.0                                  go-module  (+2 duplicates)  
 go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc             v1.35.0                                  go-module                   
 go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc             v1.38.0                                  go-module                   
 go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp             v1.35.0                                  go-module                   
@@ -496,16 +496,13 @@ go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc               v1
 go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp               v1.35.0                                  go-module  (+1 duplicate)   
 go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp               v1.38.0                                  go-module                   
 go.opentelemetry.io/otel/metric                                               v1.35.0                                  go-module                   
-go.opentelemetry.io/otel/metric                                               v1.37.0                                  go-module  (+1 duplicate)   
-go.opentelemetry.io/otel/metric                                               v1.38.0                                  go-module                   
+go.opentelemetry.io/otel/metric                                               v1.38.0                                  go-module  (+2 duplicates)  
 go.opentelemetry.io/otel/sdk                                                  v1.35.0                                  go-module                   
-go.opentelemetry.io/otel/sdk                                                  v1.37.0                                  go-module                   
-go.opentelemetry.io/otel/sdk                                                  v1.38.0                                  go-module                   
+go.opentelemetry.io/otel/sdk                                                  v1.38.0                                  go-module  (+1 duplicate)   
 go.opentelemetry.io/otel/sdk/metric                                           v1.35.0                                  go-module                   
 go.opentelemetry.io/otel/sdk/metric                                           v1.38.0                                  go-module                   
 go.opentelemetry.io/otel/trace                                                v1.35.0                                  go-module                   
-go.opentelemetry.io/otel/trace                                                v1.37.0                                  go-module  (+1 duplicate)   
-go.opentelemetry.io/otel/trace                                                v1.38.0                                  go-module                   
+go.opentelemetry.io/otel/trace                                                v1.38.0                                  go-module  (+2 duplicates)  
 go.opentelemetry.io/proto/otlp                                                v1.5.0                                   go-module  (+1 duplicate)   
 go.opentelemetry.io/proto/otlp                                                v1.7.1                                   go-module                   
 go.uber.org/atomic                                                            v1.9.0                                   go-module                   
@@ -526,7 +523,7 @@ golang.org/x/net                                                              v0
 golang.org/x/net                                                              v0.47.0                                  go-module  (+2 duplicates)  
 golang.org/x/net                                                              v0.48.0                                  go-module                   
 golang.org/x/oauth2                                                           v0.29.0                                  go-module                   
-golang.org/x/oauth2                                                           v0.30.0                                  go-module                   
+golang.org/x/oauth2                                                           v0.32.0                                  go-module                   
 golang.org/x/sync                                                             v0.16.0                                  go-module                   
 golang.org/x/sync                                                             v0.18.0                                  go-module  (+2 duplicates)  
 golang.org/x/sync                                                             v0.19.0                                  go-module                   
@@ -546,14 +543,13 @@ golang.org/x/time                                                             v0
 google.golang.org/api                                                         v0.160.0                                 go-module                   
 google.golang.org/genproto                                                    v0.0.0-20240227224415-6ceb2ff114de       go-module                   
 google.golang.org/genproto/googleapis/api                                     v0.0.0-20250218202821-56aae31c358a       go-module                   
-google.golang.org/genproto/googleapis/api                                     v0.0.0-20250804133106-a7a43d27e69b       go-module                   
+google.golang.org/genproto/googleapis/api                                     v0.0.0-20251029180050-ab9386a59fda       go-module                   
 google.golang.org/genproto/googleapis/api                                     v0.0.0-20251103181224-f26f9409b101       go-module                   
 google.golang.org/genproto/googleapis/rpc                                     v0.0.0-20250218202821-56aae31c358a       go-module                   
-google.golang.org/genproto/googleapis/rpc                                     v0.0.0-20250804133106-a7a43d27e69b       go-module  (+2 duplicates)  
+google.golang.org/genproto/googleapis/rpc                                     v0.0.0-20251029180050-ab9386a59fda       go-module  (+2 duplicates)  
 google.golang.org/genproto/googleapis/rpc                                     v0.0.0-20251103181224-f26f9409b101       go-module                   
 google.golang.org/grpc                                                        v1.72.2                                  go-module                   
-google.golang.org/grpc                                                        v1.76.0                                  go-module  (+2 duplicates)  
-google.golang.org/grpc                                                        v1.78.0                                  go-module                   
+google.golang.org/grpc                                                        v1.78.0                                  go-module  (+3 duplicates)  
 google.golang.org/protobuf                                                    v1.36.10                                 go-module  (+2 duplicates)  
 google.golang.org/protobuf                                                    v1.36.11                                 go-module                   
 google.golang.org/protobuf                                                    v1.36.5                                  go-module                   
@@ -638,7 +634,7 @@ libcap2-bin                                                                   1:
 libcom-err2                                                                   1.47.0-2.4~exp1ubuntu4.1                 deb                         
 libcrypt-dev                                                                  1:4.4.36-4build1                         deb                         
 libcrypt1                                                                     1:4.4.36-4build1                         deb                         
-libcurl4t64                                                                   8.5.0-2ubuntu10.7                        deb                         
+libcurl4t64                                                                   8.5.0-2ubuntu10.8                        deb                         
 libdb5.3t64                                                                   5.3.28+dfsg2-7                           deb                         
 libdebconfclient0                                                             0.271ubuntu3                             deb                         
 libdevmapper1.02.1                                                            2:1.02.185-3ubuntu3.2                    deb                         
@@ -771,7 +767,7 @@ ms                                                                            2.
 ms                                                                            2.1.2                                    npm                         
 ms                                                                            2.1.3                                    npm        (+1 duplicate)   
 mute-stream                                                                   1.0.0                                    npm                         
-nan                                                                           2.25.0                                   npm                         
+nan                                                                           2.26.1                                   npm                         
 ncurses-base                                                                  6.4+20240113-1ubuntu2                    deb                         
 ncurses-bin                                                                   6.4+20240113-1ubuntu2                    deb                         
 negotiator                                                                    0.6.3                                    npm        (+1 duplicate)   
@@ -868,7 +864,7 @@ sigstore                                                                      2.
 smart-buffer                                                                  4.2.0                                    npm                         
 socket.io                                                                     4.8.3                                    npm                         
 socket.io-adapter                                                             2.5.6                                    npm                         
-socket.io-parser                                                              4.2.5                                    npm                         
+socket.io-parser                                                              4.2.6                                    npm                         
 socks                                                                         2.8.3                                    npm                         
 socks-proxy-agent                                                             8.0.4                                    npm                         
 spdx-correct                                                                  3.2.0                                    npm                         
@@ -881,17 +877,17 @@ sprintf-js                                                                    1.
 ssh2                                                                          1.17.0                                   npm                         
 ssri                                                                          10.0.6                                   npm                         
 statuses                                                                      2.0.2                                    npm                         
-stdlib                                                                        go1.24.11                                go-module  (+3 duplicates)  
 stdlib                                                                        go1.24.2                                 go-module  (+1 duplicate)   
 stdlib                                                                        go1.25.3                                 go-module  (+2 duplicates)  
 stdlib                                                                        go1.25.7                                 go-module                   
+stdlib                                                                        go1.25.8                                 go-module  (+3 duplicates)  
 stdlib                                                                        go1.26.0                                 go-module  (+4 duplicates)  
 string-width                                                                  4.2.3                                    npm        (+1 duplicate)   
 string-width                                                                  5.1.2                                    npm        (+1 duplicate)   
 string_decoder                                                                1.3.0                                    npm                         
 strip-ansi                                                                    6.0.1                                    npm        (+1 duplicate)   
 strip-ansi                                                                    7.1.0                                    npm        (+1 duplicate)   
-sudo                                                                          1.9.15p5-3ubuntu5.24.04.1                deb                         
+sudo                                                                          1.9.15p5-3ubuntu5.24.04.2                deb                         
 supports-color                                                                9.4.0                                    npm                         
 systemd-standalone-sysusers                                                   255.4-1ubuntu8.12                        deb                         
 systeminformation                                                             5.31.4                                   npm                         
