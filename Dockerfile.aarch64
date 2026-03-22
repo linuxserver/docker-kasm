@@ -12,6 +12,7 @@ LABEL maintainer="thespad"
 # Env
 ENV DOCKER_TLS_CERTDIR=""
 ENV TINI_SUBREAPER=true
+ENV DEBIAN_FRONTEND=noninteractive
 
 #Add needed nvidia environment variables for https://github.com/NVIDIA/nvidia-docker
 ENV NVIDIA_DRIVER_CAPABILITIES="compute,graphics,video,utility"
@@ -27,7 +28,7 @@ RUN \
       sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
       tee /etc/apt/sources.list.d/nvidia-container-toolkit.list && \
   curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
-  printf "Package: docker-ce docker-ce-cli docker-ce-rootless-extras\nPin: version 5:28.* \nPin-Priority: 1001" > /etc/apt/preferences.d/docker && \
+  printf "Package: docker-ce docker-ce-cli docker-ce-rootless-extras\nPin: version 5:29.* \nPin-Priority: 1001" > /etc/apt/preferences.d/docker && \
   apt-get install -y --no-install-recommends \
     btrfs-progs \
     build-essential \
@@ -67,26 +68,31 @@ RUN \
   echo "${KASM_VERSION}" > /version.txt && \
   curl -o \
     /tmp/wizard.tar.gz -L \
-    "https://github.com/kasmtech/kasm-install-wizard/archive/refs/tags/${KASM_VERSION}.tar.gz" && \
+    # "https://github.com/kasmtech/kasm-install-wizard/archive/refs/tags/${KASM_VERSION}.tar.gz" && \
+    "https://github.com/kasmtech/kasm-install-wizard/archive/refs/tags/1.18.0.tar.gz" && \
   tar xf \
     /tmp/wizard.tar.gz -C \
     /wizard --strip-components=1 && \
+  # Enable rolling service images
+  sed -i "/installFlags = \[.*/a \    installFlags.push('-O');" /wizard/index.js && \
   cd /wizard && \
   npm install && \
   echo "**** add installer ****" && \
   curl -o \
+    /tmp/images.tar.gz -L \
+    #"https://kasm-ci.s3.amazonaws.com/${KASM_VERSION}-images-combined.tar.gz" && \
+    "https://kasm-ci.s3.amazonaws.com/1.18.0-images-combined.tar.gz" && \
+  tar xf \
+    /tmp/images.tar.gz -C \
+    / && \
+  curl -o \
     /tmp/kasm.tar.gz -L \
-    "https://github.com/kasmtech/kasm-install-wizard/releases/download/${KASM_VERSION}/kasm_release.tar.gz" && \
+    # "https://github.com/kasmtech/kasm-install-wizard/releases/download/${KASM_VERSION}/kasm_release.tar.gz" && \
+    "https://kasm-static-content.s3.amazonaws.com/kasm_release_1.18.1.tar.gz" && \
   tar xf \
     /tmp/kasm.tar.gz -C \
     / && \
   ALVERSION=$(cat /kasm_release/conf/database/seed_data/default_properties.yaml |awk '/alembic_version/ {print $2}') && \
-  curl -o \
-    /tmp/images.tar.gz -L \
-    "https://kasm-ci.s3.amazonaws.com/${KASM_VERSION}-images-combined.tar.gz" && \
-  tar xf \
-    /tmp/images.tar.gz -C \
-    / && \
   sed -i \
     '/alembic_version/s/.*/alembic_version: '${ALVERSION}'/' \
     /kasm_release/conf/database/seed_data/default_images_a* && \
