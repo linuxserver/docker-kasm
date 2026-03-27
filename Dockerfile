@@ -113,6 +113,9 @@ RUN \
     '.services.kasm_api.depends_on = {"db":{"condition": "service_healthy"}}' \
     /kasm_release/docker/docker-compose-all.yaml && \
   /kasm_release/bin/utils/yq_$(uname -m) -i \
+    '.services.kasm_api.healthcheck += {"start_period": "60s","start_interval": "30s"}' \
+    /kasm_release/docker/docker-compose-all.yaml && \
+  /kasm_release/bin/utils/yq_$(uname -m) -i \
     '.services.kasm_rdp_https_gateway.depends_on = {"proxy":{"condition": "service_started"}}' \
     /kasm_release/docker/docker-compose-all.yaml && \
   echo "**** copy assets ****" && \

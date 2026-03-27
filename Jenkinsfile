@@ -30,7 +30,7 @@ pipeline {
     PR_DOCKERHUB_IMAGE = 'lspipepr/kasm'
     DIST_IMAGE = 'ubuntu'
     MULTIARCH='true'
-    CI='false'
+    CI='true'
     CI_WEB='false'
     CI_PORT='3000'
     CI_SSL='true'
