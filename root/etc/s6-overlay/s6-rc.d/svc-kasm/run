@@ -10,6 +10,4 @@ docker ps -q | xargs docker stop &> /dev/null
 
 if [[ -f /opt/kasm/bin/start ]]; then
   /opt/kasm/bin/start
-else
-  sleep infinity
 fi
