@@ -104,7 +104,7 @@ RUN \
     '.services.proxy.volumes += "/kasm_release/www/img/thumbnails:/srv/www/img/thumbnails"' \
     /kasm_release/docker/docker-compose-all.yaml && \
   /kasm_release/bin/utils/yq_$(uname -m) -i \
-    '.services.proxy.depends_on = {"kasm_manager":{"condition": "service_healthy"},"kasm_api":{"condition": "service_healthy"},"kasm_agent":{"condition": "service_started"},"kasm_guac":{"condition": "service_started"},"kasm_rdp_https_gateway":{"condition": "service_started"}}' \
+    '.services.proxy.depends_on = {"kasm_manager":{"condition": "service_healthy"},"kasm_api":{"condition": "service_healthy"},"kasm_agent":{"condition": "service_started"},"kasm_guac":{"condition": "service_started"}}' \
     /kasm_release/docker/docker-compose-all.yaml && \
   /kasm_release/bin/utils/yq_$(uname -m) -i \
     '.services.kasm_manager.depends_on = {"db":{"condition": "service_healthy"}}' \
