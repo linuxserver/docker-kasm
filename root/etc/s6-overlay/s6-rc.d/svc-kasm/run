@@ -1,0 +1,15 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+while [[ ! -S /var/run/docker.sock ]]; do
+  sleep 1
+done
+
+# Stop any running containers that shouldn't be
+docker ps -q | xargs docker stop &> /dev/null
+
+if [[ -f /opt/kasm/bin/start ]]; then
+  /opt/kasm/bin/start
+else
+  sleep infinity
+fi

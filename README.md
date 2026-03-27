@@ -71,9 +71,11 @@ Access the installation wizard at https://`your ip`:3000 and follow the instruct
 
 Currently Synology systems are not supported due to them blocking CPU scheduling in their Kernel.
 
-### Updating KASM
+### Upgrading KASM
 
-In order to update kasm, first make sure you are using the latest docker image, and then perform the in app update in the admin panel. Docker image update and recreation of container alone won't update kasm.
+In order to upgrade kasm, first make sure you are using the latest docker image, and then perform the in app update in the admin panel. Docker image update and recreation of container alone won't upgrade kasm.
+
+Following the upgrade, you will need to update any workspace image tags to match the new version.
 
 ### GPU Support
 
@@ -127,6 +129,7 @@ services:
     ports:
       - 3000:3000
       - 443:443
+    stop_grace_period: "90s" #optional
     restart: unless-stopped
 ```
 
@@ -147,6 +150,7 @@ docker run -d \
   -v /path/to/kasm/profiles:/profiles `#optional` \
   -v /dev/input:/dev/input `#optional` \
   -v /run/udev/data:/run/udev/data `#optional` \
+  --stop-timeout="90s" `#optional` \
   --restart unless-stopped \
   lscr.io/linuxserver/kasm:latest
 ```
@@ -167,6 +171,7 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-v /profiles` | Optionally specify a path for persistent profile storage. |
 | `-v /dev/input` | Optional for gamepad support. |
 | `-v /run/udev/data` | Optional for gamepad support. |
+| `--stop-timeout=` | Increase container shutdown delay to give Kasm services time to stop cleanly. |
 | `--security-opt apparmor=rootlesskit` | Some hosts require this on top of privileged for namespacing to work properly inside the DinD layer. |
 
 ## Environment variables from files (Docker secrets)
@@ -313,7 +318,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
-* **22.03.26:** - Update for 1.18.1 release. Use rolling service images. Update docker pin to v29.
+* **22.03.26:** - Update for 1.18.1 release. Use rolling service images.
 * **13.11.25:** - Pin docker to v28 to avoid API deprecation issues.
 * **22.10.25:** - Update for 1.18.0 release.
 * **08.06.25:** - Deprecate develop branch.
