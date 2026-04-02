@@ -42,6 +42,8 @@ opt_param_volumes:
 opt_security_opt_param: true
 opt_security_opt_param_vars:
   - {run_var: "apparmor=rootlesskit", compose_var: "apparmor:rootlesskit", desc: "Some hosts require this on top of privileged for namespacing to work properly inside the DinD layer."}
+opt_custom_params:
+  - {name: "stop-timeout", name_compose: "stop_grace_period", value: "90s", desc: "Increase container shutdown delay to give Kasm services time to stop cleanly."}
 unraid_template: false
 privileged: true
 # application setup block
@@ -60,9 +62,11 @@ app_setup_block: |
 
   Currently Synology systems are not supported due to them blocking CPU scheduling in their Kernel.
 
-  ### Updating KASM
+  ### Upgrading KASM
 
-  In order to update kasm, first make sure you are using the latest docker image, and then perform the in app update in the admin panel. Docker image update and recreation of container alone won't update kasm.
+  In order to upgrade kasm, first make sure you are using the latest docker image, and then perform the in app update in the admin panel. Docker image update and recreation of container alone won't upgrade kasm.
+
+  Following the upgrade, you will need to update any workspace image tags to match the new version.
 
   ### GPU Support
 
@@ -126,6 +130,7 @@ init_diagram: |
   "kasm:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "22.03.26:", desc: "Update for 1.18.1 release. Use rolling service images."}
   - {date: "13.11.25:", desc: "Pin docker to v28 to avoid API deprecation issues."}
   - {date: "22.10.25:", desc: "Update for 1.18.0 release."}
   - {date: "08.06.25:", desc: "Deprecate develop branch."}

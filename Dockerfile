@@ -12,6 +12,7 @@ LABEL maintainer="thespad"
 # Env
 ENV DOCKER_TLS_CERTDIR=""
 ENV TINI_SUBREAPER=true
+ENV DEBIAN_FRONTEND=noninteractive
 
 #Add needed nvidia environment variables for https://github.com/NVIDIA/nvidia-docker
 ENV NVIDIA_DRIVER_CAPABILITIES="compute,graphics,video,utility"
@@ -27,7 +28,7 @@ RUN \
       sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
       tee /etc/apt/sources.list.d/nvidia-container-toolkit.list && \
   curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
-  printf "Package: docker-ce docker-ce-cli docker-ce-rootless-extras\nPin: version 5:28.* \nPin-Priority: 1001" > /etc/apt/preferences.d/docker && \
+  printf "Package: docker-ce docker-ce-cli docker-ce-rootless-extras\nPin: version 5:29.* \nPin-Priority: 1001" > /etc/apt/preferences.d/docker && \
   apt-get install -y --no-install-recommends \
     btrfs-progs \
     build-essential \
@@ -58,42 +59,64 @@ RUN \
     https://raw.githubusercontent.com/moby/moby/master/hack/dind && \
   chmod +x /usr/local/bin/dind && \
   echo 'hosts: files dns' > /etc/nsswitch.conf && \
-  echo "**** setup wizard ****" && \
   mkdir -p /wizard && \
   if [ -z ${KASM_VERSION+x} ]; then \
       KASM_VERSION=$(curl -sX GET 'https://api.github.com/repos/kasmtech/kasm-install-wizard/releases/latest' \
       | jq -r '.name'); \
   fi && \
   echo "${KASM_VERSION}" > /version.txt && \
+  echo "**** add wizard ****" && \
   curl -o \
     /tmp/wizard.tar.gz -L \
-    "https://github.com/kasmtech/kasm-install-wizard/archive/refs/tags/${KASM_VERSION}.tar.gz" && \
+    # "https://github.com/kasmtech/kasm-install-wizard/archive/refs/tags/${KASM_VERSION}.tar.gz" && \
+    "https://github.com/kasmtech/kasm-install-wizard/archive/refs/tags/1.18.0.tar.gz" && \
   tar xf \
     /tmp/wizard.tar.gz -C \
     /wizard --strip-components=1 && \
+  # Enable rolling service images
+  sed -i "/installFlags = \[.*/a \    installFlags.push('-O');" /wizard/index.js && \
   cd /wizard && \
   npm install && \
+  echo "**** add image definitions ****" && \
+  curl -o \
+    /tmp/images.tar.gz -L \
+    #"https://kasm-ci.s3.amazonaws.com/${KASM_VERSION}-images-combined.tar.gz" && \
+    "https://kasm-ci.s3.amazonaws.com/1.18.0-images-combined.tar.gz" && \
+  tar xf \
+    /tmp/images.tar.gz -C \
+    / && \
   echo "**** add installer ****" && \
   curl -o \
     /tmp/kasm.tar.gz -L \
-    "https://github.com/kasmtech/kasm-install-wizard/releases/download/${KASM_VERSION}/kasm_release.tar.gz" && \
+    "https://kasm-static-content.s3.amazonaws.com/kasm_release_${KASM_VERSION}.tar.gz" && \
   tar xf \
     /tmp/kasm.tar.gz -C \
     / && \
   ALVERSION=$(cat /kasm_release/conf/database/seed_data/default_properties.yaml |awk '/alembic_version/ {print $2}') && \
-  curl -o \
-    /tmp/images.tar.gz -L \
-    "https://kasm-ci.s3.amazonaws.com/${KASM_VERSION}-images-combined.tar.gz" && \
-  tar xf \
-    /tmp/images.tar.gz -C \
-    / && \
   sed -i \
     '/alembic_version/s/.*/alembic_version: '${ALVERSION}'/' \
     /kasm_release/conf/database/seed_data/default_images_a* && \
+  # Don't check for open ports
   sed -i 's/-N -e -H/-N -B -e -H/g' /kasm_release/upgrade.sh && \
   echo "exit 0" > /kasm_release/install_dependencies.sh && \
+  # Add our customisations
   /kasm_release/bin/utils/yq_$(uname -m) -i \
     '.services.proxy.volumes += "/kasm_release/www/img/thumbnails:/srv/www/img/thumbnails"' \
+    /kasm_release/docker/docker-compose-all.yaml && \
+  /kasm_release/bin/utils/yq_$(uname -m) -i \
+    '.services.proxy.depends_on = {"kasm_manager":{"condition": "service_healthy"},"kasm_api":{"condition": "service_healthy"},"kasm_agent":{"condition": "service_started"},"kasm_guac":{"condition": "service_started"}}' \
+    /kasm_release/docker/docker-compose-all.yaml && \
+  /kasm_release/bin/utils/yq_$(uname -m) -i \
+    '.services.kasm_manager.depends_on = {"db":{"condition": "service_healthy"}}' \
+    /kasm_release/docker/docker-compose-all.yaml && \
+  /kasm_release/bin/utils/yq_$(uname -m) -i \
+    '.services.kasm_api.depends_on = {"db":{"condition": "service_healthy"}}' \
+    /kasm_release/docker/docker-compose-all.yaml && \
+  /kasm_release/bin/utils/yq_$(uname -m) -i \
+    '.services.kasm_api.healthcheck += {"start_period": "60s","start_interval": "30s"}' \
+    /kasm_release/docker/docker-compose-all.yaml && \
+  /kasm_release/bin/utils/yq_$(uname -m) -i \
+    '.services.kasm_rdp_https_gateway.depends_on = {"proxy":{"condition": "service_started"}}' \
     /kasm_release/docker/docker-compose-all.yaml && \
   echo "**** copy assets ****" && \
   cp \
