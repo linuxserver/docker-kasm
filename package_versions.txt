@@ -30,7 +30,7 @@ NAME                                                                          VE
 @tufjs/canonical-json                                                         2.0.0                                    npm                         
 @tufjs/models                                                                 2.0.1                                    npm                         
 @types/cors                                                                   2.8.19                                   npm                         
-@types/node                                                                   25.5.0                                   npm                         
+@types/node                                                                   25.5.2                                   npm                         
 @types/ws                                                                     8.18.1                                   npm                         
 abbrev                                                                        2.0.0                                    npm                         
 accepts                                                                       1.3.8                                    npm                         
@@ -735,7 +735,7 @@ libxtables12                                                                  1.
 libxxhash0                                                                    0.8.2-2build1                            deb                         
 libzstd1                                                                      1.5.5+dfsg2-2build1.1                    deb                         
 locales                                                                       2.39-0ubuntu8.7                          deb                         
-lodash                                                                        4.17.21                                  npm                         
+lodash                                                                        4.18.1                                   npm                         
 login                                                                         1:4.13+dfsg1-4ubuntu3.2                  deb                         
 logsave                                                                       1.47.0-2.4~exp1ubuntu4.1                 deb                         
 lru-cache                                                                     10.2.2                                   npm                         
