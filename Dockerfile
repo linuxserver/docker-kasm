@@ -20,15 +20,18 @@ ENV NVIDIA_DRIVER_CAPABILITIES="compute,graphics,video,utility"
 # Container setup
 RUN \
   echo "**** install packages ****" && \
-  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
-  echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu noble stable" > \
-    /etc/apt/sources.list.d/docker.list && \
+  install -m 0755 -d /etc/apt/keyrings && \
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
+  chmod a+r /etc/apt/keyrings/docker.asc && \
+  printf "Types: deb\nURIs: https://download.docker.com/linux/ubuntu\nSuites: $(. /etc/os-release && echo ${UBUNTU_CODENAME:-$VERSION_CODENAME})\nComponents: stable\nArchitectures: $(dpkg --print-architecture)\nSigned-By: /etc/apt/keyrings/docker.asc" > /etc/apt/sources.list.d/docker.sources && \
+  cat /etc/apt/sources.list.d/docker.sources && \
   curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
     && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
       sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
       tee /etc/apt/sources.list.d/nvidia-container-toolkit.list && \
   curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
   printf "Package: docker-ce docker-ce-cli docker-ce-rootless-extras\nPin: version 5:29.* \nPin-Priority: 1001" > /etc/apt/preferences.d/docker && \
+  apt-get update && \
   apt-get install -y --no-install-recommends \
     btrfs-progs \
     build-essential \
@@ -54,7 +57,7 @@ RUN \
   usermod -G dockremap dockremap && \
   echo 'dockremap:165536:65536' >> /etc/subuid && \
   echo 'dockremap:165536:65536' >> /etc/subgid && \
-  curl -o \
+  curl -w "%{response_code}" -o \
   /usr/local/bin/dind -L \
     https://raw.githubusercontent.com/moby/moby/master/hack/dind && \
   chmod +x /usr/local/bin/dind && \
@@ -69,22 +72,12 @@ RUN \
   curl -o \
     /tmp/wizard.tar.gz -L \
     # "https://github.com/kasmtech/kasm-install-wizard/archive/refs/tags/${KASM_VERSION}.tar.gz" && \
-    "https://github.com/kasmtech/kasm-install-wizard/archive/refs/tags/1.18.0.tar.gz" && \
+    "https://github.com/KodeStar/kasm-install-wizard/archive/refs/heads/feature/KASM-8264-registry-based-wizard-installer.tar.gz" && \
   tar xf \
     /tmp/wizard.tar.gz -C \
     /wizard --strip-components=1 && \
-  # Enable rolling service images
-  sed -i "/installFlags = \[.*/a \    installFlags.push('-O');" /wizard/index.js && \
   cd /wizard && \
   npm install && \
-  echo "**** add image definitions ****" && \
-  curl -o \
-    /tmp/images.tar.gz -L \
-    #"https://kasm-ci.s3.amazonaws.com/${KASM_VERSION}-images-combined.tar.gz" && \
-    "https://kasm-ci.s3.amazonaws.com/1.18.0-images-combined.tar.gz" && \
-  tar xf \
-    /tmp/images.tar.gz -C \
-    / && \
   echo "**** add installer ****" && \
   curl -o \
     /tmp/kasm.tar.gz -L \
@@ -92,17 +85,9 @@ RUN \
   tar xf \
     /tmp/kasm.tar.gz -C \
     / && \
-  ALVERSION=$(cat /kasm_release/conf/database/seed_data/default_properties.yaml |awk '/alembic_version/ {print $2}') && \
-  sed -i \
-    '/alembic_version/s/.*/alembic_version: '${ALVERSION}'/' \
-    /kasm_release/conf/database/seed_data/default_images_a* && \
   # Don't check for open ports
   sed -i 's/-N -e -H/-N -B -e -H/g' /kasm_release/upgrade.sh && \
   echo "exit 0" > /kasm_release/install_dependencies.sh && \
-  # Add our customisations
-  /kasm_release/bin/utils/yq_$(uname -m) -i \
-    '.services.proxy.volumes += "/kasm_release/www/img/thumbnails:/srv/www/img/thumbnails"' \
-    /kasm_release/docker/docker-compose-all.yaml && \
   /kasm_release/bin/utils/yq_$(uname -m) -i \
     '.services.proxy.depends_on = {"kasm_manager":{"condition": "service_healthy"},"kasm_api":{"condition": "service_healthy"},"kasm_agent":{"condition": "service_started"},"kasm_guac":{"condition": "service_started"}}' \
     /kasm_release/docker/docker-compose-all.yaml && \
@@ -118,13 +103,6 @@ RUN \
   /kasm_release/bin/utils/yq_$(uname -m) -i \
     '.services.kasm_rdp_https_gateway.depends_on = {"proxy":{"condition": "service_started"}}' \
     /kasm_release/docker/docker-compose-all.yaml && \
-  echo "**** copy assets ****" && \
-  cp \
-    /kasm_release/www/img/thumbnails/*.png /kasm_release/www/img/thumbnails/*.svg \
-    /wizard/public/img/thumbnails/ && \
-  cp \
-    /kasm_release/conf/database/seed_data/default_images_a* \
-    /wizard/ && \
   useradd -u 70 kasm_db && \
   useradd kasm && \
   printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
