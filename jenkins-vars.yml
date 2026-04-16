@@ -2,8 +2,7 @@
 
 # jenkins variables
 project_name: docker-kasm
-external_type: na
-custom_version_command: "echo 1.18.1"
+external_type: github_stable
 release_type: stable
 release_tag: latest
 ls_branch: master

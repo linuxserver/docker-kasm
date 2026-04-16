@@ -17,20 +17,23 @@ ENV DEBIAN_FRONTEND=noninteractive
 #Add needed nvidia environment variables for https://github.com/NVIDIA/nvidia-docker
 ENV NVIDIA_DRIVER_CAPABILITIES="compute,graphics,video,utility"
 
-# Container setup
 RUN \
   echo "**** install packages ****" && \
   install -m 0755 -d /etc/apt/keyrings && \
+  # Docker
   curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
-  chmod a+r /etc/apt/keyrings/docker.asc && \
   printf "Types: deb\nURIs: https://download.docker.com/linux/ubuntu\nSuites: $(. /etc/os-release && echo ${UBUNTU_CODENAME:-$VERSION_CODENAME})\nComponents: stable\nArchitectures: $(dpkg --print-architecture)\nSigned-By: /etc/apt/keyrings/docker.asc" > /etc/apt/sources.list.d/docker.sources && \
-  cat /etc/apt/sources.list.d/docker.sources && \
-  curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
+  printf "Package: docker-ce docker-ce-cli docker-ce-rootless-extras\nPin: version 5:29.*\nPin-Priority: 1001" > /etc/apt/preferences.d/docker && \
+  # Nvidia CTK
+  curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | gpg --dearmor -o /etc/apt/keyrings/nvidia-container-toolkit-keyring.gpg \
     && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
-      sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+      sed 's#deb https://#deb [signed-by=/etc/apt/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
       tee /etc/apt/sources.list.d/nvidia-container-toolkit.list && \
-  curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
-  printf "Package: docker-ce docker-ce-cli docker-ce-rootless-extras\nPin: version 5:29.* \nPin-Priority: 1001" > /etc/apt/preferences.d/docker && \
+  # NodeJS
+  curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg && \
+  printf "Types: deb\nURIs: https://deb.nodesource.com/node_20.x\nSuites: nodistro\nComponents: main\nArchitectures: $(dpkg --print-architecture)\nSigned-By: /etc/apt/keyrings/nodesource.gpg" > /etc/apt/sources.list.d/nodesource.sources && \
+  printf "Package: nodejs\nPin: origin deb.nodesource.com\nPin-Priority: 600" > /etc/apt/preferences.d/nodejs && \
+  chmod a+r /etc/apt/keyrings/{*.gpg,*.asc}
   apt-get update && \
   apt-get install -y --no-install-recommends \
     btrfs-progs \
@@ -57,7 +60,7 @@ RUN \
   usermod -G dockremap dockremap && \
   echo 'dockremap:165536:65536' >> /etc/subuid && \
   echo 'dockremap:165536:65536' >> /etc/subgid && \
-  curl -w "%{response_code}" -o \
+  curl -o \
   /usr/local/bin/dind -L \
     https://raw.githubusercontent.com/moby/moby/master/hack/dind && \
   chmod +x /usr/local/bin/dind && \
@@ -71,8 +74,7 @@ RUN \
   echo "**** add wizard ****" && \
   curl -o \
     /tmp/wizard.tar.gz -L \
-    # "https://github.com/kasmtech/kasm-install-wizard/archive/refs/tags/${KASM_VERSION}.tar.gz" && \
-    "https://github.com/KodeStar/kasm-install-wizard/archive/refs/heads/feature/KASM-8264-registry-based-wizard-installer.tar.gz" && \
+    "https://github.com/kasmtech/kasm-install-wizard/archive/refs/tags/${KASM_VERSION}.tar.gz" && \
   tar xf \
     /tmp/wizard.tar.gz -C \
     /wizard --strip-components=1 && \
@@ -85,9 +87,10 @@ RUN \
   tar xf \
     /tmp/kasm.tar.gz -C \
     / && \
-  # Don't check for open ports
+  # Don't check for open ports during upgrades
   sed -i 's/-N -e -H/-N -B -e -H/g' /kasm_release/upgrade.sh && \
   echo "exit 0" > /kasm_release/install_dependencies.sh && \
+  # Fix dependencies so containers start in the right order
   /kasm_release/bin/utils/yq_$(uname -m) -i \
     '.services.proxy.depends_on = {"kasm_manager":{"condition": "service_healthy"},"kasm_api":{"condition": "service_healthy"},"kasm_agent":{"condition": "service_started"},"kasm_guac":{"condition": "service_started"}}' \
     /kasm_release/docker/docker-compose-all.yaml && \
@@ -103,6 +106,9 @@ RUN \
   /kasm_release/bin/utils/yq_$(uname -m) -i \
     '.services.kasm_rdp_https_gateway.depends_on = {"proxy":{"condition": "service_started"}}' \
     /kasm_release/docker/docker-compose-all.yaml && \
+  # Disable containerd snapshotter
+  jq '. += {"features": {"containerd-snapshotter": false}}' /etc/docker/daemon.json > /tmp/daemon.json && mv /tmp/daemon.json /etc/docker/daemon.json && \
+  # Add Kasm and db users
   useradd -u 70 kasm_db && \
   useradd kasm && \
   printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \

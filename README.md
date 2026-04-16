@@ -317,7 +317,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
-* **22.03.26:** - Update for 1.18.1 release. Use rolling service images.
+* **16.04.26:** - Update for 1.18.1 release. Use rolling service images.
 * **13.11.25:** - Pin docker to v28 to avoid API deprecation issues.
 * **22.10.25:** - Update for 1.18.0 release.
 * **08.06.25:** - Deprecate develop branch.
