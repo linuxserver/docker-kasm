@@ -12,22 +12,30 @@ LABEL maintainer="thespad"
 # Env
 ENV DOCKER_TLS_CERTDIR=""
 ENV TINI_SUBREAPER=true
+ENV DEBIAN_FRONTEND=noninteractive
 
 #Add needed nvidia environment variables for https://github.com/NVIDIA/nvidia-docker
 ENV NVIDIA_DRIVER_CAPABILITIES="compute,graphics,video,utility"
 
-# Container setup
 RUN \
   echo "**** install packages ****" && \
-  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
-  echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu noble stable" > \
-    /etc/apt/sources.list.d/docker.list && \
-  curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
+  install -m 0755 -d /etc/apt/keyrings && \
+  # Docker
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
+  printf "Types: deb\nURIs: https://download.docker.com/linux/ubuntu\nSuites: $(. /etc/os-release && echo ${UBUNTU_CODENAME:-$VERSION_CODENAME})\nComponents: stable\nArchitectures: $(dpkg --print-architecture)\nSigned-By: /etc/apt/keyrings/docker.asc" > /etc/apt/sources.list.d/docker.sources && \
+  printf "Package: docker-ce docker-ce-cli docker-ce-rootless-extras\nPin: version 5:29.*\nPin-Priority: 1001" > /etc/apt/preferences.d/docker && \
+  # Nvidia CTK
+  curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | gpg --dearmor -o /etc/apt/keyrings/nvidia-container-toolkit-keyring.gpg \
     && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
-      sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+      sed 's#deb https://#deb [signed-by=/etc/apt/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
       tee /etc/apt/sources.list.d/nvidia-container-toolkit.list && \
-  curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
-  printf "Package: docker-ce docker-ce-cli docker-ce-rootless-extras\nPin: version 5:28.* \nPin-Priority: 1001" > /etc/apt/preferences.d/docker && \
+  # NodeJS
+  curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg && \
+  printf "Types: deb\nURIs: https://deb.nodesource.com/node_24.x\nSuites: nodistro\nComponents: main\nArchitectures: $(dpkg --print-architecture)\nSigned-By: /etc/apt/keyrings/nodesource.gpg" > /etc/apt/sources.list.d/nodesource.sources && \
+  printf "Package: nodejs\nPin: origin deb.nodesource.com\nPin-Priority: 600" > /etc/apt/preferences.d/nodejs && \
+  chmod a+r /etc/apt/keyrings/*.gpg && \
+  chmod a+r /etc/apt/keyrings/*.asc && \
+  apt-get update && \
   apt-get install -y --no-install-recommends \
     btrfs-progs \
     build-essential \
@@ -58,13 +66,13 @@ RUN \
     https://raw.githubusercontent.com/moby/moby/master/hack/dind && \
   chmod +x /usr/local/bin/dind && \
   echo 'hosts: files dns' > /etc/nsswitch.conf && \
-  echo "**** setup wizard ****" && \
   mkdir -p /wizard && \
   if [ -z ${KASM_VERSION+x} ]; then \
       KASM_VERSION=$(curl -sX GET 'https://api.github.com/repos/kasmtech/kasm-install-wizard/releases/latest' \
       | jq -r '.name'); \
   fi && \
   echo "${KASM_VERSION}" > /version.txt && \
+  echo "**** add wizard ****" && \
   curl -o \
     /tmp/wizard.tar.gz -L \
     "https://github.com/kasmtech/kasm-install-wizard/archive/refs/tags/${KASM_VERSION}.tar.gz" && \
@@ -76,32 +84,30 @@ RUN \
   echo "**** add installer ****" && \
   curl -o \
     /tmp/kasm.tar.gz -L \
-    "https://github.com/kasmtech/kasm-install-wizard/releases/download/${KASM_VERSION}/kasm_release.tar.gz" && \
+    "https://kasm-static-content.s3.amazonaws.com/kasm_release_${KASM_VERSION}.tar.gz" && \
   tar xf \
     /tmp/kasm.tar.gz -C \
     / && \
-  ALVERSION=$(cat /kasm_release/conf/database/seed_data/default_properties.yaml |awk '/alembic_version/ {print $2}') && \
-  curl -o \
-    /tmp/images.tar.gz -L \
-    "https://kasm-ci.s3.amazonaws.com/${KASM_VERSION}-images-combined.tar.gz" && \
-  tar xf \
-    /tmp/images.tar.gz -C \
-    / && \
-  sed -i \
-    '/alembic_version/s/.*/alembic_version: '${ALVERSION}'/' \
-    /kasm_release/conf/database/seed_data/default_images_a* && \
+  # Don't check for open ports during upgrades
   sed -i 's/-N -e -H/-N -B -e -H/g' /kasm_release/upgrade.sh && \
   echo "exit 0" > /kasm_release/install_dependencies.sh && \
+  # Fix dependencies so containers start in the right order
   /kasm_release/bin/utils/yq_$(uname -m) -i \
-    '.services.proxy.volumes += "/kasm_release/www/img/thumbnails:/srv/www/img/thumbnails"' \
+    '.services.proxy.depends_on = {"kasm_manager":{"condition": "service_healthy"},"kasm_api":{"condition": "service_healthy"},"kasm_agent":{"condition": "service_started"},"kasm_guac":{"condition": "service_started"}}' \
     /kasm_release/docker/docker-compose-all.yaml && \
-  echo "**** copy assets ****" && \
-  cp \
-    /kasm_release/www/img/thumbnails/*.png /kasm_release/www/img/thumbnails/*.svg \
-    /wizard/public/img/thumbnails/ && \
-  cp \
-    /kasm_release/conf/database/seed_data/default_images_a* \
-    /wizard/ && \
+  /kasm_release/bin/utils/yq_$(uname -m) -i \
+    '.services.kasm_manager.depends_on = {"db":{"condition": "service_healthy"}}' \
+    /kasm_release/docker/docker-compose-all.yaml && \
+  /kasm_release/bin/utils/yq_$(uname -m) -i \
+    '.services.kasm_api.depends_on = {"db":{"condition": "service_healthy"}}' \
+    /kasm_release/docker/docker-compose-all.yaml && \
+  /kasm_release/bin/utils/yq_$(uname -m) -i \
+    '.services.kasm_api.healthcheck += {"start_period": "60s","start_interval": "30s"}' \
+    /kasm_release/docker/docker-compose-all.yaml && \
+  /kasm_release/bin/utils/yq_$(uname -m) -i \
+    '.services.kasm_rdp_https_gateway.depends_on = {"proxy":{"condition": "service_started"}}' \
+    /kasm_release/docker/docker-compose-all.yaml && \
+  # Add Kasm and db users
   useradd -u 70 kasm_db && \
   useradd kasm && \
   printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
