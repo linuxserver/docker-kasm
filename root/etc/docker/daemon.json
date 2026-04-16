@@ -4,5 +4,8 @@
             "args": [],
             "path": "nvidia-container-runtime"
         }
+    },
+    "features": {
+        "containerd-snapshotter": false
     }
 }

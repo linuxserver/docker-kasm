@@ -31,7 +31,7 @@ RUN \
       tee /etc/apt/sources.list.d/nvidia-container-toolkit.list && \
   # NodeJS
   curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg && \
-  printf "Types: deb\nURIs: https://deb.nodesource.com/node_20.x\nSuites: nodistro\nComponents: main\nArchitectures: $(dpkg --print-architecture)\nSigned-By: /etc/apt/keyrings/nodesource.gpg" > /etc/apt/sources.list.d/nodesource.sources && \
+  printf "Types: deb\nURIs: https://deb.nodesource.com/node_24.x\nSuites: nodistro\nComponents: main\nArchitectures: $(dpkg --print-architecture)\nSigned-By: /etc/apt/keyrings/nodesource.gpg" > /etc/apt/sources.list.d/nodesource.sources && \
   printf "Package: nodejs\nPin: origin deb.nodesource.com\nPin-Priority: 600" > /etc/apt/preferences.d/nodejs && \
   chmod a+r /etc/apt/keyrings/*.gpg && \
   chmod a+r /etc/apt/keyrings/*.asc && \
@@ -107,10 +107,6 @@ RUN \
   /kasm_release/bin/utils/yq_$(uname -m) -i \
     '.services.kasm_rdp_https_gateway.depends_on = {"proxy":{"condition": "service_started"}}' \
     /kasm_release/docker/docker-compose-all.yaml && \
-  # Disable containerd snapshotter
-  mkdir -p /etc/docker/ && \
-  if [ ! -f /etc/docker/daemon.json ]; then echo '{}' > /etc/docker/daemon.json; fi && \
-  jq '. += {"features": {"containerd-snapshotter": false}}' /etc/docker/daemon.json > /tmp/daemon.json && mv /tmp/daemon.json /etc/docker/daemon.json && \
   # Add Kasm and db users
   useradd -u 70 kasm_db && \
   useradd kasm && \
