@@ -108,6 +108,8 @@ RUN \
     '.services.kasm_rdp_https_gateway.depends_on = {"proxy":{"condition": "service_started"}}' \
     /kasm_release/docker/docker-compose-all.yaml && \
   # Disable containerd snapshotter
+  mkdir -p /etc/docker/ && \
+  if [ ! -f /etc/docker/daemon.json ]; then echo '{}' > /etc/docker/daemon.json; fi && \
   jq '. += {"features": {"containerd-snapshotter": false}}' /etc/docker/daemon.json > /tmp/daemon.json && mv /tmp/daemon.json /etc/docker/daemon.json && \
   # Add Kasm and db users
   useradd -u 70 kasm_db && \
