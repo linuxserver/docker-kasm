@@ -117,11 +117,11 @@ init_diagram: |
     init-custom-files -> init-services
     init-services -> svc-cron
     svc-cron -> legacy-services
-    init-config-kasm -> svc-docker
     init-services -> svc-docker
     svc-docker -> legacy-services
-    init-config-kasm -> svc-kasm-wizard
-    init-services -> svc-kasm-wizard
+    svc-docker -> svc-kasm
+    svc-kasm -> legacy-services
+    svc-docker -> svc-kasm-wizard
     svc-kasm-wizard -> legacy-services
   }
   Base Images: {
