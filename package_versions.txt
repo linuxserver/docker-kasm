@@ -4,7 +4,7 @@ NAME                                                                          VE
 @gar/promise-retry                                                            1.0.3                                    npm                         
 @grpc/grpc-js                                                                 1.14.3                                   npm                         
 @grpc/proto-loader                                                            0.7.15                                   npm                         
-@grpc/proto-loader                                                            0.8.0                                    npm                         
+@grpc/proto-loader                                                            0.8.1                                    npm                         
 @isaacs/fs-minipass                                                           4.0.1                                    npm                         
 @isaacs/string-locale-compare                                                 1.1.0                                    npm                         
 @js-sdsl/ordered-map                                                          4.4.2                                    npm                         
@@ -44,7 +44,7 @@ NAME                                                                          VE
 @tufjs/canonical-json                                                         2.0.0                                    npm                         
 @tufjs/models                                                                 4.1.0                                    npm                         
 @types/cors                                                                   2.8.19                                   npm                         
-@types/node                                                                   25.6.0                                   npm                         
+@types/node                                                                   25.7.0                                   npm                         
 @types/ws                                                                     8.18.1                                   npm                         
 abbrev                                                                        4.0.0                                    npm                         
 accepts                                                                       1.3.8                                    npm                         
@@ -111,7 +111,7 @@ cpu-features                                                                  0.
 cron                                                                          3.0pl1-184ubuntu2                        deb                         
 cron-daemon-common                                                            3.0pl1-184ubuntu2                        deb                         
 cssesc                                                                        3.0.0                                    npm                         
-curl                                                                          8.5.0-2ubuntu10.8                        deb                         
+curl                                                                          8.5.0-2ubuntu10.9                        deb                         
 dario.cat/mergo                                                               v1.0.2                                   go-module  (+1 duplicate)   
 dash                                                                          0.5.12-6ubuntu5                          deb                         
 debconf                                                                       1.5.86ubuntu1                            deb                         
@@ -123,13 +123,13 @@ destroy                                                                       1.
 diff                                                                          8.0.3                                    npm                         
 diffutils                                                                     1:3.10-1build1                           deb                         
 dirmngr                                                                       2.4.4-2ubuntu17.4                        deb                         
-docker-ce                                                                     5:29.4.2-2~ubuntu.24.04~noble            deb                         
-docker-ce-cli                                                                 5:29.4.2-2~ubuntu.24.04~noble            deb                         
+docker-ce                                                                     5:29.4.3-1~ubuntu.24.04~noble            deb                         
+docker-ce-cli                                                                 5:29.4.3-1~ubuntu.24.04~noble            deb                         
 docker-compose-plugin                                                         5.1.3-1~ubuntu.24.04~noble               deb                         
 docker-modem                                                                  5.0.7                                    npm                         
 dockerode                                                                     4.0.12                                   npm                         
-dpkg                                                                          1.22.6ubuntu6.5                          deb                         
-dpkg-dev                                                                      1.22.6ubuntu6.5                          deb                         
+dpkg                                                                          1.22.6ubuntu6.6                          deb                         
+dpkg-dev                                                                      1.22.6ubuntu6.6                          deb                         
 dunder-proto                                                                  1.0.1                                    npm                         
 e2fsprogs                                                                     1.47.0-2.4~exp1ubuntu4.1                 deb                         
 ee-first                                                                      1.1.1                                    npm                         
@@ -147,7 +147,7 @@ escalade                                                                      3.
 escape-html                                                                   1.0.3                                    npm                         
 etag                                                                          1.8.1                                    npm                         
 exponential-backoff                                                           3.1.3                                    npm                         
-express                                                                       4.22.1                                   npm                         
+express                                                                       4.22.2                                   npm                         
 fastest-levenshtein                                                           1.0.16                                   npm                         
 fdir                                                                          6.5.0                                    npm                         
 finalhandler                                                                  1.3.2                                    npm                         
@@ -388,11 +388,11 @@ github.com/moby/locker                                                        v1
 github.com/moby/moby/api                                                      v1.54.1                                  go-module                   
 github.com/moby/moby/api                                                      v1.54.2                                  go-module                   
 github.com/moby/moby/client                                                   v0.4.0                                   go-module                   
-github.com/moby/moby/v2                                                       v29.4.2                                  go-module  (+1 duplicate)   
+github.com/moby/moby/v2                                                       v29.4.3                                  go-module  (+1 duplicate)   
 github.com/moby/patternmatcher                                                v0.6.1                                   go-module  (+1 duplicate)   
 github.com/moby/policy-helpers                                                v0.0.0-20260324161837-b7c0b994300b       go-module                   
-github.com/moby/profiles/apparmor                                             v0.1.0                                   go-module                   
-github.com/moby/profiles/seccomp                                              v0.2.2                                   go-module                   
+github.com/moby/profiles/apparmor                                             v0.2.1                                   go-module                   
+github.com/moby/profiles/seccomp                                              v0.2.3                                   go-module                   
 github.com/moby/pubsub                                                        v1.0.0                                   go-module                   
 github.com/moby/spdystream                                                    v0.5.1                                   go-module                   
 github.com/moby/swarmkit/v2                                                   v2.1.2-0.20251110192100-17b8d222e7dd     go-module                   
@@ -677,7 +677,7 @@ libcap2-bin                                                                   1:
 libcom-err2                                                                   1.47.0-2.4~exp1ubuntu4.1                 deb                         
 libcrypt-dev                                                                  1:4.4.36-4build1                         deb                         
 libcrypt1                                                                     1:4.4.36-4build1                         deb                         
-libcurl4t64                                                                   8.5.0-2ubuntu10.8                        deb                         
+libcurl4t64                                                                   8.5.0-2ubuntu10.9                        deb                         
 libdb5.3t64                                                                   5.3.28+dfsg2-7                           deb                         
 libdebconfclient0                                                             0.271ubuntu3                             deb                         
 libdevmapper1.02.1                                                            2:1.02.185-3ubuntu3.2                    deb                         
@@ -720,7 +720,7 @@ libnettle8t64                                                                 3.
 libnfnetlink0                                                                 1.0.2-2build1                            deb                         
 libnftables1                                                                  1.0.9-1ubuntu0.1                         deb                         
 libnftnl11                                                                    1.2.6-2build1                            deb                         
-libnghttp2-14                                                                 1.59.0-1ubuntu0.2                        deb                         
+libnghttp2-14                                                                 1.59.0-1ubuntu0.3                        deb                         
 libnpmaccess                                                                  10.0.3                                   npm                         
 libnpmdiff                                                                    8.1.5                                    npm                         
 libnpmexec                                                                    10.2.5                                   npm                         
@@ -808,7 +808,7 @@ mount                                                                         2.
 ms                                                                            2.0.0                                    npm        (+3 duplicates)  
 ms                                                                            2.1.3                                    npm        (+1 duplicate)   
 mute-stream                                                                   3.0.0                                    npm                         
-nan                                                                           2.26.2                                   npm                         
+nan                                                                           2.27.0                                   npm                         
 ncurses-base                                                                  6.4+20240113-1ubuntu2                    deb                         
 ncurses-bin                                                                   6.4+20240113-1ubuntu2                    deb                         
 negotiator                                                                    0.6.3                                    npm                         
@@ -859,7 +859,7 @@ proggy                                                                        4.
 promise-all-reject-late                                                       1.0.1                                    npm                         
 promise-call-limit                                                            3.0.2                                    npm                         
 promzard                                                                      3.0.1                                    npm                         
-protobufjs                                                                    7.5.6                                    npm                         
+protobufjs                                                                    7.5.8                                    npm                         
 proxy-addr                                                                    2.0.7                                    npm                         
 publicsuffix                                                                  20231001.0357-0.1                        deb                         
 pump                                                                          3.0.4                                    npm                         
@@ -868,7 +868,6 @@ python3-minimal                                                               3.
 python3.12                                                                    3.12.3-1ubuntu0.13                       deb                         
 python3.12-minimal                                                            3.12.3-1ubuntu0.13                       deb                         
 qrcode-terminal                                                               0.12.0                                   npm                         
-qs                                                                            6.14.2                                   npm                         
 qs                                                                            6.15.1                                   npm                         
 range-parser                                                                  1.2.1                                    npm                         
 raw-body                                                                      2.5.3                                    npm                         
@@ -880,7 +879,7 @@ require-directory                                                             2.
 resenje.org/singleflight                                                      v0.4.3                                   go-module                   
 safe-buffer                                                                   5.2.1                                    npm                         
 safer-buffer                                                                  2.1.2                                    npm        (+1 duplicate)   
-sed                                                                           4.9-2build1                              deb                         
+sed                                                                           4.9-2ubuntu0.24.04.1                     deb                         
 semver                                                                        7.7.4                                    npm                         
 send                                                                          0.19.2                                   npm                         
 sensible-utils                                                                0.0.22                                   deb                         
@@ -921,7 +920,7 @@ strip-ansi                                                                    6.
 sudo                                                                          1.9.15p5-3ubuntu5.24.04.2                deb                         
 supports-color                                                                10.2.2                                   npm                         
 systemd-standalone-sysusers                                                   255.4-1ubuntu8.15                        deb                         
-systeminformation                                                             5.31.5                                   npm                         
+systeminformation                                                             5.31.6                                   npm                         
 sysvinit-utils                                                                3.08-6ubuntu3                            deb                         
 tags.cncf.io/container-device-interface                                       v1.1.0                                   go-module  (+7 duplicates)  
 tags.cncf.io/container-device-interface/specs-go                              v1.1.0                                   go-module  (+6 duplicates)  
@@ -940,7 +939,7 @@ type-is                                                                       1.
 tzdata                                                                        2026a-0ubuntu0.24.04.1                   deb                         
 ubuntu-keyring                                                                2023.11.28.1                             deb                         
 uidmap                                                                        1:4.13+dfsg1-4ubuntu3.2                  deb                         
-undici-types                                                                  7.19.2                                   npm                         
+undici-types                                                                  7.21.0                                   npm                         
 unminimize                                                                    0.2.1                                    deb                         
 unpipe                                                                        1.0.0                                    npm                         
 util-deprecate                                                                1.0.2                                    npm        (+1 duplicate)   
