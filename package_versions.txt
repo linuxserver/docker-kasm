@@ -29,7 +29,6 @@ NAME                                                                          VE
 @protobufjs/eventemitter                                                      1.1.1                                    npm                         
 @protobufjs/fetch                                                             1.1.1                                    npm                         
 @protobufjs/float                                                             1.0.2                                    npm                         
-@protobufjs/inquire                                                           1.1.2                                    npm                         
 @protobufjs/path                                                              1.1.2                                    npm                         
 @protobufjs/pool                                                              1.1.0                                    npm                         
 @protobufjs/utf8                                                              1.1.1                                    npm                         
@@ -44,7 +43,7 @@ NAME                                                                          VE
 @tufjs/canonical-json                                                         2.0.0                                    npm                         
 @tufjs/models                                                                 4.1.0                                    npm                         
 @types/cors                                                                   2.8.19                                   npm                         
-@types/node                                                                   25.9.2                                   npm                         
+@types/node                                                                   25.9.3                                   npm                         
 @types/ws                                                                     8.18.1                                   npm                         
 abbrev                                                                        4.0.0                                    npm                         
 accepts                                                                       1.3.8                                    npm                         
@@ -136,7 +135,7 @@ ee-first                                                                      1.
 emoji-regex                                                                   8.0.0                                    npm                         
 encodeurl                                                                     2.0.0                                    npm                         
 end-of-stream                                                                 1.4.5                                    npm                         
-engine.io                                                                     6.6.8                                    npm                         
+engine.io                                                                     6.6.9                                    npm                         
 engine.io-parser                                                              5.2.3                                    npm                         
 engine.io-parser                                                              UNKNOWN                                  npm        (+1 duplicate)   
 env-paths                                                                     2.2.1                                    npm                         
@@ -765,12 +764,12 @@ libssh-4                                                                      0.
 libssl3t64                                                                    3.0.13-0ubuntu3.11                       deb                         
 libstdc++6                                                                    14.2.0-4ubuntu2~24.04.1                  deb                         
 libsubid4                                                                     1:4.13+dfsg1-4ubuntu3.2                  deb                         
-libsystemd0                                                                   255.4-1ubuntu8.15                        deb                         
+libsystemd0                                                                   255.4-1ubuntu8.16                        deb                         
 libtasn1-6                                                                    4.19.0-3ubuntu0.24.04.2                  deb                         
 libtinfo6                                                                     6.4+20240113-1ubuntu2                    deb                         
 libtirpc-common                                                               1.3.4+ds-1.1build1                       deb                         
 libtirpc3t64                                                                  1.3.4+ds-1.1build1                       deb                         
-libudev1                                                                      255.4-1ubuntu8.15                        deb                         
+libudev1                                                                      255.4-1ubuntu8.16                        deb                         
 libunistring5                                                                 1.1-2build1.1                            deb                         
 liburcu8t64                                                                   0.14.0-3.1build1                         deb                         
 libuuid1                                                                      2.39.3-9ubuntu6.5                        deb                         
@@ -860,7 +859,7 @@ proggy                                                                        4.
 promise-all-reject-late                                                       1.0.1                                    npm                         
 promise-call-limit                                                            3.0.2                                    npm                         
 promzard                                                                      3.0.1                                    npm                         
-protobufjs                                                                    7.6.3                                    npm                         
+protobufjs                                                                    7.6.4                                    npm                         
 proxy-addr                                                                    2.0.7                                    npm                         
 publicsuffix                                                                  20231001.0357-0.1                        deb                         
 pump                                                                          3.0.4                                    npm                         
@@ -899,7 +898,7 @@ sigs.k8s.io/yaml                                                              v1
 sigstore                                                                      4.1.0                                    npm                         
 smart-buffer                                                                  4.2.0                                    npm                         
 socket.io                                                                     4.8.3                                    npm                         
-socket.io-adapter                                                             2.5.7                                    npm                         
+socket.io-adapter                                                             2.5.8                                    npm                         
 socket.io-parser                                                              4.2.6                                    npm                         
 socks                                                                         2.8.7                                    npm                         
 socks-proxy-agent                                                             8.0.5                                    npm                         
@@ -919,7 +918,7 @@ string_decoder                                                                1.
 strip-ansi                                                                    6.0.1                                    npm                         
 sudo                                                                          1.9.15p5-3ubuntu5.24.04.2                deb                         
 supports-color                                                                10.2.2                                   npm                         
-systemd-standalone-sysusers                                                   255.4-1ubuntu8.15                        deb                         
+systemd-standalone-sysusers                                                   255.4-1ubuntu8.16                        deb                         
 systeminformation                                                             5.31.7                                   npm                         
 sysvinit-utils                                                                3.08-6ubuntu3                            deb                         
 tags.cncf.io/container-device-interface                                       v1.1.0                                   go-module  (+7 duplicates)  
@@ -954,7 +953,7 @@ which                                                                         6.
 wrap-ansi                                                                     7.0.0                                    npm                         
 wrappy                                                                        1.0.2                                    npm                         
 write-file-atomic                                                             7.0.1                                    npm                         
-ws                                                                            8.20.1                                   npm                         
+ws                                                                            8.21.0                                   npm                         
 xfsprogs                                                                      6.6.0-1ubuntu2.1                         deb                         
 xz-utils                                                                      5.6.1+really5.4.5-1ubuntu0.3             deb                         
 y18n                                                                          5.0.8                                    npm                         
