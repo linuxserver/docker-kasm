@@ -122,8 +122,8 @@ destroy                                                                       1.
 diff                                                                          8.0.4                                    npm                         
 diffutils                                                                     1:3.10-1build1                           deb                         
 dirmngr                                                                       2.4.4-2ubuntu17.4                        deb                         
-docker-ce                                                                     5:29.6.0-1~ubuntu.24.04~noble            deb                         
-docker-ce-cli                                                                 5:29.6.0-1~ubuntu.24.04~noble            deb                         
+docker-ce                                                                     5:29.6.1-1~ubuntu.24.04~noble            deb                         
+docker-ce-cli                                                                 5:29.6.1-1~ubuntu.24.04~noble            deb                         
 docker-compose-plugin                                                         5.2.0-1~ubuntu.24.04~noble               deb                         
 docker-modem                                                                  5.0.7                                    npm                         
 dockerode                                                                     4.0.12                                   npm                         
@@ -224,8 +224,7 @@ github.com/containerd/cgroups/v3                                              v3
 github.com/containerd/cgroups/v3                                              v3.1.3                                   go-module                   
 github.com/containerd/console                                                 v1.0.5                                   go-module  (+5 duplicates)  
 github.com/containerd/containerd/api                                          v1.10.0                                  go-module  (+4 duplicates)  
-github.com/containerd/containerd/v2                                           v2.2.4                                   go-module                   
-github.com/containerd/containerd/v2                                           v2.2.5                                   go-module  (+3 duplicates)  
+github.com/containerd/containerd/v2                                           v2.2.5                                   go-module  (+4 duplicates)  
 github.com/containerd/continuity                                              v0.4.5                                   go-module  (+2 duplicates)  
 github.com/containerd/continuity                                              v0.5.0                                   go-module  (+1 duplicate)   
 github.com/containerd/errdefs                                                 v1.0.0                                   go-module  (+4 duplicates)  
@@ -391,14 +390,15 @@ github.com/mitchellh/copystructure                                            v1
 github.com/mitchellh/go-wordwrap                                              v1.0.1                                   go-module  (+1 duplicate)   
 github.com/mitchellh/hashstructure/v2                                         v2.0.2                                   go-module  (+1 duplicate)   
 github.com/mitchellh/reflectwalk                                              v1.0.2                                   go-module                   
-github.com/moby/buildkit                                                      v0.31.0                                  go-module  (+1 duplicate)   
+github.com/moby/buildkit                                                      v0.31.0                                  go-module                   
+github.com/moby/buildkit                                                      v0.31.1                                  go-module                   
 github.com/moby/docker-image-spec                                             v1.3.1                                   go-module  (+1 duplicate)   
 github.com/moby/go-archive                                                    v0.2.0                                   go-module  (+1 duplicate)   
 github.com/moby/ipvs                                                          v1.1.0                                   go-module                   
 github.com/moby/locker                                                        v1.0.1                                   go-module  (+3 duplicates)  
 github.com/moby/moby/api                                                      v1.55.0                                  go-module  (+1 duplicate)   
 github.com/moby/moby/client                                                   v0.5.0                                   go-module                   
-github.com/moby/moby/v2                                                       v29.6.0                                  go-module  (+1 duplicate)   
+github.com/moby/moby/v2                                                       v29.6.1                                  go-module  (+1 duplicate)   
 github.com/moby/patternmatcher                                                v0.6.1                                   go-module  (+1 duplicate)   
 github.com/moby/policy-helpers                                                v0.0.0-20260612073044-d5411a945cfc       go-module                   
 github.com/moby/profiles/apparmor                                             v0.2.1                                   go-module                   
@@ -415,7 +415,8 @@ github.com/moby/sys/sequential                                                v0
 github.com/moby/sys/signal                                                    v0.7.1                                   go-module  (+3 duplicates)  
 github.com/moby/sys/symlink                                                   v0.3.0                                   go-module  (+2 duplicates)  
 github.com/moby/sys/user                                                      v0.3.0                                   go-module                   
-github.com/moby/sys/user                                                      v0.4.0                                   go-module  (+3 duplicates)  
+github.com/moby/sys/user                                                      v0.4.0                                   go-module  (+2 duplicates)  
+github.com/moby/sys/user                                                      v0.4.1                                   go-module                   
 github.com/moby/sys/userns                                                    v0.1.0                                   go-module  (+5 duplicates)  
 github.com/moby/term                                                          v0.5.2                                   go-module  (+1 duplicate)   
 github.com/modern-go/concurrent                                               v0.0.0-20180306012644-bacd9c7ef1dd       go-module                   
@@ -627,7 +628,7 @@ is-cidr                                                                       6.
 is-fullwidth-code-point                                                       3.0.0                                    npm                         
 isexe                                                                         4.0.0                                    npm                         
 jq                                                                            1.7.1-3ubuntu0.24.04.2                   deb                         
-js-yaml                                                                       4.2.0                                    npm                         
+js-yaml                                                                       4.3.0                                    npm                         
 json-parse-even-better-errors                                                 5.0.0                                    npm                         
 json-stringify-nice                                                           1.1.4                                    npm                         
 jsonparse                                                                     1.3.1                                    npm                         
@@ -909,9 +910,9 @@ systeminformation                                                             5.
 sysvinit-utils                                                                3.08-6ubuntu3                            deb                         
 tags.cncf.io/container-device-interface                                       v1.1.0                                   go-module  (+7 duplicates)  
 tags.cncf.io/container-device-interface/specs-go                              v1.1.0                                   go-module  (+6 duplicates)  
-tar                                                                           1.35+dfsg-3build1                        deb                         
+tar                                                                           1.35+dfsg-3ubuntu0.1                     deb                         
 tar                                                                           7.5.15                                   npm                         
-tar-fs                                                                        2.1.4                                    npm                         
+tar-fs                                                                        2.1.5                                    npm                         
 tar-stream                                                                    2.2.0                                    npm                         
 text-table                                                                    0.2.0                                    npm                         
 tiny-relative-date                                                            2.0.2                                    npm                         
