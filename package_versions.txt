@@ -31,7 +31,7 @@ NAME                                                                          VE
 @protobufjs/float                                                             1.0.2                                    npm                         
 @protobufjs/path                                                              1.1.2                                    npm                         
 @protobufjs/pool                                                              1.1.0                                    npm                         
-@protobufjs/utf8                                                              1.1.1                                    npm                         
+@protobufjs/utf8                                                              1.1.2                                    npm                         
 @sigstore/bundle                                                              4.0.0                                    npm                         
 @sigstore/core                                                                3.2.1                                    npm                         
 @sigstore/protobuf-specs                                                      0.5.1                                    npm                         
@@ -43,7 +43,7 @@ NAME                                                                          VE
 @tufjs/canonical-json                                                         2.0.0                                    npm                         
 @tufjs/models                                                                 4.1.0                                    npm                         
 @types/cors                                                                   2.8.19                                   npm                         
-@types/node                                                                   26.0.1                                   npm                         
+@types/node                                                                   26.1.0                                   npm                         
 @types/ws                                                                     8.18.1                                   npm                         
 abbrev                                                                        4.0.0                                    npm                         
 accepts                                                                       1.3.8                                    npm                         
@@ -124,7 +124,7 @@ diffutils                                                                     1:
 dirmngr                                                                       2.4.4-2ubuntu17.4                        deb                         
 docker-ce                                                                     5:29.6.1-1~ubuntu.24.04~noble            deb                         
 docker-ce-cli                                                                 5:29.6.1-1~ubuntu.24.04~noble            deb                         
-docker-compose-plugin                                                         5.2.0-1~ubuntu.24.04~noble               deb                         
+docker-compose-plugin                                                         5.3.1-1~ubuntu.24.04~noble               deb                         
 docker-modem                                                                  5.0.7                                    npm                         
 dockerode                                                                     4.0.12                                   npm                         
 dpkg                                                                          1.22.6ubuntu6.6                          deb                         
@@ -216,7 +216,7 @@ github.com/cilium/ebpf                                                        v0
 github.com/clipperhouse/uax29/v2                                              v2.2.0                                   go-module                   
 github.com/cloudflare/cfssl                                                   v1.6.5                                   go-module                   
 github.com/cloudflare/circl                                                   v1.6.3                                   go-module                   
-github.com/compose-spec/compose-go/v2                                         v2.12.1                                  go-module                   
+github.com/compose-spec/compose-go/v2                                         v2.13.0                                  go-module                   
 github.com/container-storage-interface/spec                                   v1.5.0                                   go-module                   
 github.com/containerd/accelerated-container-image                             v1.3.0                                   go-module                   
 github.com/containerd/btrfs/v2                                                v2.0.0                                   go-module                   
@@ -266,10 +266,10 @@ github.com/digitorus/timestamp                                                v0
 github.com/dimchansky/utfbom                                                  v1.1.1                                   go-module  (+2 duplicates)  
 github.com/distribution/reference                                             v0.6.0                                   go-module  (+3 duplicates)  
 github.com/docker/buildx                                                      v0.35.0                                  go-module                   
-github.com/docker/cli                                                         v29.6.0+incompatible                     go-module                   
+github.com/docker/cli                                                         v29.6.1+incompatible                     go-module                   
 github.com/docker/cli-docs-tool                                               v0.11.0                                  go-module                   
 github.com/docker/cli/cmd/docker                                              UNKNOWN                                  go-module                   
-github.com/docker/compose/v5                                                  v5.2.0                                   go-module                   
+github.com/docker/compose/v5                                                  v5.3.1                                   go-module                   
 github.com/docker/distribution                                                v2.8.3+incompatible                      go-module                   
 github.com/docker/docker                                                      v28.5.2+incompatible                     go-module                   
 github.com/docker/docker-credential-helpers                                   v0.9.8                                   go-module                   
@@ -390,8 +390,7 @@ github.com/mitchellh/copystructure                                            v1
 github.com/mitchellh/go-wordwrap                                              v1.0.1                                   go-module  (+1 duplicate)   
 github.com/mitchellh/hashstructure/v2                                         v2.0.2                                   go-module  (+1 duplicate)   
 github.com/mitchellh/reflectwalk                                              v1.0.2                                   go-module                   
-github.com/moby/buildkit                                                      v0.31.0                                  go-module                   
-github.com/moby/buildkit                                                      v0.31.1                                  go-module                   
+github.com/moby/buildkit                                                      v0.31.1                                  go-module  (+1 duplicate)   
 github.com/moby/docker-image-spec                                             v1.3.1                                   go-module  (+1 duplicate)   
 github.com/moby/go-archive                                                    v0.2.0                                   go-module  (+1 duplicate)   
 github.com/moby/ipvs                                                          v1.1.0                                   go-module                   
@@ -415,8 +414,8 @@ github.com/moby/sys/sequential                                                v0
 github.com/moby/sys/signal                                                    v0.7.1                                   go-module  (+3 duplicates)  
 github.com/moby/sys/symlink                                                   v0.3.0                                   go-module  (+2 duplicates)  
 github.com/moby/sys/user                                                      v0.3.0                                   go-module                   
-github.com/moby/sys/user                                                      v0.4.0                                   go-module  (+2 duplicates)  
-github.com/moby/sys/user                                                      v0.4.1                                   go-module                   
+github.com/moby/sys/user                                                      v0.4.0                                   go-module  (+1 duplicate)   
+github.com/moby/sys/user                                                      v0.4.1                                   go-module  (+1 duplicate)   
 github.com/moby/sys/userns                                                    v0.1.0                                   go-module  (+5 duplicates)  
 github.com/moby/term                                                          v0.5.2                                   go-module  (+1 duplicate)   
 github.com/modern-go/concurrent                                               v0.0.0-20180306012644-bacd9c7ef1dd       go-module                   
@@ -556,7 +555,8 @@ go.uber.org/zap                                                               v1
 go.yaml.in/yaml/v2                                                            v2.4.2                                   go-module  (+1 duplicate)   
 go.yaml.in/yaml/v2                                                            v2.4.4                                   go-module                   
 go.yaml.in/yaml/v3                                                            v3.0.4                                   go-module                   
-go.yaml.in/yaml/v4                                                            v4.0.0-rc.4                              go-module  (+2 duplicates)  
+go.yaml.in/yaml/v4                                                            v4.0.0-rc.4                              go-module  (+1 duplicate)   
+go.yaml.in/yaml/v4                                                            v4.0.0-rc.6                              go-module                   
 golang.org/x/crypto                                                           v0.53.0                                  go-module  (+2 duplicates)  
 golang.org/x/exp                                                              v0.0.0-20241108190413-2d47ceb2692f       go-module  (+2 duplicates)  
 golang.org/x/mod                                                              v0.33.0                                  go-module  (+3 duplicates)  
@@ -622,7 +622,7 @@ init-package-json                                                             8.
 init-system-helpers                                                           1.66ubuntu1                              deb                         
 ip-address                                                                    10.2.0                                   npm                         
 ipaddr.js                                                                     1.9.1                                    npm                         
-iproute2                                                                      6.1.0-1ubuntu6.3                         deb                         
+iproute2                                                                      6.1.0-1ubuntu6.4                         deb                         
 iptables                                                                      1.8.10-3ubuntu2                          deb                         
 is-cidr                                                                       6.0.4                                    npm                         
 is-fullwidth-code-point                                                       3.0.0                                    npm                         
@@ -731,8 +731,8 @@ libpcre2-8-0                                                                  10
 libproc2-0                                                                    2:4.0.4-4ubuntu3.2                       deb                         
 libpsl5t64                                                                    0.21.2-1.1build1                         deb                         
 libpython3-stdlib                                                             3.12.3-0ubuntu2.1                        deb                         
-libpython3.12-minimal                                                         3.12.3-1ubuntu0.13                       deb                         
-libpython3.12-stdlib                                                          3.12.3-1ubuntu0.13                       deb                         
+libpython3.12-minimal                                                         3.12.3-1ubuntu0.15                       deb                         
+libpython3.12-stdlib                                                          3.12.3-1ubuntu0.15                       deb                         
 libreadline8t64                                                               8.2-4build1                              deb                         
 libreiserfscore0t64                                                           1:3.6.27-7.1build1                       deb                         
 librtmp1                                                                      2.4+20151223.gitfa8646d.1-2build7        deb                         
@@ -745,7 +745,7 @@ libsemanage-common                                                            3.
 libsemanage2                                                                  3.5-1build5                              deb                         
 libsepol2                                                                     3.5-2build1                              deb                         
 libsmartcols1                                                                 2.39.3-9ubuntu6.5                        deb                         
-libsqlite3-0                                                                  3.45.1-1ubuntu2.5                        deb                         
+libsqlite3-0                                                                  3.45.1-1ubuntu2.6                        deb                         
 libss2                                                                        1.47.0-2.4~exp1ubuntu4.1                 deb                         
 libssh-4                                                                      0.10.6-2ubuntu0.4                        deb                         
 libssl3t64                                                                    3.0.13-0ubuntu3.11                       deb                         
@@ -846,14 +846,14 @@ proggy                                                                        4.
 promise-all-reject-late                                                       1.0.1                                    npm                         
 promise-call-limit                                                            3.0.2                                    npm                         
 promzard                                                                      3.0.1                                    npm                         
-protobufjs                                                                    7.6.4                                    npm                         
+protobufjs                                                                    7.6.5                                    npm                         
 proxy-addr                                                                    2.0.7                                    npm                         
 publicsuffix                                                                  20231001.0357-0.1                        deb                         
 pump                                                                          3.0.4                                    npm                         
 python3                                                                       3.12.3-0ubuntu2.1                        deb                         
 python3-minimal                                                               3.12.3-0ubuntu2.1                        deb                         
-python3.12                                                                    3.12.3-1ubuntu0.13                       deb                         
-python3.12-minimal                                                            3.12.3-1ubuntu0.13                       deb                         
+python3.12                                                                    3.12.3-1ubuntu0.15                       deb                         
+python3.12-minimal                                                            3.12.3-1ubuntu0.15                       deb                         
 qrcode-terminal                                                               0.12.0                                   npm                         
 qs                                                                            6.15.3                                   npm                         
 range-parser                                                                  1.2.1                                    npm                         
@@ -906,7 +906,7 @@ strip-ansi                                                                    6.
 sudo                                                                          1.9.15p5-3ubuntu5.24.04.2                deb                         
 supports-color                                                                10.2.2                                   npm                         
 systemd-standalone-sysusers                                                   255.4-1ubuntu8.16                        deb                         
-systeminformation                                                             5.31.11                                  npm                         
+systeminformation                                                             5.31.14                                  npm                         
 sysvinit-utils                                                                3.08-6ubuntu3                            deb                         
 tags.cncf.io/container-device-interface                                       v1.1.0                                   go-module  (+7 duplicates)  
 tags.cncf.io/container-device-interface/specs-go                              v1.1.0                                   go-module  (+6 duplicates)  
