@@ -110,7 +110,7 @@ cpu-features                                                                  0.
 cron                                                                          3.0pl1-184ubuntu2                        deb                         
 cron-daemon-common                                                            3.0pl1-184ubuntu2                        deb                         
 cssesc                                                                        3.0.0                                    npm                         
-curl                                                                          8.5.0-2ubuntu10.10                       deb                         
+curl                                                                          8.5.0-2ubuntu10.11                       deb                         
 dario.cat/mergo                                                               v1.0.2                                   go-module  (+1 duplicate)   
 dash                                                                          0.5.12-6ubuntu5                          deb                         
 debconf                                                                       1.5.86ubuntu1                            deb                         
@@ -122,8 +122,8 @@ destroy                                                                       1.
 diff                                                                          8.0.4                                    npm                         
 diffutils                                                                     1:3.10-1build1                           deb                         
 dirmngr                                                                       2.4.4-2ubuntu17.4                        deb                         
-docker-ce                                                                     5:29.6.1-1~ubuntu.24.04~noble            deb                         
-docker-ce-cli                                                                 5:29.6.1-1~ubuntu.24.04~noble            deb                         
+docker-ce                                                                     5:29.6.2-1~ubuntu.24.04~noble            deb                         
+docker-ce-cli                                                                 5:29.6.2-1~ubuntu.24.04~noble            deb                         
 docker-compose-plugin                                                         5.3.1-1~ubuntu.24.04~noble               deb                         
 docker-modem                                                                  5.0.7                                    npm                         
 dockerode                                                                     4.0.12                                   npm                         
@@ -391,14 +391,15 @@ github.com/mitchellh/copystructure                                            v1
 github.com/mitchellh/go-wordwrap                                              v1.0.1                                   go-module  (+1 duplicate)   
 github.com/mitchellh/hashstructure/v2                                         v2.0.2                                   go-module  (+1 duplicate)   
 github.com/mitchellh/reflectwalk                                              v1.0.2                                   go-module                   
-github.com/moby/buildkit                                                      v0.31.1                                  go-module  (+1 duplicate)   
+github.com/moby/buildkit                                                      v0.31.1                                  go-module                   
+github.com/moby/buildkit                                                      v0.31.2                                  go-module                   
 github.com/moby/docker-image-spec                                             v1.3.1                                   go-module  (+1 duplicate)   
 github.com/moby/go-archive                                                    v0.2.0                                   go-module  (+1 duplicate)   
 github.com/moby/ipvs                                                          v1.1.0                                   go-module                   
 github.com/moby/locker                                                        v1.0.1                                   go-module  (+3 duplicates)  
 github.com/moby/moby/api                                                      v1.55.0                                  go-module  (+1 duplicate)   
 github.com/moby/moby/client                                                   v0.5.0                                   go-module                   
-github.com/moby/moby/v2                                                       v29.6.1                                  go-module  (+1 duplicate)   
+github.com/moby/moby/v2                                                       v29.6.2                                  go-module  (+1 duplicate)   
 github.com/moby/patternmatcher                                                v0.6.1                                   go-module  (+1 duplicate)   
 github.com/moby/policy-helpers                                                v0.0.0-20260612073044-d5411a945cfc       go-module                   
 github.com/moby/profiles/apparmor                                             v0.2.1                                   go-module                   
@@ -484,7 +485,7 @@ github.com/tilt-dev/fsnotify                                                  v1
 github.com/tinylib/msgp                                                       v1.3.0                                   go-module                   
 github.com/tonistiigi/dchapes-mode                                            v0.0.0-20250318174251-73d941a28323       go-module  (+1 duplicate)   
 github.com/tonistiigi/fsutil                                                  v0.0.0-20260609091201-0257b3308df4       go-module                   
-github.com/tonistiigi/fsutil                                                  v0.0.0-20260609174605-b61e79c0c046       go-module                   
+github.com/tonistiigi/fsutil                                                  v0.0.0-20260716115106-30cd4fc5d911       go-module                   
 github.com/tonistiigi/go-actions-cache                                        v0.0.0-20260120203934-54bc28c26fd2       go-module                   
 github.com/tonistiigi/go-archvariant                                          v1.0.0                                   go-module                   
 github.com/tonistiigi/go-csvvalue                                             v0.0.0-20240814133006-030d3b2625d0       go-module  (+1 duplicate)   
@@ -665,7 +666,7 @@ libcap2-bin                                                                   1:
 libcom-err2                                                                   1.47.0-2.4~exp1ubuntu4.1                 deb                         
 libcrypt-dev                                                                  1:4.4.36-4build1                         deb                         
 libcrypt1                                                                     1:4.4.36-4build1                         deb                         
-libcurl4t64                                                                   8.5.0-2ubuntu10.10                       deb                         
+libcurl4t64                                                                   8.5.0-2ubuntu10.11                       deb                         
 libdb5.3t64                                                                   5.3.28+dfsg2-7                           deb                         
 libdebconfclient0                                                             0.271ubuntu3                             deb                         
 libdevmapper1.02.1                                                            2:1.02.185-3ubuntu3.2                    deb                         
@@ -887,7 +888,7 @@ sigstore                                                                      4.
 smart-buffer                                                                  4.2.0                                    npm                         
 socket.io                                                                     4.8.3                                    npm                         
 socket.io-adapter                                                             2.5.8                                    npm                         
-socket.io-parser                                                              4.2.6                                    npm                         
+socket.io-parser                                                              4.2.7                                    npm                         
 socks                                                                         2.8.9                                    npm                         
 socks-proxy-agent                                                             8.0.5                                    npm                         
 spdx-exceptions                                                               2.5.0                                    npm                         
@@ -900,14 +901,15 @@ statuses                                                                      2.
 stdlib                                                                        go1.25.12                                go-module  (+3 duplicates)  
 stdlib                                                                        go1.26.2                                 go-module  (+1 duplicate)   
 stdlib                                                                        go1.26.3                                 go-module  (+4 duplicates)  
-stdlib                                                                        go1.26.4                                 go-module  (+3 duplicates)  
+stdlib                                                                        go1.26.4                                 go-module                   
+stdlib                                                                        go1.26.5                                 go-module  (+2 duplicates)  
 string-width                                                                  4.2.3                                    npm                         
 string_decoder                                                                1.3.0                                    npm                         
 strip-ansi                                                                    6.0.1                                    npm                         
 sudo                                                                          1.9.15p5-3ubuntu5.24.04.2                deb                         
 supports-color                                                                10.2.2                                   npm                         
 systemd-standalone-sysusers                                                   255.4-1ubuntu8.16                        deb                         
-systeminformation                                                             5.31.17                                  npm                         
+systeminformation                                                             5.33.0                                   npm                         
 sysvinit-utils                                                                3.08-6ubuntu3                            deb                         
 tags.cncf.io/container-device-interface                                       v1.1.0                                   go-module  (+7 duplicates)  
 tags.cncf.io/container-device-interface/specs-go                              v1.1.0                                   go-module  (+6 duplicates)  
@@ -923,7 +925,7 @@ treeverse                                                                     3.
 tuf-js                                                                        4.1.0                                    npm                         
 tweetnacl                                                                     0.14.5                                   npm                         
 type-is                                                                       1.6.18                                   npm                         
-tzdata                                                                        2026a-0ubuntu0.24.04.1                   deb                         
+tzdata                                                                        2026b-0ubuntu0.24.04.1                   deb                         
 ubuntu-keyring                                                                2023.11.28.1                             deb                         
 uidmap                                                                        1:4.13+dfsg1-4ubuntu3.2                  deb                         
 undici                                                                        6.26.0                                   npm                         
