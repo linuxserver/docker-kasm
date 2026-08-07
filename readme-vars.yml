@@ -130,6 +130,7 @@ init_diagram: |
   "kasm:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "04.08.26:", desc: "Give kasm_manager a healthcheck start period so a cold start does not leave kasm_proxy created but never started."}
   - {date: "16.04.26:", desc: "Update for 1.18.1 release. Use rolling service images. Bump docker to v29."}
   - {date: "13.11.25:", desc: "Pin docker to v28 to avoid API deprecation issues."}
   - {date: "22.10.25:", desc: "Update for 1.18.0 release."}
