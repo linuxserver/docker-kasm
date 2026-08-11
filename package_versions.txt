@@ -43,7 +43,7 @@ NAME                                                                          VE
 @tufjs/canonical-json                                                         2.0.0                                    npm                         
 @tufjs/models                                                                 4.1.0                                    npm                         
 @types/cors                                                                   2.8.19                                   npm                         
-@types/node                                                                   26.1.2                                   npm                         
+@types/node                                                                   26.2.0                                   npm                         
 @types/ws                                                                     8.18.1                                   npm                         
 abbrev                                                                        4.0.0                                    npm                         
 accepts                                                                       1.3.8                                    npm                         
