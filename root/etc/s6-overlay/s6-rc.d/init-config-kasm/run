@@ -13,6 +13,22 @@ if [[ -S /var/run/docker.sock ]]; then
   rm -f /var/run/docker.sock
 fi
 
+# The NVIDIA container toolkit on the host injects the driver into this container,
+# but nothing carries it over to the Workspace containers started inside the DinD
+# layer. Describe the devices and driver we were handed in a CDI specification, so
+# that dockerd here is able to inject them in turn, and make the NVIDIA runtime the
+# default one so Workspace containers pick it up without any per Workspace override.
+rm -f /etc/cdi/nvidia.yaml
+if [[ -e "/dev/nvidiactl" ]]; then
+    mkdir -p /etc/cdi
+    if nvidia-ctk cdi generate --output="/etc/cdi/nvidia.yaml"; then
+        nvidia-ctk config --in-place --set nvidia-container-runtime.mode="cdi"
+        nvidia-ctk runtime configure --runtime=docker --set-as-default
+    else
+        echo "**** NVIDIA devices were passed to this container but no CDI specification could be generated for them, Workspaces will not be GPU accelerated ****"
+    fi
+fi
+
 # Login to Dockerhub
 if [[ -n "${DOCKER_HUB_USERNAME}" ]]; then
     docker login --username "${DOCKER_HUB_USERNAME}" --password "${DOCKER_HUB_PASSWORD}"
