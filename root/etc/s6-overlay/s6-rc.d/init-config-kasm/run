@@ -18,8 +18,9 @@ fi
 # layer. Describe the devices and driver we were handed in a CDI specification, so
 # that dockerd here is able to inject them in turn, and make the NVIDIA runtime the
 # default one so Workspace containers pick it up without any per Workspace override.
-rm -f /etc/cdi/nvidia.yaml
-if [[ -e "/dev/nvidiactl" ]]; then
+# /etc/cdi isn't a persisted volume, so the spec survives a plain container restart
+# and only needs regenerating once the container is recreated.
+if [[ -e "/dev/nvidiactl" ]] && [[ ! -e "/etc/cdi/nvidia.yaml" ]]; then
     mkdir -p /etc/cdi
     if nvidia-ctk cdi generate --output="/etc/cdi/nvidia.yaml"; then
         nvidia-ctk config --in-place --set nvidia-container-runtime.mode="cdi"
