@@ -1,4 +1,8 @@
 #!/usr/bin/with-contenv bash
 # shellcheck shell=bash
 
+# Kasm routes to a session by the address its container was created with
+# shellcheck disable=SC2016
+docker ps -q --filter "label=kasm.kasmid" | xargs -r docker inspect --format '{{.Id}} {{.State.Status}}{{range $network, $settings := .NetworkSettings.Networks}} {{$network}}={{$settings.IPAddress}}{{end}}' > /opt/kasm_sessions.state
+
 /opt/kasm/bin/stop
