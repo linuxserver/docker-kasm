@@ -13,6 +13,10 @@ if [[ -S /var/run/docker.sock ]]; then
   rm -f /var/run/docker.sock
 fi
 
+# Clean up old containerd pid, which dockerd takes for a running containerd if
+# another process has been given that pid since an unclean shutdown
+rm -f /var/run/docker/containerd/containerd.pid
+
 # Login to Dockerhub
 if [[ -n "${DOCKER_HUB_USERNAME}" ]]; then
     docker login --username "${DOCKER_HUB_USERNAME}" --password "${DOCKER_HUB_PASSWORD}"
