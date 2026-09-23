@@ -130,6 +130,7 @@ init_diagram: |
   "kasm:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "23.09.26:", desc: "Also bring Workspace sessions back after an unclean shutdown."}
   - {date: "23.09.26:", desc: "Bring running and paused Workspace sessions back after a container restart."}
   - {date: "23.09.26:", desc: "Give Workspace sessions their address back after a container restart."}
   - {date: "04.08.26:", desc: "Give kasm_manager a healthcheck start period so a cold start does not leave kasm_proxy created but never started."}
