@@ -132,6 +132,7 @@ init_diagram: |
   "kasm:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "23.09.26:", desc: "Give Workspace sessions their address back after a container restart."}
   - {date: "07.08.26:", desc: "Fix NVIDIA passthrough to Workspace containers by generating a CDI specification inside the DinD layer."}
   - {date: "04.08.26:", desc: "Give kasm_manager a healthcheck start period so a cold start does not leave kasm_proxy created but never started."}
   - {date: "16.04.26:", desc: "Update for 1.18.1 release. Use rolling service images. Bump docker to v29."}
