@@ -69,7 +69,7 @@ binary-extensions                                                             3.
 binutils-common                                                               2.42-4ubuntu2.10                      deb                         
 bl                                                                            4.1.0                                 npm                         
 body-parser                                                                   1.20.8                                npm                         
-brace-expansion                                                               5.0.7                                 npm                         
+brace-expansion                                                               5.0.9                                 npm                         
 bsdutils                                                                      1:2.39.3-9ubuntu6.6                   deb                         
 btrfs-progs                                                                   6.6.3-1.1build2                       deb                         
 buffer                                                                        5.7.1                                 npm                         
@@ -96,7 +96,7 @@ code.cloudfoundry.org/clock                                                   v1
 color-convert                                                                 2.0.1                                 npm                         
 color-name                                                                    1.1.4                                 npm                         
 common-ancestor-path                                                          2.0.0                                 npm                         
-containerd.io                                                                 2.4.1-2~ubuntu.24.04~noble            deb                         
+containerd.io                                                                 2.4.2-3~ubuntu.24.04~noble            deb                         
 content-disposition                                                           0.5.4                                 npm                         
 content-type                                                                  1.0.5                                 npm                         
 cookie                                                                        0.7.2                                 npm                         
@@ -121,8 +121,8 @@ destroy                                                                       1.
 diff                                                                          8.0.4                                 npm                         
 diffutils                                                                     1:3.10-1ubuntu0.1                     deb                         
 dirmngr                                                                       2.4.4-2ubuntu17.6                     deb                         
-docker-ce                                                                     5:29.9.0-1~ubuntu.24.04~noble         deb                         
-docker-ce-cli                                                                 5:29.9.0-1~ubuntu.24.04~noble         deb                         
+docker-ce                                                                     5:29.9.2-1~ubuntu.24.04~noble         deb                         
+docker-ce-cli                                                                 5:29.9.2-1~ubuntu.24.04~noble         deb                         
 docker-compose-plugin                                                         5.6.0-1~ubuntu.24.04~noble            deb                         
 docker-modem                                                                  5.0.7                                 npm                         
 dockerode                                                                     4.0.12                                npm                         
@@ -221,7 +221,8 @@ github.com/containerd/btrfs/v2                                                v2
 github.com/containerd/cgroups/v3                                              v3.1.3                                go-module  (+3 duplicates)  
 github.com/containerd/console                                                 v1.0.5                                go-module  (+5 duplicates)  
 github.com/containerd/containerd/api                                          v1.12.0                               go-module  (+4 duplicates)  
-github.com/containerd/containerd/v2                                           v2.4.1                                go-module  (+4 duplicates)  
+github.com/containerd/containerd/v2                                           v2.4.1                                go-module                   
+github.com/containerd/containerd/v2                                           v2.4.2                                go-module  (+3 duplicates)  
 github.com/containerd/continuity                                              v0.5.0                                go-module  (+4 duplicates)  
 github.com/containerd/errdefs                                                 v1.0.0                                go-module  (+4 duplicates)  
 github.com/containerd/errdefs/pkg                                             v0.3.0                                go-module  (+4 duplicates)  
@@ -271,7 +272,7 @@ github.com/erofs/go-erofs                                                     v0
 github.com/fatih/color                                                        v1.19.0                               go-module  (+1 duplicate)   
 github.com/felixge/httpsnoop                                                  v1.1.0                                go-module  (+3 duplicates)  
 github.com/fernet/fernet-go                                                   v0.0.0-20240119011108-303da6aec611    go-module                   
-github.com/fluent/fluent-logger-golang                                        v1.10.1                               go-module                   
+github.com/fluent/fluent-logger-golang                                        v1.10.2                               go-module                   
 github.com/fsnotify/fsnotify                                                  v1.10.1                               go-module  (+2 duplicates)  
 github.com/fsnotify/fsnotify                                                  v1.7.0                                go-module  (+3 duplicates)  
 github.com/fvbommel/sortorder                                                 v1.2.0                                go-module                   
@@ -376,7 +377,7 @@ github.com/moby/ipvs                                                          v1
 github.com/moby/locker                                                        v1.0.1                                go-module  (+3 duplicates)  
 github.com/moby/moby/api                                                      v1.56.1                               go-module  (+1 duplicate)   
 github.com/moby/moby/client                                                   v0.6.1                                go-module                   
-github.com/moby/moby/v2                                                       v29.9.0                               go-module  (+1 duplicate)   
+github.com/moby/moby/v2                                                       v29.9.2                               go-module  (+1 duplicate)   
 github.com/moby/patternmatcher                                                v0.6.1                                go-module  (+1 duplicate)   
 github.com/moby/policy-helpers                                                v0.0.0-20261006174519-bd98f4747414    go-module                   
 github.com/moby/profiles/apparmor                                             v0.2.2                                go-module                   
@@ -424,7 +425,7 @@ github.com/prometheus/client_model                                            v0
 github.com/prometheus/common                                                  v0.70.1                               go-module                   
 github.com/prometheus/common                                                  v0.71.0                               go-module                   
 github.com/prometheus/procfs                                                  v0.21.1                               go-module  (+3 duplicates)  
-github.com/rootless-containers/rootlesskit/v3                                 v3.2.0                                go-module                   
+github.com/rootless-containers/rootlesskit/v3                                 v3.3.0                                go-module                   
 github.com/santhosh-tekuri/jsonschema/v6                                      v6.0.3                                go-module                   
 github.com/sean-/seed                                                         v0.0.0-20170313163322-e2103e2c3529    go-module                   
 github.com/seccomp/libseccomp-golang                                          v0.12.0                               go-module                   
@@ -510,22 +511,25 @@ go.yaml.in/yaml/v3                                                            v3
 go.yaml.in/yaml/v4                                                            v4.0.0-rc.4                           go-module  (+1 duplicate)   
 go.yaml.in/yaml/v4                                                            v4.0.0-rc.6                           go-module                   
 golang.org/x/crypto                                                           v0.56.0                               go-module  (+1 duplicate)   
-golang.org/x/crypto                                                           v0.57.0                               go-module                   
-golang.org/x/mod                                                              v0.41.0                               go-module  (+5 duplicates)  
+golang.org/x/crypto                                                           v0.58.0                               go-module                   
+golang.org/x/mod                                                              v0.41.0                               go-module  (+4 duplicates)  
+golang.org/x/mod                                                              v0.42.0                               go-module                   
 golang.org/x/net                                                              v0.52.0                               go-module  (+1 duplicate)   
 golang.org/x/net                                                              v0.55.0                               go-module                   
 golang.org/x/net                                                              v0.58.0                               go-module  (+3 duplicates)  
-golang.org/x/net                                                              v0.60.0                               go-module  (+1 duplicate)   
+golang.org/x/net                                                              v0.61.0                               go-module  (+1 duplicate)   
 golang.org/x/oauth2                                                           v0.37.0                               go-module                   
-golang.org/x/sync                                                             v0.23.0                               go-module  (+4 duplicates)  
+golang.org/x/sync                                                             v0.23.0                               go-module  (+3 duplicates)  
+golang.org/x/sync                                                             v0.24.0                               go-module                   
 golang.org/x/sys                                                              v0.42.0                               go-module  (+1 duplicate)   
 golang.org/x/sys                                                              v0.46.0                               go-module  (+1 duplicate)   
-golang.org/x/sys                                                              v0.48.0                               go-module  (+9 duplicates)  
+golang.org/x/sys                                                              v0.48.0                               go-module  (+7 duplicates)  
+golang.org/x/sys                                                              v0.49.0                               go-module  (+1 duplicate)   
 golang.org/x/term                                                             v0.45.0                               go-module                   
-golang.org/x/term                                                             v0.46.0                               go-module                   
+golang.org/x/term                                                             v0.47.0                               go-module                   
 golang.org/x/text                                                             v0.35.0                               go-module  (+1 duplicate)   
 golang.org/x/text                                                             v0.41.0                               go-module  (+2 duplicates)  
-golang.org/x/text                                                             v0.42.0                               go-module                   
+golang.org/x/text                                                             v0.43.0                               go-module                   
 golang.org/x/time                                                             v0.16.0                               go-module  (+2 duplicates)  
 google.golang.org/api                                                         v0.287.1                              go-module                   
 google.golang.org/genproto                                                    v0.0.0-20260825221802-da73d73af1c5    go-module                   
@@ -563,7 +567,7 @@ inherits                                                                      2.
 ini                                                                           6.0.0                                 npm                         
 init-package-json                                                             8.2.5                                 npm                         
 init-system-helpers                                                           1.66ubuntu1                           deb                         
-ip-address                                                                    10.2.0                                npm                         
+ip-address                                                                    10.5.0                                npm                         
 ipaddr.js                                                                     1.9.1                                 npm                         
 iproute2                                                                      6.1.0-1ubuntu6.4                      deb                         
 iptables                                                                      1.8.10-3ubuntu2                       deb                         
@@ -588,7 +592,7 @@ kasm-wizard                                                                   0.
 keyboxd                                                                       2.4.4-2ubuntu17.6                     deb                         
 krb5-locales                                                                  1.20.1-6ubuntu2.10                    deb                         
 libacl1                                                                       2.3.2-1build1.1                       deb                         
-libapparmor1                                                                  4.0.1really4.0.1-0ubuntu0.24.04.8     deb                         
+libapparmor1                                                                  4.0.1really4.0.1-0ubuntu0.24.04.9     deb                         
 libapt-pkg6.0t64                                                              2.8.3                                 deb                         
 libassuan0                                                                    2.5.6-1build1                         deb                         
 libattr1                                                                      1:2.5.2-1ubuntu0.1                    deb                         
@@ -639,7 +643,7 @@ libksba8                                                                      1.
 libldap-common                                                                2.6.10+dfsg-0ubuntu0.24.04.1          deb                         
 libldap2                                                                      2.6.10+dfsg-0ubuntu0.24.04.1          deb                         
 liblz4-1                                                                      1.9.4-1build1.1                       deb                         
-liblzma5                                                                      5.6.1+really5.4.5-1ubuntu0.3          deb                         
+liblzma5                                                                      5.6.1+really5.4.5-1ubuntu0.4          deb                         
 liblzo2-2                                                                     2.10-2build4                          deb                         
 libmd0                                                                        1.1.0-2build1.1                       deb                         
 libmnl0                                                                       1.0.5-2build1                         deb                         
@@ -656,7 +660,7 @@ libnpmdiff                                                                    8.
 libnpmexec                                                                    10.3.2                                npm                         
 libnpmfund                                                                    7.0.26                                npm                         
 libnpmorg                                                                     8.0.1                                 npm                         
-libnpmpack                                                                    9.1.12                                npm                         
+libnpmpack                                                                    9.1.13                                npm                         
 libnpmpublish                                                                 11.2.0                                npm                         
 libnpmsearch                                                                  9.0.1                                 npm                         
 libnpmteam                                                                    8.0.2                                 npm                         
@@ -738,7 +742,7 @@ mount                                                                         2.
 ms                                                                            2.0.0                                 npm        (+3 duplicates)  
 ms                                                                            2.1.3                                 npm        (+1 duplicate)   
 mute-stream                                                                   3.0.0                                 npm                         
-nan                                                                           2.29.0                                npm                         
+nan                                                                           2.30.0                                npm                         
 ncurses-base                                                                  6.4+20240113-1ubuntu2.2               deb                         
 ncurses-bin                                                                   6.4+20240113-1ubuntu2.2               deb                         
 negotiator                                                                    0.6.3                                 npm                         
@@ -748,9 +752,9 @@ netcat-openbsd                                                                1.
 nftables                                                                      1.0.9-1ubuntu0.1                      deb                         
 node-gyp                                                                      12.4.0                                npm                         
 node-pty                                                                      0.10.1                                npm                         
-nodejs                                                                        24.21.0-1nodesource1                  deb                         
+nodejs                                                                        24.22.0-1nodesource1                  deb                         
 nopt                                                                          9.0.0                                 npm                         
-npm                                                                           11.19.0                               npm                         
+npm                                                                           11.19.1                               npm                         
 npm-audit-report                                                              7.0.0                                 npm                         
 npm-bundled                                                                   5.0.0                                 npm                         
 npm-install-checks                                                            8.0.0                                 npm                         
@@ -798,7 +802,7 @@ python3-minimal                                                               3.
 python3.12                                                                    3.12.3-1ubuntu0.17                    deb                         
 python3.12-minimal                                                            3.12.3-1ubuntu0.17                    deb                         
 qrcode-terminal                                                               0.12.0                                npm                         
-qs                                                                            6.16.0                                npm                         
+qs                                                                            6.16.1                                npm                         
 range-parser                                                                  1.2.1                                 npm                         
 raw-body                                                                      2.5.3                                 npm                         
 read                                                                          5.0.1                                 npm                         
@@ -836,23 +840,23 @@ split-ca                                                                      1.
 ssh2                                                                          1.17.0                                npm                         
 ssri                                                                          13.0.1                                npm                         
 statuses                                                                      2.0.2                                 npm                         
+stdlib                                                                        go1.26.10                             go-module  (+2 duplicates)  
 stdlib                                                                        go1.26.2                              go-module  (+1 duplicate)   
 stdlib                                                                        go1.26.8                              go-module                   
-stdlib                                                                        go1.26.9                              go-module  (+2 duplicates)  
 stdlib                                                                        go1.27.1                              go-module  (+4 duplicates)  
-stdlib                                                                        go1.27.2                              go-module  (+3 duplicates)  
+stdlib                                                                        go1.27.3                              go-module  (+3 duplicates)  
 string-width                                                                  4.2.3                                 npm                         
 string_decoder                                                                1.3.0                                 npm                         
 strip-ansi                                                                    6.0.1                                 npm                         
 sudo                                                                          1.9.15p5-3ubuntu5.24.04.4             deb                         
 supports-color                                                                10.2.2                                npm                         
 systemd-standalone-sysusers                                                   255.4-1ubuntu8.17                     deb                         
-systeminformation                                                             5.33.15                               npm                         
+systeminformation                                                             5.33.16                               npm                         
 sysvinit-utils                                                                3.08-6ubuntu3                         deb                         
 tags.cncf.io/container-device-interface                                       v1.1.1                                go-module  (+7 duplicates)  
 tags.cncf.io/container-device-interface/specs-go                              v1.1.1                                go-module  (+6 duplicates)  
 tar                                                                           1.35+dfsg-3ubuntu0.4                  deb                         
-tar                                                                           7.5.19                                npm                         
+tar                                                                           7.5.22                                npm                         
 tar-fs                                                                        2.1.5                                 npm                         
 tar-stream                                                                    2.2.0                                 npm                         
 text-table                                                                    0.2.0                                 npm                         
@@ -866,7 +870,7 @@ type-is                                                                       1.
 tzdata                                                                        2026c-0ubuntu0.24.04.1                deb                         
 ubuntu-keyring                                                                2023.11.28.1                          deb                         
 uidmap                                                                        1:4.13+dfsg1-4ubuntu3.2               deb                         
-undici                                                                        6.27.0                                npm                         
+undici                                                                        6.28.0                                npm                         
 undici-types                                                                  8.9.0                                 npm                         
 unminimize                                                                    0.2.1                                 deb                         
 unpipe                                                                        1.0.0                                 npm                         
@@ -883,7 +887,7 @@ wrappy                                                                        1.
 write-file-atomic                                                             7.0.1                                 npm                         
 ws                                                                            8.21.3                                npm                         
 xfsprogs                                                                      6.6.0-1ubuntu2.1                      deb                         
-xz-utils                                                                      5.6.1+really5.4.5-1ubuntu0.3          deb                         
+xz-utils                                                                      5.6.1+really5.4.5-1ubuntu0.4          deb                         
 y18n                                                                          5.0.8                                 npm                         
 yallist                                                                       4.0.0                                 npm                         
 yallist                                                                       5.0.0                                 npm                         
