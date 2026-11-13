@@ -8,6 +8,18 @@ done
 # Stop any running containers that shouldn't be
 docker ps -q | xargs docker stop &> /dev/null
 
+# Docker gives a starting container the lowest free address, not its previous one
+if [[ -f /opt/kasm_sessions.state ]]; then
+  while read -r id _ networks; do
+    for network in ${networks}; do
+      [[ -n "${network#*=}" ]] || continue
+      docker network disconnect --force "${network%%=*}" "${id}"
+      docker network connect --ip "${network#*=}" "${network%%=*}" "${id}" || docker network connect "${network%%=*}" "${id}"
+    done
+  done < /opt/kasm_sessions.state
+  rm -f /opt/kasm_sessions.state
+fi
+
 if [[ -f /opt/kasm/bin/start ]]; then
   /opt/kasm/bin/start
 fi
