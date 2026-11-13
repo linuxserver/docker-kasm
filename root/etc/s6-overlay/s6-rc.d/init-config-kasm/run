@@ -51,3 +51,9 @@ if [[ ! -L "/var/lib/docker-plugins" ]]; then
     mkdir -p /var/lib/docker-plugins/rclone/config
     mkdir -p /var/lib/docker-plugins/rclone/cache
 fi
+
+# After an unclean shutdown svc-kasm/finish has not recorded the sessions, but
+# dockerd's records, read before it starts, still hold them as they were
+if [[ ! -f /opt/kasm_sessions.state && -d /opt/docker/containers ]]; then
+    find /opt/docker/containers -name config.v2.json -exec jq -r 'select(.Config.Labels["kasm.kasmid"] and .State.Running) | "\(.ID) \(if .State.Paused then "paused" else "running" end)\(.NetworkSettings.Networks | to_entries? // [] | map(" \(.key)=\(.value.IPAddress)") | join(""))"' {} \; > /opt/kasm_sessions.state
+fi
