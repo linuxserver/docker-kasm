@@ -13,6 +13,10 @@ if [[ -S /var/run/docker.sock ]]; then
   rm -f /var/run/docker.sock
 fi
 
+# Clean up old containerd pid, which dockerd takes for a running containerd if
+# another process has been given that pid since an unclean shutdown
+rm -f /var/run/docker/containerd/containerd.pid
+
 # The NVIDIA container toolkit on the host injects the driver into this container,
 # but nothing carries it over to the Workspace containers started inside the DinD
 # layer. Describe the devices and driver we were handed in a CDI specification, so
