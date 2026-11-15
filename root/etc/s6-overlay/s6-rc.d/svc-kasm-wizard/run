@@ -2,12 +2,15 @@
 
 # Wait for docker to be up
 while [[ ! -S /var/run/docker.sock ]]; do
-  sleep 1
+    sleep 1
 done
 
-# Don't do anything if wizard is disabled
-if [[ -f "/opt/NO_WIZARD" ]]; then
-    sleep infinity
+# Don't do anything if Kasm is installed and/or wizard is disabled
+if [[ -L /opt/kasm/current ]]; then
+  if [[ "${KASM_SETUP}" != 'true' ]] || [[ -f "/opt/NO_WIZARD" ]]; then
+      echo "KASM_SETUP is not set to 'true' and Kasm has been installed, disabling install wizard"
+      sleep infinity
+  fi
 fi
 
 cd /wizard || exit 1
