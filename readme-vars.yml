@@ -54,14 +54,14 @@ app_setup_block: |
 
   ### First-run setup
 
-  Access the installation wizard at https://127.0.0.1:3000 and follow the instructions there. If using our example run/compose the setup page is only bound to 127.0.0.1.
+  Access the install wizard at https://<hostip>:3000 and follow the instructions there. In our example run/compose the install wizard is only bound to 127.0.0.1, so if you need to access it over the network this will need changing.
 
-  Once setup is complete access https://`<hostip>`:443 and login with the credentials you entered during setup. The default users are:
+  Once setup is complete access https://<hostip>:443 and login with the credentials you entered during setup. The default users are:
 
   * admin@kasm.local
   * user@kasm.local
 
-  **Never expose the installation wizard to the internet and ensure `KASM_SETUP` is set to `false` during normal use.**
+  **Never expose the install wizard to the internet and ensure `KASM_SETUP` is set to `false` during normal use.**
 
   ### Upgrading KASM
 
