@@ -59,20 +59,20 @@ The architectures supported by this image are:
 
 This container uses [Docker in Docker](https://www.docker.com/blog/docker-can-now-run-within-docker/) and requires being run in `privileged` mode. This container also requires an initial setup that runs on port 3000.
 
-**Unlike other containers the web interface port (default 443) needs to be set for the env variable `KASM_PORT` and both the inside and outside port IE for 4443 `KASM_PORT=4443` `-p 4443:4443`**
+### First-run setup
 
-**Unraid users due to the DinD storage layer `/opt/` should be mounted directly to a disk IE `/mnt/disk1/appdata/path` or optimally with a cache disk at `/mnt/cache/appdata/path`**
+Access the installation wizard at https://127.0.0.1:3000 and follow the instructions there. If using our example run/compose the setup page is only bound to 127.0.0.1.
 
-Access the installation wizard at https://`your ip`:3000 and follow the instructions there. Once setup is complete access https://`your ip`:443 and login with the credentials you entered during setup. The default users are:
+Once setup is complete access https://`<hostip>`:443 and login with the credentials you entered during setup. The default users are:
 
 * admin@kasm.local
 * user@kasm.local
 
-Currently Synology systems are not supported due to them blocking CPU scheduling in their Kernel.
+**Never expose the installation wizard to the internet and ensure `KASM_SETUP` is set to `false` during normal use.**
 
 ### Upgrading KASM
 
-In order to upgrade Kasm, first make sure you are using the latest docker image, and then perform the in app update from the installation wizard. Docker image update and recreation of container alone won't upgrade Kasm.
+In order to upgrade Kasm, first make sure you are using the latest docker image, and then set `KASM_SETUP=true` to allow you to perform the update from the installation wizard. Docker image update and recreation of container alone won't upgrade Kasm.
 
 Following the upgrade, you will need to update any workspace image tags to match the new version.
 
@@ -93,6 +93,12 @@ In order to use persistant profiles in Workspaces you will need to mount in a fo
 ### Reverse proxy
 
 A sample for [SWAG](https://github.com/linuxserver/docker-swag) can be found [here](https://raw.githubusercontent.com/linuxserver/reverse-proxy-confs/master/kasm.subdomain.conf.sample). Post installation you will need to modify the "Proxy Port" setting under the default zone to 0 as outlined [here](https://docs.kasm.com/docs/latest/how-to/reverse_proxy/index.html#update-zones) to launch Workspaces sessions.
+
+### Additional notes
+
+* **The web interface port (default 443) needs to match the env variable `KASM_PORT` and both the inside and outside port i.e. to use port 4443, set `KASM_PORT=4443` `-p 4443:4443`**
+* **Unraid users due to the DinD storage layer `/opt/` should be mounted directly to a disk IE `/mnt/disk1/appdata/path` or optimally with a cache disk at `/mnt/cache/appdata/path`**
+* Currently Synology systems are not supported due to them blocking CPU scheduling in their Kernel.
 
 ### Strict reverse proxies
 
@@ -116,9 +122,10 @@ services:
     container_name: kasm
     privileged: true
     security_opt:
-      - apparmor:rootlesskit #optional
+      - apparmor:runc #optional
     environment:
       - KASM_PORT=443
+      - KASM_SETUP=false
       - DOCKER_HUB_USERNAME=USER #optional
       - DOCKER_HUB_PASSWORD=PASS #optional
       - DOCKER_MTU=1500 #optional
@@ -128,7 +135,7 @@ services:
       - /dev/input:/dev/input #optional
       - /run/udev/data:/run/udev/data #optional
     ports:
-      - 3000:3000
+      - 127.0.0.1:3000:3000
       - 443:443
     stop_grace_period: "90s" #optional
     restart: unless-stopped
@@ -140,12 +147,13 @@ services:
 docker run -d \
   --name=kasm \
   --privileged \
-  --security-opt apparmor=rootlesskit `#optional` \
+  --security-opt apparmor=runc `#optional` \
   -e KASM_PORT=443 \
+  -e KASM_SETUP=false \
   -e DOCKER_HUB_USERNAME=USER `#optional` \
   -e DOCKER_HUB_PASSWORD=PASS `#optional` \
   -e DOCKER_MTU=1500 `#optional` \
-  -p 3000:3000 \
+  -p 127.0.0.1:3000:3000 \
   -p 443:443 \
   -v /path/to/kasm/data:/opt \
   -v /path/to/kasm/profiles:/profiles `#optional` \
@@ -162,9 +170,10 @@ Containers are configured using parameters passed at runtime (such as those abov
 
 | Parameter | Function |
 | :----: | --- |
-| `-p 3000:3000` | Kasm Installation wizard. (https) |
+| `-p 127.0.0.1:3000:3000` | Kasm Installation wizard. (https) |
 | `-p 443:443` | Kasm Workspaces interface. (https) |
 | `-e KASM_PORT=443` | Specify the port you bind to the outside for Kasm Workspaces. |
+| `-e KASM_SETUP=false` | Set to `true` to enable the Kasm setup page, *first-run setup is always enabled*. |
 | `-e DOCKER_HUB_USERNAME=USER` | Optionally specify a DockerHub Username to pull private images. |
 | `-e DOCKER_HUB_PASSWORD=PASS` | Optionally specify a DockerHub password to pull private images. |
 | `-e DOCKER_MTU=1500` | Optionally specify the mtu options passed to dockerd. |
@@ -173,7 +182,7 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-v /dev/input` | Optional for gamepad support. |
 | `-v /run/udev/data` | Optional for gamepad support. |
 | `--stop-timeout=` | Increase container shutdown delay to give Kasm services time to stop cleanly. |
-| `--security-opt apparmor=rootlesskit` | Some hosts require this on top of privileged for namespacing to work properly inside the DinD layer. |
+| `--security-opt apparmor=runc` | Some hosts require this on top of privileged for namespacing to work properly inside the DinD layer. |
 
 ## Environment variables from files (Docker secrets)
 
@@ -319,6 +328,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **15.11.26:** - Add `KASM_SETUP` toggle, default to disabling install wizard after first-run.
 * **07.08.26:** - Fix NVIDIA passthrough to Workspace containers by generating a CDI specification inside the DinD layer.
 * **04.08.26:** - Give kasm_manager a healthcheck start period so a cold start does not leave kasm_proxy created but never started.
 * **16.04.26:** - Update for 1.18.1 release. Use rolling service images. Bump docker to v29.

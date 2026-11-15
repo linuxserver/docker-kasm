@@ -1,0 +1,13 @@
+#!/usr/bin/with-contenv bash
+
+if [[ ! -L /opt/kasm/current ]]; then
+    while ! pgrep -f /kasm_release/install.sh &>/dev/null; do
+        sleep 5
+    done
+
+    while pgrep -f /kasm_release/install.sh &>/dev/null; do
+        sleep 5
+    done
+
+    pkill --signal SIGTERM -f '/usr/bin/node index.js'
+fi
