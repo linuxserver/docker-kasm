@@ -61,13 +61,7 @@ This container uses [Docker in Docker](https://www.docker.com/blog/docker-can-no
 
 ### First-run setup
 
-The install wizard requires an auth token, a new one is printed to the container log every time the wizard starts:
-
-```bash
-docker logs kasm 2>&1 | grep -A1 'setup token (required'
-```
-
-Access the install wizard at https://<hostip>:3000/#token=<token> (or enter the token when prompted) and follow the instructions there. In our example run/compose the install wizard is only bound to 127.0.0.1, so if you need to access it over the network this will need changing.
+Access the install wizard at https://<hostip>:3000 and follow the instructions there. In our example run/compose the install wizard is only bound to 127.0.0.1, so if you need to access it over the network this will need changing.
 
 Once setup is complete access https://<hostip>:443 and login with the credentials you entered during setup. The default users are:
 
@@ -334,7 +328,6 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
-* **17.11.26:** - Install wizard now requires an auth token.
 * **15.11.26:** - Add `KASM_SETUP` toggle, default to disabling install wizard after first-run.
 * **07.08.26:** - Fix NVIDIA passthrough to Workspace containers by generating a CDI specification inside the DinD layer.
 * **04.08.26:** - Give kasm_manager a healthcheck start period so a cold start does not leave kasm_proxy created but never started.
