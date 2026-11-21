@@ -71,7 +71,7 @@ RUN \
       KASM_VERSION=$(curl -sX GET 'https://api.github.com/repos/kasmtech/kasm-install-wizard/releases/latest' \
       | jq -r '.name'); \
   fi && \
-  echo "${KASM_VERSION}" > /version.txt && \
+  echo "${KASM_VERSION%.*}" > /version.txt && \
   echo "**** add wizard ****" && \
   curl -o \
     /tmp/wizard.tar.gz -L \
@@ -84,7 +84,7 @@ RUN \
   echo "**** add installer ****" && \
   curl -o \
     /tmp/kasm.tar.gz -L \
-    "https://kasm-static-content.s3.amazonaws.com/kasm_release_${KASM_VERSION}.tar.gz" && \
+    "https://kasm-static-content.s3.amazonaws.com/kasm_release_${KASM_VERSION%.*}.tar.gz" && \
   tar xf \
     /tmp/kasm.tar.gz -C \
     / && \
