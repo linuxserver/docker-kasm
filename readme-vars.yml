@@ -147,6 +147,9 @@ init_diagram: |
   "kasm:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "21.11.26:", desc: "Also bring Workspace sessions back after an unclean shutdown."}
+  - {date: "21.11.26:", desc: "Bring running and paused Workspace sessions back after a container restart."}
+  - {date: "21.11.26:", desc: "Give Workspace sessions their address back after a container restart."}
   - {date: "17.11.26:", desc: "Install wizard now requires an auth token."}
   - {date: "15.11.26:", desc: "Add `KASM_SETUP` toggle, default to disabling install wizard after first-run."}
   - {date: "07.08.26:", desc: "Fix NVIDIA passthrough to Workspace containers by generating a CDI specification inside the DinD layer."}
