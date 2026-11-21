@@ -21,12 +21,13 @@ param_usage_include_net: false
 param_usage_include_env: true
 param_env_vars:
   - {env_var: "KASM_PORT", env_value: "443", desc: "Specify the port you bind to the outside for Kasm Workspaces."}
+  - {env_var: "KASM_SETUP", env_value: "false", desc: "Set to `true` to enable the Kasm setup page, *first-run setup is always enabled*."}
 param_usage_include_vols: true
 param_volumes:
   - {vol_path: "/opt", vol_host_path: "/path/to/{{ project_name }}/data", desc: "Docker and installation storage."}
 param_usage_include_ports: true
 param_ports:
-  - {external_port: "3000", internal_port: "3000", port_desc: "Kasm Installation wizard. (https)"}
+  - {external_port: "127.0.0.1:3000", internal_port: "3000", port_desc: "Kasm Installation wizard. (https)"}
   - {external_port: "443", internal_port: "443", port_desc: "Kasm Workspaces interface. (https)"}
 # optional container parameters
 opt_param_usage_include_env: true
@@ -41,7 +42,7 @@ opt_param_volumes:
   - {vol_path: "/run/udev/data", vol_host_path: "/run/udev/data", desc: "Optional for gamepad support."}
 opt_security_opt_param: true
 opt_security_opt_param_vars:
-  - {run_var: "apparmor=rootlesskit", compose_var: "apparmor:rootlesskit", desc: "Some hosts require this on top of privileged for namespacing to work properly inside the DinD layer."}
+  - {run_var: "apparmor=runc", compose_var: "apparmor:runc", desc: "Some hosts require this on top of privileged for namespacing to work properly inside the DinD layer."}
 opt_custom_params:
   - {name: "stop-timeout", name_compose: "stop_grace_period", value: "90s", desc: "Increase container shutdown delay to give Kasm services time to stop cleanly."}
 unraid_template: false
@@ -51,20 +52,26 @@ app_setup_block_enabled: true
 app_setup_block: |
   This container uses [Docker in Docker](https://www.docker.com/blog/docker-can-now-run-within-docker/) and requires being run in `privileged` mode. This container also requires an initial setup that runs on port 3000.
 
-  **Unlike other containers the web interface port (default 443) needs to be set for the env variable `KASM_PORT` and both the inside and outside port IE for 4443 `KASM_PORT=4443` `-p 4443:4443`**
+  ### First-run setup
 
-  **Unraid users due to the DinD storage layer `/opt/` should be mounted directly to a disk IE `/mnt/disk1/appdata/path` or optimally with a cache disk at `/mnt/cache/appdata/path`**
+  The install wizard requires an auth token, a new one is printed to the container log every time the wizard starts:
 
-  Access the installation wizard at https://`your ip`:3000 and follow the instructions there. Once setup is complete access https://`your ip`:443 and login with the credentials you entered during setup. The default users are:
+  ```bash
+  docker logs kasm 2>&1 | grep -A1 'setup token (required'
+  ```
+
+  Access the install wizard at https://<hostip>:3000/#token=<token> (or enter the token when prompted) and follow the instructions there. In our example run/compose the install wizard is only bound to 127.0.0.1, so if you need to access it over the network this will need changing.
+
+  Once setup is complete access https://<hostip>:443 and login with the credentials you entered during setup. The default users are:
 
   * admin@kasm.local
   * user@kasm.local
 
-  Currently Synology systems are not supported due to them blocking CPU scheduling in their Kernel.
+  **Never expose the install wizard to the internet and ensure `KASM_SETUP` is set to `false` during normal use.**
 
   ### Upgrading KASM
 
-  In order to upgrade Kasm, first make sure you are using the latest docker image, and then perform the in app update from the installation wizard. Docker image update and recreation of container alone won't upgrade Kasm.
+  In order to upgrade Kasm, first make sure you are using the latest docker image, and then set `KASM_SETUP=true` to allow you to perform the update from the installation wizard. Docker image update and recreation of container alone won't upgrade Kasm.
 
   Following the upgrade, you will need to update any workspace image tags to match the new version.
 
@@ -85,6 +92,12 @@ app_setup_block: |
   ### Reverse proxy
 
   A sample for [SWAG](https://github.com/linuxserver/docker-swag) can be found [here](https://raw.githubusercontent.com/linuxserver/reverse-proxy-confs/master/kasm.subdomain.conf.sample). Post installation you will need to modify the "Proxy Port" setting under the default zone to 0 as outlined [here](https://docs.kasm.com/docs/latest/how-to/reverse_proxy/index.html#update-zones) to launch Workspaces sessions.
+
+  ### Additional notes
+
+  * **The web interface port (default 443) needs to match the env variable `KASM_PORT` and both the inside and outside port i.e. to use port 4443, set `KASM_PORT=4443` `-p 4443:4443`**
+  * **Unraid users due to the DinD storage layer `/opt/` should be mounted directly to a disk IE `/mnt/disk1/appdata/path` or optimally with a cache disk at `/mnt/cache/appdata/path`**
+  * Currently Synology systems are not supported due to them blocking CPU scheduling in their Kernel.
 # init diagram
 init_diagram: |
   "kasm:latest": {
@@ -102,13 +115,13 @@ init_diagram: |
     init-migrations -> init-adduser
     init-os-end -> init-config
     init-config -> init-config-end
-    init-config-kasm -> init-config-end
     init-crontab-config -> init-config-end
-    init-config -> init-config-kasm
+    init-kasm-config -> init-config-end
     init-config -> init-crontab-config
     init-mods-end -> init-custom-files
     init-adduser -> init-device-perms
     base -> init-envfile
+    init-config -> init-kasm-config
     base -> init-migrations
     init-config-end -> init-mods
     init-mods-package-install -> init-mods-end
@@ -125,6 +138,8 @@ init_diagram: |
     svc-kasm -> legacy-services
     svc-docker -> svc-kasm-wizard
     svc-kasm-wizard -> legacy-services
+    init-kasm-config -> svc-wizard-watchdog
+    svc-wizard-watchdog -> legacy-services
   }
   Base Images: {
     "baseimage-ubuntu:noble"
@@ -132,9 +147,11 @@ init_diagram: |
   "kasm:latest" <- Base Images
 # changelog
 changelogs:
-  - {date: "23.09.26:", desc: "Also bring Workspace sessions back after an unclean shutdown."}
-  - {date: "23.09.26:", desc: "Bring running and paused Workspace sessions back after a container restart."}
-  - {date: "23.09.26:", desc: "Give Workspace sessions their address back after a container restart."}
+  - {date: "21.11.26:", desc: "Also bring Workspace sessions back after an unclean shutdown."}
+  - {date: "21.11.26:", desc: "Bring running and paused Workspace sessions back after a container restart."}
+  - {date: "21.11.26:", desc: "Give Workspace sessions their address back after a container restart."}
+  - {date: "17.11.26:", desc: "Install wizard now requires an auth token."}
+  - {date: "15.11.26:", desc: "Add `KASM_SETUP` toggle, default to disabling install wizard after first-run."}
   - {date: "07.08.26:", desc: "Fix NVIDIA passthrough to Workspace containers by generating a CDI specification inside the DinD layer."}
   - {date: "04.08.26:", desc: "Give kasm_manager a healthcheck start period so a cold start does not leave kasm_proxy created but never started."}
   - {date: "16.04.26:", desc: "Update for 1.18.1 release. Use rolling service images. Bump docker to v29."}

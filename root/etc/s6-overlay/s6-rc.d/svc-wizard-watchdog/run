@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+
+# If Kasm isn't installed yet, wait for the install to complete then kill the install wizard
+if [[ ! -f "/opt/kasm/.wizard_install_complete" ]]; then
+    while [[ ! -f "/opt/kasm/.wizard_install_complete" ]]; do
+        sleep 5
+    done
+    pkill --signal SIGTERM -f '/usr/bin/node index.js'
+fi
